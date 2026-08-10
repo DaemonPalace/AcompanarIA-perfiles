@@ -1,0 +1,54 @@
+Article #2
+Spiritual Pain Is Associated with Decreased Quality of Life in Advanced Cancer Patients in Palliative Care: An Exploratory Study
+Pedro E. Pérez-Cruz, Paola Langer, Cecilia Carrasco, Pilar Bonati, Bogomila Batic, Laura Tupper Satt, Marcela Gonzalez Otaiza
+Single-center study (Palliative Care clinic, Complejo Asistencial Dr. Sotero del Rio, Puente Alto, Chile; academic affiliation Pontificia Universidad Catolica de Chile, Santiago), published 2019 — Journal of Palliative Medicine, Vol. 22, No. 6, pp. 663-669, doi: 10.1089/jpm.2018.0340. Epub 16 Jan 2019.
+208 cancer patients enrolled at a palliative care (PC) clinic in Puente Alto, Chile, as part of a larger longitudinal study characterizing patients' end of life; cross-sectional baseline analysis. Inclusion criteria: age >=18, having a primary caregiver, no delirium, Karnofsky Performance Status (KPS) <=80.
+
+Instruments:
+Spiritual Pain (SP) — single-item question, 0-10 numeric scale, patient self-report; also single-item measures for financial distress and other spirituality-related variables
+Quality of Life (QOL) — 0-100 scale (specific instrument name not confirmed in available abstract/secondary sources; described only as "questionnaires to assess QOL, 0-100")
+Global Distress Score-Physical — used to assess physical symptom distress (ESAS-derived composite, exact item set not confirmed in available sources)
+Hospital Anxiety and Depression Scale (HADS) — used to assess psychological distress; HADS-D subscale is the depression outcome reported in the source review table (Deng et al. 2026, Table 1)
+Karnofsky Performance Status (KPS) — used as inclusion criterion (<=80) and likely covariate
+Demographic and spirituality/religiosity variables collected at baseline (exact list not confirmed from available sources)
+
+variables:
+sociodemographic ->
+age, sex, presence of a primary caregiver (inclusion criterion)
+
+clinical/functional status ->
+Karnofsky Performance Status (KPS, <=80 required for inclusion), cancer diagnosis (mixed cancer types, per source review table), absence of delirium (inclusion criterion)
+
+spiritual/existential ->
+Spiritual pain (SP, 0-10 single-item), spirituality/religiosity-related variables (specific items not confirmed)
+
+symptom burden ->
+Global distress score-physical (composite physical symptom measure, exact items not confirmed)
+
+outcome variables ->
+Quality of Life (QOL, 0-100)
+Psychological distress / Depression (HADS-D)
+
+{
+NOTE: Full-text tables (baseline characteristics, multivariable regression coefficients for the SP-QOL association, confounder adjustment set) were not accessible — article is paywalled (Journal of Palliative Medicine / Mary Ann Liebert) and no open-access full text was located. Data below combines the PubMed abstract (which includes numeric results) and the prevalence figure from the source review table (Deng et al. 2026, Table 1). If you have institutional access to the full PDF, upload it and this document can be completed with the full regression table and confounder list.
+
+Reported sample characteristics (from PubMed abstract):
+208 patients enrolled; mean age 64 years; 50% female; 67% reported spiritual pain (SP present, defined as SP score >0 on the 0-10 scale, consistent with usage in related Latin American SP literature).
+
+Reported association: Spiritual pain was significantly associated with decreased quality of life in baseline analyses; the association with QOL was adjusted for potential confounders in a multivariable model (specific covariates and effect sizes not available from accessible sources).
+}
+
+Prevalence (per source review table, Deng et al. 2026, Table 1): Depression (HADS-D) prevalence in this sample: 37.5%. Sample: n=208, mean age 64.0 +/- 14.0, % female 50%, mixed cancer types.
+
+Key findings for model training:
+- This is one of the few studies in your corpus that centers the SPIRITUAL/EXISTENTIAL dimension (spiritual pain, single-item 0-10 self-report) as a driver of quality of life in advanced cancer, rather than depression itself as the primary outcome — depression (HADS-D) appears here as a secondary/comorbid distress measure rather than the study's main focus. Relevant to ACOMPANAR's spiritual dimension, and a useful reminder that spiritual pain and depression are related but conceptually distinct constructs that this study measured separately.
+- High prevalence of spiritual pain (67%) in a Chilean PC population — consistent with other Latin American studies in the broader literature (which report SP prevalence in the 44-67% range) — suggesting the spiritual dimension may carry substantial independent weight in this cultural/regional context, worth weighting appropriately in a model calibrated for Spanish-speaking/Latin American populations.
+- Inclusion criteria required a primary caregiver and excluded patients with delirium and KPS >80 — the sample is therefore restricted to patients with a support person and more advanced functional impairment; results may not generalize to patients without caregiver support or with better functional status.
+- The single-item (0-10) measurement approach for spiritual pain is a notably lightweight instrument compared to multi-item spirituality scales (e.g., FACIT-Sp) used elsewhere in the literature — a methodological consideration if standardizing measurement approaches across your corpus.
+
+Limitations noted by authors / inferred:
+- Cross-sectional design (baseline analysis of a longitudinal study) — cannot establish causal direction between spiritual pain and QOL.
+- Single-item measurement of spiritual pain — exploratory/screening-level instrument, not a validated multi-item spirituality or existential distress scale; may lack nuance relative to standardized tools.
+- Single-center sample (one PC clinic in Puente Alto, Chile) — limits generalizability, though study is explicitly framed by the authors as "exploratory."
+- Restrictive inclusion criteria (requires a primary caregiver, excludes delirium, KPS <=80 only) — selection bias toward a specific subgroup of PC patients; may not represent patients with better functional status, no caregiver, or cognitive impairment.
+- Full text not accessible for this extraction — exact QOL instrument name, full confounder-adjusted regression table, and complete baseline characteristics table could not be verified independently; entry is based on abstract-level and secondary-source data only.

@@ -1,0 +1,126 @@
+Artículo #13
+https://doi.org/10.7759/cureus.83493
+Prevalence of Depression and Anxiety in Cancer Patients Receiving Palliative Care in the Comprehensive Cancer Center, King Fahad Medical City, Riyadh, Saudi Arabia: A Cross-Sectional Study
+Nawaf A. Alotaibi, Abdullah I. Alsuhail
+Riyadh, Arabia Saudita, publicado 05 mayo 2025
+130 pacientes del Comprehensive Cancer Center, King Fahad Medical City (estudio unicéntrico, transversal)
+
+Escala Arábiga de Ansiedad y Depresión Hospitalaria (HADS) — validada por Terkawi et al. (2017)
+HADS-D (depresión) y HADS-A (ansiedad), 7 ítems cada subescala, rango 0-21
+Corte de interpretación: 0-7 normal | 8-10 borderline anormal | 11-21 anormal
+Punto de corte usado en el estudio para "caso": puntaje ≥8
+
+variables:
+sociodemográficas ->
+edad, género, estado civil, tiempo desde el diagnóstico, tipo de cáncer primario
+
+clínicas / tratamiento ->
+uso de antidepresivo (sí/no), enfermedad metastásica (sí/no), estado "no resucitar" (DNR), Palliative Performance Scale (PPS)
+
+síntomas físicos (recolectados vía Google Forms) ->
+dolor, cansancio/fatiga, somnolencia, náusea, falta de apetito, dificultad respiratoria
+
+variables de resultado ->
+HADS-D (puntaje depresión 0-21)
+HADS-A (puntaje ansiedad 0-21)
+
+Prevalencia general:
+HADS-D ≥8 (caso de depresión): 50% (n=65/130)
+HADS-D 8-10 (borderline): 18.5% (n=24/130)
+HADS-D 11-21 (anormal): 31.5% (n=41/130)
+HADS-A ≥8 (caso de ansiedad): 31% (n=40/130)
+HADS-A 8-10 (borderline): 9% (n=12/130)
+HADS-A 11-21 (anormal): 22% (n=28/130)
+
+{
+Características de los participantes (n=130)
+
+Género
+Masculino          43 (33%)
+Femenino           87 (67%)
+
+Edad
+<30                 8 (6%)
+30-39               14 (11%)
+40-49               28 (22%)
+50-59               35 (27%)
+≥60                 45 (34%)
+
+Estado civil
+Soltero             15 (12%)
+Casado              71 (55%)
+Divorciado          11 (9%)
+Viudo               33 (24%)
+
+Tiempo desde el primer diagnóstico
+<1 año              24 (19%)
+1-5 años            78 (60%)
+6-10 años           28 (21%)
+
+Paciente usando antidepresivo
+Sí                  26 (20%)
+No                  104 (80%)
+
+Paciente con enfermedad metastásica
+Sí                  61 (47%)
+No                  69 (53%)
+
+Cáncer primario más frecuente
+Mama                27 casos (21%)
+Pulmón              16 casos (12%)
+Cerebro             11 casos (9%)
+}
+
+{
+Correlación entre depresión/ansiedad y variables (Tabla 2)
+
+Variable                              HADS-D r    HADS-D p    HADS-A r    HADS-A p
+Edad                                  -0.082      0.35        -0.105      0.234
+Género                                0.035       0.69        0.064       0.47
+Estado civil                          0.004       0.967       0.064       0.471
+Tiempo desde diagnóstico              0.173       0.049       0.135       0.126
+Cáncer primario                       0.042       0.634       0.081       0.362
+Uso de antidepresivo                  0.248       0.004       0.358       0.001
+Enfermedad metastásica                -0.135      0.126       -0.223      0.011
+PPS score                             -0.202      0.02        -0.067      0.45
+Dolor                                 0.215       0.014       0.149       0.09
+Cansancio/fatiga                      0.265       0.002       0.133       0.132
+Somnolencia                           0.140       0.112       0.172       0.051
+Náusea                                0.091       0.3         0.155       0.08
+Falta de apetito                      0.187       0.03        0.178       0.04
+Dificultad respiratoria               -0.018      0.836       -0.074      0.403
+}
+
+{
+Asociación chi-cuadrado con puntajes HADS categorizados (Tabla 3) — variables con significancia estadística
+
+Uso de antidepresivo × HADS-D: p=0.024 (No: 45% caso | Sí: 69% caso)
+Uso de antidepresivo × HADS-A: p=0.001 (No: 22% caso | Sí: 65% caso)
+Enfermedad metastásica × HADS-A: p=0.022 (No metastásico: 39% caso | Metastásico: 21% caso — dirección inversa)
+}
+
+Hallazgos clave para modelado / entrenamiento:
+- Pacientes con dolor y fatiga: mayor probabilidad de depresión (dolor p=0.014; fatiga p=0.002)
+- Falta de apetito asociada a depresión (p=0.03) y ansiedad (p=0.04)
+- PPS más bajo (peor funcionalidad) correlaciona con mayor depresión (r=-0.202, p=0.02)
+- Enfermedad metastásica se asoció paradójicamente con MENOR ansiedad (r=-0.223, p=0.011; chi2 p=0.022) — hallazgo contraintuitivo discutido por los autores
+- Uso de antidepresivo se asoció con MAYOR depresión y ansiedad — interpretado por los autores como causalidad inversa (ya tenían diagnóstico previo que motivó la prescripción, no que el antidepresivo cause el síntoma)
+- Sin asociación significativa entre tipo de cáncer y depresión/ansiedad
+- Mayor tiempo desde el diagnóstico (>5 años) correlaciona positivamente con depresión (p=0.049)
+- Género femenino mostró mayor prevalencia de depresión/ansiedad, sin significancia estadística
+
+Comparación internacional citada en discusión (contexto para benchmarking del modelo):
+- Meta-análisis global: depresión más alta en África (36%), más baja en Europa (25%)
+- Manchester, Inglaterra: 25% ansiedad, 22% depresión
+- China: 29% ansiedad, 11% depresión
+- Brasil (atención primaria): 42% depresión
+- Arabia Saudita — colorrectal: 30% depresión (SCID)
+- Arabia Saudita — mama: 57% depresión moderada-severa, 44% ansiedad moderada-severa (HADS)
+- Arabia Saudita — sur (Najran): 42.4% depresión, 23.9% ansiedad
+- Arabia Saudita — malignidades hematológicas: 46.5% depresión, 22.3% ansiedad (PHQ-9/GAD-7)
+- Arabia Saudita — cribado nacional población general (2022): 12.7% MDD, 12.4% GAD
+
+Limitaciones señaladas por los autores:
+- Muestra N=130 limita análisis de subgrupos (ej. régimen antidepresivo específico)
+- Diseño unicéntrico, enrolamiento consecutivo — limita generalización
+- Transversal — no permite relaciones temporales ni controla confusores (nivel socioeconómico, soporte social, historia de salud mental detallada)

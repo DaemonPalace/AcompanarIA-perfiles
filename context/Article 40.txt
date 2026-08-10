@@ -1,0 +1,43 @@
+Article #4
+Screening for Depression in Palliative Cancer Patients Attending a Pain and Symptom Control Clinic
+Rami A. Sela
+Department of Psychosocial and Spiritual Resources, Cross Cancer Institute, Department of Oncology, Faculty of Medicine and Dentistry, University of Alberta, Edmonton, Alberta, Canada. Published 2007 — Palliative & Supportive Care, Vol. 5, No. 3, pp. 207-217, doi: 10.1017/S1478951507000375. Published online 24 Sep 2007.
+132 oncology outpatients attending a multidisciplinary pain and symptom control clinic at the Cross Cancer Institute, Edmonton, Alberta, Canada; cross-sectional design (single-visit screening survey); mixed cancer types (distribution not specified in available sources); 52.3% female (per source review table).
+
+Instruments:
+Brief Zung Self-Rating Depression Scale (BZSDS; Dugan et al., 1998) — abbreviated version of the Zung Self-Rating Depression Scale (SDS), used as the primary depression measure; scored into ranges of "mild," "moderate," and "severe" depressive symptoms
+Depression Visual Analogue Scale (DVAS) — single-item visual analogue scale, evaluated in this study as a brief alternative screening tool; correlated with the BZSDS at r = 0.82
+
+variables:
+sociodemographic ->
+sex (52.3% female per source review table; other sociodemographic variables not specified in available sources)
+
+clinical/medical status ->
+cancer diagnosis (mixed cancer types, distribution not specified in available sources); attendance at a pain and symptom control clinic (i.e., sample drawn from a symptomatic/advanced outpatient population, not necessarily a formal palliative care unit)
+
+outcome variables ->
+Depression (BZSDS; categorized as clinically significant vs. not, and further into mild/moderate/severe)
+Depression (DVAS) — evaluated for concurrent validity against the BZSDS, not as an independent outcome
+
+{
+Results (from published abstract):
+The majority of participants (72%) showed clinically significant depressive symptoms on the BZSDS, split as 21% "mild," 32% "moderate," and 19% "severe."
+Participants showed low endorsement of items reflecting overt manifestations of depression (e.g., sadness, tearfulness, irritability, suicidal ideation) — suggesting depression in this population may present atypically or be underrecognized through observable affect alone, consistent with the article's stated concern about underrecognition of depression in palliative care.
+The DVAS correlated strongly with the BZSDS (r = 0.82), supporting its use as a simple, quick screening tool in this population.
+NOTE: Full-text access to this article was not available (Cambridge Core, access-restricted; full-text purchase/institutional login required). The results above are from the published abstract; detailed statistical tables (e.g., item-level endorsement rates, ROC/sensitivity-specificity data for the DVAS, associations with clinical/demographic variables) could not be verified independently. If you have institutional access to the full PDF, upload it and this document can be completed with full table data.
+}
+
+Prevalence (per source review table, Deng et al. 2026, Table 1): Depression (SDS) prevalence in this sample: 72%. Sample: n=132, mean age NA (not reported in available sources), % female 52.3%, mixed cancer types.
+NOTE: This 72% figure matches the abstract's reported "72% clinically significant depressive symptoms" on the BZSDS, so it is well corroborated across primary and secondary sources (higher confidence than some other entries in this corpus where the source-table figure could not be cross-checked against the primary abstract).
+
+Key findings for model training:
+- One of the earliest studies in the corpus (2007) and one of the only ones to explicitly compare two screening instruments (a multi-item scale, BZSDS, vs. a single-item visual analogue scale, DVAS) for detecting depression — directly relevant if ACOMPANAR is considering brief/single-item emotional-state screening as an alternative to longer questionnaires.
+- The finding that patients showed LOW endorsement of overt/observable depressive manifestations (sadness, tearfulness, irritability, suicidal ideation) despite HIGH overall depressive symptom burden is an important and somewhat counterintuitive signal: it suggests depression in advanced cancer patients may manifest more through somatic/less-visible symptoms than through outwardly recognizable affect — a caution against relying on observable emotional expression alone as a proxy for depression risk.
+- Strong correlation (r = 0.82) between a single-item visual analogue scale and a full multi-item depression scale suggests that brief, low-burden screening tools can capture much of the same signal as longer instruments in this population — potentially useful for lightweight, low-friction check-ins in a conversational/companion tool context.
+- 72% prevalence is on the higher end of this corpus (range ~10-88%), consistent with a symptomatic outpatient population attending a pain and symptom control clinic (i.e., likely higher symptom burden than a general oncology outpatient sample).
+
+Limitations (inferred / reported):
+- Cross-sectional design — cannot assess how depression screening results relate to later clinical outcomes or change over time.
+- Single-center sample (one clinic in Edmonton, Alberta) — limits generalizability.
+- Sample specifically drawn from a pain and symptom control clinic — likely biased toward patients with higher symptom burden than a general oncology or palliative care population; prevalence figures may not generalize to less symptomatic advanced cancer populations.
+- Full text not accessible for this extraction — detailed statistical tables and any adjustment for confounding variables could not be verified independently; entry is based on abstract-level data and the source review table only.

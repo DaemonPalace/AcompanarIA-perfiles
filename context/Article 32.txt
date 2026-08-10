@@ -1,0 +1,102 @@
+Article #32
+Thoughts of self-harm and depression as prognostic factors in palliative care patients
+Mari Lloyd-Williams, Sheila Payne, et al.
+September 2014, United Kingdom
+Journal of Affective Disorders
+
+629 initial patients with various types of cancer, 139 patients died 6 months after study and 235 died during the study
+age 21-94 mean 66
+67% female
+37 week median survival rate
+PHQ-9
+ECOG-PS
+Edinburg Depression Scale (EDS)
+DSM-IV
+Reports thoughts of self harm
+
+{able 1. Baseline characteristics.
+Empty Cell	Total n=629
+Age, n, mean, IQR, range, SD	n=628, 66, 21–93, 12.87
+Gender, n (%)	
+ Male	207 (33)
+ Female	422 (67)
+
+Ethnic origin, n (%)	
+ White British	613 (97)
+ Other	16 (3)
+Marital status, n (%)	n=628
+Married	323 (51)
+Divorced/widowed/single (living with family/friend)	58 (9)
+Divorced/widowed/single (living alone)	217 (35)
+Other	30 (5)
+Time since diagnosis, n, median, IQR (years), range (years)	n=627, 3, 1–6, 0–10
+
+Primary site of cancer, n (%)	
+(some have more than one primary cancer)	
+Bone	16 (2)
+Liver	15 (2)
+Breast	218 (32)
+Lung	78 (12)
+Central nervous system	8 (1)
+Male specific	57 (8)
+Female specific	51 (8)
+Renal	27 (4)
+Gastrointestinal	116 (17)
+Skin and connective tissues	10 (1)
+Haematology	24 (4)
+Head and neck	40 (6)
+Other	19 (3)
+EDS, n, median, IQR, range	629, 6.0, 3–10, 0–28
+
+EDS, n (%)	
+<13	520 (83)
+≥13	109 (17)
+PHQ9, n, median, IQR, range	629, 7.0, 3–10, 0–27
+
+PHQ9, n (%)	
+≤9	430 (68)
+14-Oct	133 (21)
+≥15	66 (11)
+
+ECOG, n (%)	
+0	32 (5)
+1	267 (42)
+2	175 (28)
+3	131 (21)
+4	24 (4)
+}{
+
+Table 2. Characteristics of patients who scored for thoughts of self-harm at any time point during the 6 months follow-up.
+Baseline characteristics	Self-harm at any time point from baseline to 24 weeks
+No 492 (78%)	Yes 137 (22%)
+Age		
+ mean, median, IQR, range, SD	67, 67, 60–77, 21–92, 12.74	53, 64, 55–77, 38–93, 12.26
+
+Gender, n (%)		
+ Male	160 (33)	47(34)
+ Female	332 (67)	90 (66)
+
+Type of cancer, n (%)		
+(some have more than one type of cancer)		
+Bone	13	3
+Liver	13	2
+Breast	167 (34)	51 (35)
+Lung	64 (13)	14 (10)
+Central nervous system	5	3
+Male specific	46 (9)	11 (7)
+Female specific	40 (8)	11 (7)
+Renal	24	3
+Gastrointestinal	87 (18)	29 (20)
+Skin and connective tissues	7	3
+Haematology	21	3
+Head and neck	30	10
+Other	15	4
+
+EDS		
+Median, IQR, range	5, 2–9, 0–21	11, 7–17, 0–28
+
+PHQ9		
+Median, IQR, range	6, 3–9, 0–22	11, 7–15, 1–27}
+
+
+

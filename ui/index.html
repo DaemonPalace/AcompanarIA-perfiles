@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACOMPAÑAR — Editor de Grafo Clínico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>ACOMPAÑAR · Editor de Grafo Clínico</h1>
+  <p>Mapa mental de variables y relaciones del modelo — edición visual sin código, import/export de <code>graph_model.json</code>, generación de dataset sintético.</p>
+</header>
+
+<div id="banner" class="banner" hidden>
+  <span id="banner-text"></span>
+  <button class="close-x" id="banner-close" aria-label="Cerrar">&times;</button>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-group">
+    <button class="secondary-btn" id="btn-import">Importar JSON</button>
+    <input type="file" id="file-import" accept="application/json,.json" hidden>
+    <button class="secondary-btn" id="btn-export">Exportar JSON</button>
+  </div>
+  <div class="toolbar-group">
+    <label>Perfiles (n)
+      <input type="number" id="gen-n" min="1" max="20000" value="500">
+    </label>
+    <label>Semilla (opcional)
+      <input type="number" id="gen-seed" placeholder="ej. 42">
+    </label>
+    <button class="primary-btn" id="btn-generate">Generar dataset</button>
+  </div>
+</div>
+
+<div class="workspace">
+  <div id="canvas-wrap">
+    <svg id="graph-svg"></svg>
+    <div id="legend"></div>
+    <div id="hint">Clic: seleccionar nodo/relación · Shift/Ctrl+clic un 2º nodo: comparar par · Clic en vacío: quitar selección · Arrastrar: reposicionar</div>
+  </div>
+  <aside id="inspector" hidden></aside>
+</div>
+
+<div id="compare-popup" hidden></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

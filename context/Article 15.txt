@@ -1,0 +1,53 @@
+Article #1
+The Influence of Family Adaptability and Cohesion on Anxiety and Depression of Terminally Ill Cancer Patients
+Young-Yoon Park, Young-Jin Jeong, Junyong Lee, Nayun Moon, Inho Bang, Hyunju Kim, Kyung-Sook Yun, Yong-I Kim, Tae-Hee Jeon
+Single-center study (Veterans Health Service Medical Center, Seoul, South Korea), published 2018 — Supportive Care in Cancer, Vol. 26, No. 1, pp. 313-321, doi: 10.1007/s00520-017-3912-4. Received 11 Jul 2017 / Accepted 25 Sep 2017 / Published online 4 Oct 2017.
+100 terminally ill cancer patients admitted to a palliative care unit in Seoul, South Korea; cross-sectional design (survey + medical record review); recruitment June 2016-March 2017; single hospital, convenience sample.
+
+Instruments:
+Family Adaptability and Cohesion Evaluation Scales III (FACES-III), Korean version — 30 items, 5-point Likert scale ("never" to "always"); two subscales: family adaptability and family cohesion; total Cronbach's alpha = 0.83 (originally validated in families with schizophrenia; noted as widely used in terminally ill cancer patients); FACES-III scores dichotomized into high vs. low adaptability and high vs. low cohesion for analysis
+Hospital Anxiety and Depression Scale (HADS), Korean version — subscales HADS-A (anxiety) and HADS-D (depression) used as outcome variables; exact cutoff score used by these authors not confirmed in available secondary sources (standard Korean-validated cutoffs are typically >=8 or >=11)
+ECOG Performance Status — used as a covariate in adjusted regression models
+
+variables:
+sociodemographic ->
+age, sex, monthly average household income
+
+clinical/medical status ->
+ECOG Performance Status, cancer diagnosis (mixed cancer types, distribution not specified in available sources)
+
+family/relational ->
+presence of a family caregiver (yes/no), visiting time by family and friends, family adaptability (high/low, FACES-III), family cohesion (high/low, FACES-III)
+
+outcome variables ->
+Anxiety (HADS-A)
+Depression (HADS-D)
+
+{
+NOTE: Full-text tables (sample characteristics, unadjusted group comparisons, complete regression model) were not accessible — article is paywalled on SpringerLink and no open-access full text was located. The results below are drawn from the published abstract and results summary available via SpringerLink/PubMed, and from the prevalence figure supplied in the source review table (Deng et al. 2026 meta-analysis, Table 1). If you have institutional access to the full PDF, upload it and this document can be completed with full table data (sample characteristics table, cancer-type breakdown, exact HADS-D cutoff, full regression coefficient table).
+
+Chi-square analysis: presence of a family caregiver and family/friend visiting time were NOT statistically significantly associated with anxiety or depression.
+
+Multiple logistic regression (adjusted for age, sex, ECOG PS, and monthly average household income):
+Predictor                          Outcome        Adjusted OR (95% CI)
+Low family adaptability            Anxiety        2.4 (1.03-5.83)
+Low family adaptability            Depression     5.4 (1.10-26.87)
+Low family cohesion                Depression     5.4 (1.10-27.20)
+(No significant association reported between family cohesion and anxiety.)
+}
+
+Prevalence (per source review table, Deng et al. 2026, Table 1): Depression (HADS-D) prevalence in this sample: 88%. Sample: n=100, mean age NA (not reported in available sources), % female 19%, mixed cancer types.
+NOTE: 88% is a notable outlier relative to the rest of this corpus (range ~10-72% across the other 8 studies in the table). This may reflect a lower HADS-D cutoff, a specifically late-stage/terminal sub-population, or a scoring difference in the Korean validation. The exact cutoff used could not be confirmed from available sources — flag for verification before using as a benchmark figure.
+
+Key findings for model training:
+- This is one of the few studies in your corpus focused explicitly on the RELATIONAL/FAMILY dimension (family adaptability and cohesion, FACES-III) as a predictor of depression, rather than purely clinical or demographic variables — directly relevant to ACOMPANAR's "relational" dimension.
+- Family cohesion emerged as a significant predictor of depression but NOT of anxiety, suggesting these two constructs may have distinct relational determinants — relevant if your algorithm currently treats anxiety and depression as a single emotional axis.
+- Confidence intervals are very wide (e.g., 1.10-26.87), signaling low statistical precision — expectable given n=100 and likely small cell counts in some categories. Treat these ORs as directional/effect-size signals rather than precise estimates.
+- Presence of a family caregiver and visiting frequency alone were NOT sufficient to protect against anxiety/depression — it was the QUALITY of family functioning (adaptability, cohesion) that mattered, not mere physical presence. This is a useful distinction for ACOMPANAR: presence/frequency-based relational metrics may be insufficient; quality-of-relationship metrics may carry more predictive weight.
+- The 88% depression prevalence is a high outlier versus the rest of the corpus — flag before using as a benchmark or ceiling estimate.
+
+Limitations noted by authors / inferred:
+- Cross-sectional design — cannot establish causality between family functioning and anxiety/depression (bidirectional relationship plausible).
+- Small, single-center sample (n=100, one hospital in Seoul) — limits generalizability.
+- Possible cultural/measurement specificity: Korean-validated FACES-III and HADS may not be directly comparable to validations used in other countries in this corpus.
+- Full text not accessible for this extraction — sample characteristics table, cancer-type breakdown, exact HADS-D cutoff, and complete regression table could not be verified independently; entry is based on abstract-level and secondary-source data only.

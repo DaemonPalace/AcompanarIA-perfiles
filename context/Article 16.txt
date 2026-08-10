@@ -1,0 +1,42 @@
+Article #3
+Symptoms of Advanced Cancer in Palliative Medicine: A Longitudinal Study
+Leslye Rojas-Concha, Maiken Bang Hansen, Morten Aagaard Petersen, Mogens Groenvold
+Palliative Care Research Unit, Department of Geriatrics and Palliative Medicine, Bispebjerg and Frederiksberg Hospital, University of Copenhagen, Copenhagen, Denmark (Groenvold additionally affiliated with the Department of Public Health, University of Copenhagen). Published 2023 — BMJ Supportive & Palliative Care, Vol. 13, pp. e415-e427, doi: 10.1136/bmjspcare-2021-002999.
+201 patients with advanced cancer admitted to specialized palliative care in Denmark; longitudinal design (assessment at admittance and again during the first month of follow-up); mean age 66 years; 48.3% female; mixed cancer types (distribution not specified in available sources).
+
+Instruments:
+Hospital Anxiety and Depression Scale (HADS), subscale HADS-D used to assess depression as an outcome/symptom; exact cutoff score used by these authors not confirmed in available secondary sources (standard cutoffs are typically >=8 or >=11)
+European Organisation for Research and Treatment of Cancer Quality of Life Questionnaire (EORTC QLQ-C15-PAL or related EORTC instrument) — commonly used alongside HADS in this research group's other Danish palliative-care register studies; use in this specific paper not independently confirmed from available sources
+Patient characteristics/covariates used to examine association with symptom change (specific list not confirmed from available sources — likely includes age, sex, cancer diagnosis, and performance status based on this research group's standard methodology)
+
+variables:
+sociodemographic ->
+age, sex (specific additional variables not confirmed from available sources)
+
+clinical/medical status ->
+cancer diagnosis (mixed cancer types, distribution not specified in available sources), time since admittance to palliative care
+
+outcome variables ->
+Depression (HADS-D) — also part of a broader symptom battery, since the study's stated objective was to examine general symptomatology (not depression alone) at admittance and its change over the first month
+
+{
+NOTE: Full-text access to this article was not available (BMJ Supportive & Palliative Care article, access-restricted; open-access full text was not located). The information below is drawn from the published abstract objectives, the study design as indexed in PubMed/Frontiers reference lists, and the prevalence figure supplied in the source review table (Deng et al. 2026 meta-analysis, Table 1). If you have institutional access to the full PDF, upload it and this document can be completed with full table data (symptom battery used, complete list of covariates, exact HADS-D cutoff, statistical results on symptom change over time).
+
+Stated objectives (from abstract): to examine the symptomatology of patients with advanced cancer at admittance to palliative care services, to investigate how symptomatology changed during the first month of follow-up, and whether these changes were associated with various patient characteristics.
+
+Specific numerical results for depression/HADS-D (baseline levels, magnitude of change over the first month, and which patient characteristics were associated with change) could not be confirmed from available sources — flagged for verification if full text becomes available.
+}
+
+Prevalence (per source review table, Deng et al. 2026, Table 1): Depression (HADS-D) prevalence in this sample: 10%. Sample: n=201, mean age 66, % female 48.3%, mixed cancer types.
+NOTE: 10% is the lowest depression prevalence in this 9-study corpus (range ~10-88%). This may reflect a stricter/higher HADS-D cutoff, a less advanced-stage or better-functioning sample relative to other studies, or a genuine difference in the Danish palliative care population. The exact cutoff and sample severity characteristics could not be confirmed from available sources — flag for verification before using as a benchmark figure.
+
+Key findings for model training:
+- This is the only explicitly LONGITUDINAL study in the corpus with symptom trajectory (not a single cross-sectional snapshot) as its central design feature, examining how depression/symptoms change over the first month after admittance to palliative care — directly relevant if ACOMPANAR needs to model depression as a trajectory rather than a static state.
+- The study's framing (symptomatology broadly, with depression as one symptom among several) differs from studies that treat depression as the sole primary outcome — useful reminder that depression often co-occurs with and is measured alongside other physical/psychological symptoms in real clinical assessment protocols.
+- The very low prevalence (10%) relative to the rest of the corpus is a notable outlier at the opposite extreme from Park et al. (88%) — the two studies together illustrate how much reported depression prevalence can vary by cutoff, population, and clinical setting, which is a caution against treating any single prevalence figure as a universal benchmark.
+- Danish register-based/clinical palliative care research from this group (Rojas-Concha, Hansen, Petersen, Groenvold) tends to be methodologically rigorous and large-scale (national registers), so this study's findings may be more generalizable within a Danish/Scandinavian palliative care context than smaller single-center studies elsewhere in the corpus.
+
+Limitations (inferred / reported):
+- Full text not accessible for this extraction — the exact symptom battery, complete covariate list, exact HADS-D cutoff, and detailed statistical results on symptom change could not be verified independently; entry is based on abstract-level objectives and secondary-source data only.
+- As with other studies in palliative care settings, attrition over the one-month follow-up (due to death or clinical deterioration) is a plausible methodological limitation, though this could not be confirmed from available sources.
+- Single-country (Denmark) setting — cultural and health-system-specific factors may limit direct comparability with studies from other countries in this corpus.

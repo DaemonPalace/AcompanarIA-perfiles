@@ -1,0 +1,1707 @@
+{
+  "metadata": {
+    "model_name": "Palliative Care Baseline",
+    "version": "1.0.0",
+    "last_modified": "2026-08-10"
+  },
+  "nodes": [
+    {
+      "id": "base_neurological_disease",
+      "label": "Base Neurological Disease",
+      "category": "clinical",
+      "desc": "The specific degenerative neurological disease driving the palliative process.",
+      "type": "categorical",
+      "categories": [
+        "Parkinson's",
+        "ALS",
+        "Alzheimer's",
+        "Huntington's",
+        "Multiple Sclerosis",
+        "Other"
+      ],
+      "probabilities": [
+        0.35,
+        0.15,
+        0.3,
+        0.05,
+        0.1,
+        0.05
+      ]
+    },
+    {
+      "id": "disease_stage",
+      "label": "Disease Stage",
+      "category": "clinical",
+      "desc": "Clinical stage of advance of the base disease, from mild to terminal.",
+      "type": "categorical",
+      "categories": [
+        "Stage 1 (Mild)",
+        "Stage 2 (Moderate)",
+        "Stage 3 (Advanced)",
+        "Terminal"
+      ],
+      "probabilities": [
+        0.25,
+        0.35,
+        0.25,
+        0.15
+      ]
+    },
+    {
+      "id": "depressive_diagnosis_dsm5",
+      "label": "Depressive Diagnosis (DSM-5)",
+      "category": "clinical",
+      "desc": "DSM-5 depressive disorder category assigned to the patient.",
+      "type": "categorical",
+      "categories": [
+        "Major depressive disorder",
+        "Dysthymia (persistent depressive disorder)",
+        "Subclinical depression",
+        "No formal diagnosis"
+      ],
+      "probabilities": [
+        0.4,
+        0.2,
+        0.25,
+        0.15
+      ]
+    },
+    {
+      "id": "depressive_episode_type",
+      "label": "Depressive Episode Type",
+      "category": "clinical",
+      "desc": "Whether the current major depressive episode is a single or recurrent occurrence (DSM-5).",
+      "type": "binary",
+      "categories": [
+        "Single",
+        "Recurrent"
+      ],
+      "probabilities": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "id": "psychiatric_comorbidities",
+      "label": "Psychiatric Comorbidities",
+      "category": "clinical",
+      "desc": "Comorbid psychiatric condition present alongside the depressive disorder.",
+      "type": "categorical",
+      "categories": [
+        "Anxiety disorder",
+        "OCD",
+        "Personality disorder",
+        "None"
+      ],
+      "probabilities": [
+        0.4,
+        0.08,
+        0.07,
+        0.45
+      ]
+    },
+    {
+      "id": "somatic_symptoms_cluster",
+      "label": "Somatic Symptoms Cluster",
+      "category": "clinical",
+      "desc": "Dominant somatic symptom cluster accompanying the depressive presentation (DSM-5 Criterion A).",
+      "type": "categorical",
+      "categories": [
+        "Insomnia",
+        "Hypersomnia",
+        "Anorexia",
+        "Severe fatigue",
+        "Psychomotor agitation",
+        "None"
+      ],
+      "probabilities": [
+        0.3,
+        0.1,
+        0.15,
+        0.25,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "id": "metastatic_disease",
+      "label": "Metastatic Disease",
+      "category": "oncology",
+      "desc": "Whether the patient's cancer/disease has metastasized, marking a more advanced disease burden.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "id": "chemotherapy_current",
+      "label": "Current Chemotherapy",
+      "category": "oncology",
+      "desc": "Whether the patient is currently receiving chemotherapy or other active oncological treatment.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "id": "psychoactive_medication",
+      "label": "Psychoactive Medication",
+      "category": "medication",
+      "desc": "Current class of psychoactive medication prescribed to the patient, if any.",
+      "type": "categorical",
+      "categories": [
+        "Antidepressants",
+        "Anxiolytics",
+        "Antipsychotics",
+        "None"
+      ],
+      "probabilities": [
+        0.45,
+        0.2,
+        0.1,
+        0.25
+      ]
+    },
+    {
+      "id": "opioid_use",
+      "label": "Opioid Analgesic Use",
+      "category": "medication",
+      "desc": "Whether the patient is currently on opioid analgesics for pain control.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.65,
+        0.35
+      ]
+    },
+    {
+      "id": "antiemetic_use",
+      "label": "Antiemetic Use",
+      "category": "medication",
+      "desc": "Whether the patient is currently on antiemetic medication to control nausea/vomiting.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.7,
+        0.3
+      ]
+    },
+    {
+      "id": "opioid_induced_constipation",
+      "label": "Opioid-Induced Constipation",
+      "category": "side_effect",
+      "desc": "Severity of constipation attributable to opioid analgesic use.",
+      "type": "ordinal",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.0,
+      "baseline_std": 2.5
+    },
+    {
+      "id": "sedation_level",
+      "label": "Sedation Level",
+      "category": "side_effect",
+      "desc": "Degree of pharmacological sedation from opioids or psychoactive medication.",
+      "type": "ordinal",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.0,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "nutritional_status_mna",
+      "label": "Nutritional Status (MNA-SF)",
+      "category": "functional",
+      "desc": "Mini Nutritional Assessment - Short Form score; lower values indicate malnutrition risk.",
+      "type": "continuous",
+      "range": [
+        0,
+        14
+      ],
+      "baseline_mean": 9.0,
+      "baseline_std": 3.0
+    },
+    {
+      "id": "functional_autonomy_adl",
+      "label": "Functional Autonomy (Barthel ADL)",
+      "category": "functional",
+      "desc": "Barthel Index of Activities of Daily Living; higher values indicate greater independence.",
+      "type": "continuous",
+      "range": [
+        0,
+        100
+      ],
+      "baseline_mean": 55.0,
+      "baseline_std": 22.0
+    },
+    {
+      "id": "instrumental_autonomy_iadl",
+      "label": "Instrumental Autonomy (Lawton IADL)",
+      "category": "functional",
+      "desc": "Lawton-Brody Instrumental Activities of Daily Living score.",
+      "type": "continuous",
+      "range": [
+        0,
+        8
+      ],
+      "baseline_mean": 4.0,
+      "baseline_std": 2.0
+    },
+    {
+      "id": "cognitive_function_mmse",
+      "label": "Cognitive Function (MMSE)",
+      "category": "functional",
+      "desc": "Mini-Mental State Examination score; scores below 23/24 suggest cognitive impairment.",
+      "type": "continuous",
+      "range": [
+        0,
+        30
+      ],
+      "baseline_mean": 23.0,
+      "baseline_std": 5.0
+    },
+    {
+      "id": "global_performance_status",
+      "label": "Global Performance Status",
+      "category": "functional",
+      "desc": "Overall functional performance of the patient on a 0-10 scale (protective factor for mood).",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.5,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "ecog_performance_status",
+      "label": "ECOG Performance Status",
+      "category": "functional",
+      "desc": "Eastern Cooperative Oncology Group performance status, 0 (fully active) to 4 (bedridden).",
+      "type": "ordinal",
+      "range": [
+        0,
+        4
+      ],
+      "baseline_mean": 2.0,
+      "baseline_std": 1.0
+    },
+    {
+      "id": "mobility",
+      "label": "Mobility",
+      "category": "functional",
+      "desc": "Patient's current level of physical mobility.",
+      "type": "categorical",
+      "categories": [
+        "Autonomous",
+        "With support",
+        "Wheelchair",
+        "Bedridden"
+      ],
+      "probabilities": [
+        0.3,
+        0.3,
+        0.25,
+        0.15
+      ]
+    },
+    {
+      "id": "fine_motor_control",
+      "label": "Fine Motor Control",
+      "category": "functional",
+      "desc": "Degree of preserved fine motor control, relevant for app/device usability.",
+      "type": "categorical",
+      "categories": [
+        "Preserved",
+        "Partially preserved",
+        "Lost"
+      ],
+      "probabilities": [
+        0.4,
+        0.35,
+        0.25
+      ]
+    },
+    {
+      "id": "communication_capacity",
+      "label": "Communication Capacity",
+      "category": "functional",
+      "desc": "Patient's capacity to communicate verbally.",
+      "type": "categorical",
+      "categories": [
+        "Fluent verbal",
+        "Limited verbal",
+        "Gestural only",
+        "No verbal communication"
+      ],
+      "probabilities": [
+        0.5,
+        0.25,
+        0.15,
+        0.1
+      ]
+    },
+    {
+      "id": "chronic_pain",
+      "label": "Chronic Pain",
+      "category": "symptom",
+      "desc": "Chronic pain intensity (ESAS-style 0-10 scale).",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 4.0,
+      "baseline_std": 2.6
+    },
+    {
+      "id": "fatigue",
+      "label": "Fatigue",
+      "category": "symptom",
+      "desc": "Fatigue intensity (ESAS-style 0-10 scale).",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.0,
+      "baseline_std": 2.4
+    },
+    {
+      "id": "appetite_loss",
+      "label": "Appetite Loss",
+      "category": "symptom",
+      "desc": "Loss of appetite intensity (ESAS-style 0-10 scale).",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.8,
+      "baseline_std": 2.6
+    },
+    {
+      "id": "nausea_vomiting",
+      "label": "Nausea / Vomiting",
+      "category": "symptom",
+      "desc": "Nausea and vomiting intensity (ESAS-style 0-10 scale).",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 2.5,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "dyspnea",
+      "label": "Dyspnea",
+      "category": "symptom",
+      "desc": "Shortness of breath intensity, common in advanced disease.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.0,
+      "baseline_std": 2.4
+    },
+    {
+      "id": "drowsiness",
+      "label": "Drowsiness",
+      "category": "symptom",
+      "desc": "Daytime drowsiness intensity, a common nutrition-impact/medication-related symptom.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.5,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "insomnia_severity",
+      "label": "Insomnia Severity",
+      "category": "symptom",
+      "desc": "Severity of sleep-onset/maintenance difficulty (DSM-5 Criterion A4).",
+      "type": "ordinal",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 4.0,
+      "baseline_std": 2.5
+    },
+    {
+      "id": "depression_severity_index",
+      "label": "Depression Severity Index",
+      "category": "psychological",
+      "desc": "Continuous proxy (GDS/HAM-D style, 0-27) for DSM-5 major depressive episode severity specifiers (F32.0-F32.3).",
+      "type": "continuous",
+      "range": [
+        0,
+        27
+      ],
+      "baseline_mean": 10.0,
+      "baseline_std": 6.0
+    },
+    {
+      "id": "anxiety_level",
+      "label": "Anxiety Level",
+      "category": "psychological",
+      "desc": "Anxiety symptom intensity, proxy for HADS-A subscale.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 4.5,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "suicidal_ideation_risk",
+      "label": "Suicidal Ideation Risk",
+      "category": "psychological",
+      "desc": "Latent 0-10 risk score for suicidal ideation (DSM-5 Criterion A9); scores >=7 should trigger the maximum-priority alert protocol.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 2.0,
+      "baseline_std": 2.0
+    },
+    {
+      "id": "spiritual_pain",
+      "label": "Spiritual Pain",
+      "category": "psychological",
+      "desc": "Existential/spiritual suffering intensity distinct from physical or mood symptoms.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 3.0,
+      "baseline_std": 2.5
+    },
+    {
+      "id": "distress_level",
+      "label": "Distress Level (ESAS)",
+      "category": "emotional",
+      "desc": "General emotional distress, captured by the conversational assistant.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.0,
+      "baseline_std": 2.0
+    },
+    {
+      "id": "loneliness",
+      "label": "Loneliness (ESAS)",
+      "category": "emotional",
+      "desc": "Sense of loneliness; the system's primary emotional metric.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.0,
+      "baseline_std": 2.2
+    },
+    {
+      "id": "death_anxiety",
+      "label": "Death Anxiety (ESAS)",
+      "category": "emotional",
+      "desc": "Fear of death, 0=acceptance to 10=terror; key indicator for Logotherapy vs. CBT selection.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 4.5,
+      "baseline_std": 2.3
+    },
+    {
+      "id": "meaning_in_life",
+      "label": "Meaning in Life (ESAS)",
+      "category": "emotional",
+      "desc": "Sense of meaning, 0=existential void to 10=clear sense of meaning; indicator for existential approach.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.5,
+      "baseline_std": 2.2
+    },
+    {
+      "id": "emotional_trend_7d",
+      "label": "7-Day Emotional Trend (ESAS)",
+      "category": "emotional",
+      "desc": "Weighted average of the last 7 emotional check-ins; detects gradual deterioration.",
+      "type": "continuous",
+      "range": [
+        0,
+        10
+      ],
+      "baseline_mean": 5.0,
+      "baseline_std": 1.8
+    },
+    {
+      "id": "caregiver_burnout_zarit",
+      "label": "Caregiver Burnout (Zarit)",
+      "category": "relational",
+      "desc": "Zarit Burden Interview score for the primary caregiver.",
+      "type": "continuous",
+      "range": [
+        0,
+        88
+      ],
+      "baseline_mean": 38.0,
+      "baseline_std": 16.0
+    },
+    {
+      "id": "caregiver_type",
+      "label": "Caregiver Type",
+      "category": "relational",
+      "desc": "Relationship of the primary caregiver to the patient.",
+      "type": "categorical",
+      "categories": [
+        "Direct family",
+        "Professional caregiver",
+        "Volunteer",
+        "None identified"
+      ],
+      "probabilities": [
+        0.65,
+        0.2,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "id": "caregiver_contact_frequency",
+      "label": "Caregiver Contact Frequency",
+      "category": "relational",
+      "desc": "How often the caregiver is in contact with the patient.",
+      "type": "categorical",
+      "categories": [
+        "24/7 at home",
+        "Daily visits",
+        "Weekly visits",
+        "Sporadic contact"
+      ],
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "id": "caregiver_detected_signals",
+      "label": "Caregiver-Detected Alert Signals",
+      "category": "relational",
+      "desc": "Warning signs the caregiver reports observing in day-to-day contact.",
+      "type": "categorical",
+      "categories": [
+        "Frequent crying",
+        "Isolation",
+        "Refusal to eat",
+        "Visible insomnia",
+        "No alert signs"
+      ],
+      "probabilities": [
+        0.25,
+        0.25,
+        0.15,
+        0.2,
+        0.15
+      ]
+    },
+    {
+      "id": "relationship_quality",
+      "label": "Relationship Quality",
+      "category": "relational",
+      "desc": "Quality of the relationship between patient and caregiver.",
+      "type": "categorical",
+      "categories": [
+        "Very close",
+        "Close",
+        "Distant",
+        "Conflictive"
+      ],
+      "probabilities": [
+        0.35,
+        0.35,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "id": "family_support_network",
+      "label": "Family Support Network",
+      "category": "relational",
+      "desc": "Size of the patient's family/social support network.",
+      "type": "categorical",
+      "categories": [
+        "Extensive (5+)",
+        "Moderate (2-4)",
+        "Minimal (1)",
+        "None"
+      ],
+      "probabilities": [
+        0.25,
+        0.4,
+        0.25,
+        0.1
+      ]
+    },
+    {
+      "id": "age_bracket",
+      "label": "Age Bracket",
+      "category": "demographic",
+      "desc": "Patient age interval; determines the appropriate therapeutic approach by life stage.",
+      "type": "categorical",
+      "categories": [
+        "18-35",
+        "36-55",
+        "56-70",
+        "71+"
+      ],
+      "probabilities": [
+        0.1,
+        0.25,
+        0.35,
+        0.3
+      ]
+    },
+    {
+      "id": "gender",
+      "label": "Gender",
+      "category": "demographic",
+      "desc": "Patient's gender identity.",
+      "type": "categorical",
+      "categories": [
+        "Female",
+        "Male",
+        "Non-binary",
+        "Prefer not to say"
+      ],
+      "probabilities": [
+        0.52,
+        0.45,
+        0.02,
+        0.01
+      ]
+    },
+    {
+      "id": "living_environment",
+      "label": "Living Environment",
+      "category": "demographic",
+      "desc": "Where the patient currently lives.",
+      "type": "categorical",
+      "categories": [
+        "Family home",
+        "Living alone",
+        "Clinic",
+        "Nursing home"
+      ],
+      "probabilities": [
+        0.55,
+        0.15,
+        0.1,
+        0.2
+      ]
+    },
+    {
+      "id": "socioeconomic_level",
+      "label": "Socioeconomic Level",
+      "category": "demographic",
+      "desc": "Socioeconomic stratum, affecting available intervention modality.",
+      "type": "categorical",
+      "categories": [
+        "Stratum 1-2",
+        "Stratum 3-4",
+        "Stratum 5-6"
+      ],
+      "probabilities": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    },
+    {
+      "id": "education_level",
+      "label": "Education Level",
+      "category": "demographic",
+      "desc": "Highest education level attained.",
+      "type": "categorical",
+      "categories": [
+        "None",
+        "Primary",
+        "Secondary",
+        "University",
+        "Postgraduate"
+      ],
+      "probabilities": [
+        0.1,
+        0.3,
+        0.35,
+        0.2,
+        0.05
+      ]
+    },
+    {
+      "id": "religiosity",
+      "label": "Religiosity / Spirituality",
+      "category": "demographic",
+      "desc": "Self-reported degree of religiosity or spirituality; relevant for Logotherapy and existential approaches.",
+      "type": "categorical",
+      "categories": [
+        "High",
+        "Medium",
+        "Low",
+        "None"
+      ],
+      "probabilities": [
+        0.35,
+        0.35,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "id": "native_language",
+      "label": "Native Language",
+      "category": "demographic",
+      "desc": "Patient's native/first language; determines the cultural profile of the conversational assistant.",
+      "type": "categorical",
+      "categories": [
+        "Spanish",
+        "Indigenous language",
+        "Other"
+      ],
+      "probabilities": [
+        0.9,
+        0.05,
+        0.05
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_metastatic_disease_ecog_performance_status",
+      "source": "metastatic_disease",
+      "target": "ecog_performance_status",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.0,
+      "formula": "target += source * weight",
+      "desc": "Metastatic disease is associated with worse (higher) ECOG performance status scores.",
+      "ref": "Article_29 / Article 30 (ECOG-PS worse with metastatic/advanced disease)"
+    },
+    {
+      "id": "e_metastatic_disease_chronic_pain",
+      "source": "metastatic_disease",
+      "target": "chronic_pain",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.5,
+      "formula": "target += source * weight",
+      "desc": "Metastatic disease increases baseline chronic pain intensity.",
+      "ref": "Article_27 (pain present in 79-96% of advanced cancer patients)"
+    },
+    {
+      "id": "e_chemotherapy_current_fatigue",
+      "source": "chemotherapy_current",
+      "target": "fatigue",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 1.5,
+      "formula": "target += source * weight",
+      "desc": "Active chemotherapy is one of the nutrition-impact symptoms most strongly associated with higher fatigue burden.",
+      "ref": "Article_14 (fatigue among strongest NIS associations with depression, p<0.001)"
+    },
+    {
+      "id": "e_chronic_pain_fatigue",
+      "source": "chronic_pain",
+      "target": "fatigue",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Chronic pain contributes to the overall symptom-burden cluster that includes fatigue.",
+      "ref": "Article_27 / clinical symptom-cluster estimate"
+    },
+    {
+      "id": "e_opioid_use_drowsiness",
+      "source": "opioid_use",
+      "target": "drowsiness",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2.0,
+      "formula": "target += source * weight",
+      "desc": "Opioid analgesics commonly induce daytime drowsiness as a class effect.",
+      "ref": "Article_14 / Article_27 (drowsiness as a nutrition-impact/opioid-related symptom)"
+    },
+    {
+      "id": "e_fatigue_drowsiness",
+      "source": "fatigue",
+      "target": "drowsiness",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Fatigue and drowsiness co-occur within the same symptom cluster.",
+      "ref": "Article_27 (drowsiness/fatigue symptom cluster)"
+    },
+    {
+      "id": "e_opioid_use_sedation_level",
+      "source": "opioid_use",
+      "target": "sedation_level",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2.5,
+      "formula": "target += source * weight",
+      "desc": "Opioid analgesics are a leading pharmacological cause of sedation in palliative patients.",
+      "ref": "Article_29 (opioid use context) / clinical pharmacology"
+    },
+    {
+      "id": "e_opioid_use_opioid_induced_constipation",
+      "source": "opioid_use",
+      "target": "opioid_induced_constipation",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 6.0,
+      "formula": "target += source * weight",
+      "desc": "Constipation is the most common and persistent opioid side effect (class effect).",
+      "ref": "Article_29 (opioid use context) / clinical pharmacology"
+    },
+    {
+      "id": "e_chronic_pain_appetite_loss",
+      "source": "chronic_pain",
+      "target": "appetite_loss",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.14,
+      "formula": "target += source * weight",
+      "desc": "Pain contributes modestly to appetite suppression within the symptom-burden cluster.",
+      "ref": "js/schema.js clinical estimate (dolor|perdida_apetito)"
+    },
+    {
+      "id": "e_fatigue_appetite_loss",
+      "source": "fatigue",
+      "target": "appetite_loss",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.206,
+      "formula": "target += source * weight",
+      "desc": "Fatigue and appetite loss co-occur as part of the EORTC-style symptom cluster.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster, OR 1.12-1.24)"
+    },
+    {
+      "id": "e_chemotherapy_current_nausea_vomiting",
+      "source": "chemotherapy_current",
+      "target": "nausea_vomiting",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2.0,
+      "formula": "target += source * weight",
+      "desc": "Chemotherapy is a leading cause of treatment-related nausea and vomiting.",
+      "ref": "Article_14 (nausea among strongest NIS associations with depression, p<0.001)"
+    },
+    {
+      "id": "e_fatigue_nausea_vomiting",
+      "source": "fatigue",
+      "target": "nausea_vomiting",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.163,
+      "formula": "target += source * weight",
+      "desc": "Fatigue and nausea co-occur within the EORTC-style symptom cluster.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster)"
+    },
+    {
+      "id": "e_appetite_loss_nausea_vomiting",
+      "source": "appetite_loss",
+      "target": "nausea_vomiting",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.195,
+      "formula": "target += source * weight",
+      "desc": "Appetite loss and nausea/vomiting are linked within the EORTC-style symptom cluster.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.12 / 1.21-1.22)"
+    },
+    {
+      "id": "e_antiemetic_use_nausea_vomiting",
+      "source": "antiemetic_use",
+      "target": "nausea_vomiting",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 2.0,
+      "formula": "target -= source * weight",
+      "desc": "Antiemetic medication reduces nausea/vomiting intensity.",
+      "ref": "Standard palliative-care symptom management practice"
+    },
+    {
+      "id": "e_ecog_performance_status_dyspnea",
+      "source": "ecog_performance_status",
+      "target": "dyspnea",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.0,
+      "formula": "target += source * weight",
+      "desc": "Worse performance status is associated with greater dyspnea burden in advanced disease.",
+      "ref": "Article 16 (symptom burden in advanced cancer) / Article_27"
+    },
+    {
+      "id": "e_fatigue_insomnia_severity",
+      "source": "fatigue",
+      "target": "insomnia_severity",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Fatigue and insomnia frequently co-occur as depressive somatic symptoms.",
+      "ref": "DSM-5 Criterion A4 (insomnia/hypersomnia) and A6 (fatigue)"
+    },
+    {
+      "id": "e_chronic_pain_insomnia_severity",
+      "source": "chronic_pain",
+      "target": "insomnia_severity",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.25,
+      "formula": "target += source * weight",
+      "desc": "Unmanaged pain disrupts sleep onset and maintenance.",
+      "ref": "Clinical estimate; consistent with DSM-5 somatic symptom criteria"
+    },
+    {
+      "id": "e_appetite_loss_nutritional_status_mna",
+      "source": "appetite_loss",
+      "target": "nutritional_status_mna",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 0.4,
+      "formula": "target -= source * weight",
+      "desc": "Persistent appetite loss degrades MNA-SF nutritional status score.",
+      "ref": "Clinical estimate grounded in Article_14 (nutrition impact symptoms)"
+    },
+    {
+      "id": "e_nausea_vomiting_nutritional_status_mna",
+      "source": "nausea_vomiting",
+      "target": "nutritional_status_mna",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target -= source * weight",
+      "desc": "Nausea and vomiting reduce oral intake and worsen nutritional status.",
+      "ref": "Article_14 (nutrition impact symptoms and depression association)"
+    },
+    {
+      "id": "e_nutritional_status_mna_functional_autonomy_adl",
+      "source": "nutritional_status_mna",
+      "target": "functional_autonomy_adl",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 5.5374,
+      "formula": "target += source * weight",
+      "desc": "Better nutritional status strongly predicts greater functional independence (Barthel ADL).",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.755"
+    },
+    {
+      "id": "e_nutritional_status_mna_instrumental_autonomy_iadl",
+      "source": "nutritional_status_mna",
+      "target": "instrumental_autonomy_iadl",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.4173,
+      "formula": "target += source * weight",
+      "desc": "Better nutritional status predicts greater instrumental autonomy (Lawton IADL).",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.626"
+    },
+    {
+      "id": "e_nutritional_status_mna_cognitive_function_mmse",
+      "source": "nutritional_status_mna",
+      "target": "cognitive_function_mmse",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.4767,
+      "formula": "target += source * weight",
+      "desc": "Better nutritional status is weakly associated with better cognitive function (MMSE).",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.286"
+    },
+    {
+      "id": "e_nutritional_status_mna_depression_severity_index",
+      "source": "nutritional_status_mna",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "strong",
+      "weight": 1.5,
+      "formula": "target -= source * weight",
+      "desc": "Better nutritional status strongly predicts lower depression severity.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.750"
+    },
+    {
+      "id": "e_functional_autonomy_adl_instrumental_autonomy_iadl",
+      "source": "functional_autonomy_adl",
+      "target": "instrumental_autonomy_iadl",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 0.0762,
+      "formula": "target += source * weight",
+      "desc": "Greater ADL independence strongly predicts greater IADL independence.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.838"
+    },
+    {
+      "id": "e_functional_autonomy_adl_cognitive_function_mmse",
+      "source": "functional_autonomy_adl",
+      "target": "cognitive_function_mmse",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.0948,
+      "formula": "target += source * weight",
+      "desc": "Greater ADL independence is associated with better cognitive function.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.417"
+    },
+    {
+      "id": "e_functional_autonomy_adl_depression_severity_index",
+      "source": "functional_autonomy_adl",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "strong",
+      "weight": 0.2236,
+      "formula": "target -= source * weight",
+      "desc": "Greater ADL independence strongly predicts lower depression severity.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.820"
+    },
+    {
+      "id": "e_instrumental_autonomy_iadl_cognitive_function_mmse",
+      "source": "instrumental_autonomy_iadl",
+      "target": "cognitive_function_mmse",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.52,
+      "formula": "target += source * weight",
+      "desc": "Greater IADL independence is associated with better cognitive function.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=.608"
+    },
+    {
+      "id": "e_instrumental_autonomy_iadl_depression_severity_index",
+      "source": "instrumental_autonomy_iadl",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "strong",
+      "weight": 1.842,
+      "formula": "target -= source * weight",
+      "desc": "Greater IADL independence strongly predicts lower depression severity.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.614"
+    },
+    {
+      "id": "e_cognitive_function_mmse_depression_severity_index",
+      "source": "cognitive_function_mmse",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.3276,
+      "formula": "target -= source * weight",
+      "desc": "Better cognitive function is weakly associated with lower depression severity.",
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.273"
+    },
+    {
+      "id": "e_ecog_performance_status_global_performance_status",
+      "source": "ecog_performance_status",
+      "target": "global_performance_status",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 1.0,
+      "formula": "target -= source * weight",
+      "desc": "Worse ECOG performance status reduces overall global performance status.",
+      "ref": "Article 30 / Article 31 (ECOG-PS as functional outcome measure)"
+    },
+    {
+      "id": "e_functional_autonomy_adl_global_performance_status",
+      "source": "functional_autonomy_adl",
+      "target": "global_performance_status",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.1,
+      "formula": "target += source * weight",
+      "desc": "Greater ADL independence modestly contributes to overall global performance.",
+      "ref": "Clinical consistency estimate"
+    },
+    {
+      "id": "e_fatigue_global_performance_status",
+      "source": "fatigue",
+      "target": "global_performance_status",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.2108,
+      "formula": "target -= source * weight",
+      "desc": "Higher fatigue reduces overall functional performance.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (functionality as protective factor, OR .80-.82)"
+    },
+    {
+      "id": "e_chronic_pain_global_performance_status",
+      "source": "chronic_pain",
+      "target": "global_performance_status",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.1681,
+      "formula": "target -= source * weight",
+      "desc": "Higher chronic pain reduces overall functional performance.",
+      "ref": "js/schema.js clinical estimate (funcionalidad_global|dolor)"
+    },
+    {
+      "id": "e_fatigue_depression_severity_index",
+      "source": "fatigue",
+      "target": "depression_severity_index",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.475,
+      "formula": "target += source * weight",
+      "desc": "Higher fatigue is associated with greater depression severity.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.20-1.24)"
+    },
+    {
+      "id": "e_global_performance_status_depression_severity_index",
+      "source": "global_performance_status",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 0.6522,
+      "formula": "target -= source * weight",
+      "desc": "Better global performance status is a protective factor against depression severity.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR .80-.82, protective)"
+    },
+    {
+      "id": "e_spiritual_pain_meaning_in_life",
+      "source": "spiritual_pain",
+      "target": "meaning_in_life",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 0.6,
+      "formula": "target -= source * weight",
+      "desc": "Higher spiritual pain erodes the patient's sense of meaning in life.",
+      "ref": "Article 39 / Pérez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
+    },
+    {
+      "id": "e_spiritual_pain_distress_level",
+      "source": "spiritual_pain",
+      "target": "distress_level",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Spiritual/existential suffering contributes to overall emotional distress.",
+      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+    },
+    {
+      "id": "e_chronic_pain_distress_level",
+      "source": "chronic_pain",
+      "target": "distress_level",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.2692,
+      "formula": "target += source * weight",
+      "desc": "Chronic pain intensity is moderately correlated with emotional distress/anxiety.",
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+    },
+    {
+      "id": "e_depression_severity_index_distress_level",
+      "source": "depression_severity_index",
+      "target": "distress_level",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.0933,
+      "formula": "target += source * weight",
+      "desc": "Higher depression severity is associated with greater day-to-day distress.",
+      "ref": "js/schema.js clinical estimate, moderated for system consistency"
+    },
+    {
+      "id": "e_distress_level_death_anxiety",
+      "source": "distress_level",
+      "target": "death_anxiety",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.253,
+      "formula": "target += source * weight",
+      "desc": "Higher general distress is associated with greater fear of death.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_spiritual_pain_death_anxiety",
+      "source": "spiritual_pain",
+      "target": "death_anxiety",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Spiritual/existential suffering amplifies fear of death.",
+      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+    },
+    {
+      "id": "e_distress_level_meaning_in_life",
+      "source": "distress_level",
+      "target": "meaning_in_life",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.209,
+      "formula": "target -= source * weight",
+      "desc": "Higher distress is associated with lower sense of meaning (existential void).",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_distress_level_anxiety_level",
+      "source": "distress_level",
+      "target": "anxiety_level",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 0.644,
+      "formula": "target += source * weight",
+      "desc": "General distress is strongly correlated with anxiety symptom intensity.",
+      "ref": "Article_27 (HADS-A x ESAS-Anxiety item, r=0.56, p<0.001)"
+    },
+    {
+      "id": "e_chronic_pain_anxiety_level",
+      "source": "chronic_pain",
+      "target": "anxiety_level",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.3096,
+      "formula": "target += source * weight",
+      "desc": "Pain intensity is moderately correlated with anxiety.",
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+    },
+    {
+      "id": "e_nausea_vomiting_anxiety_level",
+      "source": "nausea_vomiting",
+      "target": "anxiety_level",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Nausea/vomiting is one of the symptoms most distinctly elevated in anxious patients.",
+      "ref": "Article_27 (anxiety patients show elevated nausea/pain/dyspnea)"
+    },
+    {
+      "id": "e_dyspnea_anxiety_level",
+      "source": "dyspnea",
+      "target": "anxiety_level",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.2875,
+      "formula": "target += source * weight",
+      "desc": "Dyspnea is moderately correlated with anxiety symptom intensity.",
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+    },
+    {
+      "id": "e_distress_level_loneliness",
+      "source": "distress_level",
+      "target": "loneliness",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.242,
+      "formula": "target += source * weight",
+      "desc": "Higher distress is associated with greater sense of loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_meaning_in_life_loneliness",
+      "source": "meaning_in_life",
+      "target": "loneliness",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.14,
+      "formula": "target -= source * weight",
+      "desc": "Greater sense of meaning is associated with lower loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_distress_level_emotional_trend_7d",
+      "source": "distress_level",
+      "target": "emotional_trend_7d",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.351,
+      "formula": "target += source * weight",
+      "desc": "Distress level strongly informs the 7-day weighted emotional trend (same scale/window).",
+      "ref": "js/schema.js definitional estimate (angustia|tendencia_emocional)"
+    },
+    {
+      "id": "e_loneliness_emotional_trend_7d",
+      "source": "loneliness",
+      "target": "emotional_trend_7d",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.2,
+      "formula": "target += source * weight",
+      "desc": "Sustained loneliness contributes to the 7-day emotional trend.",
+      "ref": "Clinical consistency estimate"
+    },
+    {
+      "id": "e_loneliness_caregiver_burnout_zarit",
+      "source": "loneliness",
+      "target": "caregiver_burnout_zarit",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 1.2364,
+      "formula": "target += source * weight",
+      "desc": "Higher patient loneliness is associated with greater caregiver burden.",
+      "ref": "js/schema.js clinical estimate (burnout_zarit|soledad)"
+    },
+    {
+      "id": "e_depression_severity_index_suicidal_ideation_risk",
+      "source": "depression_severity_index",
+      "target": "suicidal_ideation_risk",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 0.3,
+      "formula": "target += source * weight",
+      "desc": "Depression severity is the strongest driver of suicidal ideation risk.",
+      "ref": "DSM-5 Criterion A9 (recurrent thoughts of death/suicidal ideation) / Article 32 (self-harm thoughts strongly associated with higher PHQ-9 scores)"
+    },
+    {
+      "id": "e_distress_level_suicidal_ideation_risk",
+      "source": "distress_level",
+      "target": "suicidal_ideation_risk",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.25,
+      "formula": "target += source * weight",
+      "desc": "Acute emotional distress amplifies suicidal ideation risk.",
+      "ref": "Clinical estimate consistent with DSM-5 risk factors"
+    },
+    {
+      "id": "e_loneliness_suicidal_ideation_risk",
+      "source": "loneliness",
+      "target": "suicidal_ideation_risk",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.2,
+      "formula": "target += source * weight",
+      "desc": "Social isolation/loneliness is a recognized risk factor for suicidal ideation.",
+      "ref": "Article 15 (family cohesion protective against anxiety/depression) / clinical risk-factor literature"
+    },
+    {
+      "id": "e_meaning_in_life_suicidal_ideation_risk",
+      "source": "meaning_in_life",
+      "target": "suicidal_ideation_risk",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 0.25,
+      "formula": "target -= source * weight",
+      "desc": "A stronger sense of meaning is protective against suicidal ideation.",
+      "ref": "ACOMPANAR_Algoritmo_v1.pdf (Logotherapy/Frankl rationale) / clinical estimate"
+    },
+    {
+      "id": "e_socioeconomic_level_nutritional_status_mna",
+      "source": "socioeconomic_level",
+      "target": "nutritional_status_mna",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": -0.3,
+      "formula": null,
+      "desc": "Lower socioeconomic stratum is associated with worse nutritional status.",
+      "ref": "Efendioglu et al. 2021 (OR=.10 for malnutrition in low-income patients)"
+    },
+    {
+      "id": "e_socioeconomic_level_depression_severity_index",
+      "source": "socioeconomic_level",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Lower socioeconomic stratum is associated with higher depression severity.",
+      "ref": "Efendioglu et al. 2021 (OR=.06 for depression in low-income patients)"
+    },
+    {
+      "id": "e_age_bracket_nutritional_status_mna",
+      "source": "age_bracket",
+      "target": "nutritional_status_mna",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": -0.2,
+      "formula": null,
+      "desc": "Advanced age (71+) is associated with worse nutritional status.",
+      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)"
+    },
+    {
+      "id": "e_age_bracket_depression_severity_index",
+      "source": "age_bracket",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.2,
+      "formula": null,
+      "desc": "Advanced age (71+) is associated with higher depression severity.",
+      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)"
+    },
+    {
+      "id": "e_disease_stage_global_performance_status",
+      "source": "disease_stage",
+      "target": "global_performance_status",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": -0.4,
+      "formula": null,
+      "desc": "Terminal-stage disease is associated with markedly lower global performance status.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (functionality as protective factor)"
+    },
+    {
+      "id": "e_disease_stage_fatigue",
+      "source": "disease_stage",
+      "target": "fatigue",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.4,
+      "formula": null,
+      "desc": "Terminal-stage disease is associated with higher symptomatic fatigue burden.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+    },
+    {
+      "id": "e_disease_stage_appetite_loss",
+      "source": "disease_stage",
+      "target": "appetite_loss",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.35,
+      "formula": null,
+      "desc": "Terminal-stage disease is associated with greater appetite loss.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+    },
+    {
+      "id": "e_disease_stage_nausea_vomiting",
+      "source": "disease_stage",
+      "target": "nausea_vomiting",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Terminal-stage disease is associated with greater nausea/vomiting burden.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+    },
+    {
+      "id": "e_family_support_network_loneliness",
+      "source": "family_support_network",
+      "target": "loneliness",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": -0.4,
+      "formula": null,
+      "desc": "Absence of a family support network is associated with greater loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_family_support_network_depression_severity_index",
+      "source": "family_support_network",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": -0.25,
+      "formula": null,
+      "desc": "Absence of a family support network is associated with higher depression severity.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_mobility_global_performance_status",
+      "source": "mobility",
+      "target": "global_performance_status",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": -0.4,
+      "formula": null,
+      "desc": "Being bedridden is associated with markedly lower global performance status.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_mobility_functional_autonomy_adl",
+      "source": "mobility",
+      "target": "functional_autonomy_adl",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": -0.5,
+      "formula": null,
+      "desc": "Being bedridden is definitionally associated with lower Barthel ADL scores.",
+      "ref": "js/schema.js definitional consistency estimate"
+    },
+    {
+      "id": "e_relationship_quality_loneliness",
+      "source": "relationship_quality",
+      "target": "loneliness",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "A conflictive caregiver relationship is associated with greater patient loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_communication_capacity_loneliness",
+      "source": "communication_capacity",
+      "target": "loneliness",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.25,
+      "formula": null,
+      "desc": "Loss of verbal communication capacity is associated with greater loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_caregiver_detected_signals_depression_severity_index",
+      "source": "caregiver_detected_signals",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Caregiver-reported alert signals (crying, isolation, refusal to eat) proxy for higher depression severity.",
+      "ref": "Clinical estimate; ACOMPANAR_Algoritmo_v1.pdf (caregiver as primary sensor)"
+    },
+    {
+      "id": "e_psychiatric_comorbidities_anxiety_level",
+      "source": "psychiatric_comorbidities",
+      "target": "anxiety_level",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.4,
+      "formula": null,
+      "desc": "A comorbid anxiety disorder diagnosis correlates with higher measured anxiety level.",
+      "ref": "DSM-5 (depressive disorder 'with anxiety' specifier) / clinical estimate"
+    },
+    {
+      "id": "e_somatic_symptoms_cluster_insomnia_severity",
+      "source": "somatic_symptoms_cluster",
+      "target": "insomnia_severity",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.4,
+      "formula": null,
+      "desc": "Insomnia as the dominant somatic symptom cluster directly correlates with insomnia severity.",
+      "ref": "DSM-5 Criterion A4 (insomnia or hypersomnia nearly every day)"
+    },
+    {
+      "id": "e_somatic_symptoms_cluster_fatigue",
+      "source": "somatic_symptoms_cluster",
+      "target": "fatigue",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.35,
+      "formula": null,
+      "desc": "Severe fatigue as the dominant somatic symptom cluster correlates with measured fatigue.",
+      "ref": "DSM-5 Criterion A6 (fatigue or loss of energy nearly every day)"
+    },
+    {
+      "id": "e_psychoactive_medication_sedation_level",
+      "source": "psychoactive_medication",
+      "target": "sedation_level",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Sedating psychoactive medications (antidepressants, anxiolytics, antipsychotics) correlate with higher sedation.",
+      "ref": "General clinical pharmacology"
+    },
+    {
+      "id": "e_depressive_diagnosis_dsm5_depression_severity_index",
+      "source": "depressive_diagnosis_dsm5",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "strong",
+      "weight": 0.6,
+      "formula": null,
+      "desc": "A major depressive disorder diagnosis correlates strongly with a higher depression severity index.",
+      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psicótico, F32.0-F32.3)"
+    },
+    {
+      "id": "e_religiosity_meaning_in_life",
+      "source": "religiosity",
+      "target": "meaning_in_life",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Higher religiosity/spirituality is associated with a stronger sense of meaning in life.",
+      "ref": "ACOMPANAR_Algoritmo_v1.pdf (religiosity relevant to Logotherapy/existential approach)"
+    },
+    {
+      "id": "e_caregiver_type_caregiver_burnout_zarit",
+      "source": "caregiver_type",
+      "target": "caregiver_burnout_zarit",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.2,
+      "formula": null,
+      "desc": "Direct family caregivers tend to report higher burnout than professional caregivers.",
+      "ref": "Clinical estimate"
+    },
+    {
+      "id": "e_caregiver_contact_frequency_caregiver_burnout_zarit",
+      "source": "caregiver_contact_frequency",
+      "target": "caregiver_burnout_zarit",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.25,
+      "formula": null,
+      "desc": "24/7 in-home caregiving contact is associated with higher caregiver burnout.",
+      "ref": "Clinical estimate"
+    },
+    {
+      "id": "e_living_environment_loneliness",
+      "source": "living_environment",
+      "target": "loneliness",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.2,
+      "formula": null,
+      "desc": "Living alone is associated with greater patient loneliness.",
+      "ref": "js/schema.js clinical estimate"
+    },
+    {
+      "id": "e_base_neurological_disease_cognitive_function_mmse",
+      "source": "base_neurological_disease",
+      "target": "cognitive_function_mmse",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": -0.3,
+      "formula": null,
+      "desc": "Dementia-associated base diseases (Alzheimer's) are associated with lower MMSE scores.",
+      "ref": "Clinical estimate"
+    },
+    {
+      "id": "e_metastatic_disease_depression_severity_index",
+      "source": "metastatic_disease",
+      "target": "depression_severity_index",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.25,
+      "formula": null,
+      "desc": "Metastatic disease burden is associated with higher depression severity.",
+      "ref": "Article_29 / Article 30 (metastatic disease and worse QoL/depression outcomes)"
+    }
+  ]
+}

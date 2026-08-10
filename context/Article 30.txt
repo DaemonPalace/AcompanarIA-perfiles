@@ -1,0 +1,59 @@
+Article #30
+https://doi.org/10.1002/hsr2.911
+Depression, anxiety, and performance status among the women with metastatic breast cancer receiving palliative care in Bangladesh: A cross sectional study
+Nashid Islam, Jheelam Biswas, et al.
+Bangladesh Dhaka, 29 October 2022
+
+95 patients attending Department of Palliative Medicine, Bangabandhu Sheikh Mujib Medical University,
+majority muslim, married mothers
+
+32.8% depression prevalence
+40% anxiety and melancholy prevalence
+Hospital Depression and Anxiety Scale HADS-A or HADS-D
+ECOG Performance Status Scale
+
+Variables:
+- Sociodemographic->
+Age - Educational status - Occupational Status - Income Group - Marital Status - Religion - Family history of malignancy - Mode of treatment along with palliative care
+- ECOG Performance Status
+- Anxiety
+- Depression
+
+{Variables 	Psychological symptoms 	p Value
+Absent 	Present
+	Depression
+Age (in years)
+Up to 40 	14 (23.3%) 	7 (20.0%) 	0.111a
+41–50 	18 (30.0%) 	19 (54.3%) 	
+51–60 	19 (31.7%) 	5 (14.3%) 	
+>60 	9 (15.0%) 	4 (11.4%) 	
+Educational status
+No formal education 	6 (10.0%) 	9 (25.7%) 	0.048a
+Primary (I–V) 	6 (10.0%) 	6 (17.1%) 	
+Secondary (6–12) 	4 (6.7%) 	4 (11.4%) 	
+Higher Secondary 	44 (73.3%) 	16 (45.7%) 	
+Occupational status
+Homemakers 	46 (76.7%) 	32 (91.4%) 	0.097
+Service holder 	14 (23.3%) 	3 (8.6%) 	
+Income group (in Tk)
+Lower middle (8000– 30,0000) 	45 (75.0%) 	30 (85.7%) 	0.337a
+Upper middle (31,000–92,000) 	11 (18.3%) 	5 (14.3%) 	
+High (>92,000) 	4 (6.7%) 	0 (0.0%) 	
+	Anxiety
+Age (in years)
+Up to 40 	8 (17.8%) 	13 (26.0%) 	0.054
+41–50 	13 (28.9%) 	24 (48.0%) 	
+51–60 	15 (33.3%) 	9 (18.0%) 	
+>60 	9 (20.0%) 	4 (8.0%) 	
+Educational status
+No formal education 	4 (8.9%) 	11 (22.0%) 	0.217a
+Up to primary 	5 (11.1%) 	7 (14.0%) 	
+Below secondary 	3 (6.7%) 	5 (10.0%) 	
+Secondary passed and above 	33 (73.3%) 	27 (54.0%) 	
+Occupational status
+Homemakers 	36 (80.0%) 	42 (84.0%) 	0.789
+Service holder 	9 (20.0%) 	8 (16.0%) 	
+Income group (in Tk)
+Lower middle (8000– 30,0000) 	33 (73.3%) 	42 (84.0%) 	0.103a
+Upper middle (31,000–92,000) 	8 (17.8%) 	8 (16.0%) 	
+High (>92,000) 	4 (8.9%) 	0 (0.0%) }

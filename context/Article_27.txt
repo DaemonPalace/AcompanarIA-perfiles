@@ -1,0 +1,108 @@
+Article #27
+Symptom distress in advanced cancer patients with anxiety and depression in the palliative care setting
+Marvin Delgado-Guay, Henrique A. Parsons, Zhijun Li, J. Lynn Palmer, Eduardo Bruera
+United States (MD Anderson Cancer Center group), published 13 November 2008 — Supportive Care in Cancer, 17:573-579 (2009)
+216 patients with advanced cancer (retrospective chart review of baseline data pooled from three previous clinical trials conducted by the same palliative care research group)
+
+Instruments:
+Edmonton Symptom Assessment System (ESAS) — 10 items, 0-10 scale (10=worst imaginable intensity), assesses physical/psychological symptoms and global well-being; validated as a mood-disorder screening tool at cutoff ≥2/10
+Hospital Anxiety and Depression Scale (HADS) — HADS-A (anxiety) and HADS-D (depression) subscales, 0-21 each; cutoff ≥8 for diagnosis; HADS-A: sensitivity 0.89, specificity 0.75, AUC 0.88 (76% correctly classified vs. DSM-IV generalized anxiety disorder via structured interview); HADS-D: sensitivity 0.80, specificity 0.88, AUC 0.93 (87% correctly classified vs. DSM-IV major depressive episode)
+
+variables:
+sociodemographic ->
+age, sex, race (White, African American, Hispanic, Asian, Other)
+
+clinical ->
+primary cancer diagnosis (lung, gastrointestinal, genitourinary, breast, gynecological, hematologic, head and neck, other)
+
+ESAS symptoms (0-10 scale, frequency defined as score ≥1) ->
+appetite (poor), drowsiness, fatigue, nausea, pain, dyspnea, well-being (worse), anxiety (ESAS item), depression (ESAS item)
+
+outcome variables ->
+HADS-A (anxiety, dichotomized ≥8/<8)
+HADS-D (depression, dichotomized ≥8/<8)
+combined anxiety+depression status
+
+Overall prevalence:
+Depressive mood (HADS-D ≥8): 37% (n=79/216)
+Anxiety (HADS-A ≥8): 44% (n=94/216)
+
+{
+Table 1: Patient characteristics (n=216)
+
+Characteristic                Frequency (%)
+Median age, years (range)     59 (20-91)
+Sex
+  Women                        82 (38)
+  Men                          134 (62)
+Race
+  White                        166 (76)
+  African American             32 (15)
+  Hispanic                     12 (6)
+  Asian                        5 (2)
+  Other                        1 (1)
+Cancer diagnosis
+  Lung                         79 (37)
+  Gastrointestinal             32 (15)
+  Genitourinary                30 (14)
+  Breast                       18 (8)
+  Gynecological                12 (6)
+  Hematologic                  11 (5)
+  Head and neck                10 (4)
+  Other                        24 (11)
+}
+
+{
+Table 2: Frequency of symptoms (ESAS ≥1) by anxiety, depression, and combined status
+
+Symptom       No anxiety     With anxiety    P         No depression   With depression   P         Neither        Both A+D        P
+Appetite      92/121 (76%)   83/94 (88%)     0.0219    103/136 (76%)   72/79 (91%)       0.0051    123/159 (77%)  52/56 (93%)      0.0104
+Drowsiness    81/122 (66%)   74/93 (80%)     0.0328    87/137 (64%)    68/78 (87%)       0.0002    108/160 (67%)  47/55 (83%)      0.0104
+Fatigue       115/122 (94%)  91/94 (97%)     0.3773    131/137 (96%)   75/79 (95%)       0.8178    152/156 (97%)  54/56 (96%)      0.6615
+Nausea        48/122 (39%)   59/94 (57%)     0.0006    55/137 (40%)    52/79 (66%)       0.0003    69/160 (43%)   38/56 (68%)      0.0014
+Pain          96/121 (79%)   88/94 (94%)     0.0031    110/136 (81%)   74/79 (94%)       0.0101    130/159 (87%)  54/56 (96%)      0.0072
+Dyspnea       83/122 (68%)   84/94 (89%)     0.0002    99/137 (72%)    68/79 (86%)       0.0196    117/160 (73%)  50/56 (89%)      0.0129
+Well-being    105/122 (86%)  90/94 (96%)     0.0173    117/137 (85%)   78/79 (99%)       0.0014    140/160 (87%)  55/56 (98%)      0.0192
+Anxiety       -              -               -         83/137 (61%)    70/79 (89%)       <0.0001   102/160 (64%)  51/56 (91%)      0.0001
+Depression    63/122 (52%)   79/94 (84%)     <0.0001   -               -                 -         92/160 (58%)   50/56 (89%)      <0.0001
+
+Fatigue was the only symptom NOT significantly associated with anxiety, depression, or the combined state — a notably ubiquitous symptom present in >94% of patients regardless of mood status.
+}
+
+{
+Table 3: Intensity of symptoms (ESAS ≥1, median [Q1-Q3]) by anxiety, depression, and combined status
+
+Symptom       No anxiety         With anxiety       P         No depression      With depression    P         Neither            Both A+D           P
+Appetite      4.5 (3-6)          6 (4-8)            0.0050    5 (3-7)            5 (4-8)            0.0656    5 (3-7)            6 (4-8)            0.0135
+Drowsiness    4 (2-5)            5 (3-7)            0.0158    4 (2-6)            4 (3-7)            0.0175    4 (2-6)            5 (3-7)            0.0272
+Fatigue       5 (3-7)            6 (5-8)            0.0011    5 (3-7)            7 (5-8)            <0.0001   5 (4-7)            7 (5-8)            0.0002
+Nausea        2 (2-4.5)          4 (2-6)            0.0151    3 (2-5)            3 (2-5)            0.5867    3 (2-5)            4 (2-5)            0.3768
+Pain          4 (3-7)            6 (3-8)            0.0082    5 (3-7)            5 (3-8)            0.0775    5 (3-7)            6 (3-8)            0.0683
+Dyspnea       5 (3-7)            5 (3-7)            0.2368    5 (3-7)            5 (3-7)            0.7209    5 (3-7)            5 (3-7)            0.6937
+Well-being    5 (3-7)            5 (3-7)            0.0007    4 (2-6)            6 (5-7)            <0.0001   5 (2.5-6)          6 (5-8)            <0.0001
+Anxiety       -                  -                  -         3 (2-5)            4.5 (3-7)          0.0175    3 (2-5)            5 (3-7)            <0.0001
+Depression    3 (2-5)            5 (4-7)            <0.0001   -                  -                  -         3 (2-5)            5 (3-7)            0.0024
+}
+
+Correlation analysis (Spearman):
+HADS-A × ESAS-Anxiety item: r=0.56 (p<0.001)
+HADS-D × ESAS-Depression item: r=0.39 (p<0.001)
+HADS-A × other ESAS symptoms (pain, fatigue, nausea, dyspnea, drowsiness, appetite, well-being): moderate correlation r=0.25-0.5 (p<0.0001) across the board
+HADS-D × same symptom set: similar moderate correlation, EXCEPT low correlation with dyspnea (r<0.25, p=0.0031)
+
+Key findings for model training:
+- Distinct symptom "signatures" differentiate anxiety from depression: anxiety patients show elevated frequency/intensity of nausea, pain, dyspnea; depression patients show elevated frequency/intensity of drowsiness, fatigue, poor appetite, worse well-being — supports using granular ESAS-style symptom vectors rather than a single "distress" scalar in your classifier's emotional/physical dimensions
+- Fatigue is present at very high frequency (94-97%) REGARDLESS of mood status — i.e., fatigue alone is a poor discriminator for depression/anxiety in this population and should be weighted cautiously as a standalone predictor feature
+- Comorbid anxiety+depression produces the strongest symptom burden across nearly all ESAS items (compounding effect) — relevant if your algorithm scores a combined "affective burden" feature rather than only individual anxiety/depression variables
+- Worse well-being had the strongest/most consistent association with both anxiety and depression across frequency and intensity analyses — potentially a useful single "flagging" item for alert-panel logic if granular ESAS data isn't available
+- Bidirectional uncertainty acknowledged by authors: unclear whether mood disorders amplify physical symptom perception (somatization) or whether unmanaged physical symptoms drive mood disorder — causal direction cannot be established from this cross-sectional/retrospective design, relevant caveat for interpreting any of your model's "risk factor" features as causal
+- Authors note symptom-mood associations may weaken as death approaches (citing conflicting findings from Teunissen et al., who found NO correlation between physical symptoms and mood in a separate hospitalized cohort) — disease trajectory/proximity to death may moderate the strength of physical-emotional correlations, a potential interaction term worth testing
+- Prevalence rates in this study (37% depression, 44% anxiety) sit centrally within the wide range reported across the literature (depression 3-69% per cited studies) — reinforces the need for multi-study aggregation with tool/setting metadata rather than treating single-study prevalence rates as ground truth
+- ESAS is proposed by the authors as a practical low-burden depression/anxiety screening tool (cutoff ≥2/10 on its embedded anxiety/depression items) — relevant to ACOMPAÑAR's caregiver-facing observation forms, since it requires minimal patient/caregiver effort compared to full HADS administration
+
+Limitations noted by authors:
+- Retrospective chart review — cannot establish causal association between mood disorders and physical symptom intensity
+- No structured DSM-IV clinical interviews performed; diagnosis relied solely on HADS cutoff scores
+- Data pooled from three distinct prior clinical trials (opioid/hypogonadism study, dyspnea characterization study, spirituality/locus-of-control study) — potential selection bias, though authors report no statistically significant difference in anxiety/depression frequency between the three source studies
+- Cross-sectional/baseline-only data — cannot capture how symptom-mood associations may change over the disease trajectory or as death approaches
+- Single research group / single institution origin for all three source trials, which may limit generalizability

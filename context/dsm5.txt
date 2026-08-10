@@ -1,0 +1,1704 @@
+Trastornos
+depresivos
+Los trastornos depresivos son el trastorno de desregulación disruptiva del estado de
+
+ánimo, el trastorno de depresión mayor (incluye el episodio depresivo mayor), el trastorno depresivo
+persistente (distimia), el trastorno disfórico premenstrual, el trastorno depresivo inducido por una
+sustancia/medicamento, el trastorno depresivo debido a otra afección médica, otro trastorno depresivo especificado y otro trastorno depresivo no especificado. Al contrario que en el DSM-IV, este
+capítulo de "Trastornos depresivos" se ha separado del capítulo anterior "Trastorno bipolar y trastornos relacionados". El rasgo común de todos estos trastornos es la presencia de un ánimo triste, vacío
+o irritable, acompañado de cambios somáticos y cognitivos que afectan significativamente a la capacidad funcional del individuo. Lo que los diferencia es la duración, la presentación temporal o la
+supuesta etiología.
+Para abordar las dudas sobre la posibilidad de que el trastorno bipolar se diagnostique y trate
+excesivamente en los niños, se ha añadido un nuevo diagnóstico, el trastorno de desregulación disruptiva del estado de ánimo, que se refiere a la presentación de irritabilidad persistente y episodios
+frecuentes de descontrol conductual extremo en los niños de hasta 12 años de edad. Su localización
+en este capítulo refleja el hallazgo de que los niños con este patrón sintomático desarrollan trastornos
+depresivos unipolares o trastornos de ansiedad, más que trastornos bipolares, al pasar a la adolescencia y la edad adulta.
+El trastorno depresivo mayor representa el trastorno clásico de este grupo. Se caracteriza por
+episodios determinados de al menos dos semanas de duración (aunque la mayoría de los episodios
+duran bastante más) que implican cambios claros en el afecto, la cognición y las funciones neurovegetativas, y remisiones interepisódicas. Se puede realizar un diagnóstico basado en un solo episodio,
+aunque en la mayoría de los casos el trastorno suele ser recurrente. Se debe considerar especialmente
+la diferencia entre la tristeza normal y la tristeza del episodio depresivo mayor. El duelo suele conllevar un gran sufrimiento, pero no induce normalmente un episodio depresivo mayor. Cuando
+ocurren a la vez, los síntomas depresivos y el deterioro funcional tienden a ser más graves y el pronóstico es peor que el del duelo que no se acompaña de trastorno depresivo mayor. La depresión
+relacionada con el duelo tiende a ocurrir en las personas vulnerables a los trastornos depresivos y se
+puede facilitar la recuperación mediante el tratamiento antidepresivo. Se puede diagnosticar una
+forma más crónica de depresión, el trastorno depresivo persistente (distimia), cuando las alteraciones del estado de ánimo duran al menos dos años en los adultos o un año en los niños. Este diagnóstico, nuevo en el DSM-5, incluye las categorías del DSM-IV de depresión mayor crónica y de distimia. Tras una revisión a fondo de los datos científicos disponibles, se ha trasladado el trastorno
+disfórico premenstrual de un apéndice del DSM-IV ("Conjunto de criterios y de ejes para un estudio
+posterior") a la Sección II del DSM-5. Casi 20 años de investigación sobre esta afección han confirmado una forma de trastorno depresivo que responde al tratamiento, que comienza poco después
+de la ovulación y que remite pocos días después de la menstruación, y que tiene un impacto funcional importante.
+Con los fenómenos depresivos se pueden asociar un gran número de sustancias de abuso, algunos
+medicamentos de prescripción médica y varias afecciones médicas. Este hecho se reconoce en el diagnóstico del trastorno depresivo debido a otra afección médica.
+
+155
+
+156
+
+Trastornos depresivos
+
+Trastorno de desregulación disruptiva
+del estado de ánimo
+296.99 (F34.8)
+A. Accesos de cólera graves y recurrentes que se manifiestan verbalmente (p. ej., rabietas verbales)
+y/o con el comportamiento (p. ej., agresión física a personas o propiedades) cuya intensidad o
+duración son desproporcionadas a la situación o provocación.
+B. Los accesos de cólera no concuerdan con el grado de desarrollo.
+C. Los accesos de cólera se producen, en término medio, tres o más veces por semana.
+D. El estado de ánimo entre los accesos de cólera es persistentemente irritable o irascible la mayor
+parte del día, casi todos los días, y es observable por parte de otras personas (p. ej., padres,
+maestros, compañeros).
+E. Los Criterios A-D han estado presentes durante 12 o más meses. En todo este tiempo, el individuo no ha tenido un período que durara tres o más meses consecutivos sin todos los síntomas
+de los Criterios A-D.
+F. Los Criterios A y D están presentes al menos en dos de tres contextos (es decir, en casa, en la
+escuela, con los compañeros) y son graves al menos en uno de ellos.
+G. El primer diagnóstico no se debe hacer antes de los 6 años o después de los 18 años.
+H. Por la historia o la observación, los Criterios A-E comienzan antes de los 10 años.
+I. Nunca ha habido un período bien definido de más de un día durante el cual se hayan cumplido
+todos los criterios sintomáticos, excepto la duración, para un episodio maníaco o hipomaníaco.
+Nota: La elevación del estado de ánimo apropiada al desarrollo, como sucede en el contexto de
+un acontecimiento muy positivo o a la espera del mismo, no se ha de considerar un síntoma de
+manía o hipomanía.
+J. Los comportamientos no se producen exclusivamente durante un episodio de trastorno de
+depresión mayor y no se explican mejor por otro trastorno mental (p. ej., trastorno del espectro
+autista, trastorno por estrés postraumático, trastorno por ansiedad de separación, trastorno
+depresivo persistente [distimia]).
+Nota: Este diagnóstico no puede coexistir con el trastorno negativista desafiante, el trastorno
+explosivo intermitente o el trastorno bipolar, aunque puede coexistir con otros, como el trastorno de depresión mayor, el trastorno de déficit de atención/hiperactividad, el trastorno de conducta
+y los trastornos por consumo de sustancias. En individuos cuyos síntomas cumplen los criterios
+para el trastorno de desregulación disruptiva del estado de ánimo y el trastorno negativista desafiante, solamente se debe hacer el diagnóstico de trastorno de desregulación disruptiva del estado
+de ánimo. Si un individuo no ha tenido nunca un episodio maníaco o hipomaníaco, no se debe
+hacer el diagnóstico de trastorno de desregulación disruptiva del estado de ánimo.
+K. Los síntomas no se pueden atribuir a los efectos fisiológicos de una sustancia o de otra afección
+médica o neurológica.
+
+Características diagnósticas
+El rasgo central del trastorno de desregulación disruptiva del estado de ánimo es una irritabilidad crónica,
+grave y persistente. Esta irritabilidad grave tiene dos manifestaciones clínicas relevantes, y la primera son
+los accesos de cólera frecuentes. Estos accesos ocurren típicamente en respuesta a la frustración y pueden
+ser verbales o conductuales (lo último en forma de agresividad contra objetos, uno mismo y otras personas). Deben ocurrir frecuentemente (p. ej., como promedio, tres o más veces a la semana) (Criterio C) en al
+menos un año y en al menos dos ambientes (Criterios E y F), como en casa y en el colegio, y deben ser inapropiados para el grado de desarrollo (Criterio B). La segunda manifestación de irritabilidad grave consiste
+en un estado de ánimo persistentemente irritable o de enfado crónico entre los graves accesos de cólera.
+Este estado de ánimo irritable o enfadado deber ser característico del niño, debe estar presente la mayor
+parte del día, casi a diario, y debe ser apreciable por otras personas del entorno del niño (Criterio D).
+
+Trastorno de desregulación disruptiva del estado de ánimo
+
+157
+
+Se debe distinguir cuidadosamente la presentación clínica del trastorno de desregulación disruptiva del estado de ánimo de las presentaciones de otras afecciones relacionadas, en particular el trastorno bipolar pediátrico. De hecho, el trastorno de desregulación disruptiva del estado de ánimo se
+añadió al DSM-5 para abordar las grandes dudas sobre la inapropiada clasificación y tratamiento de
+los niños que presentan irritabilidad crónica persistente frente a los niños que presentan un trastorno
+bipolar clásico (p. ej., episódico).
+En los niños, algunos investigadores consideran la irritabilidad grave no episódica como una
+característica del trastorno bipolar, aunque tanto el DSM-IV como el DSM-5 exigen, para reunir las
+condiciones para el diagnóstico de trastorno bipolar I, que tanto los niños como los adultos presenten
+episodios delimitados de manía o hipomanía. Durante las últimas décadas del siglo XX, esta discusión entre los investigadores, de que la irritabilidad grave y no episódica es una manifestación de
+manía pediátrica, coincidió con un aumento significativo de las tasas con que los clínicos diagnosticaban el trastorno bipolar a sus pacientes pediátricos. Este aumento abrupto en las tasas de diagnóstico parece atribuirse a que los clínicos combinaban al menos dos presentaciones clínicas en una sola
+categoría. Es decir, que se habían etiquetado como trastorno bipolar en los niños tanto las presentaciones clásicas episódicas de manía como las presentaciones no episódicas de irritabilidad grave. En
+el DSM-5, el término trastorno bipolar se reserva explícitamente para las presentaciones episódicas de
+los síntomas bipolares. El DSM-IV no tenía ningún diagnóstico pensado para diagnosticar a los jóvenes cuyos síntomas distintivos consistían en una irritabilidad muy marcada y no episódica, mientras
+que el DSM-5, con la inclusión del trastorno de desregulación disruptiva del estado de ánimo, ha
+aportado una categoría diferente para tales presentaciones.
+
+Prevalencia
+El trastorno de desregulación disruptiva del estado de ánimo es frecuente entre los niños que acuden a las
+consultas de salud mental infantil. La estimación de la prevalencia del trastorno en la comunidad no está
+clara. Basándose en las tasas de irritabilidad grave, persistente y crónica, que es el rasgo principal del
+trastorno, la prevalencia global del trastorno de desregulación disruptiva del estado de ánimo en los niños
+y los adolescentes, en un período de entre 6 meses y 1 año, probablemente sea del orden del 2-5 %.
+Sin embargo, se esperan tasas mayores en los hombres y los niños en edad escolar que en las
+mujeres y los adolescentes.
+
+Desarrollo y curso
+El comienzo del trastorno de desregulación disruptiva del estado de ánimo debe producirse antes de
+los 10 años de edad y el diagnóstico no debería aplicarse a niños menores de 6 años. No se sabe con
+certeza si esta afección se presenta únicamente en esta limitada banda de edades. Como es probable
+que los síntomas del trastorno de desregulación disruptiva del estado de ánimo cambien al madurar
+el niño, el uso de este diagnóstico se debería restringir a los grupos de edad similares a aquellos en
+que se ha establecido su validez (7-18 años). Aproximadamente, la mitad de los niños con irritabilidad
+grave crónica tendrá una presentación que va a continuar cumpliendo los criterios para el trastorno
+un año después. Las tasas de conversión de la irritabilidad grave no episódica en trastorno bipolar
+son muy bajas. Sin embargo, los niños con irritabilidad crónica tienen mayor riesgo de desarrollar
+trastornos depresivos unipolares y trastornos de ansiedad en la edad adulta.
+Las variaciones relacionadas con la edad también diferencian el trastorno bipolar clásico del trastorno de desregulación disruptiva del estado de ánimo. Las tasas del trastorno bipolar son por lo
+general muy bajas antes de la adolescencia (< 1 %), con un aumento estable a comienzos de la edad
+adulta (prevalencia del 1-2 %). El trastorno de desregulación disruptiva del estado de ánimo es más
+frecuente que el trastorno bipolar antes de la adolescencia y los síntomas de este trastorno, por lo
+general, son menos frecuentes conforme el niño evoluciona hacia la edad adulta.
+
+Factores de riesgo y pronóstico
+Temperamentales. Los niños con irritabilidad crónica normalmente presentan historias psiquiátricas complicadas. En estos niños son frecuentes los antecedentes amplios de irritabilidad crónica, que
+
+158
+
+Trastornos depresivos
+
+se manifiesta característicamente antes de que se cumplan todos los criterios del trastorno. Estas
+presentaciones prediagnósticas pueden haber reunido las condiciones para el diagnóstico de trastorno negativista desafiante. Muchos niños con trastorno de desregulación disruptiva del estado de
+ánimo presentan síntomas que también cumplen los criterios del trastorno por déficit de atención/
+hiperactividad (TDAH) y de un trastorno de ansiedad, siendo estos diagnósticos frecuentes a una
+edad temprana. En algunos niños también se cumplen los criterios del trastorno depresivo mayor.
+Genéticos y fisiológicos. En términos de agregación familiar y genética, se ha sugerido que los
+niños que presentan irritabilidad crónica no episódica pueden diferenciarse de los niños con trastorno
+bipolar basándose en el riesgo familiar. Sin embargo, estos dos grupos no difieren en las tasas familiares de trastornos de ansiedad, trastornos depresivos unipolares o abuso de sustancias. En comparación con los niños con trastorno bipolar infantil o con otras enfermedades mentales, los que presentan un trastorno de desregulación disruptiva del estado de ánimo tienen similitudes y diferencias en
+los déficits de procesamiento de la información. Por ejemplo, en los niños con trastorno bipolar y en
+los niños irritables crónicos, así como en los niños con otros trastornos psiquiátricos, existen déficits
+en el reconocimiento de las emociones faciales, así como alteraciones en la toma de decisiones y en el
+control cognitivo. Existen también pruebas de una disfunción específica del trastorno que aparece en
+las tareas que evalúan el uso de la atención en respuesta a estímulos emocionales y que muestra signos típicos de disfunción en los niños con irritabilidad crónica.
+
+Aspectos diagnósticos relacionados con el género
+Los niños que acuden a la consulta con características del trastorno de desregulación disruptiva del
+estado de ánimo son sobre todo varones. En las muestras comunitarias parece existir un predominio
+de varones. Esta diferencia en la prevalencia entre hombres y mujeres diferencia al trastorno de desregulación disruptiva del estado de ánimo del trastorno bipolar, en el que existe una prevalencia de
+género similar.
+
+Riesgo de suicidio
+Al evaluar a niños con irritabilidad crónica, en el trastorno de desregulación disruptiva del estado de
+ánimo se deberían tener en cuenta los datos científicos que documentan la conducta suicida y la agresividad, así como otras consecuencias funcionales graves.
+
+Consecuencias funcionales del trastorno de desregulación
+disruptiva del estado de ánimo
+La irritabilidad grave crónica, como la que aparece en el trastorno de desregulación disruptiva del
+estado de ánimo, se asocia a una alteración importante de la familia del niño y de las relaciones con
+los compañeros, así como también del rendimiento académico. Como consecuencia de su extremadamente baja tolerancia a la frustración, estos niños tienen por lo general dificultades para progresar
+adecuadamente en el colegio, son a menudo incapaces de participar en las actividades que normalmente disfrutan los niños, su vida familiar se altera gravemente a causa de sus crisis y su irritabilidad,
+y tienen problemas para hacer o conservar amigos. Por lo general, los niveles de disfunción de los
+niños con trastorno bipolar y de los niños con trastorno de desregulación disruptiva del estado de
+ánimo son parecidos. Ambos trastornos provocan una grave perturbación en las vidas de los afectados y en sus familias. Tanto en el trastorno de desregulación disruptiva del estado de ánimo como en
+el trastorno bipolar son frecuentes las conductas peligrosas, la ideación o los intentos de suicidio, la
+agresividad intensa y la hospitalización psiquiátrica.
+
+Diagnóstico diferencial
+Como los niños y los adolescentes con irritabilidad crónica normalmente tienen historias complejas,
+el diagnóstico de trastorno de desregulación disruptiva del estado de ánimo se debería hacer considerando la presencia o ausencia de otros trastornos múltiples. A pesar de la necesidad de considerar
+
+Trastorno de desregulación disruptiva del estado de ánimo
+
+159
+
+otros muchos síndromes, se requiere una evaluación minuciosa para diferenciar entre el trastorno de
+desregulación disruptiva del estado de ánimo, el trastorno bipolar y el trastorno negativista desafiante.
+Trastornos bipolares. El rasgo central que diferencia el trastorno de desregulación disruptiva del estado de
+ánimo y los trastornos bipolares en los niños está relacionado con el curso longitudinal de los síntomas nucleares. En los niños, al igual que en los adultos, el trastorno bipolar I y el trastorno bipolar II se manifiestan como
+una enfermedad episódica con episodios delimitados de alteración del estado de ánimo que se pueden diferenciar de la forma de ser habitual del niño. La alteración del estado de ánimo que ocurre durante un episodio
+maníaco es claramente diferente del estado de ánimo habitual del niño. Además, durante un episodio maníaco,
+el cambio del estado de ánimo debe acompañarse del comienzo o de un empeoramiento de los síntomas
+cognitivos, conductuales y físicos asociados (p. ej., distraibilidad, aumento de la actividad dirigida a un fin),
+que también están presentes en un grado que es claramente diferente del estado basal habitual del niño. Por
+lo tanto, en el caso del episodio maníaco, los padres (y, dependiendo del nivel de desarrollo, los niños) deberían
+ser capaces de identificar un período de tiempo determinado en el que el estado de ánimo y la conducta del
+niño son significativamente diferentes de lo habitual. En cambio, la irritabilidad del trastorno de desregulación
+disruptiva del estado de ánimo es persistente y se presenta durante varios meses; aunque puede desaparecer
+y volver a aparecer hasta cierto punto, la irritabilidad grave es característica del niño con trastorno de desregulación disruptiva del estado de ánimo. Por tanto, mientras que los trastornos bipolares son trastornos episódicos, el trastorno de desregulación disruptiva del estado de ánimo no lo es. De hecho, el diagnóstico de
+trastorno de desregulación disruptiva del estado de ánimo no se puede hacer en un niño que ya haya experimentado alguna vez un episodio de duración completa de hipomanía o manía (irritable o eufórico), o que
+haya tenido alguna vez un episodio de manía o hipomanía que haya durado más de un día. Otro rasgo central
+para diferenciar los trastornos bipolares del trastorno de desregulación disruptiva del estado de ánimo es la
+presencia de un estado de ánimo elevado o expansivo y de grandiosidad. Estos síntomas son características
+frecuentes de la manía, pero no son específicos del trastorno de desregulación disruptiva del estado de ánimo.
+Trastorno negativista desafiante. Aunque los síntomas del trastorno negativista desafiante se producen normalmente en los niños con trastorno de desregulación disruptiva del estado de ánimo, los síntomas afectivos
+del trastorno de desregulación disruptiva del estado de ánimo son relativamente raros en los niños con trastorno
+negativista desafiante. Los rasgos clave que garantizan el diagnóstico de trastorno de desregulación disruptiva
+del estado de ánimo en los niños cuyos síntomas también cumplen los criterios del trastorno negativista desafiante son la presencia de ataques de cólera graves y frecuentes, y una alteración persistente del ánimo entre los
+ataques. Además, el diagnóstico de trastorno de desregulación disruptiva del estado de ánimo requiere una
+alteración grave en, al menos, un entorno (p. ej., la casa, el colegio o entre los compañeros) y una alteración leve
+o moderada en un segundo entorno. Por esta razón, mientras que la mayoría de los niños cuyos síntomas cumplen los criterios del trastorno de desregulación disruptiva del estado de ánimo van a tener también una presentación que cumpla los criterios del trastorno negativista desafiante, lo contrario no suele ocurrir. Es decir, en
+sólo aproximadamente un 15 % de los pacientes con trastorno negativista desafiante se van a cumplir los criterios del trastorno de desregulación disruptiva del estado de ánimo. Además, incluso en los niños que cumplen
+los criterios de los dos diagnósticos, sólo se debería hacer el diagnóstico de trastorno de desregulación disruptiva
+del estado de ánimo. Finalmente, tanto los síntomas afectivos destacados del trastorno de desregulación disruptiva del estado de ánimo como el alto riesgo de trastornos depresivos y de ansiedad que muestran los estudios
+de seguimiento justifican la colocación del trastorno de desregulación disruptiva del estado de ánimo entre los
+trastornos depresivos en el DSM-5 (el trastorno negativista desafiante se induye en el capítulo "Trastornos
+disruptivos del control de los impulsos y de la conducta"). Esto refleja el componente afectivo que presentan los
+pacientes con trastorno de desregulación disruptiva del estado de ánimo, más destacado que el de los pacientes
+con trastorno negativista desafiante. Sin embargo, hay que hacer notar que el trastorno de desregulación disruptiva del estado de ánimo parece conllevar un alto riesgo de problemas conductuales y afectivos.
+Trastorno por déficit de atención/hiperactividad, trastorno depresivo mayor, trastornos de ansiedad,
+y trastorno del espectro autista. A diferencia de los niños diagnosticados de trastorno bipolar o trastorno negativista desafiante, un niño con síntomas que cumplan los criterios del trastorno de desregulación disruptiva del estado de ánimo también podrá recibir un diagnóstico comórbido de TDAH, trastorno depresivo mayor o trastorno de ansiedad. Sin embargo, los niños en que la irritabilidad se presenta
+solamente en el contexto de un episodio depresivo mayor o un trastorno depresivo persistente (distimia)
+
+160
+
+Trastornos depresivos
+
+se deberían diagnosticar de uno de esos trastornos más que de trastorno de desregulación disruptiva del
+estado de ánimo. Los niños con trastorno de desregulación disruptiva del estado de ánimo pueden tener
+síntomas que también cumplan los criterios de un trastorno de ansiedad y pueden recibir ambos diagnósticos, si bien los niños cuya irritabilidad se manifiesta sólo en el contexto de una exacerbación del
+trastorno de ansiedad deberían diagnosticarse del trastorno relevante de ansiedad más que de trastorno
+de desregulación disruptiva del estado de ánimo. Además, los niños con trastornos del espectro autista
+presentan frecuentemente accesos de ira cuando, por ejemplo, se alteran sus rutinas. En estos casos, los
+accesos de ira deberían considerarse secundarios al trastorno del espectro autista y el niño no se debería
+diagnosticar de trastorno de desregulación disruptiva del estado de ánimo.
+Trastorno explosivo intermitente. Los niños con síntomas sugestivos de un trastorno explosivo intermitente presentan accesos de ira graves muy parecidos a los de los niños con trastorno de desregulación disruptiva del estado de ánimo. Sin embargo, al contrario que en el trastorno de desregulación disruptiva del
+estado de ánimo, en el trastorno explosivo intermitente no se requiere una alteración persistente del estado
+de ánimo entre los accesos. Además, el trastorno explosivo intermitente requiere sólo 3 meses de síntomas
+activos, a diferencia del trastorno de desregulación disruptiva del estado de ánimo, que requiere 12 meses.
+Por lo tanto, no se deberían hacer estos dos diagnósticos en el mismo niño. En los niños con accesos de ira e
+irritabilidad intercurrentes y persistentes, sólo se debería hacer el diagnóstico de trastorno de desregulación
+disruptiva del estado de ánimo.
+
+Comorbilidad
+Las tasas de comorbilidad del trastorno de desregulación disruptiva del estado de ánimo son extremadamente altas. Es raro encontrar pacientes cuyos síntomas cumplan únicamente los criterios del trastorno de
+desregulación disruptiva del estado de ánimo. La comorbilidad entre el trastorno de desregulación disruptiva del estado de ánimo y otros síndromes definidos en el DSM-1V parece ser mayor que para otras enfermedades mentales infantiles; el solapamiento mayor se produce con el trastorno negativista desafiante.
+Además de presentar unas tasas globales de comorbilidad altas en el trastorno de desregulación disruptiva
+del estado de ánimo, el espectro de enfermedades comórbidas es muy diverso. Estos niños acuden normalmente a la consulta con un amplio abanico de síntomas y diagnósticos de conductas perturbadoras, de síntomas afectivos, de ansiedad e incluso del espectro autista. Sin embargo, los niños con trastorno de desregulación disruptiva del estado de ánimo no deberían tener síntomas que cumplan los criterios de los trastornos
+bipolares, ya que en ese contexto sólo se haría el diagnóstico de trastorno bipolar. Si los niños presentan
+síntomas que cumplen los criterios del trastorno negativista desafiante o del trastorno explosivo intermitente
+y del trastorno de desregulación disruptiva del estado de ánimo, sólo se deberían diagnosticar de trastorno
+de desregulación disruptiva del estado de ánimo. Además, como se ha señalado anteriormente, no se debería hacer un diagnóstico de trastorno de desregulación disruptiva del estado de ánimo si los síntomas aparecen sólo en un contexto que provoca ansiedad, cuando se alteran las rutinas de un niño con trastorno del
+espectro autista o trastorno obsesivo-compulsivo, ni en el contexto de un episodio depresivo mayor.
+
+Trastorno de depresión mayor
+Criterios diagnósticos
+A. Cinco (o más) de los síntomas siguientes han estado presentes durante el mismo período de dos
+semanas y representan un cambio del funcionamiento previo; al menos uno de los síntomas es
+(1) estado de ánimo deprimido o (2) pérdida de interés o de placer.
+Nota: No incluir síntomas que se pueden atribuir claramente a otra afección médica.
+1. Estado de ánimo deprimido la mayor parte del día, casi todos los días, según se desprende
+de la información subjetiva (p. ej., se siente triste, vacío, sin esperanza) o de la observación
+por parte de otras personas (p. ej., se le ve lloroso). (Nota: En niños y adolescentes, el estado
+de ánimo puede ser irritable.)
+2. Disminución importante del interés o el placer por todas o casi todas las actividades la mayor parte
+del día, casi todos los días (como se desprende de la información subjetiva o de la observación).
+
+Trastorno de depresión mayor
+
+161
+
+3. Pérdida importante de peso sin hacer dieta o aumento de peso (p. ej., modificación de más
+de un 5% del peso corporal en un mes) o disminución o aumento del apetito casi todos los
+días. (Nota: En los niños, considerar el fracaso para el aumento de peso esperado.)
+4. Insomnio o hipersomnia casi todos los días.
+5. Agitación o retraso psicomotor casi todos los días (observable por parte de otros, no simplemente la sensación subjetiva de inquietud o de enlentecimiento).
+6. Fatiga o pérdida de energía casi todos los días.
+7. Sentimiento de inutilidad o culpabilidad excesiva o inapropiada (que puede ser delirante) casi
+todos los días (no simplemente el autorreproche o culpa por estar enfermo).
+8. Disminución de la capacidad para pensar o concentrarse, o para tomar decisiones, casi todos
+los días (a partir de la información subjetiva o de la observación por parte de otras personas).
+9. Pensamientos de muerte recurrentes (no sólo miedo a morir), ideas suicidas recurrentes sin
+un plan determinado, intento de suicidio o un plan específico para llevarlo a cabo.
+B. Los síntomas causan malestar clínicamente significativo o deterioro en lo social, laboral u otras
+áreas importantes del funcionamiento.
+C. El episodio no se puede atribuir a los efectos fisiológicos de una sustancia o de otra afección
+médica.
+Nota: Los Criterios A—C constituyen un episodio de depresión mayor.
+Nota: Las respuestas a una pérdida significativa (p. ej., duelo, ruina económica, pérdidas debidas
+a una catástrofe natural, una enfermedad o discapacidad grave) pueden incluir el sentimiento de
+tristeza intensa, rumiación acerca de la pérdida, insomnio, pérdida del apetito y pérdida de peso
+que figuran en el Criterio A, y pueden simular un episodio depresivo. Aunque estos síntomas pueden ser comprensibles o considerarse apropiados a la pérdida, también se debería pensar atentamente en la presencia de un episodio de depresión mayor además de la respuesta normal a una
+pérdida significativa. Esta decisión requiere inevitablemente el criterio clínico basado en la historia
+del individuo y en las normas culturales para la expresión del malestar en el contexto de la pérdida.'
+D. El episodio de depresión mayor no se explica mejor por un trastorno esquizoafectivo, esquizofrenia, un trastorno esquizofreniforme, un trastorno delirante, u otro trastorno especificado o no
+especificado del espectro de la esquizofrenia y otros trastornos psicóticos.
+E. Nunca ha habido un episodio maníaco o hipomaníaco.
+Nota: Esta exclusión no se aplica si todos los episodios de tipo maníaco o hipomaníaco son
+inducidos por sustancias o se pueden atribuir a los efectos fisiológicos de otra afección
+médica.
+
+'Para distinguir el duelo de un episodio de depresión mayor (EDM), es útil tener en cuenta que en el duelo el
+afecto predominante es el sentimiento de vacío y pérdida, mientras que en un EDM es el estado de ánimo
+deprimido persistente y la incapacidad de esperar felicidad o placer. La disforia en el duelo probablemente
+disminuye de intensidad en días o semanas y se produce en oleadas, las denominadas punzadas del duelo.
+Estas oleadas tienden a asociarse a pensamientos o recuerdos del difunto. El estado de ánimo deprimido de
+un EDM es más persistente y no se asocia a pensamientos o preocupaciones específicos. El dolor del duelo
+puede ir acompañado de humor y emociones positivas que no son característicos de la intensa infelicidad y
+miseria que caracteriza a un EDM. El contenido de los pensamientos asociados al duelo generalmente presenta preocupación vinculada a pensamientos y recuerdos del difunto, y no la autocrítica o la rumiación
+pesimista que se observa en un EDM. En el duelo, la autoestima por lo general se conserva, mientras que en
+un EDM son frecuentes los sentimientos de no valer para nada y de desprecio por uno mismo. Si en el duelo
+existen ideas de autoanulación, implican típicamente la percepción de haber fallado al difunto (p. ej., no
+haberlo visitado con más frecuencia, no decirle lo mucho que lo quería). Si un individuo en duelo piensa en
+la muerte y en el hecho de morir, estos pensamientos se centran por lo general en el difunto y posiblemente
+en "reunirse" con él, mientras que en un EDM estos pensamientos se centran en poner fin a la propia vida
+debido al sentimiento de inutilidad, de no ser digno de vivir o de ser incapaz de hacer frente al dolor de la
+depresión.
+
+162
+
+Trastornos depresivos
+
+Procedimientos de codificación y registro
+El código diagnóstico del trastorno de depresión mayor se basa en si es un episodio único o recurrente, la gravedad actual, la presencia de características psicóticas y el estado de remisión. La
+gravedad actual y las características psicóticas sólo están indicadas si se cumplen actualmente
+todos los criterios para un episodio de depresión mayor. Los especificadores de remisión sólo están
+indicados si actualmente no se cumplen todos los criterios para un episodio de depresión mayor.
+Los códigos son los siguientes:
+Especificador de gravedad/curso
+
+Episodio único
+
+Episodio recurrente
+
+Leve (pág. 188)
+
+296.21 (F32.0)
+
+296.31 (F33.0)
+
+Moderado (pág. 188)
+
+296.22 (F32.1)
+
+296.32 (F33.1)
+
+Grave (pág. 188)
+
+296.23 (F32.2)
+
+296.33 (F33.2)
+
+Con características psicóticas** (pág. 186)
+
+296.24 (F32.3)
+
+296.34 (F33.3)
+
+En remisión parcial (pág. 188)
+
+296.25 (F32.4)
+
+296.35 (F33.41)
+
+En remisión total (pág. 188)
+
+296.26 (F32.5)
+
+296.36 (F33.42)
+
+No especificado
+
+296.20 (F32.9)
+
+296.30 (F33.9)
+
+*Para un episodio que se considera recurrente debe haber un intervalo mínimo de dos meses consecutivos entre
+los episodios, durante el cual no se cumplan los criterios para un episodio de depresión mayor. Las definiciones
+de los especificadores se encuentran en las páginas indicadas.
+**Si existen características psicóticas, codificar el especificador "con características psicóticas" independientemente de la gravedad del episodio.
+A la hora de registrar el nombre de un diagnóstico, se enumerarán los términos en el orden siguiente:
+trastorno de depresión mayor, episodio único o recurrente, especificadores de gravedad/psicótico/
+remisión, y a continuación todos los especificadores siguientes sin código que sean aplicables al
+episodio actual.
+Especificar:
+Con ansiedad (pág. 184)
+Con características mixtas (págs. 184-185)
+Con características melancólicas (pág. 185)
+Con características atípicas (págs. 185-186)
+Con características psicóticas congruentes con el estado de ánimo (pág. 186)
+Con características psicóticas no congruentes con el estado de ánimo (pág. 186)
+Con catatonía (pág. 186). Nota de codificación: Utilizar el código adicional 293.89 (F06.1).
+Con inicio en el periparto (págs. 186-187)
+Con patrón estacional (sólo episodio recurrente) (págs. 187-188)
+
+Características diagnósticas
+Los síntomas de los criterios diagnósticos del trastorno depresivo mayor deberían aparecer casi
+cada día para poderlos considerar, con la excepción del cambio de peso y la ideación suicida. Debería haber ánimo deprimido la mayor parte del día, además de casi cada día. A menudo los síntomas
+de presentación son el insomnio y la fatiga, y el trastorno se infradiagnostica si no se reconocen los
+otros síntomas depresivos acompañantes. Al principio, el paciente quizá niegue que está triste, pero
+la tristeza se podría reconocer a través de la entrevista o deducir de la expresión facial o la conducta.
+En los pacientes que se centran en una queja somática, los clínicos deberían determinar si el malestar de esa queja se asocia a síntomas depresivos específicos. Aparecen fatiga y alteración del sueño
+en una alta proporción de casos, y las alteraciones psicomotoras son mucho menos frecuentes pero
+son indicativas de una mayor gravedad global, al igual que la presencia de una culpa delirante o
+casi delirante.
+
+Trastorno de depresión mayor
+
+163
+
+El rasgo principal del episodio depresivo mayor es un período de tiempo de al menos dos semanas durante el cual existe ánimo depresivo o pérdida del interés o del placer en casi todas las actividades (Criterio A). En los niños y los adolescentes, el ánimo suele ser irritable más que triste. El
+paciente debe experimentar además al menos cuatro síntomas adicionales de una lista que incluye
+cambios en el apetito o el peso y en la actividad psicomotora, energía disminuida, sentimientos de
+inutilidad o de culpa, dificultades para pensar, para concentrarse o para tomar decisiones, y pensamientos recurrentes de muerte o ideación suicida, o planes o intentos de suicidio. Para que un síntoma
+cuente como parte de un trastorno depresivo mayor ha de ser nuevo o debe haber empeorado claramente en comparación con el estado de la persona antes del episodio. Los síntomas deben persistir la
+mayor parte del día, casi a diario, durante al menos dos semanas consecutivas. El episodio debe
+acompañarse de un malestar clínicamente significativo o de una alteración del funcionamiento social,
+ocupacional o de otras áreas importantes. En algunos pacientes con episodios leves, el funcionamiento puede parecer normal, pero requiere un esfuerzo notablemente elevado.
+El ánimo en el episodio depresivo mayor lo describe a menudo la persona como deprimido, triste,
+desesperanzado, desanimado o "por los suelos" (Criterio Al). En algunos casos se puede negar inicialmente la tristeza, pero ésta se puede reconocer posteriormente a través de la entrevista (p. ej., al
+señalar que parece que el sujeto está a punto de llorar). En algunos pacientes que se quejan de sentirse
+"sosos", sin sentimientos, o que se sienten ansiosos se podría deducir la presencia de un ánimo deprimido a partir de la expresión facial del paciente y de su conducta. Algunos pacientes enfatizan las
+quejas somáticas (p. ej., dolores y sufrimientos corporales) en lugar de manifestar sentimientos de
+tristeza. Muchos pacientes refieren o presentan un aumento de la irritabilidad (p. ej., ira persistente,
+tendencia a responder a los acontecimientos con accesos de ira o culpabilizando a los otros, o un
+exagerado sentido de la frustración por acontecimientos menores). En los niños y los adolescentes
+aparece un ánimo irritable o malhumorado más que un ánimo triste o abatido. Esta forma de presentación debería diferenciarse de los patrones de irritabilidad ante la frustración.
+Casi siempre se produce una pérdida del interés o del placer, al menos en algún grado. Los pacientes pueden referir que se sienten menos interesados por los hobbies, "que no les importan", o que no
+sienten placer en las actividades que antes consideraban placenteras (Criterio A2). Los familiares
+notan a menudo un mayor aislamiento social o el abandono de los pasatiempos con los que disfrutaban (p. ej., el que había sido un ávido jugador de golf deja de jugar, o un niño que solía disfrutar del
+fútbol se excusa para no practicarlo). En algunos pacientes, en comparación con los niveles previos,
+existe una reducción significativa del interés o del deseo sexual.
+La alteración del apetito puede producirse en forma de disminución o de aumento. Algunos
+pacientes deprimidos refieren que tienen que forzarse para comer. Otros pueden comer más y pueden
+tener ansia por determinadas comidas (p. ej., dulces u otros hidratos de carbono). Cuando los cambios
+del apetito son graves (en cualquier dirección), hay un pérdida o ganancia significativa de peso, y en
+los niños no se alcanza la ganancia ponderal esperada (Criterio A3).
+Las alteraciones del sueño se pueden presentar en forma de dificultad para dormir o de sueño
+excesivo (Criterio A4). Cuando existe insomnio, normalmente se presenta como un insomnio medio
+(p. ej., el paciente se despierta a lo largo de la noche y tiene dificultades para volverse a dormir).
+También puede existir insomnio precoz (p. ej., dificultad para quedarse dormido). Los pacientes que
+presentan un exceso de sueño (hipersomnia) pueden presentar períodos de sueño prolongado durante
+la noche o un aumento del sueño durante el día. A veces, el motivo que lleva al paciente a buscar
+tratamiento son las alteraciones del sueño.
+Los cambios psicomotores incluyen la agitación (p. ej., la incapacidad para sentarse y estar quieto,
+caminar de un lado a otro, retorcerse las manos, o tocarse o frotarse la piel, la ropa u otros objetos) y
+la lentificación (p. ej., discurso, pensamiento y movimientos corporales ralentizados, aumento de las
+pausas antes de contestar, disminución del volumen, la inflexión, la cantidad o la variedad del contenido del discurso, o mutismo) (Criterio A5). La agitación y el retardo psicomotor deben ser lo suficientemente graves como para ser observables por otras personas y no deberían representar únicamente sensaciones subjetivas.
+Son frecuentes la disminución de la energía, el cansancio y la fatiga (Criterio A6). Una persona
+puede referir una fatiga mantenida sin haber realizado ningún esfuerzo físico. Incluso las tareas más
+
+164
+
+Trastornos depresivos
+
+pequeñas parecen requerir un esfuerzo considerable. Es posible que se reduzca la eficiencia con la que
+se realizan las tareas. Por ejemplo, un paciente puede quejarse de que lavarse y vestirse por las mañanas resulta extenuante y requiere el doble de tiempo de lo habitual.
+El sentimiento de inutilidad o de culpa que se presenta en el episodio depresivo mayor puede
+incluir evaluaciones negativas, fuera de la realidad, de la propia valía, preocupaciones de culpa y
+rumiaciones sobre pequeños errores del pasado (Criterio A7). Estos pacientes a menudo malinterpretan los acontecimientos diarios neutros o triviales como si probasen los propios defectos personales
+y tienen un exagerado sentido de la responsabilidad hacia los acontecimientos inapropiados. La sensación de inutilidad o de culpa puede alcanzar proporciones delirantes (p. ej., el paciente está convencido de que es personalmente responsable de la pobreza en el mundo). Es muy frecuente que el
+paciente se culpe a sí mismo de estar enfermo y de fracasar en sus responsabilidades laborales o
+interpersonales como consecuencia de la depresión, pero esta actitud, a menos que sea delirante, no
+se considera suficiente para cumplir este criterio.
+Muchos pacientes refieren incapacidad para pensar, concentrarse o tomar pequeñas decisiones
+(Criterio A8). Pueden parecer fácilmente distraíbles o se quejan de problemas de memoria. Aquellos
+pacientes involucrados en actividades con una gran demanda cognitiva son a menudo incapaces de
+llevarlas a cabo. En los niños, un descenso abrupto de las notas puede reflejar poca concentración. En
+los pacientes ancianos, las dificultades de memoria pueden ser la queja principal y pueden confundirse con los signos precoces de una demencia ("pseudodemencia"). Cuando el episodio depresivo
+se trata con éxito, los problemas de memoria a menudo desaparecen por completo. Sin embargo, en
+algunos pacientes, especialmente en los ancianos, un episodio depresivo mayor puede ser a veces la
+presentación inicial de una demencia irreversible.
+Son frecuentes los pensamientos de muerte, la ideación suicida o los intentos de suicidio (Criterio
+A9). Éstos pueden incluir desde un deseo pasivo de no despertarse por la mañana o la creencia de que
+los demás estarían mejor si el sujeto estuviese muerto, hasta albergar pensamientos transitorios pero
+recurrentes de cometer suicidio o tener un plan específico de suicidio.
+Los pacientes con mayor riesgo de suicidio pueden haber puesto sus asuntos en orden (p. ej.,
+testamento actualizado, deudas pagadas), haber adquirido los materiales necesarios (p. ej., una
+cuerda o una pistola) y haber elegido un lugar y una fecha para consumar el suicidio. Las motivaciones del suicidio pueden ser el deseo de rendirse a la vista de obstáculos que se perciben como insuperables, un intenso deseo de terminar con lo que se percibe como un estado de dolor emocional
+interminable y terriblemente doloroso, la incapacidad de imaginar ningún disfrute en la vida o el
+deseo de no ser una carga para los demás. La resolución de tales pensamientos puede servir mejor
+que la negación de dichos planes para medir si disminuye el riesgo de suicidio.
+La evaluación de los síntomas de un episodio depresivo mayor es especialmente difícil cuando
+ocurren en un paciente que, además, tiene una afección médica general (p. ej., cáncer, infarto cerebral,
+infarto de miocardio, diabetes, embarazo). Algunos de los signos y síntomas de los criterios del episodio
+depresivo mayor son idénticos a los de esas afecciones médicas generales (p. ej., la pérdida de peso en
+la diabetes sin tratar, la fatiga en el cáncer, la hipersomnia al comienzo del embarazo, el insomnio en el
+embarazo avanzado o en el posparto). Tales síntomas cuentan para el diagnóstico del episodio depresivo mayor, excepto cuando son clara y totalmente atribuibles a la afección médica general. En esos
+casos se deberían evaluar con especial cuidado los síntomas no vegetativos de disforia, anhedonia,
+culpa o inutilidad, la alteración de la concentración o la indecisión, y los pensamientos de suicidio. Las
+definiciones de episodios de depresión mayor que se han modificado para incluir sólo esos síntomas no
+vegetativos parecen identificar casi los mismos pacientes que cuando se utilizan todos los criterios.
+
+Características asociadas que apoyan el diagnóstico
+El trastorno depresivo mayor se asocia a una alta mortalidad y la mayor parte de ésta se debe al suicidio; sin embargo, no es la única causa. Por ejemplo, los pacientes deprimidos que ingresan en residencias de ancianos tienen una probabilidad notablemente incrementada de fallecer en el primer ario. Los
+pacientes presentan con frecuencia llanto, irritabilidad, estado taciturno, rumiación obsesiva, ansiedad, fobias, preocupación excesiva por la salud física y quejas de dolor (p. ej., dolor de cabeza, de
+articulaciones, abdominal u otros dolores). En los niños puede presentarse ansiedad por separación.
+
+Trastorno de depresión mayor
+
+165
+
+Aunque existe una gran amplitud de datos bibliográficos que describen los correlatos neuroanatómicos, neuroendocrinos y neurofisiológicos del trastorno depresivo mayor, no existe ninguna
+prueba de laboratorio que haya probado tener suficiente sensibilidad y especificidad para usarse
+como herramienta diagnóstica para este trastorno. Hasta hace poco, la alteración más ampliamente
+investigada en asociación con los episodios de depresión mayor había sido la hiperactividad del eje
+hipofisario-hipotalámico-adrenal, que parece relacionarse con la melancolía, los rasgos psicóticos y el
+riesgo de un posible suicidio. Los estudios moleculares también han encontrado factores periféricos,
+como variantes genéticas de factores neurotróficos y de citoquinas proinflamatorias. Además, en los
+adultos con depresión mayor, los estudios de resonancia magnética funcional muestran signos de
+alteraciones funcionales en los sistemas neurales que soportan el procesamiento emocional, la búsqueda de recompensa y la regulación emocional.
+
+Prevalencia
+La prevalencia a los doce meses del trastorno depresivo mayor en Estados Unidos es aproximadamente del 7 %, con notables diferencias entre los grupos de edad, de modo que la prevalencia en los
+sujetos de entre 18 y 29 años es tres veces mayor que la prevalencia en los pacientes de 60 años o
+mayores. Las mujeres presentan tasas que llegan a ser 1,5-3 veces mayores que las de los hombres,
+iniciándose el trastorno en la adolescencia temprana.
+
+Desarrollo y curso
+El trastorno depresivo mayor puede aparecer por primera vez a cualquier edad, pero la probabilidad de
+que se inicie se incrementa notablemente en la pubertad. En Estados Unidos, la incidencia parece tener un
+pico hacia los 20 años; sin embargo, no es infrecuente que se inicie por primera vez en la ancianidad.
+El curso del trastorno depresivo mayor es bastante variable, de modo que algunos pacientes apenas
+presentan remisiones (períodos de 2 o más meses sin síntomas o con sólo uno o dos síntomas leves), si
+es que las presentan, mientras que otros permanecen durante muchos años con pocos o ningún síntoma entre los episodios. Es importante distinguir los pacientes que acuden en busca de tratamiento
+durante una exacerbación de una enfermedad depresiva crónica de aquellos cuyos síntomas han aparecido recientemente. La cronicidad de los síntomas depresivos aumenta sustancialmente la probabilidad de que existan trastornos subyacentes de personalidad, ansiedad y consumo de sustancias, y
+disminuye la probabilidad de que se siga el tratamiento hasta la remisión completa. Es, por tanto, útil
+pedir a los pacientes que acuden con síntomas depresivos que identifiquen el último período de al
+menos dos meses durante el cual estuvieron completamente libres de síntomas depresivos.
+La recuperación se inicia normalmente dentro de los tres meses siguientes al comienzo en dos de
+cada cinco pacientes con depresión mayor y en el plazo de un año en cuatro de cada cinco pacientes.
+El carácter reciente del inicio es un determinante fuerte de la probabilidad de recuperación a corto
+plazo y se puede esperar que muchos pacientes que sólo han estado deprimidos durante varios meses
+se recuperen de modo espontáneo. Las características que se asocian a unas tasas de recuperación
+menores, además de la duración del episodio actual, son los rasgos psicóticos, la ansiedad intensa, los
+trastornos de personalidad y la gravedad de los síntomas.
+El riesgo de recurrencia se vuelve progresivamente menor con el tiempo conforme se incrementa la
+duración de la remisión. El riesgo es mayor en los pacientes cuyo episodio anterior fue grave, en los
+sujetos jóvenes y en las personas que han presentado múltiples episodios. La persistencia de síntomas
+depresivos durante la remisión, aunque sean leves, es un factor que predice claramente la recurrencia.
+Muchas enfermedades bipolares comienzan con uno o más episodios depresivos, y en una proporción considerable de pacientes que inicialmente parecen tener un trastorno depresivo mayor se
+acaba probando con el tiempo que en realidad padecen un trastorno bipolar. Esto es más probable en
+los pacientes en que la enfermedad se inicia en la adolescencia, en los que tienen rasgos psicóticos y
+en los que tienen antecedentes familiares de trastorno bipolar. La presencia del especificador "con
+rasgos mixtos" también aumenta el riesgo de un futuro diagnóstico de manía o hipomanía. El trastorno bipolar, en particular con rasgos psicóticos, puede convertirse también en esquizofrenia, siendo
+este cambio mucho más frecuente que el contrario.
+
+166
+
+Trastornos depresivos
+
+A pesar de que las tasas de prevalencia de los trastornos depresivos presentan diferencias claras entre
+ambos sexos, dichas diferencias entre sexos no parecen existir en relación con la fenomenología, el curso
+y la respuesta al tratamiento. Asimismo, no se aprecian efectos claros de la edad actual sobre el curso o la
+respuesta al tratamiento en el trastorno depresivo mayor. Sin embargo, existen algunas diferencias en
+cuanto a los síntomas: la hipersomnia y la hiperfagia son más probables en los sujetos jóvenes, y los síntomas melancólicos, en particular las alteraciones psicomotoras, son más frecuentes en los sujetos mayores.
+La probabilidad de los intentos de suicidio disminuye durante la época adulta media y tardía,
+aunque no así el riesgo de suicidio consumado. Las depresiones de inicio en edades tempranas son
+más familiares y es más probable que conlleven asociadas alteraciones de la personalidad. El curso
+del trastorno depresivo mayor no suele cambiar por lo general con la edad. El tiempo promedio para
+la recuperación parece ser estable en largos períodos de tiempo, y la probabilidad de entrar en un
+episodio, en general, ni aumenta ni disminuye con el tiempo.
+
+Factores de riesgo y pronósticos
+Temperamentales. El neuroticismo (la afectividad negativa) es un factor de riesgo bien establecido
+para el comienzo del trastorno depresivo mayor, y parece que unos niveles altos vuelven a los sujetos
+más proclives a desarrollar episodios depresivos en respuesta a los acontecimientos vitales estresantes.
+Los acontecimientos adversos en la infancia, especialmente cuando son múltiples experiencias de diversos tipos, constituyen un potente conjunto de factores de riesgo de contraer un trastorno
+depresivo mayor. Los acontecimientos vitales estresantes están bien reconocidos como precipitantes de
+los episodios de depresión mayor, pero la presencia o ausencia de acontecimientos vitales adversos
+próximos al comienzo de los episodios no parece ser útil para el pronóstico ni la elección del tratamiento.
+Genéticos y fisiológicos. Los familiares de primer grado de los pacientes con trastorno depresivo
+mayor tienen un riesgo dos a cuatro veces mayor que el de la población general. El riesgo relativo
+parece ser mayor en las formas de inicio temprano y recurrentes. La heredabilidad es de aproximadamente el 40 %, y los rasgos neuróticos de la personalidad cuentan en proporción considerable para
+esta asociación genética.
+Modificadores del curso. Esencialmente, todos los trastornos no afectivos mayores aumentan el
+riesgo de que un sujeto desarrolle depresión. Los episodios de depresión mayor que se desarrollan en
+el contexto de otro trastorno suelen seguir con frecuencia un curso más refractario. El trastorno por
+consumo de sustancias, la ansiedad y el trastorno límite de la personalidad se encuentran entre los
+más frecuentes, y la presencia de síntomas depresivos puede oscurecer y retrasar su reconocimiento.
+Sin embargo, la mejoría clínica mantenida de los síntomas depresivos puede depender del tratamiento apropiado y de la enfermedad subyacente. Las enfermedades médicas crónicas o discapacitantes también aumentan el riesgo de episodios de depresión mayor. Estas enfermedades prevalentes,
+como la diabetes, la obesidad mórbida y la patología cardiovascular, se complican a menudo con
+episodios depresivos, y es más probable que estos episodios se vuelvan crónicos si se comparan con
+los episodios depresivos de los pacientes sin enfermedades médicas.
+Ambientales.
+
+Aspectos diagnósticos relacionadas con la cultura
+Los estudios sobre el trastorno depresivo mayor en las diferentes culturas han mostrado diferencias
+de hasta siete veces en las tasas de prevalencia a los doce meses, pero existe mucha más uniformidad
+en la proporción mujeres/hombres, en las edades medias de inicio y en el grado en que la presencia
+del trastorno aumenta la probabilidad de un trastorno por abuso de sustancias comórbido. Aunque
+estos hallazgos sugieren diferencias culturales importantes en la expresión del trastorno depresivo
+mayor, no permiten determinar asociaciones simples entre culturas concretas y la probabilidad de
+presentar síntomas específicos. Más bien, los clínicos deberían ser conscientes de que la mayoría de
+los casos de depresión no se reconocen en los centros de atención primaria en la mayor parte de los
+países, y de que es muy probable que en muchas culturas los síntomas somáticos sean la queja de
+presentación. Entre los síntomas del Criterio A, el insomnio y la pérdida de energía son los que se
+presentan de modo más uniforme.
+
+Trastorno de depresión mayor
+
+167
+
+Aspectos diagnósticos relacionados con el género
+Aunque la mayor frecuencia en las mujeres es el hallazgo más reproducido en la epidemiología del
+trastorno depresivo mayor, no hay diferencias claras entre sexos en cuanto a síntomas, curso, respuesta al tratamiento y consecuencias funcionales. En las mujeres hay mayor riesgo de intentos de
+suicidio y el riesgo de suicidio consumado es menor. La disparidad entre las tasas de suicidio de
+ambos sexos no es tan grande en los pacientes con trastornos depresivos como en la población general.
+
+Riesgo de suicidio
+La posibilidad de una conducta suicida existe durante todo el tiempo que duran los episodios de
+depresión mayor. El factor de riesgo que se ha descrito de manera más sistemática son los antecedentes de intentos o amenazas de suicidio, pero habría que recordar que la mayoría de los suicidios
+consumados no se han precedido de intentos fallidos. Otras características asociadas a un aumento
+del riesgo de suicidio consumado son: ser varón, estar soltero o vivir solo y tener intensos sentimientos de desesperanza. La presencia del trastorno límite de la personalidad aumenta notablemente el
+riesgo de futuros intentos de suicidio.
+
+Consecuencias funcionales del trastorno
+de depresión mayor
+Muchas de las consecuencias funcionales del trastorno depresivo mayor provienen de los síntomas
+individuales. El deterioro puede ser muy ligero, de modo que muchas personas que interactúan con
+los individuos afectos no son conscientes de los síntomas depresivos. Sin embargo, el deterioro puede
+llegar hasta a la incapacidad completa, de modo que el paciente deprimido va a ser incapaz de atender sus necesidades básicas de autocuidado, o sufre mutismo, o está catatónico. Entre los pacientes
+que se atienden en los centros médicos generales, los pacientes con trastorno depresivo mayor tienen
+más dolor, más enfermedades físicas y más disminución del funcionamiento en las áreas física, social
+y personal.
+
+Diagnóstico diferencial
+Episodios maníacos con ánimo irritable o episodios mixtos. Los episodios de depresión mayor
+con marcado ánimo irritable pueden ser difíciles de diferenciar de los episodios maníacos con ánimo
+irritable o de los episodios mixtos. Esta distinción requiere una evaluación clínica minuciosa de la
+presencia de síntomas maníacos.
+Trastorno del humor debido a otra afección médica. El diagnóstico apropiado es un episodio
+depresivo mayor y se debería basar en la historia personal, el examen físico y las pruebas de laboratorio, si no se considera que el trastorno del ánimo es consecuencia directa de una afección médica
+específica (p. ej., esclerosis múltiple, infarto cerebral, hipotiroidismo).
+Trastorno depresivo o bipolar inducido por sustancias/medicamentos. Este trastorno se distingue del trastorno depresivo mayor por el hecho de que existe una sustancia (p. ej., una droga de
+abuso, una medicación, una toxina) que parece estar etiológicamente relacionada con la alteración del
+ánimo. Por ejemplo, el ánimo deprimido que ocurre sólo en el contexto de la abstinencia de cocaína
+se debería diagnosticar de trastorno depresivo inducido por cocaína.
+Trastorno por déficit de atención/hiperactividad. La distraibilidad y la baja tolerancia a la frustración pueden aparecer tanto en el trastorno por déficit de atención/hiperactividad como en el episodio
+depresivo mayor; si se cumplen los criterios de ambos, se debería diagnosticar el trastorno por déficit
+de atención/hiperactividad además del trastorno del ánimo. Sin embargo, el clínico debe tener precaución para no sobrediagnosticar un episodio depresivo mayor en los niños con trastorno por déficit
+de atención/hiperactividad cuya alteración del ánimo-se caracterice por irritabilidad más que por
+tristeza o por pérdida de interés.
+
+Trastornos depresivos
+
+168
+
+Trastorno de adaptación con ánimo deprimido. El episodio depresivo mayor que ocurre en respuesta a un factor estresante psicosocial se distingue del trastorno de adaptación con ánimo deprimido por el hecho de que los criterios diagnósticos completos del episodio depresivo mayor no se
+cumplen en el trastorno de adaptación.
+Tristeza. Por último, los períodos de tristeza son aspectos inherentes de la experiencia humana.
+Estos períodos no deberían diagnosticarse de episodio depresivo mayor a menos que se cumplan los
+criterios de gravedad (p. ej., cinco de los nueve síntomas) y duración (p. ej., la mayor parte del día,
+casi cada día durante al menos dos semanas), y que exista malestar o deterioro clínicamente significativo. El diagnóstico de otro trastorno depresivo especificado puede ser apropiado para las presentaciones de ánimo deprimido con deterioro clínicamente significativo que no cumplan los criterios de
+duración o de gravedad.
+
+Comorbilidad
+Otros trastornos con los que el trastorno depresivo mayor se asocia con frecuencia son los trastornos
+relacionados con sustancias, el trastorno de pánico, el trastorno obsesivo-compulsivo, la anorexia
+nerviosa, la bulimia nerviosa y el trastorno límite de la personalidad.
+
+Trastorno depresivo persistente (distimia)
+300.4 (F34.1)
+En este trastorno se agrupan el trastorno de depresión mayor crónico y el trastorno distímico del
+DSM-IV.
+A. Estado de ánimo deprimido durante la mayor parte del día, presente más días que los que está
+ausente, según se desprende de la información subjetiva o de la observación por parte de otras
+personas, durante un mínimo de dos años.
+Nota: En niños y adolescentes, el estado de ánimo puede ser irritable y la duración ha de ser
+como mínimo de un año.
+B. Presencia, durante la depresión, de dos (o más) de los síntomas siguientes:
+1. Poco apetito o sobrealimentación.
+2. Insomnio o hipersomnia.
+3. Poca energía o fatiga.
+4. Baja autoestima.
+5. Falta de concentración o dificultad para tomar decisiones.
+6. Sentimientos de desesperanza.
+C. Durante el período de dos años (un año en niños y adolescentes) de la alteración, el individuo
+nunca ha estado sin los síntomas de los Criterios A y B durante más de dos meses seguidos.
+D. Los criterios para un trastorno de depresión mayor pueden estar continuamente presentes
+durante dos años.
+E. Nunca ha habido un episodio maníaco o un episodio hipomaníaco, y nunca se han cumplido los
+criterios para el trastorno ciclotímico.
+F. La alteración no se explica mejor por un trastorno esquizoafectivo persistente, esquizofrenia, un
+trastorno delirante, u otro trastorno especificado o no especificado del espectro de la esquizofrenia y otro trastorno psicótico.
+G. Los síntomas no se pueden atribuir a los efectos fisiológicos de una sustancia (p. ej., una droga,
+un medicamento) o a otra afección médica (p. ej., hipotiroidismo).
+H. Los síntomas causan malestar clínicamente significativo o deterioro en lo social, laboral u otras
+áreas importantes del funcionamiento.
+Nota: Como los criterios para un episodio de depresión mayor incluyen cuatro síntomas que no
+
+están en la lista de síntomas del trastorno depresivo persistente (distimia), un número muy limitado
+
+Trastorno depresivo persistente (distimia)
+
+169
+
+de individuos tendrá síntomas depresivos que han persistido durante más de dos años, pero no
+cumplirán los criterios para el trastorno depresivo persistente. Si en algún momento durante el
+episodio actual de la enfermedad se han cumplido todos los criterios para un episodio de depresión mayor, se hará un diagnóstico de trastorno de depresión mayor. De no ser así, está justificado
+un diagnóstico de otro trastorno depresivo especificado o de un trastorno depresivo no especificado.
+Especificar si:
+Con ansiedad (pág. 184)
+Con características mixtas (págs. 184-185)
+Con características melancólicas (pág. 185)
+Con características atípicas (págs. 185-186)
+Con características psicóticas congruentes con el estado de ánimo (pág. 186)
+Con características psicóticas no congruentes con el estado de ánimo (pág. 186)
+Con inicio en el periparto (págs. 186-187)
+Especificar si:
+En remisión parcial (pág. 188)
+En remisión total (pág. 188)
+Especificar si:
+Inicio temprano: Si el inicio es antes de los 21 años.
+Inicio tardío: Si el inicio es a partir de los 21 años.
+Especificar si (durante la mayor parte de los dos años más recientes del trastorno depresivo persistente):
+Con síndrome distímico puro: No se han cumplido todos los criterios para un episodio de
+depresión mayor al menos en los dos años anteriores.
+Con episodio de depresión mayor persistente: Se han cumplido todos los criterios para un
+episodio de depresión mayor durante los dos años anteriores.
+Con episodios intermitentes de depresión mayor, con episodio actual: Actualmente se cumplen todos los criterios para un episodio de depresión mayor, pero ha habido períodos de al
+menos 8 semanas en por lo menos los dos años anteriores con síntomas por debajo del umbral
+para un episodio de depresión mayor completo.
+Con episodios intermitentes de depresión mayor, sin episodio actual: Actualmente no se
+cumplen todos los criterios para un episodio de depresión mayor, pero ha habido uno o más
+episodios de depresión mayor al menos en los dos años anteriores.
+Especificar la gravedad actual:
+Leve (pág. 188)
+Moderado (pág. 188)
+Grave (pág. 188)
+
+Características diagnósticas
+El rasgo principal del trastorno depresivo persistente (distimia) es un ánimo deprimido que aparece
+la mayor parte del día, durante la mayor parte de los días, durante al menos dos años o al menos
+durante un año en los niños y los adolescentes (Criterio A). En este trastorno se agrupan el trastorno
+de depresión mayor crónico y el trastorno distímico del DSM-IV. La depresión mayor puede preceder
+al trastorno depresivo persistente, y los episodios de depresión mayor pueden ocurrir durante el
+trastorno depresivo persistente. Los pacientes cuyos síntomas cumplan los criterios del trastorno
+depresivo mayor durante dos años se deberían diagnosticar de trastorno depresivo persistente además del trastorno depresivo mayor. Los pacientes con trastorno depresivo persistente describen su
+estado de ánimo como triste o con el ánimo "por los suelos". Durante los períodos de ánimo deprimido deben presentarse al menos dos de los seis síntomas del Criterio B. Como estos síntomas forman
+parte de la experiencia diaria del paciente, sobre todo en los casos de inicio temprano (p. ej., "siempre
+
+170
+
+Trastornos depresivos
+
+he sido así"), es posible que no se mencionen a menos que se le pregunte al individuo. Durante el
+período de dos años (de un año en los niños o los adolescentes), cualquier intervalo sin síntomas dura
+como máximo dos meses (Criterio C).
+
+Prevalencia
+El trastorno depresivo persistente es una amalgama del trastorno distímico y del trastorno de depresión
+mayor crónico del DSM-IV. La prevalencia en 12 meses en Estados Unidos es aproximadamente del
+0,5 % para el trastorno depresivo persistente y del 1,5 % para el trastorno depresivo mayor crónico.
+
+Desarrollo y curso
+El trastorno depresivo persistente tiene a menudo un inicio temprano e insidioso (p. ej., en la infancia,
+la adolescencia o la juventud) y, por definición, tiene un curso crónico. Entre los individuos con trastorno depresivo persistente y trastorno límite de la personalidad, la covarianza de los correspondientes rasgos a lo largo del tiempo sugiere la existencia de un mecanismo común. El comienzo temprano
+(p. ej., antes de los 21 años) se asocia a una mayor probabilidad de trastornos comórbidos de la personalidad y de abuso de sustancias.
+Cuando los síntomas alcanzan el nivel de un episodio depresivo mayor, es probable que desciendan posteriormente a un nivel inferior. Sin embargo, los síntomas depresivos remiten menos probablemente en un determinado período de tiempo, en el contexto de un trastorno depresivo recurrente
+que en el de un episodio depresivo mayor.
+
+Factores de riesgo y pronóstico
+Temperamentales. Los factores que predicen un peor pronóstico a largo plazo son los mayores
+niveles de neuroticismo (afectividad negativa), la mayor gravedad de los síntomas, un peor funcionamiento global y la presencia de trastornos de ansiedad o de conducta.
+Ambientales. Los factores de riesgo en la infancia son la pérdida de los padres y su separación.
+Genéticos y fisiológicos. No hay diferencias claras entre el desarrollo, el curso y la historia familiar de la enfermedad del trastorno distímico y del trastorno depresivo mayor crónico del DSM-IV.
+Es probable que los hallazgos anteriores concernientes a cualquiera de esos diagnósticos sean aplicables al trastorno depresivo persistente. Es, por tanto, probable que los pacientes con trastorno
+depresivo persistente tengan una mayor proporción de familiares de primer grado con dicho trastorno que los pacientes con trastorno depresivo mayor, y que tengan más trastornos depresivos en
+general.
+Se han implicado varias regiones cerebrales (p. ej., el córtex prefrontal, el cíngulo anterior, la amígdala, el hipocampo) en los trastornos depresivos persistentes. Además, es posible que existan también
+alteraciones polisomnográficas.
+
+Consecuencias funcionales del trastorno
+depresivo persistente
+El grado en que el trastorno depresivo persistente repercute en el funcionamiento social y laboral
+varía ampliamente, pero sus efectos pueden ser tan grandes o incluso mayores que los del trastorno
+depresivo mayor.
+
+Diagnóstico diferencial
+Trastorno depresivo mayor. Si existe ánimo deprimido además de dos o más síntomas de los
+criterios del episodio depresivo persistente durante dos años o más, entonces se realiza el diagnóstico de trastorno depresivo persistente. El diagnóstico depende de la duración de dos años, que lo
+distingue de los episodios de depresión que duran menos de dos años. Si los síntomas cumplen
+
+Trastorno disfórico premenstrual
+
+171
+
+criterios suficientes para el diagnóstico de un episodio depresivo mayor en cualquier momento de
+este período, entonces se debería hacer el diagnóstico de depresión mayor, pero no se codifica como
+un diagnóstico separado, sino como un especificador del trastorno depresivo persistente. Si los síntomas del paciente cumplen en el momento actual todos los criterios del episodio depresivo mayor,
+entonces se debería usar el especificador "con episodios intermitentes de depresión mayor con el
+episodio actual". Si el episodio depresivo mayor ha tenido una duración de al menos dos años y sigue
+presentándose, entonces se usa el especificador "con episodio de depresión mayor persistente".
+Cuando no se cumplen todos los criterios del episodio depresivo mayor en el momento actual, pero
+ha existido al menos un episodio de depresión mayor en el contexto de al menos dos años de síntomas
+depresivos persistentes, entonces se usa el especificador "con episodios intermitentes de depresión
+mayor, sin episodio actual". Si el paciente no ha presentado un episodio de depresión mayor en los
+últimos dos años, entonces se usa el especificador "con síndrome distímico puro".
+Trastornos psicóticos. Los síntomas depresivos son un rasgo común que se asocia a los trastornos
+psicóticos crónicos (p. ej., el trastorno esquizoafectivo, la esquizofrenia, el trastorno delirante). No se
+hace un diagnóstico distinto de trastorno depresivo persistente si los síntomas ocurren durante el
+curso del trastorno psicótico (incluidas las fases residuales).
+Trastorno depresivo o bipolar debido a otra afección médica. Se debe distinguir el trastorno
+depresivo persistente del trastorno depresivo o bipolar debido a otra afección médica. El diagnóstico
+es de trastorno depresivo o bipolar debido a otra afección médica si no se considera que las alteraciones anímicas sean atribuibles a los efectos fisiopatológicos directos de una afección médica específica,
+normalmente crónica, basándose en la historia personal, el examen físico y las pruebas de laboratorio
+(p. ej., esclerosis múltiple). Si se considera que los síntomas depresivos no son atribuibles a los efectos
+fisiológicos de otra afección médica, entonces se codifica el trastorno mental primario (p. ej., trastorno
+depresivo persistente) y la afección médica se considera como una afección médica concomitante (p.
+ej., diabetes mellitus).
+Trastorno depresivo o bipolar inducido por sustancias/medicamentos. El trastorno depresivo o
+bipolar inducido por sustancias/medicamentos se distingue del trastorno depresivo persistente
+cuando se considera que hay una sustancia (p. ej., una droga de abuso, una medicación, una toxina)
+que podría estar etiológicamente relacionada con la alteración del ánimo.
+Trastornos de la personalidad. A menudo hay signos de la coexistencia de alteraciones de la personalidad. Cuando la presentación en un individuo cumple los criterios tanto del trastorno depresivo
+persistente como de un trastorno de la personalidad, se deben realizar ambos diagnósticos.
+
+Comorbilidad
+En comparación con los pacientes con trastorno depresivo mayor, los que tienen trastorno depresivo
+persistente tienen mayor riesgo de comorbilidad psiquiátrica en general y de trastornos de ansiedad
+y de abuso de sustancias en particular. El comienzo temprano del trastorno depresivo persistente se
+asocia claramente a los trastornos de personalidad de los clusters B y C del DSM-IV.
+
+Trastorno disfórico premenstrual
+Criterios diagnósticos
+
+625.4 (N94.3)
+
+A. En la mayoría de los ciclos menstruales, al menos cinco síntomas han de estar presentes en la
+última semana antes del inicio de la menstruación, empezar a mejorar unos días después del
+inicio de la menstruación y hacerse mínimos o desaparecer en la semana después de la menstruación.
+B. Uno (o más) de los síntomas siguientes han de estar presentes:
+1. Labilidad afectiva intensa (p. ej., cambios de humor, de repente está triste o llorosa, o aumento
+de la sensibilidad al rechazo).
+
+172
+
+Trastornos depresivos
+
+2. Irritabilidad intensa, o enfado, o aumento de los conflictos interpersonales.
+3. Estado de ánimo intensamente deprimido, sentimiento de desesperanza o ideas de autodesprecio.
+4. Ansiedad, tensión y/o sensación intensa de estar excitada o con los nervios de punta.
+C. Uno (o más) de los síntomas siguientes también han de estar presentes, hasta llegar a un total
+de cinco síntomas cuando se combinan con los síntomas del Criterio B.
+1. Disminución del interés por las actividades habituales (p. ej., trabajo, escuela, amigos, aficiones).
+2. Dificultad subjetiva de concentración.
+3. Letargo, fatigabilidad fácil o intensa falta de energía.
+4. Cambio importante del apetito, sobrealimentación o anhelo de alimentos específicos.
+5. Hipersomnia o insomnio.
+6. Sensación de estar agobiada o sin control.
+7. Síntomas físicos como dolor o tumefacción mamaria, dolor articular o muscular, sensación de
+"hinchazón" o aumento de peso.
+Nota: Los síntomas de los Criterios A-C se han de haber cumplido durante la mayoría de los ciclos
+menstruales del año anterior.
+D. Los síntomas se asocian a malestar clínicamente significativo o interferencia en el trabajo, la
+escuela, las actividades sociales habituales o la relación con otras personas (p. ej., evitación de
+actividades sociales; disminución de la productividad y la eficiencia en el trabajo, la escuela o en
+casa).
+E. La alteración no es simplemente una exacerbación de los síntomas de otro trastorno, como el
+trastorno de depresión mayor, el trastorno de pánico, el trastorno depresivo persistente (distimia)
+o un trastorno de la personalidad (aunque puede coexistir con cualquiera de estos).
+E El Criterio A se ha de confirmar mediante evaluaciones diarias prospectivas durante al menos
+dos ciclos sintomáticos (Nota: El diagnóstico se puede hacer de forma provisional antes de esta
+confirmación.)
+G. Los síntomas no se pueden atribuir a los efectos fisiológicos de una sustancia (p. ej., una droga,
+un medicamento, otro tratamiento) o a otra afección médica (p. ej., hipertiroidismo).
+
+Procedimientos de registro
+Si los síntomas no se han confirmado mediante las evaluaciones diarias prospectivas de al menos dos
+ciclos sintomáticos, se debería indicar "provisional" después del nombre del diagnóstico (es decir,
+"trastorno disfórico premenstrual, provisional").
+
+Características diagnósticas
+Las características esenciales del trastorno disfórico premenstrual son la expresión de labilidad afectiva, disforia y síntomas de ansiedad que se repiten durante la fase premenstrual del ciclo y que
+remiten alrededor del inicio de la menstruación o poco después.
+Estos síntomas pueden acompañarse de síntomas conductuales y físicos. Los síntomas deben
+haber aparecido en la mayoría de los ciclos menstruales durante el último año y deben afectar negativamente al funcionamiento laboral o social. La intensidad y la expresividad de los síntomas acompañantes pueden estar estrechamente relacionadas con las características sociales y culturales de la
+mujer afecta, de sus perspectivas familiares y de otros factores más específicos, como las creencias
+religiosas, la tolerancia social y aspectos relacionados con el papel de la mujer.
+Típicamente, los síntomas alcanzan su cumbre alrededor del comienzo de la menstruación. Aunque no es infrecuente que los síntomas permanezcan durante los primeros días de la menstruación,
+la paciente debe tener un período libre de síntomas en la fase folicular después de que comience el
+período menstrual. Aunque los síntomas nucleares son los síntomas afectivos y de ansiedad, también
+aparecen síntomas conductuales y somáticos. Sin embargo, la presencia de síntomas físicos o conductuales en ausencia de síntomas afectivos o de ansiedad no es suficiente para el diagnóstico. Los sín-
+
+Trastorno disfórico premenstrual
+
+173
+
+tomas son de gravedad (pero no de duración) comparable a la observada en otros trastornos mentales, como el episodio depresivo mayor o el trastorno de ansiedad generalizada. Para confirmar el
+diagnóstico provisional se requieren evaluaciones diarias prospectivas de los síntomas durante al
+menos dos ciclos sintomáticos.
+
+Características asociadas que apoyan el diagnóstico
+Se han descrito delirios y alucinaciones en la fase lútea tardía del ciclo menstrual, aunque son raros.
+Algunos consideran la fase premenstrual un período con riesgo de suicidio.
+
+Prevalencia
+La prevalencia a los doce meses del trastorno disfórico premenstrual está entre el 1,8 y el 5,8 % de
+las mujeres con menstruación. Hay una sobrestimación de la prevalencia si las cifras se basan en
+informes retrospectivos más que en evaluaciones diarias prospectivas. Sin embargo, la prevalencia
+estimada, basada en un registro diario de los síntomas durante 1-2 meses, puede ser menos representativa, ya que las pacientes con síntomas más graves quizá no sean capaces de mantener el
+proceso de registro. La estimación más rigurosa del trastorno disfórico premenstrual es del 1,8 %
+en las mujeres que cumplen todos los criterios sin deterioro funcional, y del 1,3 % en las mujeres
+que cumplen los criterios con deterioro funcional y síntomas concomitantes de otro trastorno
+mental.
+
+Desarrollo y curso
+El inicio del trastorno disfórico premenstrual puede aparecer en cualquier momento tras la menarquia. La incidencia de casos nuevos en un período de seguimiento de 40 meses es del 2,5 % (intervalo
+de confianza del 95 % = 1,7-3,7). De modo anecdótico, muchas pacientes refieren que los síntomas
+empeoran al acercarse la menopausia. Los síntomas cesan tras la menopausia, aunque el tratamiento
+hormonal sustitutivo cíclico puede precipitar de nuevo la presentación de síntomas.
+
+Factores de riesgo y pronóstico
+Ambientales. Los factores ambientales que se asocian a la presentación del trastorno disfórico premenstrual son el estrés, los antecedentes de traumas interpersonales, los cambios estacionales y a los
+aspectos socioculturales de la conducta sexual femenina en general y del papel del género femenino
+en particular.
+Genéticos y fisiológicos. No se conoce la heredabilidad del trastorno disfórico premenstrual. Sin
+embargo, se estima que el rango de heredabilidad para los síntomas premenstruales oscila entre un
+30 y un 80 %, siendo la estimación de la heredabilidad de un 50 % para el componente más estable de
+los síntomas premenstruales.
+Modificadores de curso. Es posible que las mujeres que usan anticonceptivos orales tengan menos
+síntomas premenstruales que las mujeres que no los usan.
+
+Aspectos diagnósticos relacionados con la cultura
+El trastorno disfórico premenstrual no es un síndrome asociado a una cultura, ya que se ha observado
+en mujeres de Estados Unidos, Europa, India y Asia. No está claro si las tasas difieren por razas. Sin
+embargo, los factores culturales pueden influir significativamente sobre la frecuencia, la intensidad y
+la expresividad de los síntomas, y sobre los patrones de búsqueda de ayuda.
+
+Marcadores diagnósticos
+Corno se ha indicado anteriormente, el diagnóstico de trastorno disfórico premenstrual se confirma
+adecuadamente tras dos meses de evaluación prospectiva de los síntomas. Se han validado varias
+
+174
+
+Trastornos depresivos
+
+escalas, incluidas la Evaluación diaria de la gravedad de los problemas y la Escala analógica visual
+para los síntomas anímicos premenstruales, que se usan habitualmente en los ensayos clínicos del
+trastorno disfórico premenstrual. Se ha validado la Escala de evaluación de la tensión premenstrual,
+que tiene una versión autoaplicada y otra para un observador, y ambas versiones se usan mucho para
+medir la gravedad de la enfermedad en las mujeres con trastorno disfórico premenstrual.
+
+Consecuencias funcionales del trastorno
+disfórico premenstrual
+Los síntomas deben producir un malestar clínicamente significativo o un deterioro obvio y notable
+de la capacidad para funcionar en el plano social u ocupacional en la semana previa a la menstruación. El deterioro del funcionamiento social puede manifestarse a través de desavenencias matrimoniales y de problemas con los niños, con otros miembros de la familia o con los amigos. No se deberían
+confundir los problemas matrimoniales o laborales crónicos con la disfunción que aparece solamente
+asociada al trastorno disfórico premenstrual.
+
+Diagnóstico diferencial
+Síndrome premenstrual. El síndrome premenstrual difiere del trastorno disfórico premenstrual en
+que no se requiere un mínimo de cinco síntomas y en que no existe un convenio de síntomas afectivos
+en las mujeres con síndrome premenstrual. Esta afección puede que sea más frecuente que el trastorno
+disfórico premenstrual, aunque la prevalencia estimada del síndrome premenstrual varía. Aunque el
+síndrome premenstrual comparte la característica de que los síntomas aparecen durante la fase premenstrual del ciclo menstrual, se le considera por lo general menos grave que el trastorno disfórico
+premenstrual. La presencia de síntomas físicos o conductuales en la premenstruación, sin los síntomas afectivos requeridos, probablemente cumpla los criterios del síndrome premenstrual y no los del
+trastorno disfórico premenstrual.
+Dismenorrea. La dismenorrea es un síndrome de menstruaciones dolorosas que difiere del caracterizado por cambios afectivos. Además, los síntomas de la dismenorrea comienzan al inicio de la
+menstruación, mientras que los síntomas del trastorno disfórico premenstrual, por definición,
+comienzan antes del inicio de la menstruación, incluso aunque permanezcan durante los primeros
+días de ésta.
+Trastorno bipolar, trastorno depresivo mayor y trastorno depresivo persistente (distimia). Muchas
+mujeres con trastorno bipolar o trastorno depresivo mayor o trastorno depresivo persistente (distimia) (natural o inducido por sustancias/medicamentos) creen que tienen un trastorno disfórico
+premenstrual. Sin embargo, cuando exponen los síntomas se dan cuenta de que éstos no siguen un
+patrón premenstrual. Las mujeres con otro trastorno mental pueden presentar síntomas crónicos o
+síntomas intermitentes que no se relacionan con la fase del ciclo menstrual. Sin embargo, como el
+comienzo de la menstruación constituye un hecho fácil de recordar, puede que refieran que los
+síntomas ocurren sólo durante la fase premenstrual o que los síntomas empeoren antes en la fase
+premenstrual. Éste es uno de los objetivos para cumplir el requisito de que los síntomas sean confirmados mediante evaluaciones diarias prospectivas. El proceso del diagnóstico diferencial, en
+particular si el clínico cuenta sólo con síntomas retrospectivos, se hace más difícil por el solapamiento entre los síntomas del trastorno disfórico premenstrual y algunos otros diagnósticos. El
+solapamiento de síntomas es particularmente relevante para diferenciar el trastorno disfórico premenstrual del trastorno depresivo mayor, del trastorno depresivo persistente, de los trastornos
+bipolares y del trastorno límite de la personalidad. Sin embargo, la tasa de trastornos de la personalidad no es más alta en las mujeres con trastorno disfórico premenstrual que en las que no lo
+presentan.
+Uso de tratamientos hormonales. Algunas mujeres que presentan síntomas premenstruales moderados o graves podrían estar utilizando tratamientos con hormonas, incluidos los anticonceptivos
+hormonales. Si los síntomas aparecen tras el inicio del uso hormonal exógeno, los síntomas pueden
+
+Trastorno depresivo inducido por una sustancia/medicamento
+
+175
+
+deberse al uso de las hormonas más que a la afección subyacente de un trastorno disfórico premenstrual. Si la mujer suspende las hormonas y los síntomas desaparecen, se puede deducir que se trata
+de un trastorno depresivo inducido por sustancias/medicamentos.
+
+Comorbilidad
+El trastorno previo que con más frecuencia se refiere en las pacientes con trastorno disfórico premenstrual es el episodio depresivo mayor. Existe un amplio espectro de trastornos médicos (p. ej., migraña,
+asma, alergias, epilepsia) y de otros trastornos mentales (p. ej., trastornos bipolares y depresivos,
+trastornos de ansiedad, bulimia nerviosa, trastornos por consumo de sustancias) que pueden empeorar en la fase premenstrual; sin embargo, la ausencia de un período libre de síntomas durante el
+intervalo posmenstrual obvia el diagnóstico de trastorno disfórico premenstrual. Estas afecciones se
+consideran más bien la exacerbación premenstrual de un trastorno mental o médico en curso. Aunque
+el diagnóstico de trastorno disfórico premenstrual no se debería realizar en situaciones en las que la
+persona presente únicamente un empeoramiento premenstrual de otros trastornos mentales o médicos, se podría considerar este diagnóstico, además del diagnóstico de otro trastorno mental o físico,
+si la persona presentara los síntomas y los cambios en el nivel de funcionamiento que son característicos del trastorno disfórico premenstrual y que son notablemente diferentes de los síntomas que se
+experimentan como parte del otro trastorno.
+
+Trastorno depresivo inducido
+por una sustancia/medicamento
+Criterios diagnósticos
+A. Alteración importante y persistente del estado de ánimo que predomina en el cuadro clínico y
+que se caracteriza por estado de ánimo deprimido, disminución notable del interés o placer por
+todas o casi todas las actividades.
+B. Existen pruebas a partir de la historia clínica, la exploración física o los análisis de laboratorio de
+(1) y (2):
+1. Síntomas del Criterio A desarrollados durante o poco después de la intoxicación o abstinencia
+de una sustancia o después de la exposición a un medicamento.
+2. La sustancia/medicamento implicado puede producir los síntomas del Criterio A.
+C. El trastorno no se explica mejor por un trastorno depresivo no inducido por una sustancia/medicamento. La evidencia de un trastorno depresivo independiente puede incluir lo siguiente:
+Los síntomas fueron anteriores al inicio del uso de la sustancia/medicamento; los síntomas
+persisten durante un período importante (p. ej., aproximadamente un mes) después del cese
+de la abstinencia aguda o la intoxicación grave; o existen otras pruebas que sugieren la
+existencia de un trastorno depresivo independiente no inducido por sustancias/medicamentos (p. ej., antecedentes de episodios recurrentes no relacionados con sustancias/medicamentos).
+D. El trastorno no se produce exclusivamente durante el curso de un delirium.
+E. El trastorno causa malestar clínicamente significativo o deterioro en lo social, laboral u otras
+áreas importantes del funcionamiento.
+Nota: Sólo se hará este diagnóstico en lugar de un diagnóstico de intoxicación por una sustancia o
+abstinencia de una sustancia cuando los síntomas del Criterio A predominen en el cuadro clínico y
+cuando sean suficientemente graves para justificar la atención clínica.
+Nota de codificación: Los códigos CIE-9-MC y CIE-10-MC para los trastornos depresivos
+por [sustancia/medicamento específico] se indican en la tabla siguiente. Obsérvese que el código
+
+176
+
+Trastornos depresivos
+
+CIE-10-MC depende de si existe o no algún trastorno concomitante por uso de sustancias de la
+misma clase. Si un trastorno leve por consumo de sustancias coincide con el trastorno depresivo
+inducido por sustancias, el carácter en 4a posición es "1", y el clínico registrará "trastorno leve por
+consumo de [sustancia]" antes de trastorno depresivo inducido por sustancias (p. ej., "trastorno leve
+por consumo de cocaína con trastorno depresivo inducido por cocaína"). Si un trastorno moderado
+o grave por consumo de sustancias coincide con el trastorno depresivo inducido por una sustancia,
+el carácter en 4a posición es "2", y el clínico hará constar "trastorno moderado por consumo de
+[sustancia]" o "trastorno grave por consumo de [sustancia]" según la gravedad del trastorno concurrente por consumo de esa sustancia. Si no existe un trastorno concurrente por consumo de una
+sustancia (p. ej., después de un consumo importante puntual de la sustancia), el carácter en 4a
+posición es "9", y el clínico sólo hará constar el trastorno depresivo inducido por sustancias.
+CIE-10-MC
+
+CIE-9-MC
+
+Con
+trastorno
+por
+consumo
+leve
+
+Con
+trastorno
+por consumo
+moderado
+o grave
+
+Sin
+trastorno
+por
+consumo
+
+Alcohol
+
+291.89
+
+F10.14
+
+F10.24
+
+F10.94
+
+Fenciclidina
+
+292.84
+
+F16.14
+
+F16.24
+
+F16.94
+
+Otro alucinógeno
+
+292.84
+
+F16.14
+
+F16.24
+
+F16.94
+
+Inhalante
+
+292.84
+
+F18.14
+
+F18.24
+
+F18.94
+
+Opiáceo
+
+292.84
+
+F11.14
+
+F11.24
+
+F11.94
+
+Sedante, hipnótico o ansiolítico
+
+292.84
+
+F13.14
+
+F13.24
+
+F13.94
+
+Anfetamina (u otro estimulante)
+
+292.84
+
+F15.14
+
+F15.24
+
+F15.94
+
+Cocaína
+
+292.84
+
+F14.14
+
+F14.24
+
+F14.94
+
+Otra sustancia (o sustancia
+desconocida)
+
+292.84
+
+F19.14
+
+F19.24
+
+F19.94
+
+Especificar si (véase la Tabla 1 en el capítulo "Trastornos relacionados con sustancias y trastornos
+adictivos" para los diagnósticos asociados a la clase de sustancia):
+Con inicio durante la intoxicación: Si se cumplen los criterios de intoxicación con la sustancia
+y los síntomas se desarrollan durante la intoxicación.
+Con inicio durante la abstinencia: Si se cumplen los criterios de abstinencia de la sustancia y
+los síntomas aparecen durante, o poco después, de la retirada.
+
+Procedimientos de registro
+CIE-9-MC. El nombre del trastorno depresivo inducido por una sustancia/medicamento comienza
+con la sustancia específica (p. ej., cocaína, dexametasona) que se supone que es la causante de los
+síntomas depresivos. El código diagnóstico se selecciona de la tabla incluida en el conjunto de criterios, que se basa en la clase de sustancia. Para sustancias que no se ajustan a ninguna de las clases
+(p. ej., dexametasona), se utilizará el código "otra sustancia"; y en los casos en que se considere que
+una sustancia es un factor etiológico pero se desconoce la clase específica de sustancia, se utilizará la
+categoría "sustancia desconocida".
+Después del nombre del trastorno figura la especificación del inicio (es decir, inicio durante la
+intoxicación, inicio durante la abstinencia). A diferencia de los procedimientos de registro de la
+CIE-10-MC, que combinan en un mismo código el trastorno inducido por sustancias y el trastorno por
+
+Trastorno depresivo inducido por una sustancia/medicamento
+
+177
+
+consumo de sustancias, en la CIE-9-MC se utiliza un código diagnóstico aparte para el trastorno por
+consumo de una sustancia. Por ejemplo, en el caso de síntomas depresivos durante la abstinencia en
+un individuo con un trastorno grave por consumo de cocaína, el diagnóstico es 292.84 trastorno
+depresivo inducido por cocaína, con inicio durante la abstinencia. También se hace constar un diagnóstico adicional 304.20 trastorno grave por consumo de cocaína. Cuando se considera que más de
+una sustancia tiene un papel importante en el desarrollo de síntomas depresivos, se hará constar cada
+una de ellas por separado (p. ej., 292.84 trastorno depresivo inducido por metilfenidato, con inicio
+durante la abstinencia; 292.84 trastorno depresivo inducido por dexametasona, con inicio durante la
+intoxicación).
+CIE-10-MC. El nombre del trastorno depresivo inducido por una sustancia/medicamento comienza
+con la sustancia específica (p. ej., cocaína, dexametasona) que se supone que es la causante de los síntomas depresivos. El código diagnóstico se selecciona de la tabla incluida en el conjunto de criterios, que
+se basa en la clase de sustancia y en la presencia o ausencia de un trastorno concurrente por consumo
+de sustancia. Para sustancias que no se ajustan a ninguna de las clases (p. ej., dexametasona), se utilizará
+el código "otra sustancia"; y en los casos en que se considere que una sustancia es un factor etiológico
+pero se desconoce la clase específica de sustancia, se utilizará la categoría "sustancia desconocida".
+Para registrar el nombre del trastorno, se indica en primer lugar el trastorno concurrente por consumo de una sustancia (si existe) y a continuación la palabra "con", seguida del nombre del trastorno
+depresivo inducido por sustancias, seguido de la especificación del inicio (es decir, inicio durante la
+intoxicación, inicio durante la abstinencia). Por ejemplo, en el caso de síntomas depresivos durante la
+abstinencia en un individuo con un trastorno grave por consumo de cocaína, el diagnóstico es F14.24
+trastorno depresivo grave por consumo de cocaína, con trastorno depresivo inducido por cocaína, con
+inicio durante la abstinencia. No se utiliza un diagnóstico aparte del trastorno concurrente grave por
+consumo de cocaína. Si el trastorno depresivo inducido por una sustancia se produce sin un trastorno
+concurrente por consumo de una sustancia (p. ej., después de un consumo importante puntual de la
+sustancia), no se hace constar el trastorno acompañante por consumo de una sustancia (p. ej., F16.94
+trastorno depresivo inducido por fenciclidina, con inicio durante la intoxicación). Cuando se considera
+que más de una sustancia tiene un papel importante en el desarrollo de síntomas del estado de ánimo
+depresivo, se hará constar cada una de ellas por separado (p. ej., F15.24 trastorno grave por consumo
+de metilfenidato, con trastorno depresivo inducido por metilfenidato, con inicio durante la abstinencia;
+F19.94 trastorno depresivo inducido por dexametasona, con inicio durante la intoxicación).
+
+Características diagnósticas
+Las características diagnósticas del trastorno depresivo inducido por sustancias/medicamentos incluyen los síntomas de un trastorno depresivo, como el trastorno depresivo mayor; sin embargo, los síntomas depresivos se asocian al consumo, la inyección o la inhalación de una sustancia (p. ej., droga de
+abuso, toxina, medicación psicotrópica, otra medicación) y los síntomas depresivos persisten más
+tiempo de lo que cabría esperar de los efectos fisiológicos o del período de intoxicación o de abstinencia.
+El trastorno depresivo se debe haber desarrollado durante el consumo de una sustancia capaz de producir un trastorno depresivo o dentro del mes posterior al mismo conforme a los datos de la historia
+clínica, la exploración física o los análisis de laboratorio (Criterio B1). Además, el diagnóstico no se debe
+explicar mejor por un trastorno depresivo independiente. Prueba la presencia de un trastorno depresivo independiente que el trastorno depresivo haya precedido al comienzo del consumo o de la abstinencia de la sustancia, que el trastorno depresivo persista más allá de un período sustancial de tiempo
+tras el cese del uso de la sustancia, y los demás datos que sugieran la existencia de un trastorno depresivo independiente no inducido por sustancias/medicamentos (Criterio C). No se debe hacer este diagnóstico cuando los síntomas aparezcan exclusivamente durante el curso de un delirium (Criterio D). El
+trastorno depresivo asociado al consumo, la intoxicación o la abstinencia de una sustancia debe causar
+un malestar clínicamente significativo o un deterioro social, laboral o de otras áreas importantes del
+funcionamiento para reunir las condiciones para este diagnóstico (Criterio E).
+Algunos medicamentos (p. ej., los estimulantes, los esteroides, la L-dopa, los antibióticos, los fármacos del sistema nervioso central, los agentes dermatológicos, los fármacos quimioterápicos, los
+
+178
+
+Trastornos depresivos
+
+agentes inmunológicos) pueden inducir alteraciones anímicas depresivas. El juicio clínico es fundamental para determinar si el medicamento se asocia verdaderamente a la inducción de un trastorno
+depresivo o si ha aparecido un trastorno depresivo primario mientras la persona estaba tomando el
+tratamiento. Por ejemplo, un trastorno depresivo que se desarrolla dentro de las primeras semanas
+después de comenzar un tratamiento con alfa-metildopa (un agente antihipertensivo) en un paciente
+sin antecedentes de trastorno depresivo mayor reuniría las condiciones para el diagnóstico de trastorno depresivo inducido por medicamentos. En algunos casos, un trastorno establecido previamente
+(p. ej., un trastorno depresivo mayor recurrente) puede recurrir casualmente mientras el paciente está
+tomando un medicamento que tiene la capacidad de causar síntomas depresivos (p. ej., la L-dopa, los
+anticonceptivos orales). En tales casos, el clínico debe juzgar si el medicamento es el causante de esa
+situación particular.
+El trastorno depresivo inducido por sustancias/medicamentos se distingue de los trastornos
+depresivos primarios teniendo en cuenta el comienzo, el curso y otros factores asociados al consumo
+de sustancias. La historia clínica, el examen físico o las pruebas de laboratorio deben arrojar datos que
+prueben la existencia de consumo, abuso, intoxicación o abstinencia de alguna sustancia antes del
+comienzo del trastorno depresivo. El estado de abstinencia de algunas sustancias se puede alargar
+relativamente y, por tanto, es posible que los síntomas depresivos intensos permanezcan durante un
+largo período tras cesar su consumo.
+
+Prevalencia
+La prevalencia a lo largo de la vida del trastorno depresivo inducido por sustancias/medicamentos
+entre una población adulta de Estados Unidos representativa de todo el país es del 0,26 °/0.
+
+Desarrollo y curso
+El trastorno depresivo asociado al uso de una sustancia (p. ej., alcohol, drogas ilícitas, o un tratamiento prescrito para un trastorno mental u otra afección médica) se puede iniciar mientras el sujeto
+está consumiéndola o durante la abstinencia, si es que existe un síndrome de abstinencia asociado a
+la sustancia. Más a menudo, el trastorno depresivo se inicia en las primeras semanas o el mes de
+consumo de la sustancia. Una vez que se interrumpe la sustancia, los síntomas depresivos suelen
+remitir en días o semanas, dependiendo de la vida media de la sustancia/medicamento y de la presencia de un síndrome de abstinencia. Si los síntomas persisten 4 semanas más del curso esperado
+para la abstinencia de un sustancia/medicamento en particular, se deberían considerar otras causas
+para los síntomas depresivos.
+Aunque existen pocos ensayos clínicos prospectivos y controlados que hayan estudiado la asociación de los síntomas depresivos con el uso de un medicamento, la mayoría de los informes se
+ha realizado a partir de estudios de farmacovigilancia y de estudios observacionales retrospectivos o estudios de casos, lo que hace difícil determinar si existen pruebas de la causalidad. Las
+sustancias implicadas en el trastorno depresivo inducido por medicamentos, con diversos grados
+de evidencia, son: los agentes antivirales (efavirenz), los agentes cardiovasculares (clonidina, guanetidina, metildopa, reserpina), los derivados del ácido retinoico (isotretionina), los antidepresivos,
+los anticonvulsivos, los antimigrañosos (triptanes), los antipsicóticos, las hormonas (corticoesteroides, anticonceptivos orales, agonistas de la hormona liberadora de gonadotropinas, tamoxifeno), los agentes para el cese del tabaquismo (vareniclina) y los agentes inmunológicos (interferón). Sin embargo, van apareciendo otras posibles sustancias según se sintetizan nuevos
+compuestos. La historia del uso de dicha sustancia puede ayudar a incrementar la certidumbre en
+el diagnóstico.
+
+Factores de riesgo y pronóstico
+Temperamentales. Los factores que parecen aumentar el riesgo del trastorno depresivo inducido
+por sustancias/medicamentos pueden conceptualizarse como los relacionados con cada tipo específico de droga y los relativos al grupo de individuos con trastornos por consumo de alcohol o drogas.
+
+Trastorno depresivo inducido por una sustancia/medicamento
+
+179
+
+Los factores de riesgo comunes para todas las drogas son los antecedentes de trastorno depresivo
+mayor y de depresión inducida por drogas, y los factores estresantes psicosociales.
+Ambientales. También hay factores de riesgo concernientes a un tipo específico de medicación
+(p. ej., la activación inmunológica aumentada antes del tratamiento de la hepatitis C, que se asocia a
+la depresión inducida por el interferón alfa), a altas dosis de corticosteroides (mayores de 80 mg
+equivalentes de prednisona al día) o altas concentraciones plasmáticas de efavirenz, y a un alto contenido de estrógenos/progesterona en los anticonceptivos orales.
+Modificadores del curso. En una población representativa de los adultos estadounidenses, los
+pacientes con trastorno depresivo inducido por sustancias, en comparación con los pacientes con
+trastorno depresivo mayor sin trastorno por consumo de sustancias, eran con más frecuencia varones,
+de raza blanca, con educación secundaria completada, sin seguro y con menores ingresos familiares.
+Además presentaban con más frecuencia antecedentes familiares de trastornos por abuso de sustancias y conducta antisocial, presencia de acontecimientos vitales estresantes en el año previo y un
+número mayor de criterios del DSM-IV para el trastorno depresivo mayor. Referían con más probabilidad sentimientos de inutilidad, insomnio/hipersomnia y pensamientos de muerte e intentos de
+suicidio, pero con menos probabilidad el ánimo deprimido y la pérdida parental por fallecimiento
+antes de los 18 años de edad.
+
+Marcadores diagnósticos
+Para corroborar el diagnóstico, en ocasiones se puede realizar la determinación de la sustancia de abuso
+mediante pruebas de laboratorio específicas en sangre o en orina.
+
+Riesgo de suicidio
+La tendencia al suicidio inducida por drogas o por un tratamiento supone un cambio notable en los pensamientos y la conducta de la persona con respecto a su situación basal, se asocia temporalmente al
+comienzo del uso de una sustancia y debe diferenciarse de los trastornos mentales primarios subyacentes.
+En relación con la tendencia al suicidio asociada al tratamiento con antidepresivos, un comité
+asesor de la Agencia de Alimentación y Drogas estadounidense (FDA) consideró un metaanálisis de
+99.839 sujetos participantes en 372 ensayos clínicos aleatorizados de antidepresivos en el ámbito de
+los trastornos mentales. Los análisis mostraron que, al combinar los datos de todos los grupos de edad
+adulta, no había un aumento perceptible del riesgo de conducta o ideación suicida. Sin embargo, en
+los análisis estratificados según la edad aparecía elevado el riesgo en los sujetos de entre 18 y 24 años,
+aunque no significativamente (odds ratio [OR] = 1,55; intervalo de confianza [IC] = 0,91-2,70). El metaanálisis de la FDA muestra un riesgo absoluto de suicidio en los pacientes incluidos en estudios de
+antidepresivos del 0,01 %. En conclusión, el suicidio es claramente un fenómeno que se asocia al tratamiento de manera extremadamente rara, pero el resultado de suicidio es lo suficientemente serio
+como para motivar que la FDA emitiera una alerta ampliada en 2007 sobre la importancia de la monitorización minuciosa de la ideación suicida asociada al tratamiento, sobre todo en los pacientes tratados con antidepresivos.
+
+Diagnóstico diferencial
+Intoxicación y abstinencia de sustancias. Los síntomas depresivos aparecen con frecuencia en la
+intoxicación y en la abstinencia por sustancias, y normalmente es suficiente un diagnóstico de intoxicación o de abstinencia por una sustancia específica para categorizar la presentación de los síntomas.
+Se debería hacer un diagnóstico de trastorno depresivo inducido por sustancias, en vez de un diagnóstico de intoxicación o de abstinencia por sustancias, cuando los síntomas afectivos son lo suficientemente graves como para garantizar una atención clínica independiente. Por ejemplo, el ánimo disfórico es un rasgo característico de la abstinencia de la cocaína. Se debería diagnosticar un trastorno
+depresivo inducido por sustancias/medicamentos, en vez de la abstinencia a la cocaína, sólo si la
+alteración del ánimo es significativamente más intensa o si dura más de lo habitual en la abstinencia a
+la cocaína y es lo suficientemente grave como para ser objeto de atención y tratamiento independiente.
+
+180
+
+Trastornos depresivos
+
+Trastorno depresivo primario. Un trastorno depresivo inducido por una sustancia/medicación se
+distingue de un trastorno depresivo primario cuando se juzga que existe una sustancia que está relacionada etiológicamente con los síntomas, como se ha descrito anteriormente (véase la sección "Desarrollo y curso" de este trastorno).
+Trastorno depresivo debido a otra afección médica. Como los pacientes con otras afecciones
+médicas a menudo toman medicamentos para esas afecciones, el clínico debe considerar la posibilidad de que los síntomas afectivos estén causados por las consecuencias fisiológicas de la afección
+médica más que por la medicación, en cuyo caso se diagnosticaría un trastorno depresivo debido a
+otra afección médica. A menudo, la historia proporciona la base fundamental para el juicio clínico. A
+veces puede ser necesario cambiar el tratamiento de la otra afección médica (p. ej., sustituir o retirar
+una medicación) para determinar empíricamente si la medicación es el agente causal. Si el clínico se
+ha asegurado de que la alteración está en función tanto de la otra afección médica como del consumo
+o la abstinencia de una sustancia, deben hacerse los dos diagnósticos (p. ej., trastorno depresivo
+debido a otra afección médica y trastorno depresivo inducido por sustancias/medicamentos). Cuando
+las pruebas científicas son insuficientes para determinar si los síntomas depresivos se asocian al consumo de una sustancia (incluidos los medicamentos), a su abstinencia o a otra afección médica, o si
+son primarios (p. ej., no son consecuencia ni de la sustancia ni de la otra afección médica), entonces
+debería indicarse el diagnóstico de otro trastorno depresivo especificado o no especificado.
+
+Comorbilidad
+En comparación con los pacientes con trastorno depresivo mayor sin trastorno comórbido por consumo de sustancias, los pacientes con trastorno depresivo inducido por sustancias/medicamentos
+tienen mayores tasas de comorbilidad con cualquier trastorno mental del DSM-IV, tienen más probabilidad de tener los trastornos específicos del DSM-IV de juego patológico y de personalidad paranoide, histriónica y antisocial, pero tienen menos probabilidad de tener un trastorno depresivo persistente (distimia).
+En comparación con los pacientes con trastorno depresivo mayor y trastorno comórbido por consumo de sustancias, los pacientes con trastorno depresivo inducido por sustancias/medicamentos
+tienen con más probabilidad el trastorno por consumo de alcohol, trastornos por consumo de cualquier otra sustancia y el trastorno histriónico de la personalidad; sin embargo, es menos probable que
+tengan el trastorno depresivo persistente.
+
+Trastorno depresivo debido
+a otra afección médica
+Criterios diagnósticos
+A. Un período importante y persistente de estado de ánimo deprimido o una disminución notable
+del interés o placer por todas o casi todas las actividades predomina en el cuadro clínico.
+B. Existen pruebas a partir de la historia clínica, la exploración física o los análisis de laboratorio de
+que el trastorno es la consecuencia fisiopatológica directa de otra afección médica.
+C. La alteración no se explica mejor por otro trastorno mental (p. ej., trastorno de adaptación, con
+estado de ánimo deprimido, en el que el factor de estrés es una afección médica grave).
+D. El trastorno no se produce exclusivamente durante el curso de un delirium.
+E. El trastorno causa malestar clínicamente significativo o deterioro en lo social, laboral u otras
+áreas importantes del funcionamiento.
+Nota de codificación: El código CIÉ-9-MC para el trastorno depresivo debido a otra afección
+médica es 293.83, que se asigna independientemente del especificador. El código CIE-10-MC
+depende del especificador (véase más adelante).
+
+Trastorno depresivo debido a otra afección médica
+
+181
+
+Especificar si:
+(F06.31) Con características depresivas: No se cumplen todos los criterios para un episodio
+de depresión mayor.
+(F06.32) Con episodio del tipo de depresión mayor: Se cumplen todos los criterios (excepto
+el Criterio C) para un episodio de depresión mayor.
+(F06.34) Con características mixtas: También existen síntomas de manía o hipomanía, pero no
+predominan en el cuadro clínico.
+Nota de codificación: Incluir el nombre de la otra afección médica en el nombre del trastorno
+mental (p. ej., 293.83 [F06.31] trastorno depresivo debido al hipotiroidismo, con características
+depresivas). La otra afección médica también se codificará y enumerará por separado inmediatamente antes del trastorno depresivo debido a la afección médica (p. ej., 244.9 [E03.9] hipotiroidismo; 293.83 [F06.31] trastorno depresivo debido al hipotiroidismo, con características
+depresivas).
+
+Características diagnósticas
+El rasgo esencial del trastorno depresivo debido a otra afección médica es un período de tiempo
+importante y persistente de estado de ánimo deprimido, o una disminución notable del interés o del
+placer en todas o casi todas las actividades, que predomina en el cuadro clínico (Criterio A) y que se
+piensa que está relacionado con los efectos fisiológicos directos de la otra afección médica (Criterio B). Para determinar si las alteraciones del ánimo se deben a otra afección médica general, el clínico
+debe establecer primero la presencia de una afección médica general. Además, el clínico debe establecer que la alteración del ánimo está etiológicamente relacionada con la afección médica general
+mediante un mecanismo fisiológico. Se necesita una evaluación exhaustiva e integral de múltiples
+factores para realizar el juicio clínico. Aunque no hay guías clínicas infalibles para determinar si la
+relación entre la alteración del ánimo y la afección médica es etiológica, algunas consideraciones sirven de guía en esta área. Una consideración es la presencia de una asociación temporal entre el
+comienzo, la exacerbación o la remisión de la afección médica general y la alteración del ánimo. Una
+segunda consideración es la presencia de rasgos que son atípicos en los trastornos del ánimo primarios (p. ej., una edad atípica de comienzo, un curso atípico o ausencia de historia familiar). Los datos
+científicos de la bibliografía que sugieren que podría existir una asociación directa entre la afección
+médica general en cuestión y el desarrollo de síntomas afectivos podrían ser útiles como contexto
+para la evaluación de cada situación concreta.
+
+Características asociadas que apoyan el diagnóstico
+La etiología (p. ej., la relación causal con otra afección médica basada en las mejores pruebas clínicas)
+es la variable esencial del trastorno depresivo debido a otra afección médica. La lista de afecciones
+médicas que se dice que pueden inducir una depresión mayor nunca está completa y la esencia del
+diagnóstico es el buen juicio del clínico.
+Existen asociaciones claras y algunos correlatos neuroanatómicos entre depresión e infarto cerebral, enfermedad de Huntington, enfermedad de Parkinson y daño cerebral traumático. Entre las
+afecciones neuroendocrinas más estrechamente asociadas a la depresión se encuentran la enfermedad
+de Cushing y el hipotiroidismo. Hay otras muchas afecciones que se piensa que están asociadas con
+la depresión, como la esclerosis múltiple. Sin embargo, la bibliografía avala más esta asociación causal
+en algunas afecciones, como la enfermedad de Parkinson y la enfermedad de Huntington, que en
+otras, para las que el diagnóstico diferencial podría ser el de trastorno de adaptación con ánimo deprimido.
+
+Desarrollo y curso
+Tras un infarto cerebral, el inicio de una depresión parece ser muy agudo, teniendo lugar al día o a
+los pocos días del accidente cerebrovascular (ACV) en la mayor serie de casos. Sin embargo, en algu-
+
+182
+
+Trastornos depresivos
+
+nos casos, el comienzo de la depresión se produce tras semanas o meses del ACV. En la mayor serie
+de casos, la duración de los episodios depresivos mayores tras un infarto cerebral fue de 9-11 meses
+de promedio. De modo similar, el estado depresivo de la enfermedad de Huntington aparece bastante
+pronto en el curso de la enfermedad. En la enfermedad de Parkinson y en la enfermedad de Huntington, ésta precede a menudo a las alteraciones motoras mayores y al deterioro cognitivo que se asocian
+a cada afección. Esto es más importante en la enfermedad de Huntington, en la que la depresión se
+considera el primer síntoma neuropsiquiátrico. Existen datos científicos basados en la observación
+que muestran que la depresión es menos frecuente según progresa la enfermedad de Huntington.
+
+Factores de riesgo y pronóstico
+El riesgo de que se inicie de forma aguda un trastorno depresivo mayor tras un ACV (en el plazo de
+un día o una semana desde el episodio) parece correlacionarse estrechamente con la localización de
+la lesión, siendo mayor el riesgo asociado a los infartos frontales inferiores y aparentemente menor el
+asociado a las lesiones frontales derechas en los pacientes que lo presentan a los pocos días del infarto.
+No se observa asociación con las regiones frontales ni con la lateralidad en los estados depresivos que
+ocurren a los 2-6 meses tras el infarto.
+
+Aspectos diagnósticos relacionados con el género
+Las diferencias de género se corresponden con las asociadas a la afección médica general (p. ej., el
+lupus eritematoso sistémico es más frecuente en las mujeres, y el infarto cerebral es algo más frecuente
+en los hombres de mediana edad que en las mujeres).
+
+Marcadores diagnósticos
+Los marcadores diagnósticos se corresponden con los asociados a la afección médica (p. ej., los niveles
+de esteroides en sangre u orina ayudan a corroborar el diagnóstico de enfermedad de Cushing, que
+puede estar asociada con síndromes maníacos o depresivos).
+
+Riesgo de suicidio
+No hay estudios epidemiológicos que aporten datos que permitan diferenciar el riesgo de suicidio de
+un episodio mayor debido a otra afección médica del riesgo de un episodio depresivo mayor en general.
+Hay informes de casos que relacionan los suicidios con los episodios de depresión mayor débidos a
+otras afecciones médicas. Existe una asociación clara entre las enfermedades médicas graves y el suicidio, en particular poco después del comienzo de la enfermedad o al diagnosticarla. Por tanto, sería
+prudente asumir que el riesgo de suicidio de los episodios depresivos que se asocian a afecciones médicas no es menor que el de otras formas de episodio depresivo mayor, e incluso podría ser mayor.
+
+Consecuencias funcionales del trastorno depresivo
+debido a otra afección médica
+Las consecuencias funcionales se relacionan con aquellas que se asocian a la afección médica. En
+general se cree, aunque no se ha demostrado, que un episodio depresivo mayor inducido por una
+enfermedad de Cushing no va a recurrir si se detiene o se cura la enfermedad de Cushing. Sin
+embargo, se ha señalado, aunque no demostrado, que en algunos pacientes con daño cerebral estático
+y en otras enfermedades del sistema nervioso central, los síndromes afectivos, incluidos los depresivos y los maníacos /hipomaníacos, pueden ser episódicos (es decir, recurrentes).
+
+Diagnóstico diferencial
+Trastornos depresivos no debidos a otra afección médica. La determinación de si una afección médica que acompaña a un trastorno depresivo está o no causando el trastorno depende
+de: a) la ausencia de algún episodio depresivo antes del comienzo de la afección médica; b) la
+
+Otro trastorno depresivo especificado
+
+183
+
+probabilidad de que la afección médica relacionada pueda promover o causar un trastorno
+depresivo, y c) la aparición de los síntomas depresivos poco después del comienzo o del empeoramiento de la afección médica, especialmente si los síntomas depresivos remiten casi al mismo
+tiempo que se trata con eficacia el trastorno médico o cuando éste remite.
+Trastorno depresivo inducido por medicamentos. Es importante advertir que algunas afecciones
+médicas se tratan con medicamentos (p. ej., los esteroides o el interferón-alfa) que pueden inducir
+síntomas depresivos o maníacos. En estos casos, el juicio clínico, basado en todos los datos científicos
+disponibles, es la mejor forma de intentar separar el más probable o más importante de los dos factores etiológicos (p. ej., la asociación con una afección médica frente a un síndrome inducido por sustancias).
+Trastornos de adaptación. Es importante diferenciar los episodios depresivos de los trastornos de
+adaptación, ya que el comienzo de la afección médica es en sí misma un acontecimiento vital estresante que podría provocar un trastorno de adaptación o un episodio de depresión mayor. Los elementos más diferenciadores son la generalización del cuadro depresivo y el número y la cualidad de los
+síntomas depresivos que el paciente refiere o muestra en el examen del estado mental. El diagnóstico
+diferencial de las afecciones médicas asociadas es relevante, pero supera el alcance de este manual.
+
+Comorbilidad
+Las afecciones comórbidas con el trastorno depresivo debido a otra afección médica son aquéllas que
+se asocian a las afecciones médicas de relevancia etiológica. Se ha señalado que el delirium puede
+aparecer antes o durante los síntomas depresivos en los pacientes con varias afecciones médicas,
+como la enfermedad de Cushing. Es frecuente que se asocien síntomas de ansiedad, normalmente
+generalizados, a los trastornos depresivos independientemente de la causa.
+
+Otro trastorno depresivo especificado
+311 (F 32.8)
+Esta categoría se aplica a presentaciones en las que predominan los síntomas característicos de un
+trastorno depresivo que causan malestar clínicamente significativo o deterioro en lo social, laboral
+u otras áreas importantes del funcionamiento, pero que no cumplen todos los criterios de ninguno
+de los trastornos de la categoría diagnóstica de los trastornos depresivos. La categoría de otro
+trastorno depresivo especificado se utiliza en situaciones en las que el clínico opta por comunicar
+el motivo específico por el que la presentación no cumple los criterios de un trastorno depresivo
+específico. Esto se hace registrando "otro trastorno depresivo especificado" y a continuación el
+motivo específico (p. ej., "episodio depresivo de corta duración").
+Algunos ejemplos de presentaciones que se pueden especificar utilizando la designación "otro
+especificado" son los siguientes:
+1. Depresión breve recurrente: Presencia concurrente de estado de ánimo deprimido y al menos
+otros cuatro síntomas de depresión durante 2-13 días por lo menos una vez al mes (no asociados
+al ciclo menstrual) durante un mínimo de doce meses consecutivos en un individuo cuya presentación no ha cumplido nunca los criterios para ningún otro trastorno depresivo o bipolar y que
+actualmente no cumple los criterios activos o residuales para un trastorno psicótico.
+2. Episodio depresivo de corta duración (4-13 días): Afecto deprimido y al menos cuatro de los
+otros ocho síntomas de un episodio de depresión mayor asociados a malestar clínicamente significativo o deterioro que persiste durante más de cuatro días, pero menos de catorce días, en
+un individuo cuya presentación nunca ha cumplido los criterios para otro trastorno depresivo o
+bipolar, no cumple actualmente los criterios activos o residuales para un trastorno psicótico y no
+cumple los criterios para una depresión breve recurrente.
+3. Episodio depresivo con síntomas insuficientes: Afecto deprimido y al menos cuatro de los
+otros ocho síntomas de un episodio de depresión mayor asociado a malestar clínicamente signi-
+
+184
+
+Trastornos depresivos
+
+ficativo o deterioro que persiste durante un mínimo de dos semanas en un individuo cuya presentación nunca ha cumplido los criterios para otro trastorno depresivo o bipolar, no cumple
+actualmente los criterios activos o residuales para un trastorno psicótico y no cumple los criterios
+para trastorno mixto de ansiedad y depresión.
+
+Otro trastorno depresivo no especificado
+311 (F32.9)
+Esta categoría se aplica a presentaciones en las que predominan los síntomas característicos de un
+trastorno depresivo que causan malestar clínicamente significativo o deterioro en lo social, laboral
+u otras áreas importantes del funcionamiento, pero que no cumplen todos los criterios de ninguno
+de los trastornos de la categoría diagnóstica de los trastornos depresivos. La categoría del trastorno
+depresivo no especificado se utiliza en situaciones en las que el clínico opta por no especificar el
+motivo de incumplimiento de los criterios de un trastorno depresivo específico, e incluye presentaciones en las que no existe suficiente información para hacer un diagnóstico más específico (p. ej.,
+en servicios de urgencias).
+
+Especificadores para trastornos depresivos
+
+Especificar si:
+Con ansiedad: La ansiedad se define como la presencia de dos o más de los síntomas siguientes durante la mayoría de los días de un episodio de depresión mayor o trastorno depresivo
+persistente (distimia):
+1. Se siente nervioso o tenso.
+2. Se siente inhabitualmente inquieto.
+3. Dificultad para concentrarse debido a las preocupaciones.
+4. Miedo a que pueda suceder algo terrible.
+5. El individuo siente que podría perder el control de sí mismo.
+Especificar la gravedad actual:
+Leve: Dos síntomas.
+Moderado: Tres síntomas.
+Moderado-severo: Cuatro o cinco síntomas.
+Grave: Cuatro o cinco síntomas y con agitación motora.
+Nota: Ansiedad que se aprecia como característica destacada tanto del trastorno bipolar como
+del trastorno de depresión mayor en la asistencia primaria y en los servicios especializados en
+salud mental. Los altos grados de ansiedad se han asociado a un riesgo mayor de suicidio,
+duración más prolongada de la enfermedad y mayor probabilidad de falta de respuesta al tratamiento. Por lo tanto, para planificar el tratamiento y controlar la respuesta terapéutica es clínicamente útil especificar con precisión la presencia y la gravedad de la ansiedad.
+Con características mixtas:
+A. Al menos tres de los síntomas maníacos/hipomaníacos siguientes están presentes casi todos
+los días durante la mayoría de los días de un episodio de depresión mayor:
+1. Estado de ánimo elevado, expansivo.
+2. Aumento de la autoestima o sentimiento de grandeza.
+3. Más hablador de lo habitual o presión para mantener la conversación.
+4. Fuga de ideas o experiencia subjetiva de que los pensamientos van a gran velocidad.
+5. Aumento de la energía dirigida a un objetivo (social, en el trabajo o la escuela, o sexual).
+
+Especificadores para trastornos depresivos
+
+185
+
+6. Implicación aumentada o excesiva en actividades que tienen muchas posibilidades de
+consecuencias dolorosas (p. ej., dedicarse de forma desenfrenada a compras, juergas,
+indiscreciones sexuales o inversiones de dinero imprudentes).
+7. Disminución de la necesidad de sueño (se siente descansado a pesar de dormir menos de
+lo habitual, en contraste con el insomnio).
+B. Los síntomas mixtos son observables por parte de otras personas y representan un cambio
+del comportamiento habitual del individuo.
+C. En individuos cuyos síntomas cumplen todos los criterios de manía o hipomanía, el diagnóstico será trastorno bipolar I o bipolar II.
+D. Los síntomas mixtos no se pueden atribuir a los efectos fisiológicos de una sustancia (p. ej.,
+una droga, un medicamento u otro tratamiento).
+Nota: Las características mixtas asociadas a un episodio de depresión mayor son un factor
+de riesgo significativo para el desarrollo de trastorno bipolar I o bipolar II. Por lo tanto, para
+planificar el tratamiento y controlar la respuesta terapéutica es clínicamente útil apreciar la
+presencia de este especificador.
+Con características melancólicas:
+A. Una de las características siguientes está presente durante el período más grave del episodio
+actual:
+1. Pérdida de placer por todas o casi todas las actividades.
+2. Falta de reactividad a estímulos generalmente placenteros (no se siente mucho mejor, ni
+siquiera temporalmente, cuando sucede algo bueno).
+B. Tres (o más) de las características siguientes:
+1. Una cualidad bien definida del estado de ánimo depresivo es un desaliento profundo,
+desesperación y/o mal humor, o lo que se conoce como estado de ánimo vacío.
+2. Depresión que acostumbra a ser peor por la mañana.
+3. Despertar pronto por la mañana (es decir, al menos dos horas antes de lo habitual).
+4. Notable agitación o retraso psicomotor.
+5. Anorexia o pérdida de peso importante.
+6. Culpa excesiva o inapropiada.
+Nota: El especificador "con características melancólicas" se aplica si estas características están
+presentes en la fase más grave del episodio. Hay una ausencia casi completa de la capacidad de
+placer, no simplemente una disminución. Una norma para evaluar la falta de reactividad del estado
+de ánimo es que ni siquiera los acontecimientos muy deseados se asocian a una elevación notable del estado de ánimo. El estado de ánimo no aumenta en absoluto o sólo aumenta parcialmente
+(p. ej., hasta un 20-40 % de lo normal sólo durante unos minutos seguidos). La "cualidad bien
+definida" del estado de ánimo característico del especificador "con características melancólicas"
+se experimenta como cualitativamente diferente del que se produce durante un episodio depresivo no melancólico. Un estado de ánimo deprimido que se describe simplemente como más
+grave, más prolongado o presente sin ningún motivo no se considera de cualidad bien definida.
+Casi siempre existen cambios psicomotores y son observables por parte de otras personas.
+Las características melancólicas sólo muestran una tendencia ligera a repetirse en los episodios del
+mismo individuo. Son más frecuentes en los pacientes hospitalizados, en contraposición a los ambulatorios; es menos probable que aparezcan en episodios más leves de depresión mayor que en episodios más graves; y es más probable que se produzcan en episodios con características psicóticas.
+Con características atípicas: Este especificador se puede aplicar cuando estas características
+predominan durante la mayoría de los días del episodio de depresión mayor actual o más reciente
+o trastorno depresivo persistente.
+A. Reactividad del estado de ánimo (es decir, aumento del estado de ánimo en respuesta a
+sucesos positivos reales o potenciales).
+
+186
+
+Trastornos depresivos
+
+B. Dos (o más) de las características siguientes:
+1.
+2.
+3.
+4.
+
+Notable aumento de peso o del apetito.
+Hipersomnia.
+Parálisis plúmbea (es decir, sensación de pesadez plúmbea en brazos o piernas).
+Patrón prolongado de sensibilidad de rechazo interpersonal (no limitado a los episodios
+de alteración del estado de ánimo) que causa deterioro social o laboral importante.
+
+C. No se cumplen los criterios para "con características melancólicas" o "con catatonía" durante
+el mismo episodio.
+Nota: "Depresión atípica" tiene un significado histórico (es decir, atípica en contraposición con
+las presentaciones más clásicas de depresión agitada, "endógena", que eran la norma cuando
+la depresión se diagnosticaba raramente en pacientes ambulatorios y casi nunca en adolescentes o adultos jóvenes) y actualmente no connota una presentación clínica inhabitual o inusual
+como el término podría implicar.
+Reactividad del estado de ánimo es la capacidad de animarse cuando se presentan acontecimiento positivos (p. ej., una visita de los hijos, alabanzas por parte de otras personas). El estado
+de ánimo se puede volver eutímico (no triste) incluso durante períodos prolongados si las circunstancias externas se mantienen favorables. El aumento del apetito se puede manifestar por
+un aumento claro de la ingestión de alimentos o por un aumento de peso. La hipersomnia puede
+incluir un período prolongado de sueño nocturno o siestas diurnas que totalizan un mínimo de
+10 horas de sueño diarias (o al menos dos horas más que cuando el individuo no está deprimido).
+La parálisis plúmbea se define como una sensación de pesadez plúmbea o de lastre, generalmente en los brazos o las piernas. Esta sensación está presente por lo general durante al menos
+una hora diaria, pero con frecuencia dura mucha horas seguidas. A diferencia de las demás
+características atípicas, la sensibilidad patológica de rechazo interpersonal percibido es un rasgo
+que tiene un inicio temprano y que persiste durante la mayor parte de la vida adulta. La sensibilidad de rechazo se produce tanto cuando la persona está deprimida como cuando no lo está,
+aunque se puede exacerbar durante los períodos depresivos.
+Con características psicóticas: Presencia de delirios y/o alucinaciones.
+Con características psicóticas congruentes con el estado de ánimo: El contenido de
+todos los delirios y alucinaciones está en consonancia con los temas depresivos típicos de
+incapacidad personal, culpa, enfermedad, muerte, nihilismo o castigo merecido.
+Con características psicóticas no congruentes con el estado de ánimo: El contenido de
+los delirios o alucinaciones no implica los temas depresivos típicos de incapacidad personal,
+culpa, enfermedad, muerte, nihilismo o castigo merecido, o el contenido es una mezcla de
+temas congruentes e incongruentes con el estado de ánimo.
+Con catatonía: El especificador de catatonía se puede aplicar a un episodio de depresión si
+existen características catatónicas durante la mayor parte del episodio. Véanse los criterios para
+catatonía asociada a un trastorno mental en el capítulo "Espectro de la esquizofrenia y otros
+trastornos psicóticos".
+Con inicio en el periparto: Este especificador se puede aplicar al episodio actual o, si actualmente no se cumplen todos los criterios para un episodio de depresión mayor, al episodio de
+depresión mayor más reciente si el inicio de los síntomas del estado de ánimo se produce
+durante el embarazo o en las cuatro semanas después del parto.
+Nota: Los episodios del estado de ánimo se pueden iniciar durante el embarazo o en el posparto. Aunque las estimaciones difieren según el período de seguimiento después del parto,
+entre un 3 y un 6 % de las mujeres experimentará el inicio de un episodio de depresión mayor
+durante el embarazo o en las semanas o meses que siguen al parto. El 50 % de los episodios
+de depresión mayor "posparto" comienza realmente antes del parto. Así pues, estos episodios se denominan colectivamente episodios del periparto. Las mujeres con episodios de
+depresión mayor en el periparto con frecuencia sufren ansiedad grave e incluso ataques de
+
+Especificadores para trastornos depresivos
+
+187
+
+pánico. Estudios prospectivos han demostrado que los síntomas del estado de ánimo y de
+ansiedad durante el embarazo, así como la tristeza posparto (baby blues), aumentan el riesgo
+de un episodio de depresión mayor después del parto.
+Los episodios del estado de ánimo que se inician en el periparto pueden presentar o no
+características psicóticas. El infanticidio se asocia la mayoría de las veces a episodios psicóticos posparto que se caracterizan por alucinaciones que ordenan matar al niño o delirios de
+que el niño está poseído, pero los síntomas psicóticos también pueden aparecer en episodios
+graves del estado de ánimo posparto sin estos delirios o alucinaciones específicas.
+Los episodios del estado de ánimo (de depresión mayor o maníacos) en el posparto con
+características psicóticas se producen en un número de partos que oscila entre 1 de cada
+500 y 1 de cada 1.000 partos, y pueden ser más frecuentes en primíparas. El riesgo de episodios posparto con características psicóticas es especialmente mayor en mujeres con
+episodios del estado de ánimo posparto anteriores, pero también es elevado en pacientes
+con antecedentes de un trastorno depresivo o bipolar (en especial el trastorno bipolar I) y en
+las que tienen antecedentes familiares de trastornos bipolares.
+Cuando una mujer ha tenido un episodio posparto con características psicóticas, el riesgo
+de recurrencia con cada parto posterior es de entre un 30 y un 50 %. Los episodios posparto
+se han de diferenciar del delirium que sucede en el período posparto, que se distingue por un
+grado de conciencia o atención fluctuante. El período posparto es singular en cuanto al grado
+de alteraciones neuroendocrinas y de ajustes psicosociales, el posible impacto de la lactancia
+materna en el plan de tratamiento y las implicaciones a largo plazo de una historia de trastorno
+del estado de ánimo posparto en la planificación familiar posterior.
+Con patrón estacional: Este especificador se aplica al trastorno de depresión mayor recurrente.
+A. Ha habido una relación temporal regular entre el inicio de los episodios de depresión mayor
+en el trastorno de depresión mayor y un momento del año particular (p. ej., en otoño o
+invierno).
+Nota: No incluir casos en los que existe un efecto claro de factores de estrés psicosocial
+relacionados con las estaciones (p. ej., desempleo regularmente cada invierno).
+B. Las remisiones totales (o un cambio de depresión mayor a manía o hipomanía) también se
+producen en un momento del año característico (p. ej., la depresión desaparece en primavera).
+C. En los últimos dos años se han producido dos episodios de depresión mayor que demuestran
+la relación estacional definida más arriba y episodios de depresión mayor no estacional
+durante el mismo período.
+D. El número de episodios de depresión mayor estacionales (como se han descrito más arriba)
+supera notablemente el de episodios de depresión mayor no estacionales que pueden haber
+sucedido a lo largo de la vida del individuo.
+Nota: El especificador "con patrón estacional" se puede aplicar al patrón de episodios de depresión mayor en el trastorno de depresión mayor, recurrente. La característica esencial es la aparición y remisión de episodios de depresión mayor en momentos del año característicos. En la
+mayoría de los casos, los episodios comienzan en otoño o invierno y remiten en primavera. Con
+menos frecuencia, pueden registrarse episodios depresivos recurrentes en verano. Este patrón
+de aparición y remisión de los episodios tiene que haber sucedido durante un período de al
+menos dos años, sin episodios no estacionales durante este período. Además, los episodios
+depresivos estacionales han de superar notablemente a los episodios depresivos no estacionales a lo largo de toda la vida del individuo.
+Este especificador no se aplica a las situaciones en que el patrón se explica mejor por factores de estrés psicosocial estacionales (p. ej., desempleo estacional o calendario escolar). Los
+episodios de depresión mayor que se producen según un patrón estacional con frecuencia se
+caracterizan por una pérdida de energía, hipersomnia, sobrealimentación, aumento de peso y
+ansia de carbohidratos. No está claro sí el patrón estacional es más probable en el trastorno
+de depresión mayor recurrente o en los trastornos bipolares. Sin embargo, en el grupo de los
+trastornos bipolares, el patrón estacional parece más probable en el trastorno bipolar II que en
+
+188
+
+Trastornos depresivos
+
+el trastorno bipolar I. En algunos individuos, el inicio de los episodios maníacos o hipomaníacos también se puede asociar a una estación en particular.
+La prevalencia del patrón estacional de invierno varía aparentemente con la latitud, la edad y
+el sexo. La prevalencia aumenta con la latitud. La edad también es un factor de predicción importante de la estacionalidad, ya que las personas más jóvenes tienen mayor riesgo de presentar
+episodios depresivos en invierno.
+Especificar si:
+En remisión parcial: Los síntomas del episodio de depresión mayor inmediatamente anterior
+están presentes pero no se cumplen todos los criterios o, cuando acaba un episodio de este tipo,
+existe un período que dura menos de dos meses sin ningún síntoma significativo de un episodio
+de depresión mayor.
+En remisión total: Durante los últimos dos meses no ha habido signos o síntomas significativos
+del trastorno.
+Especificar la gravedad actual:
+La gravedad se basa en el número de síntomas del criterio, la gravedad de estos síntomas y el grado
+de discapacidad funcional.
+Leve: Pocos o ningún síntoma más que los necesarios para cumplir los criterios diagnósticos, la
+intensidad de los síntomas causa malestar pero es manejable, y los síntomas producen poco
+deterioro en el funcionamiento social o laboral.
+Moderado: El número de síntomas, la intensidad de los síntomas y/o el deterioro funcional están
+entre los especificados para "leve" y "grave".
+Grave: El número de síntomas supera notablemente a los necesarios para hacer el diagnóstico,
+la intensidad de los síntomas causa gran malestar y no es manejable, y los síntomas interfieren
+notablemente en el funcionamiento social y laboral.
+
+

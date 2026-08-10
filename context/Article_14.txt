@@ -1,0 +1,150 @@
+Article #14
+Associations of nutrition impact symptoms with depression in patients with advanced cancer
+Koji Amano, Satomi Okamura, Yoshinobu Matsuda, Vickie E. Baracos, Naoharu Mori, Tomofumi Miura, Ryohei Tatara, Takaomi Kessoku, Keita Tagami, Hiroyuki Otani, Masanori Mori, Tomohiko Taniyama, Nobuhisa Nakajima, Erika Nakanishi, Jun Kako, Tatsuya Morita & Mitsunori Miyashita
+Japan, published 19 June 2024 — Supportive Care in Cancer, Volume 32, article number 445
+225 patients (secondary analysis of a multicenter survey; 11 hospitals, palliative care outpatient services, hospital palliative care teams, and palliative care units in Japan; validation phase, Jan–Jul 2021)
+
+Instruments:
+Patient Health Questionnaire-9 (PHQ-9) — depression screening, cutoff ≥10 = major depression
+Ingesta-Verbal/Visual Analog Scale (Ingesta-VVAS) — dietary intake, 0-10 scale, higher = better intake
+19 Nutrition Impact Symptoms (NISs) — 0-10 scale each (0 none; 1-3 mild; 4-6 moderate; 7-9 severe; 10 unbearable), adapted from Edmonton Symptom Assessment System and Patient-Generated Subjective Global Assessment
+Functional Assessment of Anorexia/Cachexia Therapy Anorexia Cachexia Subscale (FAACT ACS) — 12 items (5-item anorexia symptoms + 4-item anorexia concerns), higher = better QOL
+ECOG Performance Status
+International cachexia diagnostic criteria (6-month %WL >5%, or BMI <20 kg/m2 + 6-month %WL >2%)
+
+variables:
+sociodemographic ->
+age, sex
+
+clinical / disease ->
+primary cancer site, ECOG performance status (0-1, 2, 3, 4), symptomatic fluid retention (edema, pleural effusion, ascites), cachexia/refractory cachexia status, treatment status (pre-chemotherapy, chemotherapy, never treated/previous treatment)
+
+anthropometric ->
+height, current and previous body weight, BMI, 6-month weight loss rate (%WL)
+
+nutrition impact symptoms (19 items, 0-10 scale) ->
+oral pain, pain, shortness of breath, fatigue, drowsiness, lack of appetite, early satiety, nausea, vomiting, constipation, diarrhea, abnormal taste, abnormal smell, dry mouth, dental problems, difficulty swallowing, food bolus obstruction, anxiety, feeling sad
+
+outcome variables ->
+PHQ-9 score (dichotomized <10 non-depression / ≥10 depression)
+number of NISs with a score ≥4 (categorized: 0, 1-3, 4-6, 7 or more)
+dietary intake (Ingesta-VVAS)
+FAACT ACS 12-item, 5-item anorexia symptoms, 4-item anorexia concerns scores
+
+Overall prevalence of depression (PHQ-9 ≥10): 34.2% (n=77/225)
+Non-depression group: n=148 (65.8%)
+
+{
+Table 1: Patient demographics and characteristics (n=225)
+
+Variable                                Total              Non-depression      Depression         P-value
+Age in years, median (IQR)              62.0 (52.0-72.0)   63.0 (53.0-73.0)    57.0 (51.0-70.0)   0.095
+Sex
+  Male                                  116 (52.3%)        82 (55.8%)          34 (45.3%)         0.140
+  Female                                106 (47.7%)        65 (44.2%)          41 (54.7%)
+Primary cancer site                                                                                0.821
+  Lung                                  55 (25.1%)         33 (22.8%)          22 (29.7%)
+  Liver, biliary system, pancreas       34 (15.5%)         25 (17.2%)          9 (12.2%)
+  Upper/lower GI tract                  32 (14.6%)         24 (16.6%)          8 (10.8%)
+  Breast                                15 (6.8%)          10 (6.9%)           5 (6.8%)
+  Urinary system and prostate           14 (6.4%)          10 (6.9%)           4 (5.4%)
+  Head and neck                         9 (4.1%)           6 (4.1%)            3 (4.1%)
+  Hematologic malignancy                8 (3.7%)           4 (2.8%)            4 (5.4%)
+  Uterus and ovaries                    7 (3.2%)           5 (3.4%)            2 (2.7%)
+  Others                                45 (20.5%)         28 (19.3%)          17 (23.0%)
+ECOG performance status                                                                            0.003
+  0-1                                   119 (54.6%)        91 (63.6%)          28 (37.3%)
+  2                                     43 (19.7%)         24 (16.8%)          19 (25.3%)
+  3                                     44 (20.2%)         22 (15.4%)          22 (29.3%)
+  4                                     12 (5.5%)           6 (4.2%)            6 (8.0%)
+Body mass index (kg/m2), median (IQR)   20.9 (18.8-23.9)   21.3 (18.9-24.3)    20.2 (18.6-23.2)   0.103
+Weight loss rate over 6 months (%)      3.4 (0.0-8.5)      3.3 (0.0-8.0)       3.8 (0.0-11.3)     0.416
+Symptomatic fluid retention, yes        51 (23.4%)         26 (17.9%)          25 (34.2%)         0.007
+Cachexia/refractory cachexia, yes       95 (47.0%)         62 (47.0%)          33 (47.1%)         0.981
+Treatment status                                                                                   0.372
+  Pre-chemotherapy                      14 (6.5%)          7 (4.9%)            7 (9.7%)
+  Chemotherapy                          146 (67.6%)        100 (69.4%)         46 (63.9%)
+  Never treated/previous treatment      56 (25.9%)         37 (25.7%)          19 (26.4%)
+}
+
+{
+Table 2: Relationship between dietary intake, NISs, and depression (median, IQR)
+
+Variable                        Total              Non-depression     Depression         P-value
+Dietary intake (Ingesta-VVAS)   6.0 (5.0-8.0)      7.0 (5.0-8.0)      5.0 (3.0-7.0)      <0.001
+Oral pain                       0.0 (0.0-0.5)      0.0 (0.0-0.0)      0.0 (0.0-1.0)      0.394
+Pain                            3.0 (0.5-6.5)      3.0 (0.0-6.0)      4.5 (2.0-7.0)      0.003
+Shortness of breath             0.0 (0.0-2.0)      0.0 (0.0-2.0)      2.0 (0.0-4.0)      0.004
+Fatigue                         3.0 (0.0-5.0)      2.0 (0.0-4.0)      4.0 (2.5-6.0)      <0.001
+Drowsiness                      3.0 (0.0-5.0)      2.0 (0.0-3.0)      4.0 (2.0-6.0)      <0.001
+Lack of appetite                3.0 (0.0-5.0)      1.0 (0.0-4.0)      5.0 (3.0-6.0)      <0.001
+Early satiety                   3.0 (0.0-5.5)      2.0 (0.0-4.0)      5.0 (3.0-7.0)      <0.001
+Nausea                          0.0 (0.0-2.0)      0.0 (0.0-1.0)      1.0 (0.0-3.0)      <0.001
+Vomiting                        0.0 (0.0-0.0)      0.0 (0.0-0.0)      0.0 (0.0-1.0)      0.003
+Constipation                    2.5 (0.0-5.0)      2.0 (0.0-5.0)      4.0 (1.0-7.0)      0.005
+Diarrhea                        0.0 (0.0-2.0)      0.0 (0.0-2.0)      0.0 (0.0-2.0)      0.707
+Abnormal taste                  0.0 (0.0-2.0)      0.0 (0.0-1.0)      0.0 (0.0-3.0)      0.028
+Abnormal smell                  0.0 (0.0-0.0)      0.0 (0.0-0.0)      0.0 (0.0-2.0)      <0.001
+Dry mouth                       0.0 (0.0-3.0)      0.0 (0.0-2.0)      2.0 (0.0-5.0)      <0.001
+Dental problems                 0.0 (0.0-1.0)      0.0 (0.0-0.0)      0.0 (0.0-2.0)      0.025
+Difficulty swallowing           0.0 (0.0-0.0)      0.0 (0.0-0.0)      0.0 (0.0-2.0)      0.050
+Food bolus obstruction          0.0 (0.0-1.0)      0.0 (0.0-1.0)      0.0 (0.0-2.0)      0.172
+Anxiety                         2.0 (0.0-4.0)      1.0 (0.0-3.0)      3.0 (2.0-7.0)      <0.001
+Feeling sad                     2.0 (0.0-5.0)      1.0 (0.0-3.0)      4.0 (2.0-7.0)      <0.001
+Number of NISs with score ≥4    3.0 (1.0-6.0)      2.0 (1.0-4.0)      6.0 (3.0-8.0)      <0.001
+
+Note: 15 of 19 NISs showed statistically significant differences between groups (non-significant: oral pain, diarrhea, difficulty swallowing, food bolus obstruction)
+}
+
+{
+Table 3: Relationship between cachexia-related QOL (FAACT ACS) and depression (median, IQR)
+
+Variable                    Total              Non-depression     Depression         P-value
+FAACT ACS 12-item score     32.0 (28.0-38.0)   36.0 (30.0-40.0)   28.0 (23.0-32.0)   <0.001
+FAACT ACS 5-item score      14.0 (11.0-17.0)   16.0 (13.0-18.0)   11.0 (7.0-14.0)    <0.001
+FAACT ACS 4-item score      11.0 (9.0-12.0)    12.0 (10.0-13.0)   9.0 (7.0-11.0)     <0.001
+}
+
+{
+Table 4: Association between NISs and depression — logistic regression (dependent variable: PHQ-9 ≥10)
+
+Variable                          Crude OR (95% CI)       P-value    Adjusted OR (95% CI)     P-value
+Number of NISs with score ≥4
+  0                                1.00 (reference)                  1.00 (reference)
+  1-3                              3.89 (0.83, 18.22)      0.154      2.98 (0.60, 14.87)       0.134
+  4-6                              14.00 (3.01, 65.16)     0.005      10.76 (2.07, 55.91)      0.016
+  7 or more                       24.00 (4.95, 116.35)    <0.001     17.02 (3.08, 94.22)      <0.001
+Age in years                      0.98 (0.96, 1.00)        0.096      0.99 (0.96, 1.02)         0.556
+Sex
+  Male                             1.00 (reference)                  1.00 (reference)
+  Female                           1.52 (0.87, 2.66)        0.141      2.34 (1.11, 4.95)         0.026
+ECOG performance status
+  0-1                              1.00 (reference)                  1.00 (reference)
+  2                                2.57 (1.23, 5.37)        0.312      1.40 (0.55, 3.55)         0.856
+  3-4                              3.25 (1.66, 6.37)        0.031      1.66 (0.68, 4.07)         0.423
+Treatment status
+  Pre-chemotherapy                 1.00 (reference)                  1.00 (reference)
+  Chemotherapy                     0.46 (0.15, 1.39)        0.206      0.46 (0.11, 1.95)         0.301
+  Never treated/previous treatment 0.51 (0.16, 1.68)        0.485      0.54 (0.11, 2.60)         0.661
+
+Multivariate model adjusted for: number of NISs with score ≥4, age, sex, ECOG performance status, treatment status
+}
+
+Key findings for model training:
+- Depression prevalence in this palliative care population (34.2%) is notably higher than in general cancer populations (8-24% per meta-analysis of 211 studies), likely reflecting proximity to end of life and broader depression spectrum
+- Having ≥4 NISs with a score ≥4 is the strongest identified risk marker for depression — dose-response relationship (4-6 NISs: adjusted OR 10.76; ≥7 NISs: adjusted OR 17.02)
+- Female sex independently associated with depression in adjusted model (OR 2.34, p=0.026) despite non-significance in crude analysis
+- ECOG performance status and treatment status lost significance after adjustment for NIS burden — suggesting NIS count may mediate much of their association with depression
+- Symptomatic fluid retention significantly associated with depression at bivariate level (p=0.007)
+- Strongest individual NIS associations with depression (p<0.001): lack of appetite, early satiety, fatigue, drowsiness, nausea, abnormal smell, dry mouth, anxiety, feeling sad
+- No significant NIS associations: oral pain, diarrhea, difficulty swallowing, food bolus obstruction
+- Depression correlated with significantly worse cachexia-related QOL across all FAACT ACS subscales (p<0.001)
+- Proposed mechanism: shared pathogenesis between cancer cachexia and depression via CNS/HPA axis dysregulation and systemic inflammation — NISs and emotional distress mutually amplify each other
+
+Limitations noted by authors:
+- Cross-sectional design — no causality can be established, confounders may be unaccounted for
+- Cachexia status excluded from regression model due to high prevalence of symptomatic fluid retention (23%) potentially impairing diagnostic criteria accuracy
+- No data on prior depression diagnosis or antidepressant use
+- Patients with major depressive disorder may have been excluded by study exclusion criteria (serious psychological distress)
+- No data on systemic inflammation markers or specific treatment modality (cytotoxic chemo, targeted therapy, immunotherapy)
+- Single-country (Japan) setting may limit generalizability

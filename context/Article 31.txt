@@ -1,0 +1,243 @@
+Article #31
+Interaction effect of comorbid depression and proactive positivity coping strategy on the 1-year survival of patients with advanced cancer: a nationwide multicentre study in South Korea
+Ju Youn Jung, Je-Yeon Yun, et al.
+South Korea, 02 June 2025
+144 patients from 12 tertiary hospitals in South Korea
+
+Patient Health Questionnaire-9 (PHQ-9)
+Eastern Cooperative Oncology Group Performance Status Scale (ECOG-PS)
+Smart Management Strategy for Health Assessment Tool (SAT-SF)
+
+variables:
+sociodemographic->
+age, sex, marital status, religious practice, educational attainment, monthly household income, and residential area
+Clinical information related to cancer diagnosis at baseline (primary tumour site, number of metastatic sites, and timing of classification as advanced cancer—stage IV at initial diagnosis vs. recurrence after prior treatment) and what treatment they received (standard chemotherapy, participation in clinical trials, or outpatient palliative care)
+Proactive Positivity (SAt-SF)
+ECOG-PS (0-V)
+Depression (PHQ-9)
+Patient 1-year Survival
+
+(SAT-SF Core strategies score > 66.66), 36.8% (n = 53/144)
+(SAT-SF Preparation strategy score > 66.66), 18.1% (n = 26/144)
+(SAT-SF Implementation strategy score > 66.66), 11.8% (n = 17/144)
+
+{
+Variables
+	
+
+Category
+	
+
+Crude HR (95% CI)
+	
+
+P value
+
+Age
+	
+
+≥ 65 years
+	
+
+1
+	
+
+0.97
+
+< 65 years
+	
+
+1.01 (0.62–1.65)
+
+Sex
+	
+
+Female
+	
+
+1
+	
+
+0.07
+
+Male
+	
+
+1.54 (0.96–2.45)
+
+Educational achievement
+	
+
+≥High school
+	
+
+1
+	
+
+0.65
+
+< High school
+	
+
+1.11 (0.71–1.75)
+
+Monthly household income
+	
+
+≥ 3,000 USD
+	
+
+1
+	
+
+0.49
+
+< 3,000 USD
+	
+
+1.22 (0.69–2.15)
+
+Residential area
+	
+
+Metropolitan area
+	
+
+1
+	
+
+0.10
+
+Rural or suburban
+	
+
+1.51 (0.93–2.45)
+
+Marital status
+	
+
+Unmarried
+	
+
+1
+	
+
+0.043
+
+Married
+	
+
+0.60 (0.36–0.99)
+
+Religious practice
+	
+
+Yes
+	
+
+1
+	
+
+0.06
+
+No
+	
+
+0.62 (0.38–1.02)
+
+Primary tumor site
+	
+
+Lung / breast / urinary-genital / thymoma-sarcoma
+	
+
+1
+	
+
+0.746
+
+Stomach-duodenal-colon / hepato-biliary-pancreatic
+	
+
+0.92 (0.56–1.52)
+
+Number of metastatic sites
+	
+
+3 sites >
+	
+
+1
+	
+
+0.251
+
+3 sites ≤
+	
+
+1.36 (0.81–2.29)
+
+Reason for diagnosis of advanced cancer
+	
+
+Stage 4 at initial diagnosis
+	
+
+1
+	
+
+0.26
+
+Recurrence after treatment
+	
+
+0.76 (0.47–1.23)
+
+Early palliative care
+	
+
+Consultation with palliative care physician & telephone coaching
+	
+
+1
+	
+
+0.289
+
+Usual palliative care provided if desired
+	
+
+0.78 (0.49–1.23)
+
+Performance status (ECOG-PS): baseline
+	
+
+0 (Fully active)/ 1 (remains ambulatory and able to carry out work of a light or sedentary nature)
+	
+
+1
+	
+
+0.008
+
+2 (ambulatory and capable of all self-care, but unable to carry out any work activities; “up and about” > 50% of waking hours)
+	
+
+2.33 (1.25–4.34)
+
+Depression (PHQ-9 total score): baseline
+	
+
+No (0–4) / mild (5–9)
+	
+
+1
+	
+
+< 0.001
+
+Moderate (10–14) / moderately severe (15–19) / severe (20–27)
+	
+
+2.76 (1.72–4.42)
+}

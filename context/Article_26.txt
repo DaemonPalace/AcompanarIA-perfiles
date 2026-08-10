@@ -1,0 +1,207 @@
+Article #26
+Quality of Life for Hong Kong Chinese Patients with Advanced Gynecological Cancers in the Palliative Phase of Care: A Cross-Sectional Study
+Kwok Ying Chan, Man Lui Chan, Thomas Chung Cheung Yau, Cho Wing Li, Hon Wai Cheng, Mau Kwong Sham
+Hong Kong, China, published 2012 — Journal of Palliative Care, 28(4):259-266, doi: 10.1177/082585971202800404
+53 consecutive patients with advanced gynecological cancer (AGC), Palliative Medical Unit, Grantham Hospital, Hong Kong (cross-sectional study, recruited July 3, 2008 - December 3, 2009)
+
+Instruments:
+McGill Quality of Life Questionnaire for Hong Kong Chinese (MQOL-HK) — 17-item patient-rated QOL for palliative cancer patients; 5 domains: physical well-being, psychological well-being, existential well-being, support, sexual function; 0-10 scale per item, 0=worst, 10=best; Cronbach's alpha 0.68-0.85; test-retest reliability 0.75
+Hospital Anxiety and Depression Scale (HADS) — Cantonese Chinese version (Cronbach's α=0.77, sensitivity 0.79, specificity 0.80); 7 items each subscale, 0-3 per item, range 0-21; cutoff 8-10 = doubtful case, ≥11 = definite case, ≥15 = severe depression/anxiety suspected
+Palliative Performance Scale (PPS) — observer-rated, 0-100% in 10% increments, 5 parameters (ambulation, activity/disease evidence, self-care, intake, level of consciousness)
+Psychosocial Adjustment to Illness Scale (PAIS), sexual relationships subscale — 6 items, 0-3 scale (0=no disturbance, 3=marked disturbance), range 0-18, higher = more sexual dysfunction; only administered to patients in a sexual relationship (n=31/53)
+
+variables:
+sociodemographic ->
+age, marital status, number of children, education years/level, religion, monthly income (HKD), accommodation (residential care facility, alone, with family)
+
+clinical ->
+gynecological cancer site (ovary, cervix, uterus), disease stage (III, IV), oncological treatment type/history, past medical history (hypertension, diabetes, cerebrovascular accident, ischemic heart disease, cancer), past psychiatric history, analgesic use, other medications (antihypertensives, CHF/IHD meds, oral hypoglycemics/insulin, antidepressants), PPS score
+
+outcome/psychological variables ->
+MQOL-HK total score and 5 domain scores (physical, psychological, existential, support, sexual)
+HADS depression subscale score
+HADS anxiety subscale score
+PAIS sexual relationships subscale score
+
+{
+Table 1: Demographic data (n=53)
+
+Variable                          n      %      Mean    SD      Range
+Age (years)                                     62.11   15.5    35-92
+Marital status
+  Married                          18     34.0
+  Widowed                          25     47.2
+  Single                            8     15.1
+  Divorced                          2     3.8
+Number of children                              1.7     1.14    0-3
+  No children                       11     20.8
+  1                                  11     20.8
+  2                                  14     26.4
+  3 or more                          17     32.1
+Education years                                 11.01   6.07    2-19
+Education level
+  No formal education                9     17.0
+  Primary                            16     30.2
+  Secondary                          15     28.3
+  Tertiary                           13     24.5
+Religion
+  No religion                        25     47.2
+  Christian                          13     24.5
+  Catholic                            2     3.8
+  Buddhist                            4     7.5
+  Traditional Chinese beliefs        9     17.0
+Monthly income (HKD)
+  ≤$12,000                           13     24.5
+  $12,001-$20,000                    16     30.2
+  $20,001-$30,000                    10     18.9
+  >$30,000                            8     15.1
+  No response                         6     11.3
+Accommodation
+  In residential care facility        5     9.4
+  Alone                                6     11.3
+  With family members                42     79.2
+}
+
+{
+Table 2: Concomitant medical and psychiatric histories (n=53)
+
+Past medical history (multiple response)   n     %
+  No history                                29    54.7
+  Hypertension                              16    30.2
+  Diabetes mellitus                          7    13.2
+  Cerebrovascular accident                   6    11.3
+  Ischemic heart disease                     4    7.5
+  Cancer (other)                             1    1.9
+Past psychiatric history
+  No history                                51    96.2
+  Depression                                 2    3.8
+Analgesics
+  No analgesics                             27    50.9
+  One analgesic                             21    39.6
+  Two analgesics                             5    9.4
+Medications (multiple response)
+  No medications                            29    54.7
+  Anti-hypertensive                          14    26.4
+  CHF/IHD medication                        10    18.9
+  Oral hypoglycemic/insulin                   7    13.2
+  Antidepressants                             3    5.7
+}
+
+{
+Table 3: Clinical features of AGC (n=53)
+
+Site of gynecological cancer     n      %
+  Ovary                           29     54.7
+  Cervix                          13     24.5
+  Uterus                          11     20.8
+Stage
+  Stage III                       14     26.4
+  Stage IV                        39     73.6
+Oncological treatment
+  No treatment                     2     3.8
+  Surgery plus RT                  2     3.8
+  Surgery plus chemo               11     20.8
+  Surgery plus RT and chemo        14     26.4
+  Chemo alone                       4     7.5
+  RT alone                         13     24.5
+  Chemo and RT                      7     13.2
+
+Time from first treatment to PC admission: mean 3.95 years (range 8 months - 12 years)
+Median PPS: 40% (mean 48.87%, SD 10.31%, range 40-70%)
+}
+
+{
+Table 4: MQOL-HK subscale and overall results
+
+Subscale item                                    Mean    SD
+PHYSICAL DOMAIN
+  Physical symptom 1 (most troublesome)           3.08    2.15
+  Physical symptom 2                              4.08    1.83
+  Physical symptom 3                              4.60    2.20
+  Physical well-being                              4.31    2.51
+  Eating                                            3.93    2.28
+  Domain 1 - Physical                              3.99    2.15  (lowest-scoring domain)
+PSYCHOLOGICAL DOMAIN
+  Depressed                                         4.34    2.62  (lowest item in domain)
+  Anxious                                           5.26    2.05
+  Sad                                               4.38    2.68
+  Afraid of the future                              5.74    2.32
+  Feeling every day is a burden                      4.57    2.83
+  Having face (feeling respected)                    4.76    2.51
+  Domain 2 - Psychological                          4.79    2.28
+EXISTENTIAL DOMAIN
+  Life seems purposeful and meaningful               4.30    2.38
+  Life goals are being achieved                       4.87    2.62
+  Life seems worthwhile                              4.96    2.57
+  Feeling good about oneself                          4.37    2.61
+  Domain 3 - Existential                             4.66    2.41
+SUPPORT DOMAIN
+  Feeling supported                                   5.53    2.14
+  Feeling that the world is caring                     5.00    2.28
+  Domain 4 - Support                                  5.29    2.09  (highest-scoring domain)
+SEXUAL DOMAIN
+  Enjoying sexual life as usual                        4.42    2.88
+OVERALL
+  Overall QOL single item                              4.68    2.40
+  MQOL-HK TOTAL SCORE                                  4.63    1.94  (range 1.3-8.2)
+
+Most commonly reported physical symptoms: pain (72%), edema (52%), fatigue (45%), nausea (43%), shortness of breath (32%)
+}
+
+{
+Table 5: PAIS sexual relationships subscale (n=31, patients with active sexual partner; 22/53=42% excluded as not in sexual relationship)
+
+Item                                Mean    SD
+Relationship with partner            0.90    0.30   (least affected)
+Interest in sexual activity          1.70    0.93
+Frequency of sexual activity         2.64    0.66
+Sexual pleasure and satisfaction     2.16    0.86
+Sexual performance                   2.71    0.53   (most affected)
+Arguments with partner               1.45    0.89
+Overall PAIS score                   11.65   2.38 (text) / 3.26 (abstract SD reported)
+}
+
+{
+Table 6: Correlation coefficients — MQOL-HK domains vs. clinical variables
+
+Variable                       Mean total    Physical    Psychological   Existential   Support    Sexual    Single item
+Age                             0.683**       0.617**      0.691**         0.530**       0.508**    0.584**    0.529**
+Number of children              0.211         0.085        0.208           0.099         0.098      0.195**    0.071
+Education (years)               -0.275        -0.248       -0.237          -0.148        -0.089     -0.167     -0.033
+Monthly income                  0.223         0.145        0.158           0.203         0.391      0.174      0.295*
+HADS depression subscale        -0.518**      -0.491*      -0.547**        -0.488**      -0.455**   -0.200     -0.586*
+HADS anxiety subscale           -0.278*       -0.225       -0.314*         -0.217        -0.264     -0.200     -0.263
+Religion                        0.148         0.078        0.234           0.332         0.259      0.007      0.252
+PAIS score                      -0.344        -0.198       -0.348          -0.338        -0.357     -0.086     -0.451*
+PPS (0-100%)                    0.239         0.392*       0.225           0.234         0.230      -0.034     0.275
+
+* p<0.05, ** p<0.01
+Note: POSITIVE correlation between age and QOL — older patients report BETTER quality of life (opposite of typical assumption)
+}
+
+Prevalence findings:
+Depression symptoms (HADS-d >10): 62% (n=33/53); severe depression (HADS-d ≥15): 19% (n=10/53) — only 3 patients were on antidepressants prior to admission
+Significant anxiety symptoms: 42% of patients
+
+Multivariate regression (predictors of MQOL-HK total score):
+Model included age, HADS depression, HADS anxiety — age and depression were retained as independent significant predictors, together explaining 58.2% of variance in MQOL-HK score
+  Age: β = 0.593 (p<0.05) — older age associated with BETTER QOL
+  HADS depression: β = -0.286 (p<0.05) — higher depression associated with WORSE QOL
+  (HADS anxiety dropped out as non-independent predictor after adjustment)
+
+Key findings for model training:
+- Depression prevalence (62%) is markedly higher than most other studies in this corpus — reflects a specific high-symptom-burden population (advanced/Stage IV gynecological cancer, palliative inpatient unit, median PPS only 40%)
+- Younger age is consistently and counterintuitively associated with WORSE QOL and (implicitly) greater psychological distress — authors attribute this to unmet life-role expectations and a larger gap between hopes for the future and current experience in younger patients; this is a recurring pattern worth testing against your dataset (may interact with your `age`/`age_group` dimension differently than assumed)
+- Physical domain scored worst of all MQOL-HK domains (mean 3.99/10) — pain (72%), edema (52%), fatigue (45%) most prevalent physical symptoms; notably only 50.9% of patients had received any analgesic despite high pain prevalence — a clinician/caregiver detection gap directly relevant to ACOMPAÑAR's alert-generation logic
+- Existential domain showed low scores specifically on "life seems purposeful/meaningful" and "feeling good about oneself" — relevant to Logotherapy-axis features in your therapeutic recommendation engine
+- Sexual functioning domain was low-scoring but "relationship with partner" was the LEAST affected PAIS item — suggests partner relationship quality is somewhat protective/resilient even when other domains deteriorate; relevant to your "relational" dimension
+- Severe under-treatment of depression observed: 62% had depression symptoms but only 3/53 (5.7%) were on antidepressants — reinforces a cross-study pattern (also seen in Article 25/Saudi study) of depression being clinically under-recognized in palliative settings
+- PPS (functional performance) correlated only with the physical domain, not with psychological, existential, or support domains — suggests functional status and emotional/existential distress are relatively independent axes, supporting a multidimensional (not purely physical) recommendation model
+- Cultural framing note: authors discuss Chinese cultural beliefs (Confucian/Taoist yin-yang framework) around gynecological illness as a source of additional psychological burden and stigma — a qualitative factor not captured in standard scales but relevant if you expand religiosity/cultural-context variables
+
+Limitations noted by authors:
+- Cross-sectional design — no causal relationship between clinical correlates and QOL can be established
+- Small sample size (n=53), heterogeneous AGC diagnoses (ovarian, cervical, uterine)
+- High exclusion rate for PAIS sexual subscale (42% excluded, no active sexual partner) limited interpretability of sexual functioning findings
+- HADS is a screening tool, not a definitive diagnostic instrument for depression
+- Single-center, single-ethnicity (Hong Kong Cantonese Chinese) population — limits generalizability across cultures

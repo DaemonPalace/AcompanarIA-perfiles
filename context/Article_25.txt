@@ -1,0 +1,137 @@
+Article #25
+Assessing anxiety and depression with respect to the quality of life in cancer inpatients receiving palliative care
+Radka Bužgová, Darja Jarošová, Erika Hajnová
+Czech Republic (Ostrava), published online 2015 — European Journal of Oncology Nursing, doi: 10.1016/j.ejon.2015.04.006
+225 advanced cancer inpatients, University Hospital Ostrava (cross-sectional observational study with a 21-day repeated measurement in a subgroup of 140 patients; data collected January-December 2013)
+
+Instruments:
+Hospital Anxiety and Depression Scale (HADS) — Czech version, validated in this study (Cronbach's alpha: HADS-a 0.80, HADS-d 0.79; test-retest r: HADS-a 0.89, HADS-d 0.75); 14 items (7 anxiety/HADS-a, 7 depression/HADS-d), each 0-3, subscale range 0-21, total HADS-t range 0-42; cutoffs ≥8 possible case, ≥11 definite case
+EORTC QLQ-C30 (Czech version) — quality of life; functional scales used: physical, role, emotional, cognitive, social function; global health status/QoL scale; symptom items: pain, nausea and vomiting
+Karnofsky Performance Status (KPS) scale — 0 (death) to 100 (normal condition), illness severity
+
+variables:
+sociodemographic ->
+gender, marital status, living situation (alone, with partner, with children, with other relatives, in institution), having children (yes/no), religion (yes/no)
+
+clinical ->
+cancer diagnosis site (mouth/pharynx, gastrointestinal tract, respiratory tract, bone/cartilage, skin/soft tissues, breast/female reproductive organs, male reproductive organs, urinary bladder, eye/CNS, hematopoiesis, others), Karnofsky Performance Status score, pain
+
+outcome variables ->
+HADS-a (anxiety score, 0-21)
+HADS-d (depression score, 0-21)
+HADS-t (total score, 0-42)
+EORTC QLQ-C30 functional/QoL scales
+
+Sample characteristics (n=225): mean age 65.1 years (SD 12.6; range 31-93)
+
+Overall prevalence:
+Anxiety (HADS-a ≥8): 33.9% (n=76/225); moderate-severe (HADS-a ≥11): 14.3% (n=32/225); mean anxiety score 6.1 (SD 3.9, median 5)
+Depression (HADS-d ≥8): 47.6% (n=107/225); moderate-severe (HADS-d ≥11): 22.3% (n=50/225); mean depression score 7.2 (SD 4.1, median 7)
+Total HADS-t ≥16: 46.7% (n=105/225)
+
+{
+Table 1: Sample characteristics (n=225)
+
+Sociodemographic              n (%)              Health status                    n (%)
+Gender                                            Cancer diagnosis
+  Male                        114 (50.7)            Mouth, pharynx                   11 (4.9)
+  Female                      111 (49.3)            Gastrointestinal tract            43 (19.1)
+Marital status                                     Respiratory tract                 37 (16.4)
+  Single                      12 (5.3)              Bone and cartilage                4 (1.8)
+  Married                     104 (46.2)            Skin, soft tissues                13 (5.8)
+  Divorced                    46 (20.4)             Breast, female reproductive       43 (19.1)
+  Widow(er)                   63 (28.0)             Male reproductive organs          19 (8.4)
+Children                                           Urinary bladder                   10 (4.4)
+  Yes                         195 (86.2)            Eye, CNS                          11 (4.9)
+  No                          30 (13.3)             Hematopoiesis                     18 (8.0)
+Living situation                                   Others                            16 (7.1)
+  In an institution           1 (0.4)             Karnofsky score
+  Alone                       61 (27.1)             1st assessment, mean (SD)         48.6 (11.9)
+  With a partner              121 (53.8)              <45                              82 (36.4)
+  With children               35 (15.6)               50-60                            143 (63.6)
+  With other relatives        7 (3.1)              2nd assessment, mean (SD)          47.9 (11.4)
+                                                       <45                              71 (50.7)
+                                                       50-60                            69 (49.3)
+}
+
+{
+Table 2: Differences in anxiety and depression during hospital stay (subgroup n=140, 1st vs 2nd measurement 21 days apart)
+
+Measurement       n     Anxiety HADS-a≥8 n(%)   Mean(SD)   Median   P        Depression HADS-d≥8 n(%)   Mean(SD)   Median   P
+1st measurement    140   41 (29.3)                5.0 (3.3)   5      <0.001    60 (42.9)                  5.9 (3.1)   5      <0.001
+2nd measurement    140   48 (34.3)                5.8 (3.4)   6                68 (48.6)                  7.1 (3.6)   7
+
+Note: both anxiety and depression significantly INCREASED between 1st and 2nd measurement (21 days later), during ongoing hospitalization
+}
+
+{
+Table 3: Presence of anxiety and depression by sociodemographic characteristics (n=225)
+
+Variable            n     Anxiety HADS-a≥8 n(%)   Mean(SD)   Median   P        Depression HADS-d≥8 n(%)   Mean(SD)   Median   P
+Sex
+  Man                114   35 (30.7)                5.7 (3.7)   5      0.218     50 (43.9)                  6.9 (3.8)   7      0.561
+  Woman              111   41 (36.9)                6.5 (4.1)   6                57 (51.3)                  7.4 (4.4)   7
+Living situation
+  With partner       121   35 (28.9)                5.6 (3.9)   5      0.042     51 (42.1)                  6.7 (4.2)   6      0.122
+  Without partner    104   41 (39.4)                6.3 (4.0)   6                56 (53.8)                  7.3 (3.9)   7
+Children
+  Yes                195   68 (34.9)                6.2 (3.9)   5      0.216     96 (49.2)                  7.4 (4.2)   7      0.167
+  No                 30    8 (26.7)                 5.5 (4.2)   5                11 (36.7)                  6.1 (3.8)   6
+Religion
+  Yes                92    24 (26.1)                5.6 (3.8)   5      0.045     39 (42.4)                  6.9 (3.6)   7      0.564
+  No                 133   52 (39.1)                6.4 (4.0)   6                68 (51.1)                  7.4 (4.5)   7
+
+Only significant differences for anxiety: living with a partner (p=0.042, higher anxiety) and non-religious status (p=0.045, higher anxiety). No significant sociodemographic differences found for depression.
+}
+
+{
+Table 4: Correlation matrix — QoL, age, functional status and HADS (n=225, Spearman's r, p-value)
+
+Variable                  HADS-d r(p)          HADS-a r(p)          HADS-t r(p)          Pain r(p)            KPS r(p)
+Depression                —                    0.55 (<0.001)        0.88 (<0.001)        0.31 (<0.001)        0.05 (0.493)
+Anxiety                   0.55 (<0.001)        —                    0.86 (<0.001)        0.30 (<0.001)        0.16 (0.022)
+Age                       0.01 (0.913)         -0.09 (0.164)        0.05 (0.210)         -0.01 (0.915)        -0.27 (<0.001)
+Global health status      -0.37 (<0.001)       -0.41 (<0.001)       0.44 (<0.001)        -0.32 (<0.001)       0.17 (0.010)
+Physical functioning      -0.45 (<0.001)       -0.36 (<0.001)       0.46 (<0.001)        -0.47 (<0.001)       0.33 (0.005)
+Role functioning          -0.40 (<0.001)       -0.31 (<0.001)       0.43 (<0.001)        -0.41 (<0.001)       0.19 (0.005)
+Emotional functioning     -0.39 (<0.001)       -0.63 (<0.001)       0.56 (<0.001)        -0.31 (<0.001)       0.22 (0.001)
+Cognitive functioning     -0.40 (<0.001)       -0.41 (<0.001)       0.45 (<0.001)        -0.49 (<0.001)       0.16 (0.017)
+Social functioning        -0.31 (<0.001)       -0.37 (<0.001)       0.38 (<0.001)        0.09 (0.212)         -0.36 (<0.001)
+Nausea and vomiting       0.32 (<0.001)        0.35 (<0.001)        0.43 (<0.001)        0.31 (<0.001)        0.09 (0.069)
+
+Notable: no significant correlation between age and depression, anxiety, or pain. Strongest correlation overall: anxiety-emotional functioning (r=-0.63).
+}
+
+{
+Table 5: Multiple regression — HADS-a and HADS-d vs EORTC QLQ-C30 subscales (n=225)
+
+EORTC subscale             Anxiety β (univariate, p)   Anxiety β (adjusted for pain+illness severity, p)   Depression β (univariate, p)   Depression β (adjusted, p)
+Global health status       -0.022 (0.179)               -0.021 (0.197)                                       -0.016 (0.411)                   -0.014 (0.454)
+Physical functioning       -0.025 (0.044)               -0.026 (0.026)                                       -0.044 (0.001)                   -0.051 (<0.001)
+Role functioning           0.001 (0.902)                0.003 (0.810)                                        -0.023 (0.071)                   -0.021 (0.096)
+Emotional functioning      -0.081 (<0.001)               -0.085 (<0.001)                                      -0.030 (0.024)                   -0.035 (0.008)
+Cognitive functioning      0.003 (0.794)                0.006 (0.636)                                        -0.017 (0.235)                   -0.013 (0.365)
+Social functioning         -0.002 (0.828)                -0.000 (0.999)                                       0.022 (0.079)                    0.025 (0.043)
+Nausea and vomiting        0.027 (0.025)                0.028 (0.020)                                        0.026 (0.061)                    0.028 (0.044)
+
+Associations for physical functioning, emotional functioning, and nausea/vomiting remained significant even after adjusting for pain and illness severity — indicating anxiety and depression have an INDEPENDENT contribution to lower QoL, not fully explained by physical symptom burden.
+}
+
+Quality of life comparison (Figures 1-2, box plots): patients WITH depression (HADS-d ≥8) and WITH anxiety (HADS-a ≥8) both showed significantly lower overall QoL than patients without (p<0.001 for both).
+
+Key findings for model training:
+- Depression (47.6%) more prevalent than anxiety (33.9%) in this population — consistent with general palliative-care literature pattern cited by authors
+- Both anxiety and depression correlate strongly with EVERY EORTC QLQ-C30 functional dimension (r range 0.31-0.63), and the association survives adjustment for pain and illness severity — key evidence that psychological state acts as an independent driver of quality of life, not merely a symptom co-occurring with physical decline
+- Emotional functioning shows the strongest correlation with anxiety (r=-0.63) — the single strongest correlation in the entire matrix
+- Anxiety and depression WORSENED significantly over just 21 days of hospitalization in the repeated-measures subgroup — suggests psychological state should be modeled as time-dependent/deteriorating rather than static, relevant for a recommendation engine that may need to re-assess patients periodically
+- No significant relationship found between age and either anxiety or depression — contradicts some other studies in the corpus reporting age as a risk factor; useful as a counter-example for model regularization
+- Living with a partner and non-religious status were both associated with HIGHER anxiety (opposite of intuitive assumption that partnership/companionship reduces distress) — authors note this pattern is consistent with some other studies but not universal
+- Weak/no correlation between physical symptoms (pain, nausea) and HADS scores relative to the strength of the QoL-functional correlations — supports the authors' framing that psychological distress is not simply a proxy for symptom burden
+- Nurses tend to underestimate depression severity in more severely depressed patients (cited from McDonald et al. 1999) — relevant caveat for caregiver-reported data pipelines (ACOMPAÑAR's caregiver-entry model), since caregiver/staff assessments may systematically underestimate severity at the high end
+
+Limitations noted by authors:
+- Cross-sectional primary design (with only a partial 21-day repeated-measures subsample of 140/225, due to death or health deterioration in the remainder) — limits generalizability of the longitudinal finding
+- No Czech population norms available for HADS at the time of publication; comparison relied on Dutch general-population norms (mean depression score 3.7) as reference, which may not be fully appropriate cross-culturally
+- EORTC QLQ-C30 Czech version psychometric properties not independently published/validated at time of study
+- Single-center study (University Hospital Ostrava)
+- Attrition in the second assessment (85/225 patients lost to death or inability to complete the form) — likely reflects a survivorship bias toward relatively less-severe cases in the repeated-measures comparison

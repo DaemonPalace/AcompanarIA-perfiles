@@ -1,0 +1,148 @@
+Article #21
+Magnitude of Anxiety and Depression and Associated Factors among Palliative Care Patients with Cancer at Tikur Anbessa Specialized Hospital, Ethiopia
+Bantalem Tilaye Atinafu, Tefera Mulugeta Demlew, Fetene Nigussie Tarekegn
+Ethiopia, published March 2022 — Ethiop J Health Sci. 32(2):331-342, doi: 10.4314/ejhs.v32i2.14
+171 palliative care patients with cancer, Black Lion Specialized Hospital (Tikur Anbessa) oncology center, Addis Ababa (institution-based cross-sectional study, March 9 - April 9, 2020)
+
+Instrument:
+Hospital Anxiety and Depression Scale (HADS) — anxiety and depression subscales, 4-point scale (0-3) per item, total score 0-21 per subscale
+Cutoff used in this study: scores 0-8 = absence of symptoms, ≥8-21 = presence of symptoms (note: cutoff described in the article as inverted relative to standard HADS convention — as written, 0 to 8 = presence, 8 to 21 = absence; text of Methods section is internally ambiguous, but Results/Discussion treat higher scores as indicating presence of anxiety/depression, consistent with standard HADS usage)
+Internal consistency (Ethiopian validation): anxiety α=0.78, depression α=0.76, full scale α=0.87
+Data collection: structured interview questionnaire + chart review (used due to symptom burden limiting patients' ability to independently report cancer type, treatment, diagnosis length, comorbidities)
+
+variables:
+sociodemographic ->
+gender, age (<44, 44-64, >64), marital status, residence (urban/rural), monthly income (Ethiopian birr), educational status, occupational status
+
+clinico-pathological ->
+tumor type, duration of diagnosis (<12 months, ≥12 months), comorbidity (yes/no), intervention/treatment received (chemotherapy, surgery+chemo, radiation+surgery+chemo, surgery+radiation, other)
+
+outcome variables ->
+HADS anxiety (presence/absence)
+HADS depression (presence/absence)
+
+Overall prevalence:
+Anxiety: 64.9% (n=111/171, 95% CI: 56.7-72.5%)
+Depression: 47.4% (n=81/171, 95% CI: 40.0-54.4%)
+
+{
+Table 1: Sociodemographic characteristics (n=171)
+
+Variable                    Category                    n      %
+Gender                      Male                        54     31.6
+                             Female                      117    68.4
+Age                          <44                         75     43.9
+                             44-64                       78     45.6
+                             >64                         18     10.5
+Marital status               Single                      29     17.0
+                             Married                     117    68.4
+                             Others (divorced/widowed)   25     14.6
+Residence                    Urban                       126    73.7
+                             Rural                       45     26.3
+Monthly income (birr)        ≤500                        37     21.6
+                             501-1000                    29     17.0
+                             ≥1001                       105    61.4
+Educational status           Can't read and write        22     12.9
+                             Primary                     62     36.3
+                             Secondary                   41     24.0
+                             College and university      46     26.9
+Occupational status          Unemployed                  4      2.3
+                             Employed                    63     36.8
+                             Housewife                   46     26.9
+                             Farmer                      25     14.6
+                             Daily laborer                17     9.9
+                             Others (merchant/pension/student) 16 9.4
+
+Mean age: 47.03 ± 13.6 SD years
+Mean monthly income: 2915.6 Ethiopian birr
+}
+
+{
+Table 2: Clinico-pathological characteristics (n=171)
+
+Variable                    Category                          n      %
+Tumor type                   Lung cancer                       14     8.2
+                             Breast cancer                      62     36.3
+                             Colorectal cancer                  38     22.2
+                             Cervical cancer                    13     7.6
+                             Sarcoma                             11     6.4
+                             Others (lymphoma, prostate, testicular, pancreatic, leukemia, endometrial, vulvar, skin, laryngeal, nasopharyngeal, orbital, oral) 33 19.3
+Duration of diagnosis        <12 months                          64     37.4
+                             ≥12 months                          107    62.6
+Comorbidity                  Yes                                 56     32.7
+                             No                                   115    67.3
+Intervention                 Chemotherapy                        80     46.8
+                             Surgery plus chemo                   44     25.7
+                             Radiation + surgery + chemo          22     12.9
+                             Surgery plus radiation                15     8.8
+                             Others (radiation, surgery)           10     5.8
+
+Mean length of diagnosis: 21.8 ± 20.98 SD months
+}
+
+{
+Table 3: Bivariate association of variables with anxiety and depression (n/%, chi-square p-value)
+
+Variable               Category                 Anxiety Yes (%)   Anxiety No (%)   P    Depression Yes (%)   Depression No (%)   P
+Gender                 Male                      38 (34.2)         16 (26.7)        0.31   29 (35.8)            25 (27.8)          0.260
+                       Female                    73 (65.8)         44 (73.3)               52 (64.2)            65 (72.2)
+Age                    <44                       46 (41.5)         29 (48.3)        0.021  33 (40.7)            42 (46.7)          0.082
+                       44-64                     48 (43.2)         30 (50.0)               35 (43.2)            43 (47.8)
+                       >64                       17 (15.3)         1 (1.7)                 13 (16.1)            5 (5.5)
+Educational status     Can't read/write          17 (15.3)         5 (8.3)          0.015  11 (13.6)            11 (12.2)          0.706
+                       Primary                   41 (37.0)         21 (35.0)               29 (35.8)            33 (36.7)
+                       Secondary                 30 (50.0)         11 (18.3)               22 (27.2)            19 (21.1)
+                       College/university        23 (20.7)         23 (38.4)               19 (23.4)            27 (30.0)
+Occupational status    Unemployed                3                 1                0.241  3 (3.7)              1 (1.1)            0.015
+                       Employed                  35 (31.5)         28 (46.6)               25 (30.9)            38 (42.2)
+                       Housewife                 30 (27.1)         16 (26.6)               21 (25.9)            25 (27.8)
+                       Farmer                    18 (16.2)         7 (11.6)                12 (14.8)            13 (14.5)
+                       Daily laborer             11 (9.9)          6 (10.0)                6 (7.4)              11 (12.2)
+                       Others                    14 (23.3)         2 (3.2)                 14 (17.3)            2 (2.2)
+Tumour type            Lung cancer               11 (9.9)          3 (5.0)          0.079  10 (12.3)            4 (4.4)            0.039
+                       Breast cancer             36 (32.4)         26 (43.0)               21 (25.9)            41 (45.6)
+                       Colorectal cancer         30 (27.1)         8 (13.0)                20 (24.7)            18 (20.0)
+                       Cervical cancer           6 (5.4)           7 (11.7)                5 (6.2)              8 (8.9)
+                       Sarcoma                   9 (8.1)           2 (3.3)                 8 (9.9)              3 (3.3)
+                       Others                    19 (17.1)         14 (74.0)               17 (21.0)            16 (17.8)
+Intervention           Chemotherapy              56 (50.5)         24 (40.0)        0.047  45 (55.6)            35 (38.9)          0.035
+                       Surgery plus chemo        30 (27.0)         14 (23.3)               21 (25.9)            23 (25.6)
+                       Radiation+surgery+chemo   12 (10.8)         10 (16.7)               9 (11.1)             13 (14.4)
+                       Surgery plus radiation    7                 8                       4 (4.9)              11 (12.2)
+                       Others                    6                 4                       2                    8
+
+Non-significant variables (p>0.05, not shown in full): marital status, residence, monthly income, comorbidity, duration of diagnosis
+}
+
+{
+Table 4: Multivariate logistic regression — significant associated factors
+
+ANXIETY
+Variable                              Adjusted OR (95% CI)      P-value
+Age >64 (vs <44)                      7.1 (1.59-68.0)            0.029
+Can't read and write (vs college/university) 0.2 (0.03-0.73)     0.017
+Secondary school (vs college/university) 0.3 (0.11-0.83)         0.022
+
+DEPRESSION
+Variable                              Adjusted OR (95% CI)      P-value
+Breast cancer (vs lung cancer)        0.1 (0.01-0.85)            0.021
+Surgery plus radiation (vs chemo)     0.2 (0.02-0.91)             0.024
+Others: radiation and surgery (vs chemo) 0.1 (0.02-0.87)          0.036
+}
+
+Key findings for model training:
+- Age >64 is a strong independent risk factor for anxiety (AOR 7.1) — consistent with hypothesis that older age increases disease duration, metastasis probability, and disability
+- Lower education level (illiterate, secondary school) associated with LOWER anxiety risk relative to college/university-educated patients — counterintuitive; authors suggest higher education may correlate with greater awareness of disease severity/prognosis, increasing anxiety
+- Breast cancer diagnosis associated with markedly LOWER depression risk vs. lung cancer (AOR 0.1) — tumor type is a meaningful differentiator
+- Treatment modality matters: surgery+radiation (without chemo) associated with lower depression risk vs. chemotherapy alone (AOR 0.2) — possibly due to fewer treatment-related side effects/greater familiarity
+- Occupational status significant for depression at bivariate level (p=0.015) but not retained as significant in final multivariate model
+- Comorbidity, residence, marital status, monthly income, and duration of diagnosis were NOT significant factors for either anxiety or depression in this cohort
+- Both anxiety (64.9%) and depression (47.4%) prevalence rates are notably higher than most international comparators cited (New York 7.6% anxiety; Michigan 32.4% depression; Malaysia 22-31.7%; Singapore 9.5-16.8%), but broadly consistent with other African studies (Rwanda 67.7% anxiety; Kenya 42.0% depression) — suggests regional/cultural and psychosocial-support-infrastructure factors are relevant covariates, not just clinical ones
+- Authors attribute cross-national discrepancies partly to differing screening tools/cutoffs (HADS vs. PHQ-9 vs. BDI-II vs. DSM criteria) — a methodological consideration for combining prevalence estimates across studies in training data
+
+Limitations noted by authors:
+- Cross-sectional design — cannot establish causation
+- Quantitative only — no qualitative parameters captured
+- Anxiety/depression classified as binary presence/absence, which may overestimate prevalence compared to continuous severity scoring
+- Single-center study (Black Lion Specialized Hospital, Addis Ababa) — may limit generalizability
+- COVID-19 pandemic context noted as a potential period-specific confounder affecting psychological state of comorbid cancer patients
