@@ -1,33 +1,10 @@
 {
   "metadata": {
     "model_name": "Palliative Care Baseline",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "last_modified": "2026-08-10"
   },
   "nodes": [
-    {
-      "id": "base_neurological_disease",
-      "label": "Base Neurological Disease",
-      "category": "clinical",
-      "desc": "The specific degenerative neurological disease driving the palliative process.",
-      "type": "categorical",
-      "categories": [
-        "Parkinson's",
-        "ALS",
-        "Alzheimer's",
-        "Huntington's",
-        "Multiple Sclerosis",
-        "Other"
-      ],
-      "probabilities": [
-        0.35,
-        0.15,
-        0.3,
-        0.05,
-        0.1,
-        0.05
-      ]
-    },
     {
       "id": "disease_stage",
       "label": "Disease Stage",
@@ -154,6 +131,111 @@
       ]
     },
     {
+      "id": "cancer_type_breast",
+      "label": "Primary Site: Breast",
+      "category": "oncology",
+      "desc": "Whether breast is the patient's primary cancer site; the most consistently recurring site across the audited advanced-cancer palliative literature.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.79,
+        0.21
+      ]
+    },
+    {
+      "id": "cancer_type_lung",
+      "label": "Primary Site: Lung",
+      "category": "oncology",
+      "desc": "Whether lung is the patient's primary cancer site; consistently among the top 1-2 sites in the audited advanced-cancer palliative cohorts.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.82,
+        0.18
+      ]
+    },
+    {
+      "id": "cancer_type_gastrointestinal",
+      "label": "Primary Site: Gastrointestinal/Digestive",
+      "category": "oncology",
+      "desc": "Whether the primary cancer site is digestive-tract (colorectal, gastric, esophageal, hepatobiliary, or pancreatic); the single largest pooled site-category across audited cohorts.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.76,
+        0.24
+      ]
+    },
+    {
+      "id": "cancer_type_genitourinary",
+      "label": "Primary Site: Genitourinary/Prostate",
+      "category": "oncology",
+      "desc": "Whether the primary cancer site is genitourinary (prostate, bladder, kidney, or male reproductive organs).",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.9,
+        0.1
+      ]
+    },
+    {
+      "id": "cancer_type_gynecological",
+      "label": "Primary Site: Gynecological",
+      "category": "oncology",
+      "desc": "Whether the primary cancer site is gynecological (ovary, cervix, or uterus, excluding breast).",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.96,
+        0.04
+      ]
+    },
+    {
+      "id": "cancer_type_hematologic",
+      "label": "Primary Site: Hematologic",
+      "category": "oncology",
+      "desc": "Whether the patient's malignancy is hematologic (leukemia, lymphoma) rather than a solid tumor.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.97,
+        0.03
+      ]
+    },
+    {
+      "id": "cancer_type_other_site",
+      "label": "Primary Site: Other",
+      "category": "oncology",
+      "desc": "Whether the primary cancer site falls outside the recurring major categories (e.g. head and neck, skin/soft tissue, bone, CNS, sarcoma, unknown primary) — a heterogeneous catch-all, individually low-frequency in the audited cohorts.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.79,
+        0.21
+      ]
+    },
+    {
       "id": "psychoactive_medication",
       "label": "Psychoactive Medication",
       "category": "medication",
@@ -212,7 +294,7 @@
         0,
         10
       ],
-      "baseline_mean": 3.0,
+      "baseline_mean": 3,
       "baseline_std": 2.5
     },
     {
@@ -225,7 +307,7 @@
         0,
         10
       ],
-      "baseline_mean": 3.0,
+      "baseline_mean": 3,
       "baseline_std": 2.3
     },
     {
@@ -238,8 +320,8 @@
         0,
         14
       ],
-      "baseline_mean": 9.0,
-      "baseline_std": 3.0
+      "baseline_mean": 9,
+      "baseline_std": 3
     },
     {
       "id": "functional_autonomy_adl",
@@ -251,8 +333,8 @@
         0,
         100
       ],
-      "baseline_mean": 55.0,
-      "baseline_std": 22.0
+      "baseline_mean": 55,
+      "baseline_std": 22
     },
     {
       "id": "instrumental_autonomy_iadl",
@@ -264,8 +346,8 @@
         0,
         8
       ],
-      "baseline_mean": 4.0,
-      "baseline_std": 2.0
+      "baseline_mean": 4,
+      "baseline_std": 2
     },
     {
       "id": "cognitive_function_mmse",
@@ -277,8 +359,8 @@
         0,
         30
       ],
-      "baseline_mean": 23.0,
-      "baseline_std": 5.0
+      "baseline_mean": 23,
+      "baseline_std": 5
     },
     {
       "id": "global_performance_status",
@@ -303,8 +385,8 @@
         0,
         4
       ],
-      "baseline_mean": 2.0,
-      "baseline_std": 1.0
+      "baseline_mean": 2,
+      "baseline_std": 1
     },
     {
       "id": "mobility",
@@ -371,7 +453,7 @@
         0,
         10
       ],
-      "baseline_mean": 4.0,
+      "baseline_mean": 4,
       "baseline_std": 2.6
     },
     {
@@ -384,7 +466,7 @@
         0,
         10
       ],
-      "baseline_mean": 5.0,
+      "baseline_mean": 5,
       "baseline_std": 2.4
     },
     {
@@ -423,7 +505,7 @@
         0,
         10
       ],
-      "baseline_mean": 3.0,
+      "baseline_mean": 3,
       "baseline_std": 2.4
     },
     {
@@ -449,7 +531,7 @@
         0,
         10
       ],
-      "baseline_mean": 4.0,
+      "baseline_mean": 4,
       "baseline_std": 2.5
     },
     {
@@ -462,8 +544,8 @@
         0,
         27
       ],
-      "baseline_mean": 10.0,
-      "baseline_std": 6.0
+      "baseline_mean": 10,
+      "baseline_std": 6
     },
     {
       "id": "anxiety_level",
@@ -488,8 +570,8 @@
         0,
         10
       ],
-      "baseline_mean": 2.0,
-      "baseline_std": 2.0
+      "baseline_mean": 2,
+      "baseline_std": 2
     },
     {
       "id": "spiritual_pain",
@@ -501,7 +583,7 @@
         0,
         10
       ],
-      "baseline_mean": 3.0,
+      "baseline_mean": 3,
       "baseline_std": 2.5
     },
     {
@@ -514,8 +596,8 @@
         0,
         10
       ],
-      "baseline_mean": 5.0,
-      "baseline_std": 2.0
+      "baseline_mean": 5,
+      "baseline_std": 2
     },
     {
       "id": "loneliness",
@@ -527,7 +609,7 @@
         0,
         10
       ],
-      "baseline_mean": 5.0,
+      "baseline_mean": 5,
       "baseline_std": 2.2
     },
     {
@@ -566,7 +648,7 @@
         0,
         10
       ],
-      "baseline_mean": 5.0,
+      "baseline_mean": 5,
       "baseline_std": 1.8
     },
     {
@@ -579,8 +661,8 @@
         0,
         88
       ],
-      "baseline_mean": 38.0,
-      "baseline_std": 16.0
+      "baseline_mean": 38,
+      "baseline_std": 16
     },
     {
       "id": "caregiver_type",
@@ -818,7 +900,7 @@
       "target": "ecog_performance_status",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 1.0,
+      "weight": 1,
       "formula": "target += source * weight",
       "desc": "Metastatic disease is associated with worse (higher) ECOG performance status scores.",
       "ref": "Article_29 / Article 30 (ECOG-PS worse with metastatic/advanced disease)"
@@ -862,7 +944,7 @@
       "target": "drowsiness",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 2.0,
+      "weight": 2,
       "formula": "target += source * weight",
       "desc": "Opioid analgesics commonly induce daytime drowsiness as a class effect.",
       "ref": "Article_14 / Article_27 (drowsiness as a nutrition-impact/opioid-related symptom)"
@@ -895,7 +977,7 @@
       "target": "opioid_induced_constipation",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 6.0,
+      "weight": 6,
       "formula": "target += source * weight",
       "desc": "Constipation is the most common and persistent opioid side effect (class effect).",
       "ref": "Article_29 (opioid use context) / clinical pharmacology"
@@ -928,10 +1010,109 @@
       "target": "nausea_vomiting",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 2.0,
+      "weight": 2,
       "formula": "target += source * weight",
       "desc": "Chemotherapy is a leading cause of treatment-related nausea and vomiting.",
       "ref": "Article_14 (nausea among strongest NIS associations with depression, p<0.001)"
+    },
+    {
+      "id": "e_cancer_type_lung_dyspnea",
+      "source": "cancer_type_lung",
+      "target": "dyspnea",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2,
+      "formula": "target += source * weight",
+      "desc": "Lung as primary cancer site directly increases baseline dyspnea/breathlessness burden.",
+      "ref": "Article_27 (Delgado-Guay et al., lung = largest single site at 37% of sample, dyspnea a core ESAS symptom tracked) / Article_29 (EPCRC, pulmonary diagnosis 17.8%, breathlessness measured as core symptom)"
+    },
+    {
+      "id": "e_cancer_type_lung_depression_severity_index",
+      "source": "cancer_type_lung",
+      "target": "depression_severity_index",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1,
+      "formula": "target += source * weight",
+      "desc": "Lung cancer patients show higher depression risk than breast cancer patients in adjusted analysis, used here as the higher-risk reference site.",
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 — lung as reference category)"
+    },
+    {
+      "id": "e_cancer_type_breast_depression_severity_index",
+      "source": "cancer_type_breast",
+      "target": "depression_severity_index",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 0.8,
+      "formula": "target -= source * weight",
+      "desc": "Breast cancer diagnosis is associated with markedly lower depression risk relative to lung cancer in adjusted analysis.",
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021)"
+    },
+    {
+      "id": "e_cancer_type_gastrointestinal_nausea_vomiting",
+      "source": "cancer_type_gastrointestinal",
+      "target": "nausea_vomiting",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2,
+      "formula": "target += source * weight",
+      "desc": "Gastrointestinal/hepatobiliary/pancreatic primary sites directly increase baseline nausea and vomiting burden.",
+      "ref": "Article_14 (Amano et al., liver/biliary/pancreas 15.5% + GI tract 14.6% of sample, nausea among strongest NIS associations, p<0.001) / Article_29 (EPCRC, GI 30.4% largest single diagnosis category, nausea measured as core symptom)"
+    },
+    {
+      "id": "e_cancer_type_gastrointestinal_appetite_loss",
+      "source": "cancer_type_gastrointestinal",
+      "target": "appetite_loss",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2.2,
+      "formula": "target += source * weight",
+      "desc": "Gastrointestinal/hepatobiliary/pancreatic primary sites are the classic drivers of cancer cachexia and appetite loss.",
+      "ref": "Article_14 (Amano et al., cachexia/refractory cachexia present in 47% of sample dominated by liver/biliary/pancreas/GI sites; lack of appetite p<0.001) / Article_29 (EPCRC, GI 30.4% dominant diagnosis, loss of appetite measured as core symptom, univariate beta -0.32***)"
+    },
+    {
+      "id": "e_cancer_type_genitourinary_chronic_pain",
+      "source": "cancer_type_genitourinary",
+      "target": "chronic_pain",
+      "relationType": "causal",
+      "strength": "weak",
+      "weight": 0.8,
+      "formula": "target += source * weight",
+      "desc": "Genitourinary/prostate primary sites (with common bone/pelvic involvement) contribute to chronic pain burden.",
+      "ref": "Article_27 (Delgado-Guay et al., genitourinary 14% of sample, pain present in 79-96% of the overall advanced-cancer cohort)"
+    },
+    {
+      "id": "e_cancer_type_gynecological_chronic_pain",
+      "source": "cancer_type_gynecological",
+      "target": "chronic_pain",
+      "relationType": "causal",
+      "strength": "strong",
+      "weight": 2,
+      "formula": "target += source * weight",
+      "desc": "Advanced gynecological cancer (ovary/cervix/uterus) directly increases chronic pain burden.",
+      "ref": "Article_26 (Chan et al., advanced gynecological cancer cohort: pain the most commonly reported physical symptom at 72%, median PPS only 40%)"
+    },
+    {
+      "id": "e_cancer_type_gynecological_depression_severity_index",
+      "source": "cancer_type_gynecological",
+      "target": "depression_severity_index",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.2,
+      "formula": "target += source * weight",
+      "desc": "Advanced gynecological cancer is associated with markedly elevated depression burden relative to the general advanced-cancer population.",
+      "ref": "Article_26 (Chan et al., HK gynecological cancer cohort: depression prevalence 62%, one of the highest in the audited corpus; stage IV 73.6% of sample)"
+    },
+    {
+      "id": "e_cancer_type_hematologic_fatigue",
+      "source": "cancer_type_hematologic",
+      "target": "fatigue",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 1.5,
+      "formula": "target += source * weight",
+      "desc": "Hematologic malignancies (leukemia/lymphoma) are classically associated with severe fatigue burden.",
+      "ref": "Article_25 (Bužgová et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
     },
     {
       "id": "e_fatigue_nausea_vomiting",
@@ -961,7 +1142,7 @@
       "target": "nausea_vomiting",
       "relationType": "inhibitory",
       "strength": "moderate",
-      "weight": 2.0,
+      "weight": 2,
       "formula": "target -= source * weight",
       "desc": "Antiemetic medication reduces nausea/vomiting intensity.",
       "ref": "Standard palliative-care symptom management practice"
@@ -972,7 +1153,7 @@
       "target": "dyspnea",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 1.0,
+      "weight": 1,
       "formula": "target += source * weight",
       "desc": "Worse performance status is associated with greater dyspnea burden in advanced disease.",
       "ref": "Article 16 (symptom burden in advanced cancer) / Article_27"
@@ -1137,7 +1318,7 @@
       "target": "global_performance_status",
       "relationType": "inhibitory",
       "strength": "moderate",
-      "weight": 1.0,
+      "weight": 1,
       "formula": "target -= source * weight",
       "desc": "Worse ECOG performance status reduces overall global performance status.",
       "ref": "Article 30 / Article 31 (ECOG-PS as functional outcome measure)"
@@ -1682,17 +1863,6 @@
       "ref": "js/schema.js clinical estimate"
     },
     {
-      "id": "e_base_neurological_disease_cognitive_function_mmse",
-      "source": "base_neurological_disease",
-      "target": "cognitive_function_mmse",
-      "relationType": "correlated",
-      "strength": "weak",
-      "weight": -0.3,
-      "formula": null,
-      "desc": "Dementia-associated base diseases (Alzheimer's) are associated with lower MMSE scores.",
-      "ref": "Clinical estimate"
-    },
-    {
       "id": "e_metastatic_disease_depression_severity_index",
       "source": "metastatic_disease",
       "target": "depression_severity_index",
@@ -1702,6 +1872,28 @@
       "formula": null,
       "desc": "Metastatic disease burden is associated with higher depression severity.",
       "ref": "Article_29 / Article 30 (metastatic disease and worse QoL/depression outcomes)"
+    },
+    {
+      "id": "e_depressive_episode_type_depressive_diagnosis_dsm5",
+      "source": "depressive_episode_type",
+      "target": "depressive_diagnosis_dsm5",
+      "relationType": "compound",
+      "strength": "strong",
+      "weight": 1,
+      "formula": "target = target if source == 1 else 'No formal diagnosis'",
+      "desc": "A formal DSM-5 depressive diagnosis cannot be assigned from a single, non-recurrent episode; only recurrent episodes may carry Major depressive disorder / Dysthymia / Subclinical depression.",
+      "ref": "DSM-5 major depressive disorder diagnostic criteria (single vs. recurrent episode specifier)"
+    },
+    {
+      "id": "e_depressive_diagnosis_dsm5_psychoactive_medication",
+      "source": "depressive_diagnosis_dsm5",
+      "target": "psychoactive_medication",
+      "relationType": "compound",
+      "strength": "strong",
+      "weight": 1,
+      "formula": "target = 'None' if source == 'No formal diagnosis' else target",
+      "desc": "Psychoactive medication cannot be prescribed without a documented formal psychiatric diagnosis.",
+      "ref": "General prescribing practice — psychoactive medication requires a documented psychiatric indication"
     }
   ]
 }

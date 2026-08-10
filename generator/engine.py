@@ -187,8 +187,11 @@ def _clip(val, lo, hi):
 def _apply_formula(formula, source_val, weight, running_val):
     """Parse 'target <op> <expr>' where op is one of '+=', '-=', '='.
 
-    Evaluates <expr> with a restricted namespace {source, weight}, then applies
-    the operator against the running value.
+    Evaluates <expr> with a restricted namespace {source, weight, target}, then
+    applies the operator against the running value. 'target' in the namespace
+    exposes the pre-formula running value so a '=' formula can conditionally
+    keep or override it (e.g. gating a categorical target on a source value:
+    "target = target if source == 1 else 'No'").
     """
     text = formula.strip()
     if not text.startswith("target"):
@@ -198,7 +201,7 @@ def _apply_formula(formula, source_val, weight, running_val):
     for op in ("+=", "-=", "="):
         if rest.startswith(op):
             expr = rest[len(op):].strip()
-            namespace = {"source": source_val, "weight": weight}
+            namespace = {"source": source_val, "weight": weight, "target": running_val}
             rhs = eval(expr, {"__builtins__": {}}, namespace)
             if op == "+=":
                 return running_val + rhs

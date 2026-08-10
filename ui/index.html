@@ -33,18 +33,82 @@
     </label>
     <button class="primary-btn" id="btn-generate">Generar dataset</button>
   </div>
-</div>
-
-<div class="workspace">
-  <div id="canvas-wrap">
-    <svg id="graph-svg"></svg>
-    <div id="legend"></div>
-    <div id="hint">Clic: seleccionar nodo/relación · Shift/Ctrl+clic un 2º nodo: comparar par · Clic en vacío: quitar selección · Arrastrar: reposicionar</div>
+  <div class="toolbar-group toolbar-group-status">
+    <span id="save-status" class="save-status saved">guardado</span>
   </div>
-  <aside id="inspector" hidden></aside>
 </div>
 
+<div class="filter-bar">
+  <input type="search" id="search-input" placeholder="Buscar por id, etiqueta o descripción…" aria-label="Buscar variables">
+  <div id="category-filter" class="category-filter" aria-label="Filtrar por categoría"></div>
+  <button class="secondary-btn tiny-btn" id="btn-clear-filter" type="button">Limpiar filtros</button>
+</div>
+
+<div class="tabbar" role="tablist">
+  <button class="tab-btn active" data-tab="graph" role="tab" aria-selected="true">Grafo Visual</button>
+  <button class="tab-btn" data-tab="variables" role="tab" aria-selected="false">Variables</button>
+  <button class="tab-btn" data-tab="correlations" role="tab" aria-selected="false">Correlaciones y Relaciones</button>
+  <button class="tab-btn" data-tab="analysis" role="tab" aria-selected="false">Análisis de Datos</button>
+</div>
+
+<div class="tab-panels">
+
+  <section id="panel-graph" class="tab-panel active">
+    <div class="workspace">
+      <div id="canvas-wrap">
+        <svg id="graph-svg"></svg>
+        <div id="legend"></div>
+        <div id="hint">Clic: seleccionar nodo/relación (resalta 1 salto) · Shift/Ctrl+clic: selección múltiple (unión de relaciones directas) · Clic en vacío: quitar selección · Arrastrar: reposicionar</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-variables" class="tab-panel">
+    <div class="panel-toolbar">
+      <button class="primary-btn" id="btn-add-node" type="button">+ Nueva variable</button>
+      <span class="panel-count" id="variables-count"></span>
+    </div>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Etiqueta</th><th>Categoría</th><th>Tipo</th><th>Parámetros</th><th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="variables-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="panel-correlations" class="tab-panel">
+    <div class="panel-toolbar">
+      <button class="primary-btn" id="btn-add-edge" type="button">+ Nueva relación</button>
+      <span class="panel-count" id="correlations-count"></span>
+    </div>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Origen</th><th>Destino</th><th>Tipo</th><th>Fuerza</th><th>Peso</th><th>Fórmula</th><th>Descripción</th><th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="correlations-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="panel-analysis" class="tab-panel">
+    <div id="analysis-content"><p class="analysis-loading">Abre esta pestaña para ejecutar el análisis.</p></div>
+  </section>
+
+</div>
+
+<datalist id="category-datalist"></datalist>
+
+<aside id="inspector" hidden></aside>
 <div id="compare-popup" hidden></div>
+<div id="node-form-modal" class="modal-overlay" hidden></div>
+<div id="edge-form-modal" class="modal-overlay" hidden></div>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="app.js"></script>

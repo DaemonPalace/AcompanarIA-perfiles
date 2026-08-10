@@ -4,6 +4,7 @@ Run: python3 server.py [--port 8765]
 """
 
 import argparse
+import datetime
 import json
 import mimetypes
 import os
@@ -16,6 +17,8 @@ SCHEMA_PATH = os.path.join(REPO_ROOT, "schema", "graph_model.json")
 
 sys.path.insert(0, REPO_ROOT)
 from generator import engine  # noqa: E402
+from generator import privacy  # noqa: E402
+from generator import stats as stats_mod  # noqa: E402
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -45,6 +48,12 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         if self.path == "/api/generate":
             self._handle_generate()
+            return
+        if self.path == "/api/analyze":
+            self._handle_analyze()
+            return
+        if self.path == "/api/schema":
+            self._handle_save_schema()
             return
         self._send_json(404, {"error": "not found"})
 
@@ -99,6 +108,86 @@ class Handler(BaseHTTPRequestHandler):
                 "text/csv",
                 {"Content-Disposition": 'attachment; filename="synthetic_profiles.csv"'},
             )
+
+    def _handle_analyze(self):
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length) if length else b"{}"
+            body = json.loads(raw.decode("utf-8"))
+        except Exception as e:
+            self._send_json(400, {"error": f"invalid request body: {e}"})
+            return
+
+        schema = body.get("schema")
+        n = body.get("n", 500)
+        seed = body.get("seed", None)
+
+        if not isinstance(schema, dict):
+            self._send_json(400, {"error": "'schema' field must be a JSON object"})
+            return
+
+        errors = engine.validate_schema(schema)
+        if errors:
+            self._send_json(400, {"error": "; ".join(errors)})
+            return
+
+        try:
+            rows = engine.generate(schema, n=n, seed=seed)
+        except ValueError as e:
+            self._send_json(400, {"error": str(e)})
+            return
+        except Exception as e:
+            self._send_json(400, {"error": f"generation failed: {e}"})
+            return
+
+        summary = stats_mod.summarize(schema, rows)
+        privacy_result = privacy.privacy_audit(schema, rows)
+
+        self._send_json(200, {
+            "n": len(rows),
+            "numeric": summary["numeric"],
+            "categorical": summary["categorical"],
+            "correlations": summary["correlations"],
+            "privacy": privacy_result,
+        })
+
+    def _handle_save_schema(self):
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length) if length else b"{}"
+            schema = json.loads(raw.decode("utf-8"))
+        except Exception as e:
+            self._send_json(400, {"error": f"invalid request body: {e}"})
+            return
+
+        if not isinstance(schema, dict):
+            self._send_json(400, {"error": "request body must be a JSON object (the schema itself)"})
+            return
+
+        errors = engine.validate_schema(schema)
+        if errors:
+            self._send_json(400, {"error": "; ".join(errors)})
+            return
+
+        if isinstance(schema.get("metadata"), dict):
+            schema["metadata"]["last_modified"] = datetime.date.today().isoformat()
+
+        try:
+            schema_dir = os.path.dirname(SCHEMA_PATH)
+            os.makedirs(schema_dir, exist_ok=True)
+            tmp_path = SCHEMA_PATH + ".tmp"
+            with open(tmp_path, "w", encoding="utf-8") as f:
+                f.write(json.dumps(schema, indent=2, ensure_ascii=False))
+            os.replace(tmp_path, SCHEMA_PATH)
+        except Exception as e:
+            self._send_json(500, {"error": f"failed to write schema: {e}"})
+            return
+
+        self._send_json(200, {
+            "ok": True,
+            "nodes": len(schema.get("nodes", [])),
+            "edges": len(schema.get("edges", [])),
+        })
 
     def _serve_static(self):
         rel_path = self.path.split("?", 1)[0]
