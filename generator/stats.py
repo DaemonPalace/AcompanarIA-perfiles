@@ -33,7 +33,7 @@ def summarize(schema, rows):
 
     numeric = {}
     for nid in numeric_ids:
-        vals = [r[nid] for r in rows if nid in r]
+        vals = [r[nid] for r in rows if r.get(nid) is not None]
         if not vals:
             continue
         numeric[nid] = {
@@ -62,14 +62,17 @@ def summarize(schema, rows):
     corr_ids = numeric_ids + binary_ids
     series = {}
     for nid in corr_ids:
-        vals = [to_num(nid, r[nid]) for r in rows if nid in r]
-        series[nid] = vals
+        series[nid] = [to_num(nid, r[nid]) if r.get(nid) is not None else None for r in rows]
 
     correlations = {nid: {} for nid in corr_ids}
     for i in range(len(corr_ids)):
         for j in range(i + 1, len(corr_ids)):
             a, b = corr_ids[i], corr_ids[j]
-            r = _pearson(series[a], series[b])
+            pairs = [(x, y) for x, y in zip(series[a], series[b]) if x is not None and y is not None]
+            if not pairs:
+                continue
+            xs, ys = zip(*pairs)
+            r = _pearson(list(xs), list(ys))
             if r is None:
                 continue
             correlations[a][b] = r
