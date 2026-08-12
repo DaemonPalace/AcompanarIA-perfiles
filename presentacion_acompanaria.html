@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AcompañarIA — Presentación</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root{
+    --deep:#0b2540; --teal:#0f9b8e; --teal-dk:#0a6e64; --blue:#1b6ca8;
+    --gray:#6b7785; --gray-lt:#eef2f5; --paper:#fbfcfd; --warn:#c2542f;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    background:var(--paper); color:var(--deep); overflow:hidden;
+  }
+  .app{display:flex; height:100vh;}
+  /* Sidebar */
+  .sidebar{
+    width:250px; flex:0 0 250px; background:linear-gradient(180deg,#0b2540,#0e3357);
+    color:#e7edf3; display:flex; flex-direction:column; padding:28px 18px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; margin-bottom:34px;}
+  .brand-icon{
+    width:38px;height:38px;border-radius:10px;background:var(--teal);
+    display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;
+  }
+  .brand-name{font-weight:700; font-size:17px; letter-spacing:.2px;}
+  .brand-sub{font-size:10px; color:#9db3c8; letter-spacing:.5px; text-transform:uppercase;}
+  nav.steps{display:flex; flex-direction:column; gap:4px; flex:1;}
+  .step-btn{
+    display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:10px;
+    background:transparent; border:none; color:#b9c8d8; text-align:left; cursor:pointer;
+    font-size:13.5px; transition:.18s;
+  }
+  .step-btn:hover{background:rgba(255,255,255,.06); color:#fff;}
+  .step-btn.active{background:rgba(15,155,142,.18); color:#fff; box-shadow:inset 3px 0 0 var(--teal);}
+  .step-num{
+    width:22px;height:22px;border-radius:50%;border:1px solid #4c6478;font-size:11px;
+    display:flex;align-items:center;justify-content:center;flex:0 0 22px;
+  }
+  .step-btn.active .step-num{background:var(--teal); border-color:var(--teal); color:#fff;}
+  .sidebar-footer{font-size:10.5px; color:#7d93a8; padding-top:14px; border-top:1px solid rgba(255,255,255,.08);}
+  /* Main */
+  .main{flex:1; display:flex; flex-direction:column; min-width:0;}
+  .progress-bar{height:4px; background:var(--gray-lt); width:100%;}
+  .progress-fill{height:100%; background:linear-gradient(90deg,var(--teal),var(--blue)); transition:width .35s ease;}
+  .stage{flex:1; overflow-y:auto; position:relative;}
+  .slide{
+    display:none; min-height:100%; padding:56px 68px 90px; max-width:1180px; margin:0 auto;
+    animation:fadeUp .45s ease;
+  }
+  .slide.active{display:block;}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);}}
+  .eyebrow{
+    font-size:11.5px; font-weight:700; letter-spacing:1.6px; color:var(--teal-dk);
+    text-transform:uppercase; margin-bottom:10px;
+  }
+  h1.slide-title{font-size:34px; font-weight:800; color:var(--deep); margin:0 0 6px; line-height:1.15;}
+  .slide-subtitle{font-size:15.5px; color:var(--gray); margin-bottom:34px; max-width:820px;}
+  h2.sec-h{font-size:19px; font-weight:700; color:var(--deep); margin:0 0 14px; display:flex; align-items:center; gap:9px;}
+  h2.sec-h i{color:var(--teal);}
+  .card{
+    background:#fff; border:1px solid #e4eaef; border-radius:14px; padding:22px 24px;
+    box-shadow:0 1px 2px rgba(11,37,64,.04);
+  }
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .pill{
+    display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600;
+    padding:4px 11px; border-radius:99px; background:var(--gray-lt); color:var(--gray);
+  }
+  .pill.teal{background:#e4f5f2; color:var(--teal-dk);}
+  .pill.blue{background:#e6f0f8; color:var(--blue);}
+  .pill.warn{background:#fbe9e2; color:var(--warn);}
+  table.tclean{width:100%; border-collapse:collapse; font-size:13.2px;}
+  table.tclean th{
+    text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray);
+    padding:8px 10px; border-bottom:2px solid var(--gray-lt);
+  }
+  table.tclean td{padding:10px 10px; border-bottom:1px solid #eef1f4; vertical-align:top; color:#2b3b4c;}
+  table.tclean tr:last-child td{border-bottom:none;}
+  .navbtns{
+    position:sticky; bottom:0; display:flex; justify-content:space-between; align-items:center;
+    padding:14px 68px; background:linear-gradient(0deg,var(--paper) 60%, transparent);
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:10px;
+    font-size:13.5px; font-weight:600; cursor:pointer; border:none; transition:.15s;
+  }
+  .btn-primary{background:var(--deep); color:#fff;}
+  .btn-primary:hover{background:#123a63;}
+  .btn-ghost{background:#fff; color:var(--deep); border:1px solid #d7dee4;}
+  .btn-ghost:hover{background:var(--gray-lt);}
+  .btn:disabled{opacity:.35; cursor:not-allowed;}
+  /* Title slide */
+  .title-slide{
+    height:100%; display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+    background:radial-gradient(circle at 80% 20%, #0f2f52 0%, #0b2540 60%),
+               radial-gradient(circle at 10% 90%, #0f9b8e33 0%, transparent 40%);
+    color:#fff; padding:0 90px; position:relative; overflow:hidden;
+  }
+  .title-slide::before{
+    content:''; position:absolute; inset:0;
+    background-image:radial-gradient(circle,#ffffff14 1px, transparent 1px);
+    background-size:26px 26px; opacity:.5;
+  }
+  .title-slide > *{position:relative;}
+  .title-tag{font-size:12px; letter-spacing:2px; color:#7fd8cd; text-transform:uppercase; font-weight:700; margin-bottom:18px;}
+  .title-big{font-size:64px; font-weight:800; margin:0; letter-spacing:-1px;}
+  .title-sub{font-size:19px; color:#c3d3e2; max-width:640px; margin-top:16px; line-height:1.5;}
+  .team-row{display:flex; gap:34px; margin-top:46px; flex-wrap:wrap;}
+  .team-card{display:flex; align-items:center; gap:10px;}
+  .team-dot{width:34px;height:34px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;}
+  .sponsor-row{margin-top:52px; display:flex; align-items:center; gap:10px; color:#9cb3c8; font-size:13px;}
+  .stat-tile{
+    background:#fff; border:1px solid #e4eaef; border-radius:14px; padding:18px 20px;
+  }
+  .stat-num{font-size:26px; font-weight:800; color:var(--teal-dk);}
+  .stat-lab{font-size:12px; color:var(--gray); margin-top:2px;}
+  .quote-box{
+    border-left:4px solid var(--teal); background:#f4faf9; padding:16px 20px; border-radius:0 10px 10px 0;
+    font-style:italic; color:#264a48; font-size:14.5px;
+  }
+  .mermaid{background:#fff; border-radius:14px; padding:14px;}
+  .var-chip{
+    display:inline-flex; flex-direction:column; gap:2px; background:#fff; border:1px solid #e4eaef;
+    border-radius:10px; padding:9px 13px; font-size:12px; min-width:150px;
+  }
+  .var-chip b{font-size:12.5px; color:var(--deep);}
+  .var-chip span{color:var(--gray); font-size:10.8px;}
+  .cat-clinical{border-top:3px solid #1b6ca8;}
+  .cat-emotional{border-top:3px solid #0f9b8e;}
+  .cat-relational{border-top:3px solid #b06fc9;}
+  .cat-functional{border-top:3px solid #d69a2d;}
+  .cat-demographic{border-top:3px solid #6b7785;}
+  .iframe-shell{
+    border-radius:16px; border:1px solid #d7dee4; overflow:hidden; box-shadow:0 8px 30px rgba(11,37,64,.1);
+    background:#fff;
+  }
+  .iframe-topbar{
+    background:#eef2f5; padding:9px 14px; display:flex; align-items:center; gap:8px; border-bottom:1px solid #d7dee4;
+  }
+  .iframe-dot{width:10px;height:10px;border-radius:50%;}
+  .step-timeline{border-left:2px solid var(--gray-lt); margin-left:10px;}
+  .step-timeline .ti{position:relative; padding:0 0 26px 26px;}
+  .step-timeline .ti::before{
+    content:''; position:absolute; left:-7px; top:2px; width:12px; height:12px; border-radius:50%;
+    background:var(--teal); border:3px solid #d6f0ec;
+  }
+  .step-timeline .ti:last-child{padding-bottom:0;}
+  ::-webkit-scrollbar{width:9px;} ::-webkit-scrollbar-thumb{background:#c6d1da; border-radius:99px;}
+  @media (max-width:980px){
+    .sidebar{display:none;}
+    .slide{padding:36px 22px 80px;}
+    .grid2,.grid3{grid-template-columns:1fr;}
+    .title-big{font-size:40px;}
+    .navbtns{padding:14px 22px;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <div>
+        <div class="brand-name">AcompañarIA</div>
+        <div class="brand-sub">Cuidados Paliativos · IA</div>
+      </div>
+    </div>
+    <nav class="steps" id="navSteps">
+      <button class="step-btn" data-idx="0"><span class="step-num">1</span> Portada</button>
+      <button class="step-btn" data-idx="1"><span class="step-num">2</span> Introducción</button>
+      <button class="step-btn" data-idx="2"><span class="step-num">3</span> Perfiles Sintéticos</button>
+      <button class="step-btn" data-idx="3"><span class="step-num">4</span> Investigación &amp; Algoritmo</button>
+      <button class="step-btn" data-idx="4"><span class="step-num">5</span> Generador (Demo)</button>
+      <button class="step-btn" data-idx="5"><span class="step-num">6</span> Siguientes Pasos</button>
+    </nav>
+    <div class="sidebar-footer">
+      Google Developer Studio<br>Universidad de La Sabana · 2026
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:16.6%"></div></div>
+
+    <div class="stage" id="stage">
+
+      <!-- SLIDE 1: PORTADA -->
+      <section class="slide active" data-slide="0">
+        <div class="title-slide">
+          <div class="title-tag">Google Developer Studio · Universidad de La Sabana</div>
+          <h1 class="title-big">AcompañarIA</h1>
+          <p class="title-sub">Plataforma de Generación de Perfiles Sintéticos y Monitoreo en Cuidados Paliativos. Tecnología con alma para los momentos que más importan.</p>
+          <div class="team-row">
+            <div class="team-card"><div class="team-dot">CC</div>Cristian Manuel Castañeda</div>
+            <div class="team-card"><div class="team-dot">DG</div>Daniel David Gómez</div>
+            <div class="team-card"><div class="team-dot">SP</div>Santiago Prieto</div>
+          </div>
+          <div class="sponsor-row"><i class="fa-solid fa-graduation-cap"></i> Sponsor: Google Developer Studio &amp; Universidad de La Sabana — Hackathon UniSabana 2026, Equipo Iron</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: INTRODUCCIÓN -->
+      <section class="slide" data-slide="1">
+        <div class="eyebrow">Sección 2</div>
+        <h1 class="slide-title">Introducción al Proyecto</h1>
+        <p class="slide-subtitle">AcompañarIA nace para cerrar una falla triple: el paciente terminal está solo emocionalmente, la familia no tiene herramientas para acompañar, y el sistema médico pierde el conocimiento acumulado de cada proceso paliativo.</p>
+
+        <div class="grid3" style="margin-bottom:26px;">
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-triangle-exclamation"></i>Necesidad</h2>
+            <p style="font-size:13.3px; color:#3b4b5b; line-height:1.6;">La depresión en pacientes con enfermedades avanzadas y necesidades paliativas está sub-diagnosticada y sub-tratada. Falta monitoreo continuo del estado emocional entre visitas médicas.</p>
+          </div>
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-bullseye"></i>Objetivos</h2>
+            <p style="font-size:13.3px; color:#3b4b5b; line-height:1.6;">Monitoreo continuo del estado emocional, acompañamiento empático 24/7 vía IA, e identificación temprana de riesgo (incluida ideación suicida).</p>
+          </div>
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-chart-line"></i>Impacto</h2>
+            <p style="font-size:13.3px; color:#3b4b5b; line-height:1.6;">Mejor calidad de vida del paciente, soporte real al cuidador, y la primera base de investigación clínica en efectividad terapéutica paliativa de LATAM.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="sec-h"><i class="fa-solid fa-users"></i>La Triple Falla que Resuelve AcompañarIA</h2>
+          <table class="tclean">
+            <tr><th>Actor</th><th>Falla detectada</th></tr>
+            <tr><td><b>Paciente terminal</b></td><td>Está solo emocionalmente. Sin espacio para expresar miedos, deseos ni historias. Sin acompañamiento continuo.</td></tr>
+            <tr><td><b>Familia / Cuidador</b></td><td>No tiene herramientas para conectar, acompañar ni prepararse para el cierre del proceso.</td></tr>
+            <tr><td><b>Sistema médico</b></td><td>El conocimiento acumulado en cada proceso paliativo desaparece al finalizar, sin dejar aprendizaje para la medicina.</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: PERFILES SINTÉTICOS -->
+      <section class="slide" data-slide="2">
+        <div class="eyebrow">Sección 3</div>
+        <h1 class="slide-title">¿Por qué decidimos generar perfiles sintéticos?</h1>
+        <p class="slide-subtitle">No existe una base de datos unificada con la información clínica, emocional y relacional que el algoritmo necesita: los datos reales están dispersos entre hospitales, historias clínicas y estudios aislados.</p>
+
+        <div class="grid2" style="margin-bottom:22px;">
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-lock"></i>Desafíos y Obstáculos</h2>
+            <ul style="font-size:13.2px; color:#3b4b5b; line-height:1.9; padding-left:18px;">
+              <li>Datos de salud sensibles: regulación Habeas Data (Colombia), y estándares tipo HIPAA/GDPR.</li>
+              <li>Consentimiento informado explícito requerido por paciente terminal o su tutor.</li>
+              <li>No existe una base clínica unificada: la evidencia está dispersa en +14 artículos científicos internacionales.</li>
+              <li>Riesgo operativo/ético de exponer pacientes reales en fase de prototipo (MVP).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-shield-heart"></i>Ventajas de la Data Sintética</h2>
+            <ul style="font-size:13.2px; color:#3b4b5b; line-height:1.9; padding-left:18px;">
+              <li>Cobertura de casos extremos (crisis, ideación suicida) sin exponer pacientes reales.</li>
+              <li>Entrenamiento seguro de algoritmos de IA/analítica sin riesgo de privacidad.</li>
+              <li>Mitigación de sesgo: control explícito de proporciones por diagnóstico, edad, comorbilidad.</li>
+              <li>Ideal para un MVP: itera el modelo antes de tocar un solo paciente real.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="sec-h"><i class="fa-solid fa-diagram-project"></i>Evolución del Dataset</h2>
+          <pre class="mermaid" id="mermaid-dataset">
+graph LR
+  A["Literatura clínica<br/>/context (14 artículos + DSM-5)"] --> B["Extracción de variables<br/>@clinical_researcher"]
+  B --> C["Modelo relacional (grafo)<br/>schema/graph_model.json"]
+  C --> D["Motor generador<br/>generator/engine.py"]
+  D --> E["Dataset sintético"]
+  E --> F["Auditoría de privacidad<br/>generator/privacy.py"]
+  F -->|ajuste de pesos| C
+          </pre>
+          <p style="font-size:12.5px; color:var(--gray); margin-top:10px;">El esquema se refina de forma iterativa: cada nodo (variable) y arista (relación causal/correlacional) queda referenciado a un artículo o al DSM-5, y el motor recalcula el dataset en tiempo real ante cualquier cambio de peso.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: INVESTIGACIÓN Y ALGORITMO -->
+      <section class="slide" data-slide="3">
+        <div class="eyebrow">Sección 4</div>
+        <h1 class="slide-title">Investigaciones Clínicas y Algoritmo</h1>
+        <p class="slide-subtitle">Catorce estudios internacionales sobre depresión, ansiedad y carga sintomática en cáncer avanzado/paliativo, más el DSM-5, fundamentan cada nodo y relación del modelo. El algoritmo ACOMPAÑAR traduce esa evidencia en una recomendación terapéutica personalizada.</p>
+
+        <h2 class="sec-h"><i class="fa-solid fa-book-medical"></i>Resumen ejecutivo de la evidencia (/context)</h2>
+        <div class="card" style="margin-bottom:24px; overflow-x:auto;">
+          <table class="tclean">
+            <tr><th>Hallazgo</th><th>Fuente</th></tr>
+            <tr><td>Náusea y fatiga son los síntomas de impacto nutricional más asociados a depresión (p&lt;0.001).</td><td>Art. 14 — Amano et al., Japón</td></tr>
+            <tr><td>El dolor espiritual/existencial reduce directamente la calidad de vida, independiente del dolor físico.</td><td>Art. 39 — Pérez-Cruz et al., Chile</td></tr>
+            <tr><td>Cáncer de pulmón: mayor riesgo de depresión que cáncer de mama (OR 0.1 mama vs. pulmón, p=0.021).</td><td>Art. 21 — Atinafu et al., Etiopía</td></tr>
+            <tr><td>Cáncer ginecológico avanzado: prevalencia de depresión del 62%, de las más altas del corpus.</td><td>Art. 26 — Chan et al., Hong Kong</td></tr>
+            <tr><td>Ansiedad (HADS-A) correlaciona con dolor, náusea y disnea (r=0.25–0.56).</td><td>Art. 27 — Delgado-Guay et al., MD Anderson</td></tr>
+            <tr><td>Buena autonomía funcional (Barthel/Lawton) predice fuertemente menor severidad depresiva (r=-.62 a -.82).</td><td>Efendioglu et al. 2021</td></tr>
+            <tr><td>Ideación suicida fuertemente asociada a puntajes PHQ-9 elevados.</td><td>Art. 32 — Lloyd-Williams et al., Reino Unido</td></tr>
+            <tr><td>Criterios A-E, especificadores de gravedad y codificación CIE-10 (F32.0–F33.x) del episodio depresivo mayor.</td><td>DSM-5</td></tr>
+          </table>
+        </div>
+
+        <h2 class="sec-h"><i class="fa-solid fa-sitemap"></i>Algoritmo ACOMPAÑAR — Analogía "Spotify" del acompañamiento</h2>
+        <div class="quote-box" style="margin-bottom:20px;">Así como Spotify analiza quién eres, qué sientes y qué ha funcionado antes para recomendar la canción correcta, el algoritmo analiza el diagnóstico, el estado emocional (escala ESAS) y los casos similares previos para recomendar la modalidad terapéutica óptima.</div>
+
+        <div class="card" style="margin-bottom:20px;">
+          <pre class="mermaid" id="mermaid-algo">
+graph TD
+  C["Cuidador<br/>puerta de entrada"] --> V["5 Dimensiones de Variables<br/>Clínica · ESAS Emocional · Demográfica · Relacional · Física"]
+  V --> P1["Fase 1 · Clasificación<br/>Eje A: Enfermedad · Eje B: Perfil DSM-5 · Eje C: Contexto"]
+  P1 --> P2["Fase 2 · Motor de Recomendación<br/>TCC · Logoterapia · Gestalt · TREC · Mindfulness/ACT · Rogers · Beck"]
+  P2 --> P3["Fase 3 · Plan de Intervención<br/>frecuencia, tipo de sesión, guía al cuidador"]
+  P3 --> M["Médico / Psicólogo<br/>valida y ejecuta"]
+  M --> P4["Fase 4 · Medición y feedback"]
+  P4 -->|ajusta pesos| P2
+          </pre>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h2 class="sec-h" style="font-size:15px;"><i class="fa-solid fa-notes-medical"></i>Escalas clínicas usadas</h2>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="pill blue">DSM-5 (criterios A-E)</span>
+              <span class="pill teal">ESAS (0-10 por ítem)</span>
+              <span class="pill blue">PHQ-9 / GDS-HAM-D</span>
+              <span class="pill teal">Barthel ADL / Lawton IADL</span>
+              <span class="pill blue">ECOG / MMSE</span>
+              <span class="pill warn">Zarit (burnout cuidador)</span>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="sec-h" style="font-size:15px;"><i class="fa-solid fa-triangle-exclamation"></i>Protocolo de seguridad crítico</h2>
+            <p style="font-size:12.8px; color:#3b4b5b; line-height:1.7;">Ideación suicida detectada → alerta prioridad máxima al médico, tono de contención inmediata. El asistente <b>nunca</b> diagnostica ni prescribe medicación.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: DEMO -->
+      <section class="slide" data-slide="4">
+        <div class="eyebrow">Sección 5</div>
+        <h1 class="slide-title">Aplicación Generadora de Perfiles</h1>
+        <p class="slide-subtitle">Herramienta viva: edita el grafo de variables y relaciones, y genera datasets sintéticos actualizados al instante.</p>
+
+        <div class="iframe-shell" style="width:100%;">
+          <div class="iframe-topbar">
+            <span class="iframe-dot" style="background:#e2544a"></span>
+            <span class="iframe-dot" style="background:#e0b23e"></span>
+            <span class="iframe-dot" style="background:#3fb56f"></span>
+            <span style="font-size:11.5px; color:var(--gray); margin-left:8px;">acompanaria-perfiles1-148425349822.europe-west1.run.app</span>
+          </div>
+          <iframe src="https://acompanaria-perfiles1-148425349822.europe-west1.run.app/" style="width:100%; height:78vh; min-height:640px; border:none; display:block;" loading="lazy" title="Generador de Perfiles AcompañarIA"></iframe>
+        </div>
+
+        <div class="grid2" style="margin-top:26px; align-items:start; gap:26px;">
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-hand-pointer"></i>Cómo interactuar</h2>
+            <div class="step-timeline">
+              <div class="ti"><b style="font-size:13px;">Grafo Visual</b><div style="font-size:12.2px; color:var(--gray);">Explora nodos (variables) y aristas (relaciones causales/correlacionales). Clic en un nodo aísla sus conexiones.</div></div>
+              <div class="ti"><b style="font-size:13px;">Variables</b><div style="font-size:12.2px; color:var(--gray);">Tabla CRUD para editar medias, desviaciones y rangos de cada variable clínica/emocional.</div></div>
+              <div class="ti"><b style="font-size:13px;">Correlaciones y Relaciones</b><div style="font-size:12.2px; color:var(--gray);">Ajusta pesos y fórmulas de cada relación (ej.: dolor → fatiga).</div></div>
+              <div class="ti"><b style="font-size:13px;">Análisis de Datos</b><div style="font-size:12.2px; color:var(--gray);">EDA en vivo: estadísticas, histogramas, mapa de calor de correlaciones y panel de privacidad.</div></div>
+            </div>
+            <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="pill teal">51 variables</span>
+              <span class="pill blue">70+ relaciones</span>
+              <span class="pill warn">Auditoría de privacidad en vivo</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="sec-h"><i class="fa-solid fa-layer-group"></i>Variables probadas en tiempo real (muestra)</h2>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <div class="var-chip cat-clinical"><b>Estadio de la enfermedad</b><span>categórica · 4 niveles</span></div>
+              <div class="var-chip cat-clinical"><b>Diagnóstico DSM-5</b><span>categórica · 4 niveles</span></div>
+              <div class="var-chip cat-emotional"><b>Soledad (ESAS)</b><span>continua · 0-10</span></div>
+              <div class="var-chip cat-emotional"><b>Miedo a la muerte</b><span>continua · 0-10</span></div>
+              <div class="var-chip cat-emotional"><b>Riesgo de ideación suicida</b><span>continua · 0-10</span></div>
+              <div class="var-chip cat-relational"><b>Burnout del cuidador (Zarit)</b><span>continua · 0-88</span></div>
+              <div class="var-chip cat-functional"><b>Autonomía funcional (Barthel)</b><span>continua · 0-100</span></div>
+              <div class="var-chip cat-demographic"><b>Rango de edad</b><span>categórica · 4 niveles</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: CIERRE -->
+      <section class="slide" data-slide="5">
+        <div class="eyebrow">Sección 6</div>
+        <h1 class="slide-title">Siguientes Pasos y Conclusión</h1>
+        <p class="slide-subtitle">De grafo validado a agente de acompañamiento en producción: la hoja de ruta de AcompañarIA hacia Google Cloud / Vertex AI.</p>
+
+        <div class="grid3" style="margin-bottom:26px;">
+          <div class="card">
+            <span class="pill teal">Paso 1</span>
+            <h2 class="sec-h" style="margin-top:10px;"><i class="fa-solid fa-vial-circle-check"></i>Validación de Data Sintética</h2>
+            <p style="font-size:13px; color:#3b4b5b; line-height:1.6;">Ajuste fino de coherencia médica del dataset con agentes evaluadores de IA, contrastando distribuciones sintéticas contra literatura clínica.</p>
+          </div>
+          <div class="card">
+            <span class="pill blue">Paso 2</span>
+            <h2 class="sec-h" style="margin-top:10px;"><i class="fa-solid fa-chart-line"></i>Analítica Predictiva</h2>
+            <p style="font-size:13px; color:#3b4b5b; line-height:1.6;">Entrenamiento de modelos analíticos para predicción temprana de crisis depresivas o deterioro funcional.</p>
+          </div>
+          <div class="card">
+            <span class="pill warn">Paso 3</span>
+            <h2 class="sec-h" style="margin-top:10px;"><i class="fa-solid fa-robot"></i>Agente en Vertex AI</h2>
+            <p style="font-size:13px; color:#3b4b5b; line-height:1.6;">Despliegue y entrenamiento del agente conversacional de acompañamiento (Gemini Pro) sobre Google Cloud / Vertex AI.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px;">
+          <h2 class="sec-h"><i class="fa-solid fa-scale-balanced"></i>Decisiones tomadas para un MVP funcional</h2>
+          <p style="font-size:13.2px; color:#3b4b5b; line-height:1.7;">Cada elección de este proyecto —perfiles sintéticos en vez de datos reales, pesos de relación estimados a partir de literatura en vez de regresiones propias, cobertura de una sola patología (depresión en pacientes con cancer)— prioriza tener <b>algo end-to-end funcionando</b> dentro del plazo del hackathon, no un modelo clínicamente definitivo. Es un punto de partida deliberadamente acotado para poder iterar rápido.</p>
+        </div>
+
+        <div class="card" style="border-left:4px solid var(--warn); background:#fdf6f2;">
+          <h2 class="sec-h" style="color:var(--warn);"><i class="fa-solid fa-triangle-exclamation" style="color:var(--warn);"></i>Límite importante: la integridad clínica no está garantizada</h2>
+          <p style="font-size:13.2px; color:#3b4b5b; line-height:1.7;">Los pesos y correlaciones del grafo son estimaciones razonadas a partir de 14 artículos y el DSM-5, <b>no</b> un modelo validado sobre pacientes reales de la población objetivo (Colombia/LATAM, enfermedades neurológicas degenerativas). El dataset sintético resultante es útil para prototipar y probar el sistema, pero <b>no debe usarse como base clínica definitiva</b>. Cualquier aplicación práctica en un entorno real requiere sustituir o recalibrar el esquema con datos reales de pacientes, bajo consentimiento informado y validación por profesionales de salud mental.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="navbtns">
+      <button class="btn btn-ghost" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+      <div id="dots" style="display:flex; gap:6px;"></div>
+      <button class="btn btn-primary" id="nextBtn">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </main>
+</div>
+
+<script>
+  mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
+
+  function renderMermaidIn(slideEl) {
+    const nodes = Array.from(slideEl.querySelectorAll('pre.mermaid')).filter(n => !n.dataset.rendered);
+    if (!nodes.length) return;
+    nodes.forEach(n => n.dataset.rendered = '1');
+    mermaid.run({ nodes });
+  }
+
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const stepBtns = Array.from(document.querySelectorAll('.step-btn'));
+  const total = slides.length;
+  let idx = 0;
+
+  const dotsEl = document.getElementById('dots');
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('span');
+    d.style.cssText = 'width:7px;height:7px;border-radius:50%;background:#d7dee4;transition:.2s;cursor:pointer;';
+    d.addEventListener('click', () => go(i));
+    dotsEl.appendChild(d);
+  }
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    stepBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
+    Array.from(dotsEl.children).forEach((d, i) => {
+      d.style.background = i === idx ? 'var(--teal)' : '#d7dee4';
+      d.style.width = i === idx ? '20px' : '7px';
+      d.style.borderRadius = '99px';
+    });
+    document.getElementById('progressFill').style.width = ((idx + 1) / total * 100) + '%';
+    document.getElementById('prevBtn').disabled = idx === 0;
+    document.getElementById('nextBtn').innerHTML = idx === total - 1
+      ? 'Fin <i class="fa-solid fa-flag-checkered"></i>'
+      : 'Siguiente <i class="fa-solid fa-arrow-right"></i>';
+    document.getElementById('stage').scrollTop = 0;
+    renderMermaidIn(slides[idx]);
+  }
+
+  function go(i) { idx = Math.max(0, Math.min(total - 1, i)); render(); }
+
+  document.getElementById('prevBtn').addEventListener('click', () => go(idx - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => { if (idx < total - 1) go(idx + 1); });
+  stepBtns.forEach(b => b.addEventListener('click', () => go(parseInt(b.dataset.idx))));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(idx + 1);
+    if (e.key === 'ArrowLeft') go(idx - 1);
+  });
+
+  render();
+</script>
+</body>
+</html>
