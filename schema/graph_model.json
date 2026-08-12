@@ -47,15 +47,17 @@
       "id": "depressive_episode_type",
       "label": "Depressive Episode Type",
       "category": "clinical",
-      "desc": "Whether the current major depressive episode is a single or recurrent occurrence (DSM-5).",
-      "type": "binary",
+      "desc": "Whether the current major depressive episode is a single or recurrent occurrence (DSM-5); 'None' applies when no formal diagnosis is present.",
+      "type": "categorical",
       "categories": [
         "Single",
-        "Recurrent"
+        "Recurrent",
+        "None"
       ],
       "probabilities": [
-        0.45,
-        0.55
+        0.3,
+        0.55,
+        0.15
       ]
     },
     {
@@ -224,7 +226,7 @@
       "id": "cancer_type_other_site",
       "label": "Primary Site: Other",
       "category": "oncology",
-      "desc": "Whether the primary cancer site falls outside the recurring major categories (e.g. head and neck, skin/soft tissue, bone, CNS, sarcoma, unknown primary) — a heterogeneous catch-all, individually low-frequency in the audited cohorts.",
+      "desc": "Whether the primary cancer site falls outside the recurring major categories (e.g. head and neck, skin/soft tissue, bone, CNS, sarcoma, unknown primary) \u2014 a heterogeneous catch-all, individually low-frequency in the audited cohorts.",
       "type": "binary",
       "categories": [
         "No",
@@ -361,6 +363,21 @@
       ],
       "baseline_mean": 23,
       "baseline_std": 5
+    },
+    {
+      "id": "mmse_unevaluable",
+      "label": "MMSE Unevaluable Flag",
+      "category": "functional",
+      "desc": "Explicit status flag: whether cognitive_function_mmse could not be administered (verbal interaction required) rather than being silently missing.",
+      "type": "binary",
+      "categories": [
+        "No",
+        "Yes"
+      ],
+      "probabilities": [
+        0.9,
+        0.1
+      ]
     },
     {
       "id": "global_performance_status",
@@ -895,6 +912,17 @@
   ],
   "edges": [
     {
+      "id": "e_disease_stage_metastatic_disease",
+      "source": "disease_stage",
+      "target": "metastatic_disease",
+      "relationType": "compound",
+      "strength": "strong",
+      "weight": 1,
+      "formula": "target = 'No' if source <= 1 else target",
+      "desc": "Stage 1 (Mild) and Stage 2 (Moderate) disease are non-metastatic by definition; metastatic spread only occurs from Stage 3 onward.",
+      "ref": "TNM staging convention (Stage I/II = localized, no distant metastasis by definition; distant metastasis defines Stage IV/terminal disease)"
+    },
+    {
       "id": "e_metastatic_disease_ecog_performance_status",
       "source": "metastatic_disease",
       "target": "ecog_performance_status",
@@ -1035,7 +1063,7 @@
       "weight": 1,
       "formula": "target += source * weight",
       "desc": "Lung cancer patients show higher depression risk than breast cancer patients in adjusted analysis, used here as the higher-risk reference site.",
-      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 — lung as reference category)"
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 \u2014 lung as reference category)"
     },
     {
       "id": "e_cancer_type_breast_depression_severity_index",
@@ -1112,7 +1140,7 @@
       "weight": 1.5,
       "formula": "target += source * weight",
       "desc": "Hematologic malignancies (leukemia/lymphoma) are classically associated with severe fatigue burden.",
-      "ref": "Article_25 (Bužgová et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
+      "ref": "Article_25 (Bu\u017egov\u00e1 et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
     },
     {
       "id": "e_fatigue_nausea_vomiting",
@@ -1387,7 +1415,7 @@
       "weight": 0.6,
       "formula": "target -= source * weight",
       "desc": "Higher spiritual pain erodes the patient's sense of meaning in life.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
+      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
     },
     {
       "id": "e_spiritual_pain_distress_level",
@@ -1398,7 +1426,7 @@
       "weight": 0.3,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering contributes to overall emotional distress.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019"
     },
     {
       "id": "e_chronic_pain_distress_level",
@@ -1442,7 +1470,7 @@
       "weight": 0.3,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering amplifies fear of death.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019"
     },
     {
       "id": "e_distress_level_meaning_in_life",
@@ -1816,7 +1844,7 @@
       "weight": 0.6,
       "formula": null,
       "desc": "A major depressive disorder diagnosis correlates strongly with a higher depression severity index.",
-      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psicótico, F32.0-F32.3)"
+      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psic\u00f3tico, F32.0-F32.3)"
     },
     {
       "id": "e_religiosity_meaning_in_life",
@@ -1891,9 +1919,64 @@
       "relationType": "compound",
       "strength": "strong",
       "weight": 1,
-      "formula": "target = 'None' if source == 'No formal diagnosis' else target",
+      "formula": "target = 'None' if source == 3 else target",
       "desc": "Psychoactive medication cannot be prescribed without a documented formal psychiatric diagnosis.",
-      "ref": "General prescribing practice — psychoactive medication requires a documented psychiatric indication"
+      "ref": "General prescribing practice \u2014 psychoactive medication requires a documented psychiatric indication"
+    },
+    {
+      "id": "e_disease_stage_ecog_performance_status",
+      "source": "disease_stage",
+      "target": "ecog_performance_status",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.5,
+      "formula": null,
+      "desc": "Advancing disease stage correlates with worse (higher) ECOG performance status.",
+      "ref": "Article 30 / Article 31 (ECOG-PS worsens with disease progression) clinical estimate"
+    },
+    {
+      "id": "e_disease_stage_mobility",
+      "source": "disease_stage",
+      "target": "mobility",
+      "relationType": "correlated",
+      "strength": "moderate",
+      "weight": 0.4,
+      "formula": null,
+      "desc": "Advancing disease stage (especially Terminal) correlates with reduced mobility; mild-stage patients should very rarely present as bedridden.",
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage functional decline) clinical estimate"
+    },
+    {
+      "id": "e_disease_stage_communication_capacity",
+      "source": "disease_stage",
+      "target": "communication_capacity",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.3,
+      "formula": null,
+      "desc": "Advancing disease stage correlates with reduced verbal communication capacity, consistent with terminal-phase obtundation/delirium; mild-stage patients should very rarely present with no verbal communication.",
+      "ref": "Clinical estimate, consistent with terminal-phase communication decline in palliative literature"
+    },
+    {
+      "id": "e_ecog_performance_status_mobility",
+      "source": "ecog_performance_status",
+      "target": "mobility",
+      "relationType": "correlated",
+      "strength": "strong",
+      "weight": 0.6,
+      "formula": null,
+      "desc": "ECOG performance status is definitionally tied to ambulatory capacity (ECOG 4 = completely disabled, confined to bed/chair).",
+      "ref": "ECOG scale definition (Oken et al. 1982)"
+    },
+    {
+      "id": "e_ecog_performance_status_communication_capacity",
+      "source": "ecog_performance_status",
+      "target": "communication_capacity",
+      "relationType": "correlated",
+      "strength": "weak",
+      "weight": 0.25,
+      "formula": null,
+      "desc": "Worse ECOG performance status correlates with reduced verbal communication capacity in advanced/terminal decline.",
+      "ref": "Clinical estimate, consistent with functional decline literature"
     }
   ]
 }

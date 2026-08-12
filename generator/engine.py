@@ -213,6 +213,201 @@ def _apply_formula(formula, source_val, weight, running_val):
     raise ValueError(f"formula missing supported operator (+=, -=, =): {formula!r}")
 
 
+CANCER_SITE_PREVALENCE = {
+    "cancer_type_breast": 0.21,
+    "cancer_type_lung": 0.18,
+    "cancer_type_gastrointestinal": 0.24,
+    "cancer_type_genitourinary": 0.10,
+    "cancer_type_gynecological": 0.04,
+    "cancer_type_hematologic": 0.03,
+    "cancer_type_other_site": 0.21,
+}
+
+
+def apply_hard_constraints(rows, rng):
+    """Clinical hard-constraint repair pass, run after full profile generation.
+
+    Fixes DAG/formula-inexpressible constraints: multi-parent conditional caps
+    and dataset-wide checks that engine.py's single-edge topo formulas and the
+    global correlated pass cannot guarantee (correlated edges run last and can
+    otherwise re-violate a cap set earlier in the topo pass).
+    """
+    site_cols = [c for c in CANCER_SITE_PREVALENCE if any(c in row for row in rows[:1])]
+
+    for profile in rows:
+        # mobility/ECOG vs functional scores (ADL, IADL, global performance)
+        if profile.get("mobility") == "Bedridden" and "ecog_performance_status" in profile:
+            profile["ecog_performance_status"] = max(profile["ecog_performance_status"], 3)
+        severe = profile.get("mobility") == "Bedridden" or profile.get("ecog_performance_status", 0) >= 3
+        if severe:
+            if "instrumental_autonomy_iadl" in profile:
+                profile["instrumental_autonomy_iadl"] = min(profile["instrumental_autonomy_iadl"], 2.0)
+            if "global_performance_status" in profile:
+                profile["global_performance_status"] = min(profile["global_performance_status"], 4.0)
+            if "functional_autonomy_adl" in profile:
+                profile["functional_autonomy_adl"] = min(profile["functional_autonomy_adl"], 20.0)
+
+        # ECOG 0 (fully active) mutually exclusive with severe mobility impairment / low ADL
+        if profile.get("ecog_performance_status") == 0:
+            if profile.get("mobility") in ("Wheelchair", "Bedridden"):
+                profile["mobility"] = "Autonomous"
+            if "functional_autonomy_adl" in profile:
+                profile["functional_autonomy_adl"] = max(profile["functional_autonomy_adl"], 90.0)
+
+        # cognitive/communication impairment vs ADL/IADL caps
+        # (takes precedence over the ECOG-0 floor above when both conditions co-occur)
+        mmse_raw = profile.get("cognitive_function_mmse")
+        comm = profile.get("communication_capacity")
+        if (mmse_raw is not None and mmse_raw <= 12) or comm in ("Gestural only", "No verbal communication"):
+            if "functional_autonomy_adl" in profile:
+                profile["functional_autonomy_adl"] = min(profile["functional_autonomy_adl"], 40.0)
+            if "instrumental_autonomy_iadl" in profile:
+                profile["instrumental_autonomy_iadl"] = min(profile["instrumental_autonomy_iadl"], 2.0)
+
+        # hierarchy: IADL (0-8 scale) cannot exceed ADL (0-100 scale) once both expressed as %
+        if "instrumental_autonomy_iadl" in profile and "functional_autonomy_adl" in profile:
+            iadl_pct = profile["instrumental_autonomy_iadl"] / 8.0 * 100.0
+            if iadl_pct > profile["functional_autonomy_adl"]:
+                profile["instrumental_autonomy_iadl"] = profile["functional_autonomy_adl"] / 100.0 * 8.0
+
+        # communication capacity / sedation vs MMSE (test requires verbal interaction);
+        # NaN only ever set alongside the explicit mmse_unevaluable flag
+        if "cognitive_function_mmse" in profile:
+            sedation = profile.get("sedation_level", 0)
+            if comm == "No verbal communication":
+                profile["cognitive_function_mmse"] = None
+                profile["mmse_unevaluable"] = "Yes"
+            else:
+                profile["mmse_unevaluable"] = "No"
+                if comm == "Gestural only":
+                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 10)
+                elif comm == "Limited verbal":
+                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 22)
+                elif sedation >= 5:
+                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 20)
+
+        # psychoactive medication requires a formal diagnosis or a psychiatric comorbidity
+        if profile.get("psychoactive_medication") not in (None, "None"):
+            no_basis = (
+                profile.get("depressive_diagnosis_dsm5") == "No formal diagnosis"
+                and profile.get("psychiatric_comorbidities") == "None"
+            )
+            if no_basis:
+                profile["psychoactive_medication"] = "None"
+
+        # opioid use vs opioid-induced constipation
+        if profile.get("opioid_use") == "No" and "opioid_induced_constipation" in profile:
+            profile["opioid_induced_constipation"] = 0
+
+        # sedation requires a pharmacological driver (opioid or psychoactive medication)
+        if (
+            profile.get("opioid_use") == "No"
+            and profile.get("psychoactive_medication") in (None, "None")
+            and "sedation_level" in profile
+        ):
+            profile["sedation_level"] = min(profile["sedation_level"], 3)
+
+        # episode type must desynchronize-proof against 'No formal diagnosis'
+        if profile.get("depressive_diagnosis_dsm5") == "No formal diagnosis" and "depressive_episode_type" in profile:
+            profile["depressive_episode_type"] = "None"
+
+        # depressive severity index vs formal DSM-5 diagnosis
+        if "depression_severity_index" in profile:
+            dx = profile.get("depressive_diagnosis_dsm5")
+            floor = {
+                "Major depressive disorder": 0.50,
+                "Dysthymia (persistent depressive disorder)": 0.10,
+            }.get(dx)
+            if floor is not None:
+                if profile["depression_severity_index"] < floor:
+                    profile["depression_severity_index"] = floor
+            elif dx == "No formal diagnosis":
+                profile["depression_severity_index"] = 0.0
+
+        # bedridden / non-verbal patients cannot lack a caregiver
+        if (
+            profile.get("mobility") == "Bedridden"
+            or profile.get("communication_capacity") == "No verbal communication"
+        ) and profile.get("caregiver_type") == "None identified":
+            profile["caregiver_type"] = rng.choices(
+                ["Direct family", "Professional caregiver", "Volunteer"],
+                weights=[0.65, 0.2, 0.05],
+                k=1,
+            )[0]
+
+        # living environment vs caregiver contact frequency (institutional settings aren't "at home")
+        if profile.get("living_environment") in ("Clinic", "Nursing home"):
+            if profile.get("caregiver_contact_frequency") == "24/7 at home":
+                profile["caregiver_contact_frequency"] = "Daily visits"
+        if profile.get("caregiver_type") == "None identified" and "caregiver_contact_frequency" in profile:
+            profile["caregiver_contact_frequency"] = "Sporadic contact"
+
+        # bedridden / ECOG 4 patients cannot live alone without round-the-clock care
+        severe_dependency = profile.get("mobility") == "Bedridden" or profile.get("ecog_performance_status") == 4
+        if (
+            severe_dependency
+            and profile.get("living_environment") == "Living alone"
+            and profile.get("caregiver_contact_frequency") != "24/7 at home"
+        ):
+            profile["living_environment"] = "Family home"
+
+        # caregiver burnout as a function of contact frequency and patient dependency (soft correlation)
+        if "caregiver_burnout_zarit" in profile and "functional_autonomy_adl" in profile:
+            freq_weight = {
+                "24/7 at home": 1.0,
+                "Daily visits": 0.7,
+                "Weekly visits": 0.4,
+                "Sporadic contact": 0.2,
+            }.get(profile.get("caregiver_contact_frequency"), 0.5)
+            dependency = 100.0 - profile["functional_autonomy_adl"]
+            burnout_target = freq_weight * dependency * 0.88
+            profile["caregiver_burnout_zarit"] = _clip(
+                0.5 * profile["caregiver_burnout_zarit"] + 0.5 * burnout_target, 0, 88
+            )
+
+        # gender-specific biological exclusion (ovary/cervix/uterus require female anatomy)
+        if profile.get("gender") == "Male" and "cancer_type_gynecological" in profile:
+            profile["cancer_type_gynecological"] = "No"
+
+        # exactly one active primary cancer site (single-primary plausibility, no CUP node modeled)
+        if site_cols:
+            active = [c for c in site_cols if profile.get(c) == "Yes"]
+            if len(active) == 0:
+                candidates = [
+                    c for c in site_cols
+                    if not (c == "cancer_type_gynecological" and profile.get("gender") == "Male")
+                ]
+                weights = [CANCER_SITE_PREVALENCE[c] for c in candidates]
+                chosen = rng.choices(candidates, weights=weights, k=1)[0]
+                profile[chosen] = "Yes"
+            elif len(active) > 1:
+                keep = rng.choice(active)
+                for c in active:
+                    if c != keep:
+                        profile[c] = "No"
+
+        # somatic symptom cluster antagonism (hypersomnia vs insomnia, agitation vs drowsiness)
+        cluster = profile.get("somatic_symptoms_cluster")
+        if "insomnia_severity" in profile:
+            if cluster == "Hypersomnia":
+                profile["insomnia_severity"] = min(profile["insomnia_severity"], 2.9)
+            elif cluster == "Insomnia":
+                profile["insomnia_severity"] = max(profile["insomnia_severity"], 3.0)
+        if cluster == "Psychomotor agitation" and "drowsiness" in profile:
+            profile["drowsiness"] = min(profile["drowsiness"], 6.0)
+
+        # antiemetic coverage should track nausea severity (soft correlation)
+        p = 0.0
+        if profile.get("opioid_use") == "Yes" and profile.get("nausea_vomiting", 0) > 5.0:
+            p = max(p, 0.9)
+        if profile.get("nausea_vomiting", 0) >= 8:
+            p = max(p, 0.85)
+        if p > 0 and profile.get("antiemetic_use") == "No" and rng.random() < p:
+            profile["antiemetic_use"] = "Yes"
+
+    return rows
+
+
 def generate(schema, n=500, seed=None):
     errors = validate_schema(schema)
     if errors:
@@ -237,22 +432,49 @@ def generate(schema, n=500, seed=None):
             for edge in incoming[nid]:
                 src_node = node_by_id[edge["source"]]
                 src_val = profile[edge["source"]]
-                if src_node["type"] == "binary":
+                if src_node["type"] in REQUIRED_CATEGORY_TYPES:
                     src_val = src_node["categories"].index(src_val)
                 value = _apply_formula(edge["formula"], src_val, edge.get("weight", 0), value)
 
-            ntype = node["type"]
-            if ntype in REQUIRED_RANGE_TYPES:
-                lo, hi = node["range"]
-                value = _clip(value, lo, hi)
-                if ntype == "ordinal":
-                    value = round(value)
+            profile[nid] = _clip_to_node(node, value)
 
-            profile[nid] = value
+        for edge in edges:
+            if edge.get("relationType") != "correlated":
+                continue
+            src_node = node_by_id[edge["source"]]
+            tgt_node = node_by_id[edge["target"]]
+            src_val = profile[edge["source"]]
+            if src_node["type"] in REQUIRED_CATEGORY_TYPES:
+                cats = src_node["categories"]
+                src_val = src_node["categories"].index(src_val) - (len(cats) - 1) / 2
+            delta = src_val * edge.get("weight", 0)
+
+            tgt_val = profile[edge["target"]]
+            if tgt_node["type"] in REQUIRED_CATEGORY_TYPES:
+                cats = tgt_node["categories"]
+                idx = cats.index(tgt_val)
+                idx = int(round(_clip(idx + delta, 0, len(cats) - 1)))
+                tgt_val = cats[idx]
+            else:
+                tgt_val = tgt_val + delta
+
+            profile[edge["target"]] = _clip_to_node(tgt_node, tgt_val)
 
         rows.append(profile)
 
+    rows = apply_hard_constraints(rows, rng)
+
     return rows
+
+
+def _clip_to_node(node, value):
+    ntype = node["type"]
+    if ntype in REQUIRED_RANGE_TYPES:
+        lo, hi = node["range"]
+        value = _clip(value, lo, hi)
+        if ntype == "ordinal":
+            value = round(value)
+    return value
 
 
 def to_csv(rows, node_ids):
