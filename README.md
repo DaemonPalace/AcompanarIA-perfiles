@@ -10,23 +10,6 @@ Aplicación web para diseñar, editar y generar el dataset de entrenamiento sint
   </a>
 </p>
 
-<details open>
-<summary><strong>Vista previa embebida</strong></summary>
-<br>
-
-<iframe
-  src="https://acompanaria-perfiles1-148425349822.europe-west1.run.app/"
-  title="ACOMPAÑAR — Generador de Perfiles Sintéticos"
-  width="100%"
-  height="640"
-  style="border:1px solid #ccc; border-radius:8px;"
-  loading="lazy">
-</iframe>
-
-> Nota: GitHub no ejecuta `<iframe>` dentro del README renderizado (por seguridad, GitHub elimina las etiquetas `iframe` del HTML). El bloque de arriba sí funciona si este README se sirve desde una página propia (GitHub Pages, Notion, un sitio estático, etc.). En GitHub, usa el botón de arriba para abrir la demo en una pestaña nueva.
-
-</details>
-
 ## Qué es
 
 Editor tipo grafo (nodos = variables, aristas = relaciones causales/inhibitorias) para:
