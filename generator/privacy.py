@@ -44,13 +44,20 @@ def privacy_audit(schema, rows, std_threshold=0.05, category_dominance=0.98, cor
             return node["categories"].index(val)
         return val
 
-    series = {nid: [to_num(nid, r[nid]) for r in rows] for nid in numeric_ids + binary_ids}
+    series = {
+        nid: [to_num(nid, r[nid]) if r.get(nid) is not None else None for r in rows]
+        for nid in numeric_ids + binary_ids
+    }
 
     ids = list(series.keys())
     for i in range(len(ids)):
         for j in range(i + 1, len(ids)):
             a, b = ids[i], ids[j]
-            r = _pearson(series[a], series[b])
+            pairs = [(x, y) for x, y in zip(series[a], series[b]) if x is not None and y is not None]
+            if not pairs:
+                continue
+            xs, ys = zip(*pairs)
+            r = _pearson(list(xs), list(ys))
             if r is not None and abs(r) >= corr_threshold:
                 warnings.append(
                     f"'{a}' and '{b}' are near-collinear in the generated sample (r={r:.3f}) "
