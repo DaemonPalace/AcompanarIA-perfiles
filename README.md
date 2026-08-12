@@ -2,7 +2,7 @@
 
 Aplicación web para diseñar, editar y generar el dataset de entrenamiento sintético descrito en el roadmap de `ACOMPANAR_Algoritmo_v1.pdf` — perfiles de paciente paliativo ficticios que cubren la matriz de combinaciones de variables clínicas, emocionales, demográficas, relacionales y físicas.
 
-**Demo en producción:** [acompanaria-perfiles1-148425349822.europe-west1.run.app](https://acompanaria-perfiles1-148425349822.europe-west1.run.app/)
+**Demo en producción:** [acompanaria-perfiles-148425349822.europe-west1.run.app](https://acompanaria-perfiles-148425349822.europe-west1.run.app/)
 
 <p align="center">
   <a href="https://acompanaria-perfiles1-148425349822.europe-west1.run.app/" target="_blank">
