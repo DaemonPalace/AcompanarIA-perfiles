@@ -1,0 +1,9 @@
+.git
+.gitignore
+context/
+HANDOFF.md
+README.md
+presentacion_acompanaria.html
+__pycache__/
+*.pyc
+.claude/
