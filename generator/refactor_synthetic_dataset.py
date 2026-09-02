@@ -20,7 +20,6 @@ import pandas as pd
 RNG_SEED_DEFAULT = 42
 
 STAGE_IDX = {"Stage 1 (Mild)": 0, "Stage 2 (Moderate)": 1, "Stage 3 (Advanced)": 2, "Terminal": 3}
-AGE_PENALTY = {"18-35": 0.0, "36-55": 1.0, "56-70": 2.5, "71+": 4.0}
 MOBILITY_CATS = ["Autonomous", "With support", "Wheelchair", "Bedridden"]
 COMM_CATS = ["Fluent verbal", "Limited verbal", "Gestural only", "No verbal communication"]
 CANCER_SITE_COLS = [
@@ -36,12 +35,18 @@ CANCER_SITE_PREVALENCE = {
 }
 
 # conditional probability tables: row index = ECOG (0-4), columns follow *_CATS order
+# Tightened against ECOG's own clinical definition (0=fully active ... 4=totally
+# confined): "Bedridden"/"Wheelchair" mobility at ECOG 0-1 is a definitional
+# contradiction, not just an unusual combo — ECOG 1 means ambulatory, restricted
+# only in strenuous activity. Confinement-to-bed-majority-of-time only becomes
+# expected from ECOG 3 onward. (Previous version allowed 15% Wheelchair+Bedridden
+# at ECOG 1 — flagged as "ECOG rating compression" via manual QA.)
 MOBILITY_GIVEN_ECOG = np.array([
-    [0.85, 0.13, 0.02, 0.00],
-    [0.45, 0.40, 0.13, 0.02],
-    [0.15, 0.40, 0.35, 0.10],
-    [0.03, 0.17, 0.40, 0.40],
-    [0.00, 0.02, 0.18, 0.80],
+    [0.97, 0.03, 0.00, 0.00],
+    [0.75, 0.24, 0.01, 0.00],
+    [0.25, 0.47, 0.28, 0.00],
+    [0.02, 0.13, 0.45, 0.40],
+    [0.00, 0.01, 0.14, 0.85],
 ])
 COMM_GIVEN_ECOG = np.array([
     [0.85, 0.13, 0.02, 0.00],
@@ -81,6 +86,18 @@ def _layer1_demographics_oncology(df, rng):
 
         male_mask = df.get("gender", pd.Series("", index=df.index)).eq("Male")
         df.loc[male_mask, "cancer_type_gynecological"] = "No"
+
+        # Male breast cancer is real but rare (~1% of breast cancer cases) — the
+        # independent per-node baseline sampling has no gender conditioning at
+        # all, so left unconstrained it occurs far too often (~21% regardless of
+        # gender). Dampen probabilistically, not an absolute exclusion like
+        # gynecological — it can still occur, just rarely.
+        male_breast_mask = male_mask & df["cancer_type_breast"].eq("Yes")
+        if male_breast_mask.any():
+            reassign = rng.random(male_breast_mask.sum()) < 0.95
+            reassign_idx = df.loc[male_breast_mask].index[reassign]
+            df.loc[reassign_idx, "cancer_type_breast"] = "No"
+
         active = df[CANCER_SITE_COLS].eq("Yes")
         n_active = active.sum(axis=1)
 
@@ -90,10 +107,13 @@ def _layer1_demographics_oncology(df, rng):
             weights = np.array([CANCER_SITE_PREVALENCE[c] for c in candidates])
             weights = weights / weights.sum()
             choice_idx = rng.choice(len(candidates), size=zero_mask.sum(), p=weights)
-            gyn_eligible = ~df.loc[zero_mask, "gender"].eq("Male") if "gender" in df.columns else pd.Series(True, index=df.loc[zero_mask].index)
+            male_eligible = df.loc[zero_mask, "gender"].eq("Male") if "gender" in df.columns else pd.Series(False, index=df.loc[zero_mask].index)
             for i, ridx in enumerate(df.loc[zero_mask].index):
                 col = candidates[choice_idx[i]]
-                if col == "cancer_type_gynecological" and not gyn_eligible.loc[ridx]:
+                is_male = male_eligible.loc[ridx]
+                if col == "cancer_type_gynecological" and is_male:
+                    col = "cancer_type_other_site"
+                elif col == "cancer_type_breast" and is_male and rng.random() < 0.95:
                     col = "cancer_type_other_site"
                 df.loc[ridx, col] = "Yes"
 
@@ -114,25 +134,35 @@ def _layer1_demographics_oncology(df, rng):
     return df
 
 
-def _layer2_organ_severity_functional(df, rng):
+def _layer2_organ_severity_functional(df, rng, protected_columns=()):
     """Layer 2: ECOG <- stage/metastatic; mobility <- ECOG; ADL/IADL bounded by
-    ECOG/mobility with IADL <= ADL enforced; MMSE <- age/stage/ECOG."""
+    ECOG/mobility with IADL <= ADL enforced.
+
+    cognitive_function_mmse and functional_autonomy_adl's driving formulas now
+    live as schema edges (age_bracket/disease_stage/ecog_performance_status ->
+    mmse; ecog_performance_status -> adl), not hardcoded here — this layer only
+    *refines* those schema-computed values against mobility/communication_capacity,
+    which can't be schema edges themselves since they're drawn from the
+    conditional-probability tables just below and aren't final until this point.
+
+    protected_columns: columns to treat as already-trustworthy input (e.g. a
+    model_ref-backed, evidence_tier="real_data" node from engine.py) rather
+    than something this layer should recompute from its own literature-estimate
+    formula. Without this, "ecog_performance_status" here unconditionally
+    overwrote whatever a real-data-trained model produced upstream — silently
+    discarding it (see requirements.md Stage 1 follow-up)."""
     stage_idx = df["disease_stage"].map(STAGE_IDX).fillna(0)
     meta_flag = df["metastatic_disease"].eq("Yes").astype(float)
 
-    ecog_mean = 0.6 + 0.55 * stage_idx + 1.0 * meta_flag
-    df["ecog_performance_status"] = _clip(
-        (ecog_mean + rng.normal(0, 0.6, len(df))).round(), 0, 4
-    ).astype(int)
+    if "ecog_performance_status" not in protected_columns:
+        ecog_mean = 0.6 + 0.55 * stage_idx + 1.0 * meta_flag
+        df["ecog_performance_status"] = _clip(
+            (ecog_mean + rng.normal(0, 0.6, len(df))).round(), 0, 4
+        ).astype(int)
 
     ecog_int = df["ecog_performance_status"].to_numpy()
     df["mobility"] = _cumulative_categorical_draw(rng, pd.Series(ecog_int, index=df.index), MOBILITY_GIVEN_ECOG, MOBILITY_CATS)
     df["communication_capacity"] = _cumulative_categorical_draw(rng, pd.Series(ecog_int, index=df.index), COMM_GIVEN_ECOG, COMM_CATS)
-
-    age_pen = df["age_bracket"].map(AGE_PENALTY).fillna(2.0)
-    mmse_mean = 27 - age_pen - 1.5 * stage_idx - 1.8 * df["ecog_performance_status"]
-    mmse = mmse_mean + rng.normal(0, 2.5, len(df))
-    df["cognitive_function_mmse"] = _clip(mmse.round(), 0, 30)
 
     no_verbal = df["communication_capacity"].eq("No verbal communication")
     df["mmse_unevaluable"] = np.where(no_verbal, "Yes", "No")
@@ -147,8 +177,7 @@ def _layer2_organ_severity_functional(df, rng):
     severe = df["ecog_performance_status"].ge(3) | df["mobility"].eq("Bedridden")
     cog_impaired = df["cognitive_function_mmse"].le(12) | gestural | no_verbal
 
-    adl_base = 100 - 22 * df["ecog_performance_status"] + rng.normal(0, 8, len(df))
-    df["functional_autonomy_adl"] = _clip(adl_base, 0, 100)
+    df["functional_autonomy_adl"] = _clip(df["functional_autonomy_adl"], 0, 100)
     df.loc[severe, "functional_autonomy_adl"] = df.loc[severe, "functional_autonomy_adl"].clip(upper=40)
     df.loc[ecog4_or_bedridden, "functional_autonomy_adl"] = df.loc[ecog4_or_bedridden, "functional_autonomy_adl"].clip(upper=20)
     df.loc[cog_impaired, "functional_autonomy_adl"] = df.loc[cog_impaired, "functional_autonomy_adl"].clip(upper=40)
@@ -157,14 +186,19 @@ def _layer2_organ_severity_functional(df, rng):
 
     iadl_ceiling_pct = df["functional_autonomy_adl"] / 100.0 * 8.0
     df["instrumental_autonomy_iadl"] = np.minimum(df["instrumental_autonomy_iadl"], iadl_ceiling_pct)
+    # Floor, not just a ceiling: a cognitively-intact patient with good ADL
+    # should not independently draw a severely-dependent IADL (verified: 22.4%
+    # of ADL>70/MMSE>20/fluent-verbal rows had IADL<3 before this floor existed).
+    # 0.6x leaves room for IADL to be more sensitive than ADL to early
+    # cognitive/executive decline even when MMSE is nominally intact — not a
+    # hard proportionality, just a plausibility floor.
+    not_impaired = ~cog_impaired
+    iadl_floor_pct = 0.6 * iadl_ceiling_pct
+    df.loc[not_impaired, "instrumental_autonomy_iadl"] = np.maximum(
+        df.loc[not_impaired, "instrumental_autonomy_iadl"], iadl_floor_pct[not_impaired]
+    )
     df.loc[cog_impaired, "instrumental_autonomy_iadl"] = df.loc[cog_impaired, "instrumental_autonomy_iadl"].clip(upper=2.0)
     df["instrumental_autonomy_iadl"] = _clip(df["instrumental_autonomy_iadl"], 0, 8)
-
-    df["global_performance_status"] = _clip(
-        5.5 - 1.0 * df["ecog_performance_status"] + 0.1 * (df["functional_autonomy_adl"] - 55) / 22 + rng.normal(0, 1.2, len(df)),
-        0, 10,
-    )
-    df.loc[severe, "global_performance_status"] = df.loc[severe, "global_performance_status"].clip(upper=4.0)
 
     return df
 
@@ -185,10 +219,11 @@ def _layer3_somatic_symptoms(df, rng):
     for col in ("chronic_pain", "fatigue", "appetite_loss", "nausea_vomiting", "dyspnea"):
         df[col] = _clip(df[col] + 0.15 * stage_idx, 0, 10)
 
-    df["nutritional_status_mna"] = _clip(
-        14 - 0.55 * df["appetite_loss"] - 0.35 * df["nausea_vomiting"] - 0.6 * stage_idx + rng.normal(0, 1.2, len(df)),
-        0, 14,
-    )
+    # nutritional_status_mna's driving formula (appetite_loss/nausea_vomiting/
+    # disease_stage) now lives as schema edges, not hardcoded here — appetite_loss
+    # and nausea_vomiting were bumped by stage just above, so the schema edges
+    # already see stage-adjusted inputs; only clip to the declared range remains.
+    df["nutritional_status_mna"] = _clip(df["nutritional_status_mna"], 0, 14)
     return df
 
 
@@ -202,6 +237,18 @@ def _layer4_pharmacology(df, rng):
 
     opioid_yes = df["opioid_use"].eq("Yes")
     df.loc[~opioid_yes, "opioid_induced_constipation"] = 0
+    # Patients just flipped to opioid_use=Yes above need constipation recomputed
+    # too — an earlier pass (engine.py's apply_hard_constraints, which ran before
+    # this flip existed) already zeroed it while they were still opioid_use=No,
+    # and without this it silently stayed at 0, understating a well-known opioid
+    # side effect (found via manual QA alongside the Stage-1 opioid-gating fix).
+    if flip_to_opioid.any():
+        n = int(flip_to_opioid.sum())
+        # opioid_induced_constipation is an ordinal (integer) node — the column
+        # may already be int64-typed from engine.py's output, which rejects a
+        # float assignment outright rather than silently upcasting (pandas 3.x).
+        resampled = np.round(np.clip(rng.normal(3, 2.5, n) + 6, 0, 10)).astype(int)
+        df.loc[flip_to_opioid, "opioid_induced_constipation"] = resampled
 
     need_antiemetic = (df["nausea_vomiting"].ge(6) | (df["chemotherapy_current"].eq("Yes") & df["nausea_vomiting"].ge(4)))
     flip_to_antiemetic = need_antiemetic & df["antiemetic_use"].eq("No") & (rng.random(len(df)) < 0.8)
@@ -246,13 +293,28 @@ def _layer5_psychological(df, rng):
 
 
 def _layer6_caregiver_environment(df, rng):
-    """Layer 6: living_environment restricted by ADL; caregiver_burnout_zarit <-
-    dependency + contact frequency, forced 0 if no caregiver identified."""
+    """Layer 6: living_environment restricted by ADL; caregiver_contact_frequency
+    escalated for severe dependency; caregiver_burnout_zarit <- dependency +
+    contact frequency, forced 0 if no caregiver identified."""
     none_caregiver = df["caregiver_type"].eq("None identified")
     low_adl = df["functional_autonomy_adl"].lt(30)
     not_247 = ~df["caregiver_contact_frequency"].eq("24/7 at home")
     illegal_alone = low_adl & df["living_environment"].eq("Living alone") & (not_247 | none_caregiver)
     df.loc[illegal_alone, "living_environment"] = "Family home"
+
+    # Severe dependency (bedridden / ECOG>=3 / MMSE<=12) paired with an
+    # identified caregiver visiting only weekly/sporadically is a support-level
+    # mismatch (flagged via manual QA, "Caregiver Support Discrepancies").
+    # Escalate to at least daily contact — leaves 24/7 as a still-higher
+    # possibility some rows may already have.
+    severe_dependency = (
+        df["mobility"].eq("Bedridden")
+        | df["ecog_performance_status"].ge(3)
+        | df["cognitive_function_mmse"].fillna(30).le(12)
+    )
+    low_contact = df["caregiver_contact_frequency"].isin(["Weekly visits", "Sporadic contact"])
+    undersupported = severe_dependency & low_contact & ~none_caregiver
+    df.loc[undersupported, "caregiver_contact_frequency"] = "Daily visits"
 
     freq_weight = df["caregiver_contact_frequency"].map({
         "24/7 at home": 1.0, "Daily visits": 0.7, "Weekly visits": 0.4, "Sporadic contact": 0.2,
@@ -267,18 +329,22 @@ def _layer6_caregiver_environment(df, rng):
     return df
 
 
-def refactor_synthetic_dataset(df, seed=RNG_SEED_DEFAULT):
+def refactor_synthetic_dataset(df, seed=RNG_SEED_DEFAULT, protected_columns=()):
     """Enforce the full 6-layer conditional/sequential restructuring matrix
     on an already-generated (independent-then-patched) synthetic profile
     DataFrame, in place semantics on a copy. Guarantees 100% logical
     consistency with the clinical hierarchy: every downstream column is
     re-derived or bounded strictly from its already-finalized upstream layers.
+
+    protected_columns: columns this pass must treat as trustworthy input and
+    never recompute from its own literature-estimate formulas — currently only
+    Layer 2's ecog_performance_status recompute respects this (see its docstring).
     """
     df = df.copy()
     rng = np.random.default_rng(seed)
 
     df = _layer1_demographics_oncology(df, rng)
-    df = _layer2_organ_severity_functional(df, rng)
+    df = _layer2_organ_severity_functional(df, rng, protected_columns=protected_columns)
     df = _layer3_somatic_symptoms(df, rng)
     df = _layer4_pharmacology(df, rng)
     df = _layer5_psychological(df, rng)

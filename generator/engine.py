@@ -3,6 +3,14 @@
 Consumes any valid graph_model.json-format schema (arbitrary nodes/edges) and
 produces synthetic patient profiles. No variable names are hardcoded.
 
+A node may carry a "model_ref" ({"model": "<file under models/>", "predictors":
+[node_id, ...]}) instead of relying purely on the linear formula grammar — its
+value is then sampled from a trained model (see models/, requirements.md Stage 1+)
+conditioned on its predictor nodes' already-generated values, rather than from
+baseline_mean/std or categories/probabilities. Requires pgmpy (requirements.txt)
+only when a schema actually uses model_ref; formula-only schemas still need
+nothing beyond the stdlib.
+
 CLI:
     python3 generator/engine.py schema/graph_model.json --n 500 --seed 42 --out out.csv
 """
@@ -11,6 +19,8 @@ import argparse
 import csv
 import io
 import json
+import os
+import pickle
 import random
 import sys
 
@@ -19,6 +29,13 @@ CAUSAL_TYPES = ("causal", "inhibitory", "compound")
 REQUIRED_COMMON = ("id", "type")
 REQUIRED_RANGE_TYPES = ("continuous", "ordinal")
 REQUIRED_CATEGORY_TYPES = ("categorical", "binary")
+
+# requirements.md Stage 1 (Option B, §2): nodes may carry a "model_ref" pointing
+# at a trained model file under MODELS_DIR instead of (or in addition to) a
+# baseline_mean/std or categories/probabilities. Resolved relative to this repo
+# root, independent of any schema file path — schemas arrive as arbitrary JSON
+# blobs over the API, not necessarily read from schema/graph_model.json on disk.
+MODELS_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models"))
 
 
 def load_schema(path):
@@ -102,7 +119,25 @@ def validate_schema(schema):
         if rel in CAUSAL_TYPES and not edge.get("formula"):
             errors.append(f"edge '{eid}' (relationType={rel}) missing required field 'formula'")
 
-    # DAG check over causal/inhibitory/compound edges only, via Kahn's algorithm.
+    model_deps = {}
+    for node in nodes:
+        model_ref = node.get("model_ref")
+        if model_ref is None:
+            continue
+        nid = node.get("id")
+        predictors = model_ref.get("predictors")
+        if not model_ref.get("model") or not isinstance(predictors, list) or not predictors:
+            errors.append(f"node '{nid}' has malformed 'model_ref' (expected {{'model': str, 'predictors': [id, ...]}})")
+            continue
+        unknown = [p for p in predictors if p not in node_ids]
+        if unknown:
+            errors.append(f"node '{nid}' model_ref.predictors references unknown node(s): {unknown}")
+            continue
+        model_deps[nid] = predictors
+
+    # DAG check over causal/inhibitory/compound edges plus model_ref structural
+    # dependencies (a model-backed node's predictors must resolve before it,
+    # same as a causal edge would enforce), via Kahn's algorithm.
     if not errors or node_ids:
         adj = {nid: [] for nid in node_ids}
         indeg = {nid: 0 for nid in node_ids}
@@ -114,6 +149,10 @@ def validate_schema(schema):
                 continue
             adj[src].append(tgt)
             indeg[tgt] += 1
+        for tgt, predictors in model_deps.items():
+            for src in predictors:
+                adj[src].append(tgt)
+                indeg[tgt] += 1
 
         queue = [nid for nid in node_ids if indeg[nid] == 0]
         visited = 0
@@ -131,14 +170,19 @@ def validate_schema(schema):
             cyclic = sorted(nid for nid in node_ids if indeg[nid] > 0)
             errors.append(
                 "cycle detected in causal/inhibitory/compound edge subgraph "
+                "(including model_ref structural dependencies) "
                 f"(involves nodes: {cyclic})"
             )
 
     return errors
 
 
-def _topo_sort(node_ids, edges):
-    """Kahn's algorithm topo sort restricted to causal/inhibitory/compound edges."""
+def _topo_sort(node_ids, edges, model_deps=None):
+    """Kahn's algorithm topo sort restricted to causal/inhibitory/compound edges,
+    plus structural model_ref predictor dependencies (model_deps: {node_id: [predictor_ids]}) —
+    a model-backed node is ordered after every one of its predictors, same as a
+    causal edge would enforce, even though no formula/weight edge exists for it.
+    """
     adj = {nid: [] for nid in node_ids}
     indeg = {nid: 0 for nid in node_ids}
     incoming = {nid: [] for nid in node_ids}
@@ -149,6 +193,11 @@ def _topo_sort(node_ids, edges):
         adj[src].append(tgt)
         indeg[tgt] += 1
         incoming[tgt].append(edge)
+
+    for tgt, predictors in (model_deps or {}).items():
+        for src in predictors:
+            adj[src].append(tgt)
+            indeg[tgt] += 1
 
     queue = [nid for nid in node_ids if indeg[nid] == 0]
     order = []
@@ -182,6 +231,35 @@ def _sample_baseline(node, rng):
 
 def _clip(val, lo, hi):
     return max(lo, min(hi, val))
+
+
+def _load_model_ref(model_ref, cache):
+    """Load (and cache, for the lifetime of one generate() call) the pgmpy model
+    a model_ref points at. Import is local: schemas with no model_ref nodes must
+    keep working even when pgmpy isn't installed (requirements.txt is new as of
+    Stage 1 — see requirements.md §2)."""
+    model_id = model_ref["model"]
+    if model_id not in cache:
+        model_path = os.path.join(MODELS_DIR, model_id)
+        with open(model_path, "rb") as f:
+            cache[model_id] = pickle.load(f)
+    return cache[model_id]
+
+
+def _sample_from_model_ref(node, model_ref, profile, model_cache, rng):
+    """Stochastic sample from a trained Bayesian Network's posterior, conditioned
+    on already-generated predictor values — not a MAP/argmax point estimate, so
+    generated profiles keep the same natural row-to-row variability the rest of
+    the generator has (see requirements.md Stage 1 Definition of Done)."""
+    from pgmpy.inference import VariableElimination
+
+    model = _load_model_ref(model_ref, model_cache)
+    infer = VariableElimination(model)
+    evidence = {p: profile[p] for p in model_ref["predictors"]}
+    result = infer.query(variables=[node["id"]], evidence=evidence, show_progress=False)
+    states = result.state_names[node["id"]]
+    chosen = rng.choices(states, weights=result.values, k=1)[0]
+    return int(chosen) if node["type"] in REQUIRED_RANGE_TYPES else chosen
 
 
 def _apply_formula(formula, source_val, weight, running_val):
@@ -235,56 +313,26 @@ def apply_hard_constraints(rows, rng):
     site_cols = [c for c in CANCER_SITE_PREVALENCE if any(c in row for row in rows[:1])]
 
     for profile in rows:
-        # mobility/ECOG vs functional scores (ADL, IADL, global performance)
-        if profile.get("mobility") == "Bedridden" and "ecog_performance_status" in profile:
-            profile["ecog_performance_status"] = max(profile["ecog_performance_status"], 3)
-        severe = profile.get("mobility") == "Bedridden" or profile.get("ecog_performance_status", 0) >= 3
-        if severe:
-            if "instrumental_autonomy_iadl" in profile:
-                profile["instrumental_autonomy_iadl"] = min(profile["instrumental_autonomy_iadl"], 2.0)
-            if "global_performance_status" in profile:
-                profile["global_performance_status"] = min(profile["global_performance_status"], 4.0)
-            if "functional_autonomy_adl" in profile:
-                profile["functional_autonomy_adl"] = min(profile["functional_autonomy_adl"], 20.0)
-
-        # ECOG 0 (fully active) mutually exclusive with severe mobility impairment / low ADL
-        if profile.get("ecog_performance_status") == 0:
-            if profile.get("mobility") in ("Wheelchair", "Bedridden"):
-                profile["mobility"] = "Autonomous"
-            if "functional_autonomy_adl" in profile:
-                profile["functional_autonomy_adl"] = max(profile["functional_autonomy_adl"], 90.0)
-
-        # cognitive/communication impairment vs ADL/IADL caps
-        # (takes precedence over the ECOG-0 floor above when both conditions co-occur)
-        mmse_raw = profile.get("cognitive_function_mmse")
-        comm = profile.get("communication_capacity")
-        if (mmse_raw is not None and mmse_raw <= 12) or comm in ("Gestural only", "No verbal communication"):
-            if "functional_autonomy_adl" in profile:
-                profile["functional_autonomy_adl"] = min(profile["functional_autonomy_adl"], 40.0)
-            if "instrumental_autonomy_iadl" in profile:
-                profile["instrumental_autonomy_iadl"] = min(profile["instrumental_autonomy_iadl"], 2.0)
+        # NOTE: rules keying off mobility/communication_capacity/cognitive_function_mmse
+        # (ECOG<->mobility consistency, severe-dependency ADL/IADL/MMSE caps, comm-based
+        # MMSE clipping) were removed from here — this function runs inside
+        # engine.generate(), BEFORE mobility/communication_capacity are finalized
+        # (that only happens in refactor_synthetic_dataset.py's Layer 2, which runs
+        # after, once ECOG/age/stage-driven schema edges have populated
+        # functional_autonomy_adl/cognitive_function_mmse). Keeping them here meant
+        # capping/gating decisions were made against a stale, not-yet-conditioned
+        # mobility/communication_capacity draw — harmless while ADL/MMSE were fully
+        # overwritten downstream anyway, but actively corrupting once those edges
+        # were migrated into the schema (see requirements.md-adjacent HANDOFF entry)
+        # and, worse, capable of bumping a real-data-trained ECOG value upward off a
+        # premature "Bedridden" read. refactor_synthetic_dataset.py's Layer 2 already
+        # re-implements every one of these checks correctly, with the right timing.
 
         # hierarchy: IADL (0-8 scale) cannot exceed ADL (0-100 scale) once both expressed as %
         if "instrumental_autonomy_iadl" in profile and "functional_autonomy_adl" in profile:
             iadl_pct = profile["instrumental_autonomy_iadl"] / 8.0 * 100.0
             if iadl_pct > profile["functional_autonomy_adl"]:
                 profile["instrumental_autonomy_iadl"] = profile["functional_autonomy_adl"] / 100.0 * 8.0
-
-        # communication capacity / sedation vs MMSE (test requires verbal interaction);
-        # NaN only ever set alongside the explicit mmse_unevaluable flag
-        if "cognitive_function_mmse" in profile:
-            sedation = profile.get("sedation_level", 0)
-            if comm == "No verbal communication":
-                profile["cognitive_function_mmse"] = None
-                profile["mmse_unevaluable"] = "Yes"
-            else:
-                profile["mmse_unevaluable"] = "No"
-                if comm == "Gestural only":
-                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 10)
-                elif comm == "Limited verbal":
-                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 22)
-                elif sedation >= 5:
-                    profile["cognitive_function_mmse"] = min(profile["cognitive_function_mmse"], 20)
 
         # psychoactive medication requires a formal diagnosis or a psychiatric comorbidity
         if profile.get("psychoactive_medication") not in (None, "None"):
@@ -311,12 +359,18 @@ def apply_hard_constraints(rows, rng):
         if profile.get("depressive_diagnosis_dsm5") == "No formal diagnosis" and "depressive_episode_type" in profile:
             profile["depressive_episode_type"] = "None"
 
-        # depressive severity index vs formal DSM-5 diagnosis
+        # depressive severity index vs formal DSM-5 diagnosis — backstop only,
+        # primary enforcement is now e_depressive_diagnosis_dsm5_depression_severity_index_gate
+        # (a proper topo-ordered edge, so downstream nodes like suicidal_ideation_risk
+        # see the gated value; this pass runs too late for that). Floors are fractions
+        # of the node's declared range (0-27), matching refactor_synthetic_dataset.py's
+        # Layer 5 — previously compared un-scaled (0.50/0.10 instead of 13.5/2.7),
+        # effectively a no-op floor. Fixed alongside the ordering bug.
         if "depression_severity_index" in profile:
             dx = profile.get("depressive_diagnosis_dsm5")
             floor = {
-                "Major depressive disorder": 0.50,
-                "Dysthymia (persistent depressive disorder)": 0.10,
+                "Major depressive disorder": 0.50 * 27,
+                "Dysthymia (persistent depressive disorder)": 0.10 * 27,
             }.get(dx)
             if floor is not None:
                 if profile["depression_severity_index"] < floor:
@@ -369,13 +423,23 @@ def apply_hard_constraints(rows, rng):
         if profile.get("gender") == "Male" and "cancer_type_gynecological" in profile:
             profile["cancer_type_gynecological"] = "No"
 
+        # Male breast cancer is real but rare (~1% of breast cancer cases) — the
+        # independent per-node baseline sampling has no gender conditioning at
+        # all, so left unconstrained it occurs far too often (~21% regardless of
+        # gender). Dampen probabilistically, not an absolute exclusion like
+        # gynecological — it can still occur, just rarely.
+        if profile.get("gender") == "Male" and profile.get("cancer_type_breast") == "Yes" and rng.random() < 0.95:
+            profile["cancer_type_breast"] = "No"
+
         # exactly one active primary cancer site (single-primary plausibility, no CUP node modeled)
         if site_cols:
             active = [c for c in site_cols if profile.get(c) == "Yes"]
             if len(active) == 0:
+                is_male = profile.get("gender") == "Male"
                 candidates = [
                     c for c in site_cols
-                    if not (c == "cancer_type_gynecological" and profile.get("gender") == "Male")
+                    if not (c == "cancer_type_gynecological" and is_male)
+                    and not (c == "cancer_type_breast" and is_male and rng.random() < 0.95)
                 ]
                 weights = [CANCER_SITE_PREVALENCE[c] for c in candidates]
                 chosen = rng.choices(candidates, weights=weights, k=1)[0]
@@ -418,7 +482,13 @@ def generate(schema, n=500, seed=None):
     node_by_id = {node["id"]: node for node in nodes}
     node_ids = [node["id"] for node in nodes]
 
-    order, incoming = _topo_sort(node_ids, edges)
+    model_deps = {
+        node["id"]: node["model_ref"]["predictors"]
+        for node in nodes
+        if node.get("model_ref")
+    }
+    order, incoming = _topo_sort(node_ids, edges, model_deps)
+    model_cache = {}
 
     rng = random.Random(seed)
 
@@ -427,7 +497,11 @@ def generate(schema, n=500, seed=None):
         profile = {}
         for nid in order:
             node = node_by_id[nid]
-            value = _sample_baseline(node, rng)
+            model_ref = node.get("model_ref")
+            if model_ref:
+                value = _sample_from_model_ref(node, model_ref, profile, model_cache, rng)
+            else:
+                value = _sample_baseline(node, rng)
 
             for edge in incoming[nid]:
                 src_node = node_by_id[edge["source"]]

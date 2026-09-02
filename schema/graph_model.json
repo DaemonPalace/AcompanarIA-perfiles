@@ -1,8 +1,8 @@
 {
   "metadata": {
     "model_name": "Palliative Care Baseline",
-    "version": "1.2.0",
-    "last_modified": "2026-08-10"
+    "version": "1.3.0",
+    "last_modified": "2026-09-02"
   },
   "nodes": [
     {
@@ -226,7 +226,7 @@
       "id": "cancer_type_other_site",
       "label": "Primary Site: Other",
       "category": "oncology",
-      "desc": "Whether the primary cancer site falls outside the recurring major categories (e.g. head and neck, skin/soft tissue, bone, CNS, sarcoma, unknown primary) \u2014 a heterogeneous catch-all, individually low-frequency in the audited cohorts.",
+      "desc": "Whether the primary cancer site falls outside the recurring major categories (e.g. head and neck, skin/soft tissue, bone, CNS, sarcoma, unknown primary) — a heterogeneous catch-all, individually low-frequency in the audited cohorts.",
       "type": "binary",
       "categories": [
         "No",
@@ -322,8 +322,8 @@
         0,
         14
       ],
-      "baseline_mean": 9,
-      "baseline_std": 3
+      "baseline_mean": 14,
+      "baseline_std": 1.2
     },
     {
       "id": "functional_autonomy_adl",
@@ -335,8 +335,8 @@
         0,
         100
       ],
-      "baseline_mean": 55,
-      "baseline_std": 22
+      "baseline_mean": 100,
+      "baseline_std": 8
     },
     {
       "id": "instrumental_autonomy_iadl",
@@ -361,8 +361,8 @@
         0,
         30
       ],
-      "baseline_mean": 23,
-      "baseline_std": 5
+      "baseline_mean": 27,
+      "baseline_std": 2.5
     },
     {
       "id": "mmse_unevaluable",
@@ -380,19 +380,6 @@
       ]
     },
     {
-      "id": "global_performance_status",
-      "label": "Global Performance Status",
-      "category": "functional",
-      "desc": "Overall functional performance of the patient on a 0-10 scale (protective factor for mood).",
-      "type": "continuous",
-      "range": [
-        0,
-        10
-      ],
-      "baseline_mean": 5.5,
-      "baseline_std": 2.3
-    },
-    {
       "id": "ecog_performance_status",
       "label": "ECOG Performance Status",
       "category": "functional",
@@ -403,7 +390,15 @@
         4
       ],
       "baseline_mean": 2,
-      "baseline_std": 1
+      "baseline_std": 1,
+      "evidence_tier": "real_data",
+      "model_ref": {
+        "model": "ecog_bn.pkl",
+        "predictors": [
+          "disease_stage",
+          "age_bracket"
+        ]
+      }
     },
     {
       "id": "mobility",
@@ -654,19 +649,6 @@
       ],
       "baseline_mean": 5.5,
       "baseline_std": 2.2
-    },
-    {
-      "id": "emotional_trend_7d",
-      "label": "7-Day Emotional Trend (ESAS)",
-      "category": "emotional",
-      "desc": "Weighted average of the last 7 emotional check-ins; detects gradual deterioration.",
-      "type": "continuous",
-      "range": [
-        0,
-        10
-      ],
-      "baseline_mean": 5,
-      "baseline_std": 1.8
     },
     {
       "id": "caregiver_burnout_zarit",
@@ -923,17 +905,6 @@
       "ref": "TNM staging convention (Stage I/II = localized, no distant metastasis by definition; distant metastasis defines Stage IV/terminal disease)"
     },
     {
-      "id": "e_metastatic_disease_ecog_performance_status",
-      "source": "metastatic_disease",
-      "target": "ecog_performance_status",
-      "relationType": "causal",
-      "strength": "moderate",
-      "weight": 1,
-      "formula": "target += source * weight",
-      "desc": "Metastatic disease is associated with worse (higher) ECOG performance status scores.",
-      "ref": "Article_29 / Article 30 (ECOG-PS worse with metastatic/advanced disease)"
-    },
-    {
       "id": "e_metastatic_disease_chronic_pain",
       "source": "metastatic_disease",
       "target": "chronic_pain",
@@ -950,7 +921,7 @@
       "target": "fatigue",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 1.5,
+      "weight": 0.725,
       "formula": "target += source * weight",
       "desc": "Active chemotherapy is one of the nutrition-impact symptoms most strongly associated with higher fatigue burden.",
       "ref": "Article_14 (fatigue among strongest NIS associations with depression, p<0.001)"
@@ -961,7 +932,7 @@
       "target": "fatigue",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.145,
       "formula": "target += source * weight",
       "desc": "Chronic pain contributes to the overall symptom-burden cluster that includes fatigue.",
       "ref": "Article_27 / clinical symptom-cluster estimate"
@@ -972,7 +943,7 @@
       "target": "drowsiness",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 2,
+      "weight": 0.8,
       "formula": "target += source * weight",
       "desc": "Opioid analgesics commonly induce daytime drowsiness as a class effect.",
       "ref": "Article_14 / Article_27 (drowsiness as a nutrition-impact/opioid-related symptom)"
@@ -983,7 +954,7 @@
       "target": "drowsiness",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.12,
       "formula": "target += source * weight",
       "desc": "Fatigue and drowsiness co-occur within the same symptom cluster.",
       "ref": "Article_27 (drowsiness/fatigue symptom cluster)"
@@ -1016,7 +987,7 @@
       "target": "appetite_loss",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.14,
+      "weight": 0.0675,
       "formula": "target += source * weight",
       "desc": "Pain contributes modestly to appetite suppression within the symptom-burden cluster.",
       "ref": "js/schema.js clinical estimate (dolor|perdida_apetito)"
@@ -1027,7 +998,7 @@
       "target": "appetite_loss",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.206,
+      "weight": 0.0993,
       "formula": "target += source * weight",
       "desc": "Fatigue and appetite loss co-occur as part of the EORTC-style symptom cluster.",
       "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster, OR 1.12-1.24)"
@@ -1063,7 +1034,7 @@
       "weight": 1,
       "formula": "target += source * weight",
       "desc": "Lung cancer patients show higher depression risk than breast cancer patients in adjusted analysis, used here as the higher-risk reference site.",
-      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 \u2014 lung as reference category)"
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 — lung as reference category)"
     },
     {
       "id": "e_cancer_type_breast_depression_severity_index",
@@ -1093,7 +1064,7 @@
       "target": "appetite_loss",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 2.2,
+      "weight": 1.06,
       "formula": "target += source * weight",
       "desc": "Gastrointestinal/hepatobiliary/pancreatic primary sites are the classic drivers of cancer cachexia and appetite loss.",
       "ref": "Article_14 (Amano et al., cachexia/refractory cachexia present in 47% of sample dominated by liver/biliary/pancreas/GI sites; lack of appetite p<0.001) / Article_29 (EPCRC, GI 30.4% dominant diagnosis, loss of appetite measured as core symptom, univariate beta -0.32***)"
@@ -1137,10 +1108,10 @@
       "target": "fatigue",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 1.5,
+      "weight": 0.725,
       "formula": "target += source * weight",
       "desc": "Hematologic malignancies (leukemia/lymphoma) are classically associated with severe fatigue burden.",
-      "ref": "Article_25 (Bu\u017egov\u00e1 et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
+      "ref": "Article_25 (Bužgová et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
     },
     {
       "id": "e_fatigue_nausea_vomiting",
@@ -1192,7 +1163,7 @@
       "target": "insomnia_severity",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.153,
       "formula": "target += source * weight",
       "desc": "Fatigue and insomnia frequently co-occur as depressive somatic symptoms.",
       "ref": "DSM-5 Criterion A4 (insomnia/hypersomnia) and A6 (fatigue)"
@@ -1203,7 +1174,7 @@
       "target": "insomnia_severity",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.25,
+      "weight": 0.1275,
       "formula": "target += source * weight",
       "desc": "Unmanaged pain disrupts sleep onset and maintenance.",
       "ref": "Clinical estimate; consistent with DSM-5 somatic symptom criteria"
@@ -1214,7 +1185,7 @@
       "target": "nutritional_status_mna",
       "relationType": "inhibitory",
       "strength": "moderate",
-      "weight": 0.4,
+      "weight": 0.55,
       "formula": "target -= source * weight",
       "desc": "Persistent appetite loss degrades MNA-SF nutritional status score.",
       "ref": "Clinical estimate grounded in Article_14 (nutrition impact symptoms)"
@@ -1225,21 +1196,10 @@
       "target": "nutritional_status_mna",
       "relationType": "inhibitory",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.35,
       "formula": "target -= source * weight",
       "desc": "Nausea and vomiting reduce oral intake and worsen nutritional status.",
       "ref": "Article_14 (nutrition impact symptoms and depression association)"
-    },
-    {
-      "id": "e_nutritional_status_mna_functional_autonomy_adl",
-      "source": "nutritional_status_mna",
-      "target": "functional_autonomy_adl",
-      "relationType": "causal",
-      "strength": "strong",
-      "weight": 5.5374,
-      "formula": "target += source * weight",
-      "desc": "Better nutritional status strongly predicts greater functional independence (Barthel ADL).",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.755"
     },
     {
       "id": "e_nutritional_status_mna_instrumental_autonomy_iadl",
@@ -1253,23 +1213,12 @@
       "ref": "Efendioglu et al. 2021, Table 3, r=.626"
     },
     {
-      "id": "e_nutritional_status_mna_cognitive_function_mmse",
-      "source": "nutritional_status_mna",
-      "target": "cognitive_function_mmse",
-      "relationType": "causal",
-      "strength": "weak",
-      "weight": 0.4767,
-      "formula": "target += source * weight",
-      "desc": "Better nutritional status is weakly associated with better cognitive function (MMSE).",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.286"
-    },
-    {
       "id": "e_nutritional_status_mna_depression_severity_index",
       "source": "nutritional_status_mna",
       "target": "depression_severity_index",
       "relationType": "inhibitory",
       "strength": "strong",
-      "weight": 1.5,
+      "weight": 0.169,
       "formula": "target -= source * weight",
       "desc": "Better nutritional status strongly predicts lower depression severity.",
       "ref": "Efendioglu et al. 2021, Table 3, r=-.750"
@@ -1286,37 +1235,15 @@
       "ref": "Efendioglu et al. 2021, Table 3, r=.838"
     },
     {
-      "id": "e_functional_autonomy_adl_cognitive_function_mmse",
-      "source": "functional_autonomy_adl",
-      "target": "cognitive_function_mmse",
-      "relationType": "causal",
-      "strength": "moderate",
-      "weight": 0.0948,
-      "formula": "target += source * weight",
-      "desc": "Greater ADL independence is associated with better cognitive function.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.417"
-    },
-    {
       "id": "e_functional_autonomy_adl_depression_severity_index",
       "source": "functional_autonomy_adl",
       "target": "depression_severity_index",
       "relationType": "inhibitory",
       "strength": "strong",
-      "weight": 0.2236,
+      "weight": 0.0253,
       "formula": "target -= source * weight",
       "desc": "Greater ADL independence strongly predicts lower depression severity.",
       "ref": "Efendioglu et al. 2021, Table 3, r=-.820"
-    },
-    {
-      "id": "e_instrumental_autonomy_iadl_cognitive_function_mmse",
-      "source": "instrumental_autonomy_iadl",
-      "target": "cognitive_function_mmse",
-      "relationType": "causal",
-      "strength": "moderate",
-      "weight": 1.52,
-      "formula": "target += source * weight",
-      "desc": "Greater IADL independence is associated with better cognitive function.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.608"
     },
     {
       "id": "e_instrumental_autonomy_iadl_depression_severity_index",
@@ -1324,7 +1251,7 @@
       "target": "depression_severity_index",
       "relationType": "inhibitory",
       "strength": "strong",
-      "weight": 1.842,
+      "weight": 0.208,
       "formula": "target -= source * weight",
       "desc": "Greater IADL independence strongly predicts lower depression severity.",
       "ref": "Efendioglu et al. 2021, Table 3, r=-.614"
@@ -1335,54 +1262,10 @@
       "target": "depression_severity_index",
       "relationType": "inhibitory",
       "strength": "weak",
-      "weight": 0.3276,
+      "weight": 0.037,
       "formula": "target -= source * weight",
       "desc": "Better cognitive function is weakly associated with lower depression severity.",
       "ref": "Efendioglu et al. 2021, Table 3, r=-.273"
-    },
-    {
-      "id": "e_ecog_performance_status_global_performance_status",
-      "source": "ecog_performance_status",
-      "target": "global_performance_status",
-      "relationType": "inhibitory",
-      "strength": "moderate",
-      "weight": 1,
-      "formula": "target -= source * weight",
-      "desc": "Worse ECOG performance status reduces overall global performance status.",
-      "ref": "Article 30 / Article 31 (ECOG-PS as functional outcome measure)"
-    },
-    {
-      "id": "e_functional_autonomy_adl_global_performance_status",
-      "source": "functional_autonomy_adl",
-      "target": "global_performance_status",
-      "relationType": "causal",
-      "strength": "weak",
-      "weight": 0.1,
-      "formula": "target += source * weight",
-      "desc": "Greater ADL independence modestly contributes to overall global performance.",
-      "ref": "Clinical consistency estimate"
-    },
-    {
-      "id": "e_fatigue_global_performance_status",
-      "source": "fatigue",
-      "target": "global_performance_status",
-      "relationType": "inhibitory",
-      "strength": "weak",
-      "weight": 0.2108,
-      "formula": "target -= source * weight",
-      "desc": "Higher fatigue reduces overall functional performance.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (functionality as protective factor, OR .80-.82)"
-    },
-    {
-      "id": "e_chronic_pain_global_performance_status",
-      "source": "chronic_pain",
-      "target": "global_performance_status",
-      "relationType": "inhibitory",
-      "strength": "weak",
-      "weight": 0.1681,
-      "formula": "target -= source * weight",
-      "desc": "Higher chronic pain reduces overall functional performance.",
-      "ref": "js/schema.js clinical estimate (funcionalidad_global|dolor)"
     },
     {
       "id": "e_fatigue_depression_severity_index",
@@ -1396,26 +1279,15 @@
       "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.20-1.24)"
     },
     {
-      "id": "e_global_performance_status_depression_severity_index",
-      "source": "global_performance_status",
-      "target": "depression_severity_index",
-      "relationType": "inhibitory",
-      "strength": "moderate",
-      "weight": 0.6522,
-      "formula": "target -= source * weight",
-      "desc": "Better global performance status is a protective factor against depression severity.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR .80-.82, protective)"
-    },
-    {
       "id": "e_spiritual_pain_meaning_in_life",
       "source": "spiritual_pain",
       "target": "meaning_in_life",
       "relationType": "inhibitory",
       "strength": "moderate",
-      "weight": 0.6,
+      "weight": 0.193,
       "formula": "target -= source * weight",
       "desc": "Higher spiritual pain erodes the patient's sense of meaning in life.",
-      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
     },
     {
       "id": "e_spiritual_pain_distress_level",
@@ -1423,10 +1295,10 @@
       "target": "distress_level",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.1125,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering contributes to overall emotional distress.",
-      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019"
     },
     {
       "id": "e_chronic_pain_distress_level",
@@ -1434,7 +1306,7 @@
       "target": "distress_level",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.2692,
+      "weight": 0.101,
       "formula": "target += source * weight",
       "desc": "Chronic pain intensity is moderately correlated with emotional distress/anxiety.",
       "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
@@ -1445,7 +1317,7 @@
       "target": "distress_level",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.0933,
+      "weight": 0.035,
       "formula": "target += source * weight",
       "desc": "Higher depression severity is associated with greater day-to-day distress.",
       "ref": "js/schema.js clinical estimate, moderated for system consistency"
@@ -1456,7 +1328,7 @@
       "target": "death_anxiety",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.253,
+      "weight": 0.1032,
       "formula": "target += source * weight",
       "desc": "Higher general distress is associated with greater fear of death.",
       "ref": "js/schema.js clinical estimate"
@@ -1467,10 +1339,10 @@
       "target": "death_anxiety",
       "relationType": "causal",
       "strength": "weak",
-      "weight": 0.3,
+      "weight": 0.1224,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering amplifies fear of death.",
-      "ref": "Article 39 / P\u00e9rez-Cruz et al. 2019"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019"
     },
     {
       "id": "e_distress_level_meaning_in_life",
@@ -1478,7 +1350,7 @@
       "target": "meaning_in_life",
       "relationType": "inhibitory",
       "strength": "weak",
-      "weight": 0.209,
+      "weight": 0.0673,
       "formula": "target -= source * weight",
       "desc": "Higher distress is associated with lower sense of meaning (existential void).",
       "ref": "js/schema.js clinical estimate"
@@ -1489,7 +1361,7 @@
       "target": "anxiety_level",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 0.644,
+      "weight": 0.188,
       "formula": "target += source * weight",
       "desc": "General distress is strongly correlated with anxiety symptom intensity.",
       "ref": "Article_27 (HADS-A x ESAS-Anxiety item, r=0.56, p<0.001)"
@@ -1500,7 +1372,7 @@
       "target": "anxiety_level",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.3096,
+      "weight": 0.09,
       "formula": "target += source * weight",
       "desc": "Pain intensity is moderately correlated with anxiety.",
       "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
@@ -1511,7 +1383,7 @@
       "target": "anxiety_level",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.3,
+      "weight": 0.088,
       "formula": "target += source * weight",
       "desc": "Nausea/vomiting is one of the symptoms most distinctly elevated in anxious patients.",
       "ref": "Article_27 (anxiety patients show elevated nausea/pain/dyspnea)"
@@ -1522,7 +1394,7 @@
       "target": "anxiety_level",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.2875,
+      "weight": 0.084,
       "formula": "target += source * weight",
       "desc": "Dyspnea is moderately correlated with anxiety symptom intensity.",
       "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
@@ -1550,28 +1422,6 @@
       "ref": "js/schema.js clinical estimate"
     },
     {
-      "id": "e_distress_level_emotional_trend_7d",
-      "source": "distress_level",
-      "target": "emotional_trend_7d",
-      "relationType": "causal",
-      "strength": "moderate",
-      "weight": 0.351,
-      "formula": "target += source * weight",
-      "desc": "Distress level strongly informs the 7-day weighted emotional trend (same scale/window).",
-      "ref": "js/schema.js definitional estimate (angustia|tendencia_emocional)"
-    },
-    {
-      "id": "e_loneliness_emotional_trend_7d",
-      "source": "loneliness",
-      "target": "emotional_trend_7d",
-      "relationType": "causal",
-      "strength": "weak",
-      "weight": 0.2,
-      "formula": "target += source * weight",
-      "desc": "Sustained loneliness contributes to the 7-day emotional trend.",
-      "ref": "Clinical consistency estimate"
-    },
-    {
       "id": "e_loneliness_caregiver_burnout_zarit",
       "source": "loneliness",
       "target": "caregiver_burnout_zarit",
@@ -1588,7 +1438,7 @@
       "target": "suicidal_ideation_risk",
       "relationType": "causal",
       "strength": "strong",
-      "weight": 0.3,
+      "weight": 0.15,
       "formula": "target += source * weight",
       "desc": "Depression severity is the strongest driver of suicidal ideation risk.",
       "ref": "DSM-5 Criterion A9 (recurrent thoughts of death/suicidal ideation) / Article 32 (self-harm thoughts strongly associated with higher PHQ-9 scores)"
@@ -1599,7 +1449,7 @@
       "target": "suicidal_ideation_risk",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.25,
+      "weight": 0.05,
       "formula": "target += source * weight",
       "desc": "Acute emotional distress amplifies suicidal ideation risk.",
       "ref": "Clinical estimate consistent with DSM-5 risk factors"
@@ -1610,7 +1460,7 @@
       "target": "suicidal_ideation_risk",
       "relationType": "causal",
       "strength": "moderate",
-      "weight": 0.2,
+      "weight": 0.04,
       "formula": "target += source * weight",
       "desc": "Social isolation/loneliness is a recognized risk factor for suicidal ideation.",
       "ref": "Article 15 (family cohesion protective against anxiety/depression) / clinical risk-factor literature"
@@ -1621,7 +1471,7 @@
       "target": "suicidal_ideation_risk",
       "relationType": "inhibitory",
       "strength": "moderate",
-      "weight": 0.25,
+      "weight": 0.05,
       "formula": "target -= source * weight",
       "desc": "A stronger sense of meaning is protective against suicidal ideation.",
       "ref": "ACOMPANAR_Algoritmo_v1.pdf (Logotherapy/Frankl rationale) / clinical estimate"
@@ -1669,17 +1519,6 @@
       "formula": null,
       "desc": "Advanced age (71+) is associated with higher depression severity.",
       "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)"
-    },
-    {
-      "id": "e_disease_stage_global_performance_status",
-      "source": "disease_stage",
-      "target": "global_performance_status",
-      "relationType": "correlated",
-      "strength": "moderate",
-      "weight": -0.4,
-      "formula": null,
-      "desc": "Terminal-stage disease is associated with markedly lower global performance status.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (functionality as protective factor)"
     },
     {
       "id": "e_disease_stage_fatigue",
@@ -1734,17 +1573,6 @@
       "weight": -0.25,
       "formula": null,
       "desc": "Absence of a family support network is associated with higher depression severity.",
-      "ref": "js/schema.js clinical estimate"
-    },
-    {
-      "id": "e_mobility_global_performance_status",
-      "source": "mobility",
-      "target": "global_performance_status",
-      "relationType": "correlated",
-      "strength": "moderate",
-      "weight": -0.4,
-      "formula": null,
-      "desc": "Being bedridden is associated with markedly lower global performance status.",
       "ref": "js/schema.js clinical estimate"
     },
     {
@@ -1844,7 +1672,7 @@
       "weight": 0.6,
       "formula": null,
       "desc": "A major depressive disorder diagnosis correlates strongly with a higher depression severity index.",
-      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psic\u00f3tico, F32.0-F32.3)"
+      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psicótico, F32.0-F32.3)"
     },
     {
       "id": "e_religiosity_meaning_in_life",
@@ -1921,7 +1749,7 @@
       "weight": 1,
       "formula": "target = 'None' if source == 3 else target",
       "desc": "Psychoactive medication cannot be prescribed without a documented formal psychiatric diagnosis.",
-      "ref": "General prescribing practice \u2014 psychoactive medication requires a documented psychiatric indication"
+      "ref": "General prescribing practice — psychoactive medication requires a documented psychiatric indication"
     },
     {
       "id": "e_disease_stage_ecog_performance_status",
@@ -1977,6 +1805,94 @@
       "formula": null,
       "desc": "Worse ECOG performance status correlates with reduced verbal communication capacity in advanced/terminal decline.",
       "ref": "Clinical estimate, consistent with functional decline literature"
+    },
+    {
+      "id": "e_disease_stage_opioid_use",
+      "source": "disease_stage",
+      "target": "opioid_use",
+      "relationType": "compound",
+      "strength": "strong",
+      "weight": 1,
+      "formula": "target = 'No' if source <= 0 else target",
+      "desc": "Stage 1 (Mild) disease has low baseline opioid-analgesic need per the WHO analgesic ladder (opioids reserved for moderate-severe pain, which correlates with more advanced disease). Genuinely severe pain can still trigger opioid use via the existing high-pain escalation rule in refactor_synthetic_dataset.py Layer 4.",
+      "ref": "WHO analgesic ladder; flagged via manual QA (\"Severe Opioid & Sedation Toxicity in Early Stages\")"
+    },
+    {
+      "id": "e_depressive_diagnosis_dsm5_depression_severity_index_gate",
+      "source": "depressive_diagnosis_dsm5",
+      "target": "depression_severity_index",
+      "relationType": "compound",
+      "strength": "strong",
+      "weight": 1,
+      "formula": "target = 0.0 if source == 3 else (target if target >= 13.5 else 13.5) if source == 0 else (target if target >= 2.7 else 2.7) if source == 1 else target",
+      "desc": "DSM-5-consistency floor: No formal diagnosis forces severity to 0; Major depressive disorder / Dysthymia floor severity at their DSM-5-consistent minimums (0.5x/0.1x of the 0-27 range). Runs as a proper topo-ordered edge (not a post-hoc repair) so downstream nodes like suicidal_ideation_risk see the diagnosis-consistent value, not a stale pre-gate one.",
+      "ref": "DSM-5 Major Depressive Episode severity specifiers; fixes an ordering bug found via manual QA — suicidal_ideation_risk was reading depression_severity_index before its DSM-5 floor was applied"
+    },
+    {
+      "id": "e_insomnia_severity_drowsiness",
+      "source": "insomnia_severity",
+      "target": "drowsiness",
+      "relationType": "causal",
+      "strength": "moderate",
+      "weight": 0.14,
+      "formula": "target += source * weight",
+      "desc": "Severe sleep-onset/maintenance difficulty directly elevates daytime drowsiness (sleep deprivation) — previously missing; flagged via manual QA.",
+      "ref": "Standard sleep-medicine relationship (insomnia -> daytime somnolence); flagged via manual QA"
+    },
+    {
+      "id": "e_ecog_performance_status_functional_autonomy_adl",
+      "source": "ecog_performance_status",
+      "target": "functional_autonomy_adl",
+      "relationType": "inhibitory",
+      "strength": "strong",
+      "weight": 22,
+      "formula": "target -= source * weight",
+      "desc": "ECOG performance status is the primary driver of Barthel ADL independence — migrated from a hardcoded Python formula in refactor_synthetic_dataset.py so the relationship is visible/editable in the schema graph.",
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 (adl_base = 100 - 22*ecog); verified this session — clean monotonic ADL-by-ECOG gradient (95.9/74.9/50.5/28/11.3)"
+    },
+    {
+      "id": "e_age_bracket_cognitive_function_mmse",
+      "source": "age_bracket",
+      "target": "cognitive_function_mmse",
+      "relationType": "compound",
+      "strength": "moderate",
+      "weight": 1,
+      "formula": "target -= (0 if source == 0 else 1 if source == 1 else 2.5 if source == 2 else 4) * weight",
+      "desc": "Age-related cognitive decline penalty (18-35: none, 36-55: mild, 56-70: moderate, 71+: pronounced) — migrated from refactor_synthetic_dataset.py's AGE_PENALTY lookup table via an explicit per-category mapping (plain linear weighting on category index would not reproduce the non-linear 0/1/2.5/4 curve).",
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 AGE_PENALTY"
+    },
+    {
+      "id": "e_disease_stage_cognitive_function_mmse",
+      "source": "disease_stage",
+      "target": "cognitive_function_mmse",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 1.5,
+      "formula": "target -= source * weight",
+      "desc": "More advanced disease stage is associated with modest cognitive decline (disease burden, medication effects) — migrated from refactor_synthetic_dataset.py.",
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2"
+    },
+    {
+      "id": "e_ecog_performance_status_cognitive_function_mmse",
+      "source": "ecog_performance_status",
+      "target": "cognitive_function_mmse",
+      "relationType": "inhibitory",
+      "strength": "moderate",
+      "weight": 1.8,
+      "formula": "target -= source * weight",
+      "desc": "Worse ECOG performance status is associated with cognitive decline — migrated from refactor_synthetic_dataset.py.",
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2"
+    },
+    {
+      "id": "e_disease_stage_nutritional_status_mna",
+      "source": "disease_stage",
+      "target": "nutritional_status_mna",
+      "relationType": "inhibitory",
+      "strength": "weak",
+      "weight": 0.6,
+      "formula": "target -= source * weight",
+      "desc": "More advanced disease stage independently degrades nutritional status beyond what appetite loss/nausea alone capture — migrated from refactor_synthetic_dataset.py.",
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 3"
     }
   ]
 }

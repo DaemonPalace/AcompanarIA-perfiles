@@ -1,6 +1,12 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /app
+
+# requirements.txt is new as of requirements.md Stage 1 — the model-calibration
+# pipeline (pgmpy-backed model_ref nodes in engine.py) broke the prior stdlib-only
+# runtime constraint deliberately; see requirements.md §2.
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar el proyecto (UI, esquema y módulos de generator; ver .dockerignore)
 COPY . .

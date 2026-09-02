@@ -19,6 +19,57 @@ sys.path.insert(0, REPO_ROOT)
 from generator import engine  # noqa: E402
 from generator import privacy  # noqa: E402
 from generator import stats as stats_mod  # noqa: E402
+from generator import clinical_consistency  # noqa: E402
+
+try:
+    import pandas as pd  # noqa: E402
+    from generator import refactor_synthetic_dataset as refactor_mod  # noqa: E402
+except ImportError:
+    pd = None
+    refactor_mod = None
+
+
+def _apply_refactor(rows, nodes, seed):
+    """Post-process engine.generate()'s output through refactor_synthetic_dataset's
+    6-layer conditional restructuring (ECOG -> ADL/IADL/MMSE/mobility/communication,
+    among other passes it enforces) — engine.py's own linear-formula grammar leaves
+    those under-coupled to ecog_performance_status (see requirements.md Stage 1
+    follow-up). refactor_synthetic_dataset.py hardcodes this schema's variable names
+    (unlike engine.py, which is schema-generic), so a schema the UI has been edited
+    away from the shipped shape may not have every column it expects — skip gracefully
+    rather than fail the whole request, since arbitrary user-edited schemas must keep
+    working (CLAUDE.md's stated design goal).
+    """
+    if pd is None or refactor_mod is None:
+        return rows
+    node_ids = [n["id"] for n in nodes]
+    protected_columns = [n["id"] for n in nodes if n.get("evidence_tier") == "real_data"]
+    try:
+        df = pd.DataFrame(rows, columns=node_ids)
+        seed = seed if seed is not None else refactor_mod.RNG_SEED_DEFAULT
+        df = refactor_mod.refactor_synthetic_dataset(df, seed=seed, protected_columns=protected_columns)
+        # refactor_synthetic_dataset.py can introduce columns with no matching
+        # schema node (e.g. complex_psychometrics_unevaluable) — the schema is
+        # the source of truth for what fields exist, so restrict back to it.
+        # Extra columns aren't a schema-incompatibility (caught below), just
+        # something to drop.
+        df = df[node_ids]
+        df = df.astype(object).where(pd.notnull(df), None)
+        out_rows = df.to_dict(orient="records")
+    except Exception as e:
+        sys.stderr.write(f"refactor pass skipped (schema incompatible with it): {e}\n")
+        return rows
+
+    # pandas round-tripping can leave ordinal/range fields as float/np.float64
+    # (e.g. 3 -> 3.0) instead of the clean int/clipped value engine.py's own
+    # _clip_to_node guarantees — reapply it so downstream CSV/stats/privacy see
+    # the same typing regardless of whether this pass ran.
+    for row in out_rows:
+        for node in nodes:
+            nid = node["id"]
+            if row.get(nid) is not None:
+                row[nid] = engine._clip_to_node(node, row[nid])
+    return out_rows
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -95,6 +146,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(400, {"error": f"generation failed: {e}"})
             return
 
+        rows = _apply_refactor(rows, schema["nodes"], seed)
         node_ids = [node["id"] for node in schema["nodes"]]
 
         if fmt == "json":
@@ -140,8 +192,11 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(400, {"error": f"generation failed: {e}"})
             return
 
+        rows = _apply_refactor(rows, schema["nodes"], seed)
+
         summary = stats_mod.summarize(schema, rows)
         privacy_result = privacy.privacy_audit(schema, rows)
+        consistency_result = clinical_consistency.consistency_audit(rows)
 
         self._send_json(200, {
             "n": len(rows),
@@ -149,6 +204,7 @@ class Handler(BaseHTTPRequestHandler):
             "categorical": summary["categorical"],
             "correlations": summary["correlations"],
             "privacy": privacy_result,
+            "consistency": consistency_result,
         })
 
     def _handle_save_schema(self):

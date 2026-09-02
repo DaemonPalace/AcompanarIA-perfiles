@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Real (de-identified) patient data — never committed unreviewed, per requirements.md
+# Global Rule 4. Raw TCGA export + everything ingest/parse_tcga_cases.py derives from it.
+context/data.json
+context/clinical.cases_selection*.json
+data/

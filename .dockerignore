@@ -1,8 +1,10 @@
 .git
 .gitignore
 context/
+data/
 HANDOFF.md
 README.md
+requirements.md
 presentacion_acompanaria.html
 __pycache__/
 *.pyc

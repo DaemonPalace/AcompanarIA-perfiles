@@ -1312,12 +1312,24 @@ function renderAnalysis(data) {
       <p class="privacy-note">${escapeHtml(note)}</p>
     </div>`;
 
+  const consistencyFindings = (data.consistency && data.consistency.findings) || [];
+  const consistencyNote = (data.consistency && data.consistency.note) || "";
+  const consistencyHtml = `
+    <div class="privacy-panel ${consistencyFindings.length ? "has-warnings" : ""}">
+      <h4>Consistencia clínica ${consistencyFindings.length ? `(${consistencyFindings.length})` : ""}</h4>
+      ${consistencyFindings.length
+        ? `<ul>${consistencyFindings.map((f) => `<li><strong>${escapeHtml(f.severity)}</strong> — ${escapeHtml(f.description)}</li>`).join("")}</ul>`
+        : `<p class="muted">Sin inconsistencias detectadas.</p>`}
+      <p class="privacy-note">${escapeHtml(consistencyNote)}</p>
+    </div>`;
+
   host.innerHTML = `
     <div class="analysis-meta">n=${data.n ?? "?"} perfiles sintéticos generados para este análisis (se re-ejecuta automáticamente tras cada edición del esquema).</div>
     <section class="analysis-section"><h3>Variables numéricas</h3><div class="stat-tile-row">${numericHtml || '<p class="muted">Sin variables numéricas.</p>'}</div></section>
     <section class="analysis-section"><h3>Variables categóricas</h3><div class="stat-tile-row">${catHtml || '<p class="muted">Sin variables categóricas.</p>'}</div></section>
     <section class="analysis-section"><h3>Matriz de correlación</h3>${corrHtml}</section>
     <section class="analysis-section">${privacyHtml}</section>
+    <section class="analysis-section">${consistencyHtml}</section>
   `;
 }
 
