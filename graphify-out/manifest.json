@@ -1,0 +1,314 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1786545697.7461998,
+    "seen": 1789410648.808199,
+    "ast_hash": "dee873741504080d8b9619c96ce49ce0",
+    "semantic_hash": "dee873741504080d8b9619c96ce49ce0"
+  },
+  "generator/clinical_consistency.py": {
+    "mtime": 1788450033.099326,
+    "seen": 1789410648.808203,
+    "ast_hash": "0d3b1201a776296a16d7ffa827c2c3a8",
+    "semantic_hash": "0d3b1201a776296a16d7ffa827c2c3a8"
+  },
+  "generator/engine.py": {
+    "mtime": 1788382043.1209097,
+    "seen": 1789410648.8082051,
+    "ast_hash": "160457fe3dce475e8824164d163769b3",
+    "semantic_hash": "160457fe3dce475e8824164d163769b3"
+  },
+  "generator/privacy.py": {
+    "mtime": 1788450523.5828598,
+    "seen": 1789410648.808206,
+    "ast_hash": "b3e617e1ba36466190b1b13859abfa2f",
+    "semantic_hash": "b3e617e1ba36466190b1b13859abfa2f"
+  },
+  "generator/refactor_synthetic_dataset.py": {
+    "mtime": 1788450044.0452693,
+    "seen": 1789410648.8082066,
+    "ast_hash": "1b584e95cd48f1886b2fffe571cf8319",
+    "semantic_hash": "1b584e95cd48f1886b2fffe571cf8319"
+  },
+  "generator/stats.py": {
+    "mtime": 1786571099.0686648,
+    "seen": 1789410648.8082073,
+    "ast_hash": "edd805a7e05312fa75604b6b90157276",
+    "semantic_hash": "edd805a7e05312fa75604b6b90157276"
+  },
+  "ingest/parse_tcga_cases.py": {
+    "mtime": 1788374184.095474,
+    "seen": 1789410648.808208,
+    "ast_hash": "76454742af1b4424b61e0cc52c203fdc",
+    "semantic_hash": "76454742af1b4424b61e0cc52c203fdc"
+  },
+  "models/ecog_bn_cpts.json": {
+    "mtime": 1788374659.6806786,
+    "seen": 1789410648.8082087,
+    "ast_hash": "9627344a101f19ae43a0c4bb487b884d",
+    "semantic_hash": "9627344a101f19ae43a0c4bb487b884d"
+  },
+  "models/metastatic_bn_cpts.json": {
+    "mtime": 1788450137.8699305,
+    "seen": 1789410648.8082092,
+    "ast_hash": "16abff40198cd641e319091c20643ca7",
+    "semantic_hash": "16abff40198cd641e319091c20643ca7"
+  },
+  "schema/graph_model.json": {
+    "mtime": 1788450788.5223827,
+    "seen": 1789410648.80821,
+    "ast_hash": "c05e3f33fbf4ed7929eaa75741077f8e",
+    "semantic_hash": "c05e3f33fbf4ed7929eaa75741077f8e"
+  },
+  "server.py": {
+    "mtime": 1788450425.1151817,
+    "seen": 1789410648.8082106,
+    "ast_hash": "437928216349c1ee7b4819d22647ecc6",
+    "semantic_hash": "437928216349c1ee7b4819d22647ecc6"
+  },
+  "training/seer_local_aggregate.py": {
+    "mtime": 1788462966.6086729,
+    "seen": 1789410648.808211,
+    "ast_hash": "e25fe572d90bc7e28039ebcbbb247300",
+    "semantic_hash": "e25fe572d90bc7e28039ebcbbb247300"
+  },
+  "training/train_ecog_bn.py": {
+    "mtime": 1788374653.359041,
+    "seen": 1789410648.808212,
+    "ast_hash": "5ed63c9218feb5ee0fee1797bbffd417",
+    "semantic_hash": "5ed63c9218feb5ee0fee1797bbffd417"
+  },
+  "training/train_metastatic_bn.py": {
+    "mtime": 1788450127.940158,
+    "seen": 1789410648.8082128,
+    "ast_hash": "171034e2cfef378757788ad6b6e1c59a",
+    "semantic_hash": "171034e2cfef378757788ad6b6e1c59a"
+  },
+  "ui/app.js": {
+    "mtime": 1788378875.8162928,
+    "seen": 1789410648.8082132,
+    "ast_hash": "8b3dc52f4c5d8f7630017f9c7a710b7d",
+    "semantic_hash": "8b3dc52f4c5d8f7630017f9c7a710b7d"
+  },
+  ".claude/agents/00_orchestrator.md": {
+    "mtime": 1786377642.345305,
+    "seen": 1789410648.808214,
+    "ast_hash": "c295d7955b0f0b4f93cf50a75b71d329",
+    "semantic_hash": "c295d7955b0f0b4f93cf50a75b71d329"
+  },
+  ".claude/agents/01_clinical_researcher.md": {
+    "mtime": 1786377870.535095,
+    "seen": 1789410648.808215,
+    "ast_hash": "da876e45707629b5d8952866f22aad62",
+    "semantic_hash": "da876e45707629b5d8952866f22aad62"
+  },
+  ".claude/agents/02_data_analyst.md": {
+    "mtime": 1786377984.120949,
+    "seen": 1789410648.8082154,
+    "ast_hash": "16a2e4b64365dae8ff3575f9ce26d1d5",
+    "semantic_hash": "16a2e4b64365dae8ff3575f9ce26d1d5"
+  },
+  ".claude/agents/03_frontend_architect.md": {
+    "mtime": 1786378036.41763,
+    "seen": 1789410648.808216,
+    "ast_hash": "64bb9b39546eda5a430a6f8505d25fdf",
+    "semantic_hash": "64bb9b39546eda5a430a6f8505d25fdf"
+  },
+  ".claude/agents/04_data_visualizer.md": {
+    "mtime": 1786378087.5718882,
+    "seen": 1789410648.8082166,
+    "ast_hash": "dbf2508c00683ae907462c923c128c87",
+    "semantic_hash": "dbf2508c00683ae907462c923c128c87"
+  },
+  ".claude/agents/05_privacy_ethics.md": {
+    "mtime": 1786378114.8448858,
+    "seen": 1789410648.8082173,
+    "ast_hash": "fddf4ba58d3105b1f58886b6d648bc4e",
+    "semantic_hash": "fddf4ba58d3105b1f58886b6d648bc4e"
+  },
+  ".claude/agents/06_clinical_consistency_reviewer.md": {
+    "mtime": 1788378897.784342,
+    "seen": 1789410648.8082178,
+    "ast_hash": "0829b53d7a549a3dd1736d380ece4e50",
+    "semantic_hash": "0829b53d7a549a3dd1736d380ece4e50"
+  },
+  "CLAUDE.md": {
+    "mtime": 1786566955.377593,
+    "seen": 1789410648.8082187,
+    "ast_hash": "0450424605bb4ba01a8393c7e733de48",
+    "semantic_hash": "0450424605bb4ba01a8393c7e733de48"
+  },
+  "HANDOFF.md": {
+    "mtime": 1788450821.3292046,
+    "seen": 1789410648.8082194,
+    "ast_hash": "32d4a3c86d50620dc7389ce2dd4cfc28",
+    "semantic_hash": "32d4a3c86d50620dc7389ce2dd4cfc28"
+  },
+  "README.md": {
+    "mtime": 1786571846.7636073,
+    "seen": 1789410648.80822,
+    "ast_hash": "b9911d202e8957565e777418d9769e91",
+    "semantic_hash": "b9911d202e8957565e777418d9769e91"
+  },
+  "context/Article 15.txt": {
+    "mtime": 1786378673.9848711,
+    "seen": 1789410648.8082204,
+    "ast_hash": "2dfeac4fc492150836f71ad8719d2f6a",
+    "semantic_hash": "2dfeac4fc492150836f71ad8719d2f6a"
+  },
+  "context/Article 16.txt": {
+    "mtime": 1786378661.6924927,
+    "seen": 1789410648.808221,
+    "ast_hash": "c9989845fc3bb3f4e327a5a41ba5fd15",
+    "semantic_hash": "c9989845fc3bb3f4e327a5a41ba5fd15"
+  },
+  "context/Article 30.txt": {
+    "mtime": 1786109609.3466606,
+    "seen": 1789410648.8082216,
+    "ast_hash": "f7572d3ed84e90f425f97bf180a6937f",
+    "semantic_hash": "f7572d3ed84e90f425f97bf180a6937f"
+  },
+  "context/Article 31.txt": {
+    "mtime": 1786114482.1925352,
+    "seen": 1789410648.8082225,
+    "ast_hash": "415fb36daff7281aae37a29bd42bb478",
+    "semantic_hash": "415fb36daff7281aae37a29bd42bb478"
+  },
+  "context/Article 32.txt": {
+    "mtime": 1786205845.7928114,
+    "seen": 1789410648.808223,
+    "ast_hash": "ef39ab7299f04d8690ac54321fabd221",
+    "semantic_hash": "ef39ab7299f04d8690ac54321fabd221"
+  },
+  "context/Article 40.txt": {
+    "mtime": 1786378653.900472,
+    "seen": 1789410648.8082237,
+    "ast_hash": "6c348f8e2d1e2ebbb22259329eb2f4bb",
+    "semantic_hash": "6c348f8e2d1e2ebbb22259329eb2f4bb"
+  },
+  "context/Article_14.txt": {
+    "mtime": 1786378658.2864835,
+    "seen": 1789410648.8082244,
+    "ast_hash": "039dd241d8389d3a0b8d346e1383dfde",
+    "semantic_hash": "039dd241d8389d3a0b8d346e1383dfde"
+  },
+  "context/Article_21.txt": {
+    "mtime": 1786378652.8844693,
+    "seen": 1789410648.808225,
+    "ast_hash": "79c34ae15f0c9acd2b3c63494beaac83",
+    "semantic_hash": "79c34ae15f0c9acd2b3c63494beaac83"
+  },
+  "context/Article_25.txt": {
+    "mtime": 1786378655.7314768,
+    "seen": 1789410648.8082256,
+    "ast_hash": "affe702136715cabec5bbf15d8b0bbb2",
+    "semantic_hash": "affe702136715cabec5bbf15d8b0bbb2"
+  },
+  "context/Article_26.txt": {
+    "mtime": 1786378660.6064897,
+    "seen": 1789410648.8082263,
+    "ast_hash": "dcd5857f460e5a505e1ba59207e3512e",
+    "semantic_hash": "dcd5857f460e5a505e1ba59207e3512e"
+  },
+  "context/Article_27.txt": {
+    "mtime": 1786378656.9614801,
+    "seen": 1789410648.8082268,
+    "ast_hash": "486e838fe2ac93b6300e7e2afa1b38b0",
+    "semantic_hash": "486e838fe2ac93b6300e7e2afa1b38b0"
+  },
+  "context/Article_28.txt": {
+    "mtime": 1786378654.7614741,
+    "seen": 1789410648.8082273,
+    "ast_hash": "291d89d56bf75fc2ef15c1572017777e",
+    "semantic_hash": "291d89d56bf75fc2ef15c1572017777e"
+  },
+  "context/Article_29 (1).txt": {
+    "mtime": 1786378662.894496,
+    "seen": 1789410648.808228,
+    "ast_hash": "081437dacb7d4b2676640015a8991e6e",
+    "semantic_hash": "081437dacb7d4b2676640015a8991e6e"
+  },
+  "context/Articulo_13.txt": {
+    "mtime": 1786378672.0825202,
+    "seen": 1789410648.808229,
+    "ast_hash": "4291345d388bcf6f903243d0a3d1ef42",
+    "semantic_hash": "4291345d388bcf6f903243d0a3d1ef42"
+  },
+  "context/dsm5.txt": {
+    "mtime": 1786379807.7205472,
+    "seen": 1789410648.8082294,
+    "ast_hash": "5ae30087490ca487db59d302bc8dc2b0",
+    "semantic_hash": "5ae30087490ca487db59d302bc8dc2b0"
+  },
+  "context/palliative_care_databases.md": {
+    "mtime": 1788276765.9850008,
+    "seen": 1789410648.8082302,
+    "ast_hash": "cc9379edb3f834a75686af86bc17a1b1",
+    "semantic_hash": "cc9379edb3f834a75686af86bc17a1b1"
+  },
+  "presentacion_acompanaria.html": {
+    "mtime": 1786571799.844563,
+    "seen": 1789410648.8082306,
+    "ast_hash": "9d3cde4ca632b3379fa0113d8a649cc8",
+    "semantic_hash": "9d3cde4ca632b3379fa0113d8a649cc8"
+  },
+  "reports/stage1_ecog_bn_eval.md": {
+    "mtime": 1788374659.6809185,
+    "seen": 1789410648.8082314,
+    "ast_hash": "39bb3481e70941cb8c670033de8119ae",
+    "semantic_hash": "39bb3481e70941cb8c670033de8119ae"
+  },
+  "reports/stage1_manual_qa_checklist.md": {
+    "mtime": 1788376860.2106643,
+    "seen": 1789410648.8082325,
+    "ast_hash": "90822b39256df877111fff3ade3d3732",
+    "semantic_hash": "90822b39256df877111fff3ade3d3732"
+  },
+  "reports/stage2_metastatic_bn_eval.md": {
+    "mtime": 1788450137.8726237,
+    "seen": 1789410648.8082333,
+    "ast_hash": "fabe67ff235ce15610a00ad60b977017",
+    "semantic_hash": "fabe67ff235ce15610a00ad60b977017"
+  },
+  "reports/stage3_consistency_pass.md": {
+    "mtime": 1788450781.3962042,
+    "seen": 1789410648.808234,
+    "ast_hash": "a30b5f8da923fcb0bce8d1460bfdb79d",
+    "semantic_hash": "a30b5f8da923fcb0bce8d1460bfdb79d"
+  },
+  "requirements.md": {
+    "mtime": 1788450848.7657351,
+    "seen": 1789410648.8082347,
+    "ast_hash": "cdb2d71aed4e3bd7f96ddeb0b54be9c1",
+    "semantic_hash": "cdb2d71aed4e3bd7f96ddeb0b54be9c1"
+  },
+  "requirements.txt": {
+    "mtime": 1788374355.2460456,
+    "seen": 1789410648.8082354,
+    "ast_hash": "7a38e04c3f1d5ac199df3897de41d4fb",
+    "semantic_hash": "7a38e04c3f1d5ac199df3897de41d4fb"
+  },
+  "ui/index.html": {
+    "mtime": 1786385345.8805752,
+    "seen": 1789410648.8082364,
+    "ast_hash": "e04064e753844c9715da666eeec47257",
+    "semantic_hash": "e04064e753844c9715da666eeec47257"
+  },
+  "context/ACOMPANAR_Algoritmo_v1.pdf": {
+    "mtime": 1786378885.222087,
+    "seen": 1789410648.8082368,
+    "ast_hash": "b4fc3f7d37528e86361c64d97635328b",
+    "semantic_hash": "b4fc3f7d37528e86361c64d97635328b"
+  },
+  "context/Article 39.txt": {
+    "mtime": 1786378659.7304873,
+    "seen": 1789410648.8082376,
+    "ast_hash": "d981ac4c8fb0442165bd047edd3685c3",
+    "semantic_hash": "d981ac4c8fb0442165bd047edd3685c3"
+  },
+  "context/DSM-5-abreviado.pdf": {
+    "mtime": 1786378792.07307,
+    "seen": 1789410648.8082383,
+    "ast_hash": "1e958a470a18d976806d52f8ba0974aa",
+    "semantic_hash": "1e958a470a18d976806d52f8ba0974aa"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "disease_stage": {
+    "variable": "disease_stage",
+    "evidence": [],
+    "state_names": {
+      "disease_stage": [
+        "Stage 1 (Mild)",
+        "Stage 2 (Moderate)",
+        "Stage 3 (Advanced)",
+        "Terminal"
+      ]
+    },
+    "values": [
+      [
+        0.005960729312762973
+      ],
+      [
+        0.0038569424964936885
+      ],
+      [
+        0.6903927068723703
+      ],
+      [
+        0.29978962131837306
+      ]
+    ]
+  },
+  "metastatic_disease": {
+    "variable": "metastatic_disease",
+    "evidence": [
+      "disease_stage"
+    ],
+    "state_names": {
+      "metastatic_disease": [
+        "No",
+        "Yes"
+      ],
+      "disease_stage": [
+        "Stage 1 (Mild)",
+        "Stage 2 (Moderate)",
+        "Stage 3 (Advanced)",
+        "Terminal"
+      ]
+    },
+    "values": [
+      [
+        0.8529411764705882,
+        0.7727272727272727,
+        0.994667343829355,
+        0.40292397660818713
+      ],
+      [
+        0.14705882352941177,
+        0.22727272727272727,
+        0.005332656170644997,
+        0.5970760233918129
+      ]
+    ]
+  }
+}

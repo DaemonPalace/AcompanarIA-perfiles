@@ -28,6 +28,82 @@ except ImportError:
     pd = None
     refactor_mod = None
 
+TCGA_BASELINE_PATH = os.path.join(REPO_ROOT, "data", "tcga_parsed", "baseline_profile.csv")
+_dcr_reference_cache = None
+
+
+def _stage_to_bucket(raw):
+    if not isinstance(raw, str) or not raw.startswith("Stage "):
+        return None
+    code = raw[len("Stage "):]
+    if code.startswith("IV"):
+        return "Terminal"
+    if code.startswith("III"):
+        return "Stage 3 (Advanced)"
+    if code.startswith("II"):
+        return "Stage 2 (Moderate)"
+    if code.startswith("I"):
+        return "Stage 1 (Mild)"
+    return None
+
+
+def _age_to_bracket(age_years):
+    if age_years is None or (isinstance(age_years, float) and pd.isna(age_years)):
+        return None
+    age_years = float(age_years)
+    if age_years <= 35:
+        return "18-35"
+    if age_years <= 55:
+        return "36-55"
+    if age_years <= 70:
+        return "56-70"
+    return "71+"
+
+
+def _ajcc_m_to_metastatic(raw):
+    if not isinstance(raw, str):
+        return None
+    raw = raw.strip()
+    if raw in ("M0", "cM0 (i+)"):
+        return "No"
+    if raw.startswith("M1"):
+        return "Yes"
+    return None
+
+
+def _get_dcr_reference_rows():
+    """Builds the real_data-tier reference set for privacy.real_data_dcr_audit()
+    from data/tcga_parsed/baseline_profile.csv, using the same category encoding
+    training/train_ecog_bn.py and train_metastatic_bn.py fit their models on.
+    data/ is gitignored and won't exist in a deployed container — returns None
+    rather than raising, so /api/analyze degrades gracefully without it."""
+    global _dcr_reference_cache
+    if _dcr_reference_cache is not None:
+        return _dcr_reference_cache
+    if pd is None or not os.path.isfile(TCGA_BASELINE_PATH):
+        return None
+    try:
+        df = pd.read_csv(TCGA_BASELINE_PATH)
+        rows = []
+        for _, r in df.iterrows():
+            rows.append({
+                "disease_stage": _stage_to_bucket(r.get("ajcc_pathologic_stage")),
+                "age_bracket": _age_to_bracket(r.get("age_at_diagnosis_years")),
+                "gender": {"male": "Male", "female": "Female"}.get(
+                    str(r.get("sex_at_birth") or "").strip().lower()
+                ),
+                "has_chemo": {"True": "Yes", "False": "No"}.get(str(r.get("has_chemo"))),
+                "metastatic_disease": _ajcc_m_to_metastatic(r.get("ajcc_m")),
+                "ecog_performance_status": (
+                    int(r["baseline_ecog"]) if pd.notna(r.get("baseline_ecog")) else None
+                ),
+            })
+        _dcr_reference_cache = rows
+        return rows
+    except Exception as e:
+        sys.stderr.write(f"DCR reference load skipped: {e}\n")
+        return None
+
 
 def _apply_refactor(rows, nodes, seed):
     """Post-process engine.generate()'s output through refactor_synthetic_dataset's
@@ -198,6 +274,13 @@ class Handler(BaseHTTPRequestHandler):
         privacy_result = privacy.privacy_audit(schema, rows)
         consistency_result = clinical_consistency.consistency_audit(rows)
 
+        dcr_reference = _get_dcr_reference_rows()
+        dcr_result = (
+            privacy.real_data_dcr_audit(schema, dcr_reference, rows)
+            if dcr_reference is not None
+            else {"warnings": [], "flags": {}, "note": "Reference data not available in this environment (data/ is gitignored, dev-only)."}
+        )
+
         self._send_json(200, {
             "n": len(rows),
             "numeric": summary["numeric"],
@@ -205,6 +288,7 @@ class Handler(BaseHTTPRequestHandler):
             "correlations": summary["correlations"],
             "privacy": privacy_result,
             "consistency": consistency_result,
+            "dcr": dcr_result,
         })
 
     def _handle_save_schema(self):

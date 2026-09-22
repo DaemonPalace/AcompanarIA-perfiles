@@ -74,7 +74,7 @@ def check_pharmacology_vs_severity(rows):
     """Opioid/sedation intensity should track pain/disease severity, not occur
     by base-rate chance regardless of it (found via manual QA: "Severe Opioid
     & Sedation Toxicity in Early Stages")."""
-    if not _present(rows, "disease_stage", "metastatic_disease", "chemotherapy_current",
+    if not _present(rows, "disease_stage", "metastatic_disease", "has_chemo",
                      "sedation_level", "chronic_pain"):
         return None
     n = len(rows)
@@ -82,7 +82,7 @@ def check_pharmacology_vs_severity(rows):
         r for r in rows
         if r.get("disease_stage") == "Stage 1 (Mild)"
         and r.get("metastatic_disease") == "No"
-        and r.get("chemotherapy_current") == "No"
+        and r.get("has_chemo") == "No"
         and (r.get("sedation_level") or 0) >= 8
         and (r.get("chronic_pain") or 0) <= 6
     ]

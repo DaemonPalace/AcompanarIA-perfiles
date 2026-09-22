@@ -1,15 +1,15 @@
 {
   "metadata": {
     "model_name": "Palliative Care Baseline",
-    "version": "1.3.0",
-    "last_modified": "2026-09-02"
+    "version": "1.4.0",
+    "last_modified": "2026-09-03"
   },
   "nodes": [
     {
       "id": "disease_stage",
       "label": "Disease Stage",
       "category": "clinical",
-      "desc": "Clinical stage of advance of the base disease, from mild to terminal.",
+      "desc": "Clinical stage of advance of the base disease, from mild to terminal. Recalibrated to real TCGA stage distribution (heavily skewed Advanced/Terminal, consistent with a palliative population) as of Stage 2.",
       "type": "categorical",
       "categories": [
         "Stage 1 (Mild)",
@@ -18,11 +18,13 @@
         "Terminal"
       ],
       "probabilities": [
-        0.25,
-        0.35,
-        0.25,
-        0.15
-      ]
+        0.0045,
+        0.0029,
+        0.66,
+        0.3326
+      ],
+      "evidence_tier": "real_data",
+      "ref": "data/tcga_parsed/baseline_profile.csv ajcc_pathologic_stage, n=2438/2591 (94% coverage) (Stage 2 Tier A)"
     },
     {
       "id": "depressive_diagnosis_dsm5",
@@ -41,7 +43,8 @@
         0.2,
         0.25,
         0.15
-      ]
+      ],
+      "evidence_tier": "literature"
     },
     {
       "id": "depressive_episode_type",
@@ -58,7 +61,8 @@
         0.3,
         0.55,
         0.15
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "psychiatric_comorbidities",
@@ -77,7 +81,8 @@
         0.08,
         0.07,
         0.45
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "somatic_symptoms_cluster",
@@ -100,7 +105,8 @@
         0.25,
         0.1,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "metastatic_disease",
@@ -115,22 +121,31 @@
       "probabilities": [
         0.45,
         0.55
-      ]
+      ],
+      "evidence_tier": "real_data",
+      "model_ref": {
+        "model": "metastatic_bn.pkl",
+        "predictors": [
+          "disease_stage"
+        ]
+      }
     },
     {
-      "id": "chemotherapy_current",
-      "label": "Current Chemotherapy",
+      "id": "has_chemo",
+      "label": "Chemotherapy History",
       "category": "oncology",
-      "desc": "Whether the patient is currently receiving chemotherapy or other active oncological treatment.",
+      "desc": "Whether the patient has ever received chemotherapy in their treatment history (TCGA measures treatment history, not point-in-time active status — renamed from chemotherapy_current to honestly reflect that).",
       "type": "binary",
       "categories": [
         "No",
         "Yes"
       ],
       "probabilities": [
-        0.6,
-        0.4
-      ]
+        0.6368,
+        0.3632
+      ],
+      "evidence_tier": "real_data",
+      "ref": "data/tcga_parsed/baseline_profile.csv has_chemo field, n=2591, 100% coverage (Stage 2 Tier A)"
     },
     {
       "id": "cancer_type_breast",
@@ -145,7 +160,8 @@
       "probabilities": [
         0.79,
         0.21
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_lung",
@@ -160,7 +176,8 @@
       "probabilities": [
         0.82,
         0.18
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_gastrointestinal",
@@ -175,7 +192,8 @@
       "probabilities": [
         0.76,
         0.24
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_genitourinary",
@@ -190,7 +208,8 @@
       "probabilities": [
         0.9,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_gynecological",
@@ -205,7 +224,8 @@
       "probabilities": [
         0.96,
         0.04
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_hematologic",
@@ -220,7 +240,8 @@
       "probabilities": [
         0.97,
         0.03
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "cancer_type_other_site",
@@ -235,7 +256,8 @@
       "probabilities": [
         0.79,
         0.21
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "psychoactive_medication",
@@ -254,7 +276,8 @@
         0.2,
         0.1,
         0.25
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "opioid_use",
@@ -269,7 +292,8 @@
       "probabilities": [
         0.65,
         0.35
-      ]
+      ],
+      "evidence_tier": "literature"
     },
     {
       "id": "antiemetic_use",
@@ -284,7 +308,8 @@
       "probabilities": [
         0.7,
         0.3
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "opioid_induced_constipation",
@@ -297,7 +322,8 @@
         10
       ],
       "baseline_mean": 3,
-      "baseline_std": 2.5
+      "baseline_std": 2.5,
+      "evidence_tier": "literature"
     },
     {
       "id": "sedation_level",
@@ -310,7 +336,8 @@
         10
       ],
       "baseline_mean": 3,
-      "baseline_std": 2.3
+      "baseline_std": 2.3,
+      "evidence_tier": "literature"
     },
     {
       "id": "nutritional_status_mna",
@@ -323,7 +350,8 @@
         14
       ],
       "baseline_mean": 14,
-      "baseline_std": 1.2
+      "baseline_std": 1.2,
+      "evidence_tier": "literature"
     },
     {
       "id": "functional_autonomy_adl",
@@ -336,7 +364,8 @@
         100
       ],
       "baseline_mean": 100,
-      "baseline_std": 8
+      "baseline_std": 8,
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "instrumental_autonomy_iadl",
@@ -349,7 +378,8 @@
         8
       ],
       "baseline_mean": 4,
-      "baseline_std": 2
+      "baseline_std": 2,
+      "evidence_tier": "literature"
     },
     {
       "id": "cognitive_function_mmse",
@@ -362,7 +392,8 @@
         30
       ],
       "baseline_mean": 27,
-      "baseline_std": 2.5
+      "baseline_std": 2.5,
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "mmse_unevaluable",
@@ -377,7 +408,8 @@
       "probabilities": [
         0.9,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "ecog_performance_status",
@@ -417,7 +449,8 @@
         0.3,
         0.25,
         0.15
-      ]
+      ],
+      "evidence_tier": "literature"
     },
     {
       "id": "fine_motor_control",
@@ -434,7 +467,8 @@
         0.4,
         0.35,
         0.25
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "communication_capacity",
@@ -453,7 +487,8 @@
         0.25,
         0.15,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "chronic_pain",
@@ -466,7 +501,8 @@
         10
       ],
       "baseline_mean": 4,
-      "baseline_std": 2.6
+      "baseline_std": 2.6,
+      "evidence_tier": "literature"
     },
     {
       "id": "fatigue",
@@ -479,7 +515,8 @@
         10
       ],
       "baseline_mean": 5,
-      "baseline_std": 2.4
+      "baseline_std": 2.4,
+      "evidence_tier": "literature"
     },
     {
       "id": "appetite_loss",
@@ -492,7 +529,8 @@
         10
       ],
       "baseline_mean": 3.8,
-      "baseline_std": 2.6
+      "baseline_std": 2.6,
+      "evidence_tier": "literature"
     },
     {
       "id": "nausea_vomiting",
@@ -505,7 +543,8 @@
         10
       ],
       "baseline_mean": 2.5,
-      "baseline_std": 2.3
+      "baseline_std": 2.3,
+      "evidence_tier": "literature"
     },
     {
       "id": "dyspnea",
@@ -518,7 +557,8 @@
         10
       ],
       "baseline_mean": 3,
-      "baseline_std": 2.4
+      "baseline_std": 2.4,
+      "evidence_tier": "literature"
     },
     {
       "id": "drowsiness",
@@ -531,7 +571,8 @@
         10
       ],
       "baseline_mean": 3.5,
-      "baseline_std": 2.3
+      "baseline_std": 2.3,
+      "evidence_tier": "literature"
     },
     {
       "id": "insomnia_severity",
@@ -544,7 +585,8 @@
         10
       ],
       "baseline_mean": 4,
-      "baseline_std": 2.5
+      "baseline_std": 2.5,
+      "evidence_tier": "literature"
     },
     {
       "id": "depression_severity_index",
@@ -557,7 +599,8 @@
         27
       ],
       "baseline_mean": 10,
-      "baseline_std": 6
+      "baseline_std": 6,
+      "evidence_tier": "literature"
     },
     {
       "id": "anxiety_level",
@@ -570,7 +613,8 @@
         10
       ],
       "baseline_mean": 4.5,
-      "baseline_std": 2.3
+      "baseline_std": 2.3,
+      "evidence_tier": "literature"
     },
     {
       "id": "suicidal_ideation_risk",
@@ -583,7 +627,8 @@
         10
       ],
       "baseline_mean": 2,
-      "baseline_std": 2
+      "baseline_std": 2,
+      "evidence_tier": "literature"
     },
     {
       "id": "spiritual_pain",
@@ -596,7 +641,8 @@
         10
       ],
       "baseline_mean": 3,
-      "baseline_std": 2.5
+      "baseline_std": 2.5,
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "distress_level",
@@ -609,7 +655,8 @@
         10
       ],
       "baseline_mean": 5,
-      "baseline_std": 2
+      "baseline_std": 2,
+      "evidence_tier": "literature"
     },
     {
       "id": "loneliness",
@@ -622,7 +669,8 @@
         10
       ],
       "baseline_mean": 5,
-      "baseline_std": 2.2
+      "baseline_std": 2.2,
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "death_anxiety",
@@ -635,7 +683,8 @@
         10
       ],
       "baseline_mean": 4.5,
-      "baseline_std": 2.3
+      "baseline_std": 2.3,
+      "evidence_tier": "literature"
     },
     {
       "id": "meaning_in_life",
@@ -648,7 +697,8 @@
         10
       ],
       "baseline_mean": 5.5,
-      "baseline_std": 2.2
+      "baseline_std": 2.2,
+      "evidence_tier": "literature"
     },
     {
       "id": "caregiver_burnout_zarit",
@@ -661,7 +711,8 @@
         88
       ],
       "baseline_mean": 38,
-      "baseline_std": 16
+      "baseline_std": 16,
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "caregiver_type",
@@ -680,7 +731,8 @@
         0.2,
         0.05,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "caregiver_contact_frequency",
@@ -699,7 +751,8 @@
         0.3,
         0.2,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "caregiver_detected_signals",
@@ -720,7 +773,8 @@
         0.15,
         0.2,
         0.15
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "relationship_quality",
@@ -739,7 +793,8 @@
         0.35,
         0.2,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "family_support_network",
@@ -758,7 +813,8 @@
         0.4,
         0.25,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "age_bracket",
@@ -773,17 +829,19 @@
         "71+"
       ],
       "probabilities": [
-        0.1,
-        0.25,
-        0.35,
-        0.3
-      ]
+        0.0287,
+        0.2491,
+        0.4203,
+        0.3019
+      ],
+      "evidence_tier": "real_data",
+      "ref": "data/tcga_parsed/baseline_profile.csv age_at_diagnosis_years, n=2577/2591 (99% coverage) (Stage 2 Tier A)"
     },
     {
       "id": "gender",
       "label": "Gender",
       "category": "demographic",
-      "desc": "Patient's gender identity.",
+      "desc": "Patient's gender identity. Female/Male portion recalibrated to TCGA sex-at-birth distribution as of Stage 2 (TCGA cannot inform gender identity, so Non-binary/Prefer not to say keep their literature-estimated share unchanged).",
       "type": "categorical",
       "categories": [
         "Female",
@@ -792,11 +850,13 @@
         "Prefer not to say"
       ],
       "probabilities": [
-        0.52,
-        0.45,
+        0.4096,
+        0.5604,
         0.02,
         0.01
-      ]
+      ],
+      "evidence_tier": "real_data",
+      "ref": "data/tcga_parsed/baseline_profile.csv sex_at_birth, n=2591 (100% coverage), rescaled within F/M only (Stage 2 Tier A)"
     },
     {
       "id": "living_environment",
@@ -815,7 +875,8 @@
         0.15,
         0.1,
         0.2
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "socioeconomic_level",
@@ -832,7 +893,8 @@
         0.4,
         0.4,
         0.2
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "education_level",
@@ -853,7 +915,8 @@
         0.35,
         0.2,
         0.05
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "religiosity",
@@ -872,7 +935,8 @@
         0.35,
         0.2,
         0.1
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "native_language",
@@ -889,21 +953,11 @@
         0.9,
         0.05,
         0.05
-      ]
+      ],
+      "evidence_tier": "clinical_estimate"
     }
   ],
   "edges": [
-    {
-      "id": "e_disease_stage_metastatic_disease",
-      "source": "disease_stage",
-      "target": "metastatic_disease",
-      "relationType": "compound",
-      "strength": "strong",
-      "weight": 1,
-      "formula": "target = 'No' if source <= 1 else target",
-      "desc": "Stage 1 (Mild) and Stage 2 (Moderate) disease are non-metastatic by definition; metastatic spread only occurs from Stage 3 onward.",
-      "ref": "TNM staging convention (Stage I/II = localized, no distant metastasis by definition; distant metastasis defines Stage IV/terminal disease)"
-    },
     {
       "id": "e_metastatic_disease_chronic_pain",
       "source": "metastatic_disease",
@@ -913,18 +967,20 @@
       "weight": 1.5,
       "formula": "target += source * weight",
       "desc": "Metastatic disease increases baseline chronic pain intensity.",
-      "ref": "Article_27 (pain present in 79-96% of advanced cancer patients)"
+      "ref": "Article_27 (pain present in 79-96% of advanced cancer patients)",
+      "evidence_tier": "literature"
     },
     {
-      "id": "e_chemotherapy_current_fatigue",
-      "source": "chemotherapy_current",
+      "id": "e_has_chemo_fatigue",
+      "source": "has_chemo",
       "target": "fatigue",
       "relationType": "causal",
       "strength": "strong",
       "weight": 0.725,
       "formula": "target += source * weight",
       "desc": "Active chemotherapy is one of the nutrition-impact symptoms most strongly associated with higher fatigue burden.",
-      "ref": "Article_14 (fatigue among strongest NIS associations with depression, p<0.001)"
+      "ref": "Article_14 (fatigue among strongest NIS associations with depression, p<0.001)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_chronic_pain_fatigue",
@@ -935,7 +991,8 @@
       "weight": 0.145,
       "formula": "target += source * weight",
       "desc": "Chronic pain contributes to the overall symptom-burden cluster that includes fatigue.",
-      "ref": "Article_27 / clinical symptom-cluster estimate"
+      "ref": "Article_27 / clinical symptom-cluster estimate",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_opioid_use_drowsiness",
@@ -946,7 +1003,8 @@
       "weight": 0.8,
       "formula": "target += source * weight",
       "desc": "Opioid analgesics commonly induce daytime drowsiness as a class effect.",
-      "ref": "Article_14 / Article_27 (drowsiness as a nutrition-impact/opioid-related symptom)"
+      "ref": "Article_14 / Article_27 (drowsiness as a nutrition-impact/opioid-related symptom)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_fatigue_drowsiness",
@@ -957,7 +1015,8 @@
       "weight": 0.12,
       "formula": "target += source * weight",
       "desc": "Fatigue and drowsiness co-occur within the same symptom cluster.",
-      "ref": "Article_27 (drowsiness/fatigue symptom cluster)"
+      "ref": "Article_27 (drowsiness/fatigue symptom cluster)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_opioid_use_sedation_level",
@@ -968,7 +1027,8 @@
       "weight": 2.5,
       "formula": "target += source * weight",
       "desc": "Opioid analgesics are a leading pharmacological cause of sedation in palliative patients.",
-      "ref": "Article_29 (opioid use context) / clinical pharmacology"
+      "ref": "Article_29 (opioid use context) / clinical pharmacology",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_opioid_use_opioid_induced_constipation",
@@ -979,7 +1039,8 @@
       "weight": 6,
       "formula": "target += source * weight",
       "desc": "Constipation is the most common and persistent opioid side effect (class effect).",
-      "ref": "Article_29 (opioid use context) / clinical pharmacology"
+      "ref": "Article_29 (opioid use context) / clinical pharmacology",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_chronic_pain_appetite_loss",
@@ -990,7 +1051,8 @@
       "weight": 0.0675,
       "formula": "target += source * weight",
       "desc": "Pain contributes modestly to appetite suppression within the symptom-burden cluster.",
-      "ref": "js/schema.js clinical estimate (dolor|perdida_apetito)"
+      "ref": "js/schema.js clinical estimate (dolor|perdida_apetito)",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_fatigue_appetite_loss",
@@ -1001,18 +1063,20 @@
       "weight": 0.0993,
       "formula": "target += source * weight",
       "desc": "Fatigue and appetite loss co-occur as part of the EORTC-style symptom cluster.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster, OR 1.12-1.24)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster, OR 1.12-1.24)",
+      "evidence_tier": "literature"
     },
     {
-      "id": "e_chemotherapy_current_nausea_vomiting",
-      "source": "chemotherapy_current",
+      "id": "e_has_chemo_nausea_vomiting",
+      "source": "has_chemo",
       "target": "nausea_vomiting",
       "relationType": "causal",
       "strength": "strong",
       "weight": 2,
       "formula": "target += source * weight",
       "desc": "Chemotherapy is a leading cause of treatment-related nausea and vomiting.",
-      "ref": "Article_14 (nausea among strongest NIS associations with depression, p<0.001)"
+      "ref": "Article_14 (nausea among strongest NIS associations with depression, p<0.001)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_lung_dyspnea",
@@ -1023,7 +1087,8 @@
       "weight": 2,
       "formula": "target += source * weight",
       "desc": "Lung as primary cancer site directly increases baseline dyspnea/breathlessness burden.",
-      "ref": "Article_27 (Delgado-Guay et al., lung = largest single site at 37% of sample, dyspnea a core ESAS symptom tracked) / Article_29 (EPCRC, pulmonary diagnosis 17.8%, breathlessness measured as core symptom)"
+      "ref": "Article_27 (Delgado-Guay et al., lung = largest single site at 37% of sample, dyspnea a core ESAS symptom tracked) / Article_29 (EPCRC, pulmonary diagnosis 17.8%, breathlessness measured as core symptom)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_lung_depression_severity_index",
@@ -1034,7 +1099,8 @@
       "weight": 1,
       "formula": "target += source * weight",
       "desc": "Lung cancer patients show higher depression risk than breast cancer patients in adjusted analysis, used here as the higher-risk reference site.",
-      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 — lung as reference category)"
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021 — lung as reference category)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_breast_depression_severity_index",
@@ -1045,7 +1111,8 @@
       "weight": 0.8,
       "formula": "target -= source * weight",
       "desc": "Breast cancer diagnosis is associated with markedly lower depression risk relative to lung cancer in adjusted analysis.",
-      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021)"
+      "ref": "Article_21 (Atinafu et al., Ethiopia: breast cancer vs. lung cancer adjusted OR 0.1 for depression, p=0.021)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_gastrointestinal_nausea_vomiting",
@@ -1056,7 +1123,8 @@
       "weight": 2,
       "formula": "target += source * weight",
       "desc": "Gastrointestinal/hepatobiliary/pancreatic primary sites directly increase baseline nausea and vomiting burden.",
-      "ref": "Article_14 (Amano et al., liver/biliary/pancreas 15.5% + GI tract 14.6% of sample, nausea among strongest NIS associations, p<0.001) / Article_29 (EPCRC, GI 30.4% largest single diagnosis category, nausea measured as core symptom)"
+      "ref": "Article_14 (Amano et al., liver/biliary/pancreas 15.5% + GI tract 14.6% of sample, nausea among strongest NIS associations, p<0.001) / Article_29 (EPCRC, GI 30.4% largest single diagnosis category, nausea measured as core symptom)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_gastrointestinal_appetite_loss",
@@ -1067,7 +1135,8 @@
       "weight": 1.06,
       "formula": "target += source * weight",
       "desc": "Gastrointestinal/hepatobiliary/pancreatic primary sites are the classic drivers of cancer cachexia and appetite loss.",
-      "ref": "Article_14 (Amano et al., cachexia/refractory cachexia present in 47% of sample dominated by liver/biliary/pancreas/GI sites; lack of appetite p<0.001) / Article_29 (EPCRC, GI 30.4% dominant diagnosis, loss of appetite measured as core symptom, univariate beta -0.32***)"
+      "ref": "Article_14 (Amano et al., cachexia/refractory cachexia present in 47% of sample dominated by liver/biliary/pancreas/GI sites; lack of appetite p<0.001) / Article_29 (EPCRC, GI 30.4% dominant diagnosis, loss of appetite measured as core symptom, univariate beta -0.32***)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_genitourinary_chronic_pain",
@@ -1078,7 +1147,8 @@
       "weight": 0.8,
       "formula": "target += source * weight",
       "desc": "Genitourinary/prostate primary sites (with common bone/pelvic involvement) contribute to chronic pain burden.",
-      "ref": "Article_27 (Delgado-Guay et al., genitourinary 14% of sample, pain present in 79-96% of the overall advanced-cancer cohort)"
+      "ref": "Article_27 (Delgado-Guay et al., genitourinary 14% of sample, pain present in 79-96% of the overall advanced-cancer cohort)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_gynecological_chronic_pain",
@@ -1089,7 +1159,8 @@
       "weight": 2,
       "formula": "target += source * weight",
       "desc": "Advanced gynecological cancer (ovary/cervix/uterus) directly increases chronic pain burden.",
-      "ref": "Article_26 (Chan et al., advanced gynecological cancer cohort: pain the most commonly reported physical symptom at 72%, median PPS only 40%)"
+      "ref": "Article_26 (Chan et al., advanced gynecological cancer cohort: pain the most commonly reported physical symptom at 72%, median PPS only 40%)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_gynecological_depression_severity_index",
@@ -1100,7 +1171,8 @@
       "weight": 1.2,
       "formula": "target += source * weight",
       "desc": "Advanced gynecological cancer is associated with markedly elevated depression burden relative to the general advanced-cancer population.",
-      "ref": "Article_26 (Chan et al., HK gynecological cancer cohort: depression prevalence 62%, one of the highest in the audited corpus; stage IV 73.6% of sample)"
+      "ref": "Article_26 (Chan et al., HK gynecological cancer cohort: depression prevalence 62%, one of the highest in the audited corpus; stage IV 73.6% of sample)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cancer_type_hematologic_fatigue",
@@ -1111,7 +1183,8 @@
       "weight": 0.725,
       "formula": "target += source * weight",
       "desc": "Hematologic malignancies (leukemia/lymphoma) are classically associated with severe fatigue burden.",
-      "ref": "Article_25 (Bužgová et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus"
+      "ref": "Article_25 (Bužgová et al., hematopoiesis 8.0% of advanced-cancer sample) / general oncology-hematology fatigue-burden literature cited across the corpus",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_fatigue_nausea_vomiting",
@@ -1122,7 +1195,8 @@
       "weight": 0.163,
       "formula": "target += source * weight",
       "desc": "Fatigue and nausea co-occur within the EORTC-style symptom cluster.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (EORTC symptom cluster)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_appetite_loss_nausea_vomiting",
@@ -1133,7 +1207,8 @@
       "weight": 0.195,
       "formula": "target += source * weight",
       "desc": "Appetite loss and nausea/vomiting are linked within the EORTC-style symptom cluster.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.12 / 1.21-1.22)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.12 / 1.21-1.22)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_antiemetic_use_nausea_vomiting",
@@ -1144,7 +1219,8 @@
       "weight": 2,
       "formula": "target -= source * weight",
       "desc": "Antiemetic medication reduces nausea/vomiting intensity.",
-      "ref": "Standard palliative-care symptom management practice"
+      "ref": "Standard palliative-care symptom management practice",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_ecog_performance_status_dyspnea",
@@ -1155,7 +1231,8 @@
       "weight": 1,
       "formula": "target += source * weight",
       "desc": "Worse performance status is associated with greater dyspnea burden in advanced disease.",
-      "ref": "Article 16 (symptom burden in advanced cancer) / Article_27"
+      "ref": "Article 16 (symptom burden in advanced cancer) / Article_27",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_fatigue_insomnia_severity",
@@ -1166,7 +1243,8 @@
       "weight": 0.153,
       "formula": "target += source * weight",
       "desc": "Fatigue and insomnia frequently co-occur as depressive somatic symptoms.",
-      "ref": "DSM-5 Criterion A4 (insomnia/hypersomnia) and A6 (fatigue)"
+      "ref": "DSM-5 Criterion A4 (insomnia/hypersomnia) and A6 (fatigue)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_chronic_pain_insomnia_severity",
@@ -1177,7 +1255,8 @@
       "weight": 0.1275,
       "formula": "target += source * weight",
       "desc": "Unmanaged pain disrupts sleep onset and maintenance.",
-      "ref": "Clinical estimate; consistent with DSM-5 somatic symptom criteria"
+      "ref": "Clinical estimate; consistent with DSM-5 somatic symptom criteria",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_appetite_loss_nutritional_status_mna",
@@ -1188,7 +1267,8 @@
       "weight": 0.55,
       "formula": "target -= source * weight",
       "desc": "Persistent appetite loss degrades MNA-SF nutritional status score.",
-      "ref": "Clinical estimate grounded in Article_14 (nutrition impact symptoms)"
+      "ref": "Clinical estimate grounded in Article_14 (nutrition impact symptoms)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_nausea_vomiting_nutritional_status_mna",
@@ -1199,7 +1279,8 @@
       "weight": 0.35,
       "formula": "target -= source * weight",
       "desc": "Nausea and vomiting reduce oral intake and worsen nutritional status.",
-      "ref": "Article_14 (nutrition impact symptoms and depression association)"
+      "ref": "Article_14 (nutrition impact symptoms and depression association)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_nutritional_status_mna_instrumental_autonomy_iadl",
@@ -1210,7 +1291,8 @@
       "weight": 0.4173,
       "formula": "target += source * weight",
       "desc": "Better nutritional status predicts greater instrumental autonomy (Lawton IADL).",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.626"
+      "ref": "Efendioglu et al. 2021, Table 3, r=.626",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_nutritional_status_mna_depression_severity_index",
@@ -1221,7 +1303,8 @@
       "weight": 0.169,
       "formula": "target -= source * weight",
       "desc": "Better nutritional status strongly predicts lower depression severity.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=-.750"
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.750",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_functional_autonomy_adl_instrumental_autonomy_iadl",
@@ -1232,7 +1315,8 @@
       "weight": 0.0762,
       "formula": "target += source * weight",
       "desc": "Greater ADL independence strongly predicts greater IADL independence.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=.838"
+      "ref": "Efendioglu et al. 2021, Table 3, r=.838",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_functional_autonomy_adl_depression_severity_index",
@@ -1243,7 +1327,8 @@
       "weight": 0.0253,
       "formula": "target -= source * weight",
       "desc": "Greater ADL independence strongly predicts lower depression severity.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=-.820"
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.820",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_instrumental_autonomy_iadl_depression_severity_index",
@@ -1254,7 +1339,8 @@
       "weight": 0.208,
       "formula": "target -= source * weight",
       "desc": "Greater IADL independence strongly predicts lower depression severity.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=-.614"
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.614",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_cognitive_function_mmse_depression_severity_index",
@@ -1265,7 +1351,8 @@
       "weight": 0.037,
       "formula": "target -= source * weight",
       "desc": "Better cognitive function is weakly associated with lower depression severity.",
-      "ref": "Efendioglu et al. 2021, Table 3, r=-.273"
+      "ref": "Efendioglu et al. 2021, Table 3, r=-.273",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_fatigue_depression_severity_index",
@@ -1276,7 +1363,8 @@
       "weight": 0.475,
       "formula": "target += source * weight",
       "desc": "Higher fatigue is associated with greater depression severity.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.20-1.24)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (OR 1.20-1.24)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_spiritual_pain_meaning_in_life",
@@ -1287,7 +1375,8 @@
       "weight": 0.193,
       "formula": "target -= source * weight",
       "desc": "Higher spiritual pain erodes the patient's sense of meaning in life.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019 (spiritual pain decreases quality of life)"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019 (spiritual pain decreases quality of life)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_spiritual_pain_distress_level",
@@ -1298,7 +1387,8 @@
       "weight": 0.1125,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering contributes to overall emotional distress.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_chronic_pain_distress_level",
@@ -1309,7 +1399,8 @@
       "weight": 0.101,
       "formula": "target += source * weight",
       "desc": "Chronic pain intensity is moderately correlated with emotional distress/anxiety.",
-      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_depression_severity_index_distress_level",
@@ -1320,7 +1411,8 @@
       "weight": 0.035,
       "formula": "target += source * weight",
       "desc": "Higher depression severity is associated with greater day-to-day distress.",
-      "ref": "js/schema.js clinical estimate, moderated for system consistency"
+      "ref": "js/schema.js clinical estimate, moderated for system consistency",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_distress_level_death_anxiety",
@@ -1331,7 +1423,8 @@
       "weight": 0.1032,
       "formula": "target += source * weight",
       "desc": "Higher general distress is associated with greater fear of death.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_spiritual_pain_death_anxiety",
@@ -1342,7 +1435,8 @@
       "weight": 0.1224,
       "formula": "target += source * weight",
       "desc": "Spiritual/existential suffering amplifies fear of death.",
-      "ref": "Article 39 / Pérez-Cruz et al. 2019"
+      "ref": "Article 39 / Pérez-Cruz et al. 2019",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_distress_level_meaning_in_life",
@@ -1353,7 +1447,8 @@
       "weight": 0.0673,
       "formula": "target -= source * weight",
       "desc": "Higher distress is associated with lower sense of meaning (existential void).",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_distress_level_anxiety_level",
@@ -1364,7 +1459,8 @@
       "weight": 0.188,
       "formula": "target += source * weight",
       "desc": "General distress is strongly correlated with anxiety symptom intensity.",
-      "ref": "Article_27 (HADS-A x ESAS-Anxiety item, r=0.56, p<0.001)"
+      "ref": "Article_27 (HADS-A x ESAS-Anxiety item, r=0.56, p<0.001)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_chronic_pain_anxiety_level",
@@ -1375,7 +1471,8 @@
       "weight": 0.09,
       "formula": "target += source * weight",
       "desc": "Pain intensity is moderately correlated with anxiety.",
-      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_nausea_vomiting_anxiety_level",
@@ -1386,7 +1483,8 @@
       "weight": 0.088,
       "formula": "target += source * weight",
       "desc": "Nausea/vomiting is one of the symptoms most distinctly elevated in anxious patients.",
-      "ref": "Article_27 (anxiety patients show elevated nausea/pain/dyspnea)"
+      "ref": "Article_27 (anxiety patients show elevated nausea/pain/dyspnea)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_dyspnea_anxiety_level",
@@ -1397,7 +1495,8 @@
       "weight": 0.084,
       "formula": "target += source * weight",
       "desc": "Dyspnea is moderately correlated with anxiety symptom intensity.",
-      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)"
+      "ref": "Article_27 (HADS-A x ESAS symptom correlations, r=0.25-0.5)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_distress_level_loneliness",
@@ -1408,7 +1507,8 @@
       "weight": 0.242,
       "formula": "target += source * weight",
       "desc": "Higher distress is associated with greater sense of loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_meaning_in_life_loneliness",
@@ -1419,7 +1519,8 @@
       "weight": 0.14,
       "formula": "target -= source * weight",
       "desc": "Greater sense of meaning is associated with lower loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_loneliness_caregiver_burnout_zarit",
@@ -1430,7 +1531,8 @@
       "weight": 1.2364,
       "formula": "target += source * weight",
       "desc": "Higher patient loneliness is associated with greater caregiver burden.",
-      "ref": "js/schema.js clinical estimate (burnout_zarit|soledad)"
+      "ref": "js/schema.js clinical estimate (burnout_zarit|soledad)",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_depression_severity_index_suicidal_ideation_risk",
@@ -1441,7 +1543,8 @@
       "weight": 0.15,
       "formula": "target += source * weight",
       "desc": "Depression severity is the strongest driver of suicidal ideation risk.",
-      "ref": "DSM-5 Criterion A9 (recurrent thoughts of death/suicidal ideation) / Article 32 (self-harm thoughts strongly associated with higher PHQ-9 scores)"
+      "ref": "DSM-5 Criterion A9 (recurrent thoughts of death/suicidal ideation) / Article 32 (self-harm thoughts strongly associated with higher PHQ-9 scores)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_distress_level_suicidal_ideation_risk",
@@ -1452,7 +1555,8 @@
       "weight": 0.05,
       "formula": "target += source * weight",
       "desc": "Acute emotional distress amplifies suicidal ideation risk.",
-      "ref": "Clinical estimate consistent with DSM-5 risk factors"
+      "ref": "Clinical estimate consistent with DSM-5 risk factors",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_loneliness_suicidal_ideation_risk",
@@ -1463,7 +1567,8 @@
       "weight": 0.04,
       "formula": "target += source * weight",
       "desc": "Social isolation/loneliness is a recognized risk factor for suicidal ideation.",
-      "ref": "Article 15 (family cohesion protective against anxiety/depression) / clinical risk-factor literature"
+      "ref": "Article 15 (family cohesion protective against anxiety/depression) / clinical risk-factor literature",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_meaning_in_life_suicidal_ideation_risk",
@@ -1474,7 +1579,8 @@
       "weight": 0.05,
       "formula": "target -= source * weight",
       "desc": "A stronger sense of meaning is protective against suicidal ideation.",
-      "ref": "ACOMPANAR_Algoritmo_v1.pdf (Logotherapy/Frankl rationale) / clinical estimate"
+      "ref": "ACOMPANAR_Algoritmo_v1.pdf (Logotherapy/Frankl rationale) / clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_socioeconomic_level_nutritional_status_mna",
@@ -1485,7 +1591,8 @@
       "weight": -0.3,
       "formula": null,
       "desc": "Lower socioeconomic stratum is associated with worse nutritional status.",
-      "ref": "Efendioglu et al. 2021 (OR=.10 for malnutrition in low-income patients)"
+      "ref": "Efendioglu et al. 2021 (OR=.10 for malnutrition in low-income patients)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_socioeconomic_level_depression_severity_index",
@@ -1496,7 +1603,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Lower socioeconomic stratum is associated with higher depression severity.",
-      "ref": "Efendioglu et al. 2021 (OR=.06 for depression in low-income patients)"
+      "ref": "Efendioglu et al. 2021 (OR=.06 for depression in low-income patients)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_age_bracket_nutritional_status_mna",
@@ -1507,7 +1615,8 @@
       "weight": -0.2,
       "formula": null,
       "desc": "Advanced age (71+) is associated with worse nutritional status.",
-      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)"
+      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_age_bracket_depression_severity_index",
@@ -1518,7 +1627,8 @@
       "weight": 0.2,
       "formula": null,
       "desc": "Advanced age (71+) is associated with higher depression severity.",
-      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)"
+      "ref": "Efendioglu et al. 2021 (subgroup analysis, age >=85)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_disease_stage_fatigue",
@@ -1529,7 +1639,8 @@
       "weight": 0.4,
       "formula": null,
       "desc": "Terminal-stage disease is associated with higher symptomatic fatigue burden.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_disease_stage_appetite_loss",
@@ -1540,7 +1651,8 @@
       "weight": 0.35,
       "formula": null,
       "desc": "Terminal-stage disease is associated with greater appetite loss.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_disease_stage_nausea_vomiting",
@@ -1551,7 +1663,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Terminal-stage disease is associated with greater nausea/vomiting burden.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage symptom burden)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_family_support_network_loneliness",
@@ -1562,7 +1675,8 @@
       "weight": -0.4,
       "formula": null,
       "desc": "Absence of a family support network is associated with greater loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_family_support_network_depression_severity_index",
@@ -1573,7 +1687,8 @@
       "weight": -0.25,
       "formula": null,
       "desc": "Absence of a family support network is associated with higher depression severity.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_mobility_functional_autonomy_adl",
@@ -1584,7 +1699,8 @@
       "weight": -0.5,
       "formula": null,
       "desc": "Being bedridden is definitionally associated with lower Barthel ADL scores.",
-      "ref": "js/schema.js definitional consistency estimate"
+      "ref": "js/schema.js definitional consistency estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_relationship_quality_loneliness",
@@ -1595,7 +1711,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "A conflictive caregiver relationship is associated with greater patient loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_communication_capacity_loneliness",
@@ -1606,7 +1723,8 @@
       "weight": 0.25,
       "formula": null,
       "desc": "Loss of verbal communication capacity is associated with greater loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_caregiver_detected_signals_depression_severity_index",
@@ -1617,7 +1735,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Caregiver-reported alert signals (crying, isolation, refusal to eat) proxy for higher depression severity.",
-      "ref": "Clinical estimate; ACOMPANAR_Algoritmo_v1.pdf (caregiver as primary sensor)"
+      "ref": "Clinical estimate; ACOMPANAR_Algoritmo_v1.pdf (caregiver as primary sensor)",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_psychiatric_comorbidities_anxiety_level",
@@ -1628,7 +1747,8 @@
       "weight": 0.4,
       "formula": null,
       "desc": "A comorbid anxiety disorder diagnosis correlates with higher measured anxiety level.",
-      "ref": "DSM-5 (depressive disorder 'with anxiety' specifier) / clinical estimate"
+      "ref": "DSM-5 (depressive disorder 'with anxiety' specifier) / clinical estimate",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_somatic_symptoms_cluster_insomnia_severity",
@@ -1639,7 +1759,8 @@
       "weight": 0.4,
       "formula": null,
       "desc": "Insomnia as the dominant somatic symptom cluster directly correlates with insomnia severity.",
-      "ref": "DSM-5 Criterion A4 (insomnia or hypersomnia nearly every day)"
+      "ref": "DSM-5 Criterion A4 (insomnia or hypersomnia nearly every day)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_somatic_symptoms_cluster_fatigue",
@@ -1650,7 +1771,8 @@
       "weight": 0.35,
       "formula": null,
       "desc": "Severe fatigue as the dominant somatic symptom cluster correlates with measured fatigue.",
-      "ref": "DSM-5 Criterion A6 (fatigue or loss of energy nearly every day)"
+      "ref": "DSM-5 Criterion A6 (fatigue or loss of energy nearly every day)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_psychoactive_medication_sedation_level",
@@ -1661,7 +1783,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Sedating psychoactive medications (antidepressants, anxiolytics, antipsychotics) correlate with higher sedation.",
-      "ref": "General clinical pharmacology"
+      "ref": "General clinical pharmacology",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_depressive_diagnosis_dsm5_depression_severity_index",
@@ -1672,7 +1795,8 @@
       "weight": 0.6,
       "formula": null,
       "desc": "A major depressive disorder diagnosis correlates strongly with a higher depression severity index.",
-      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psicótico, F32.0-F32.3)"
+      "ref": "DSM-5 severity specifiers (Leve/Moderado/Grave/Psicótico, F32.0-F32.3)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_religiosity_meaning_in_life",
@@ -1683,7 +1807,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Higher religiosity/spirituality is associated with a stronger sense of meaning in life.",
-      "ref": "ACOMPANAR_Algoritmo_v1.pdf (religiosity relevant to Logotherapy/existential approach)"
+      "ref": "ACOMPANAR_Algoritmo_v1.pdf (religiosity relevant to Logotherapy/existential approach)",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_caregiver_type_caregiver_burnout_zarit",
@@ -1694,7 +1819,8 @@
       "weight": 0.2,
       "formula": null,
       "desc": "Direct family caregivers tend to report higher burnout than professional caregivers.",
-      "ref": "Clinical estimate"
+      "ref": "Clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_caregiver_contact_frequency_caregiver_burnout_zarit",
@@ -1705,7 +1831,8 @@
       "weight": 0.25,
       "formula": null,
       "desc": "24/7 in-home caregiving contact is associated with higher caregiver burnout.",
-      "ref": "Clinical estimate"
+      "ref": "Clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_living_environment_loneliness",
@@ -1716,7 +1843,8 @@
       "weight": 0.2,
       "formula": null,
       "desc": "Living alone is associated with greater patient loneliness.",
-      "ref": "js/schema.js clinical estimate"
+      "ref": "js/schema.js clinical estimate",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_metastatic_disease_depression_severity_index",
@@ -1727,7 +1855,8 @@
       "weight": 0.25,
       "formula": null,
       "desc": "Metastatic disease burden is associated with higher depression severity.",
-      "ref": "Article_29 / Article 30 (metastatic disease and worse QoL/depression outcomes)"
+      "ref": "Article_29 / Article 30 (metastatic disease and worse QoL/depression outcomes)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_depressive_episode_type_depressive_diagnosis_dsm5",
@@ -1738,7 +1867,8 @@
       "weight": 1,
       "formula": "target = target if source == 1 else 'No formal diagnosis'",
       "desc": "A formal DSM-5 depressive diagnosis cannot be assigned from a single, non-recurrent episode; only recurrent episodes may carry Major depressive disorder / Dysthymia / Subclinical depression.",
-      "ref": "DSM-5 major depressive disorder diagnostic criteria (single vs. recurrent episode specifier)"
+      "ref": "DSM-5 major depressive disorder diagnostic criteria (single vs. recurrent episode specifier)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_depressive_diagnosis_dsm5_psychoactive_medication",
@@ -1749,7 +1879,8 @@
       "weight": 1,
       "formula": "target = 'None' if source == 3 else target",
       "desc": "Psychoactive medication cannot be prescribed without a documented formal psychiatric diagnosis.",
-      "ref": "General prescribing practice — psychoactive medication requires a documented psychiatric indication"
+      "ref": "General prescribing practice — psychoactive medication requires a documented psychiatric indication",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_disease_stage_ecog_performance_status",
@@ -1760,7 +1891,8 @@
       "weight": 0.5,
       "formula": null,
       "desc": "Advancing disease stage correlates with worse (higher) ECOG performance status.",
-      "ref": "Article 30 / Article 31 (ECOG-PS worsens with disease progression) clinical estimate"
+      "ref": "Article 30 / Article 31 (ECOG-PS worsens with disease progression) clinical estimate",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_disease_stage_mobility",
@@ -1771,7 +1903,8 @@
       "weight": 0.4,
       "formula": null,
       "desc": "Advancing disease stage (especially Terminal) correlates with reduced mobility; mild-stage patients should very rarely present as bedridden.",
-      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage functional decline) clinical estimate"
+      "ref": "Article_28 / Gontijo Garcia et al. 2023 (advanced-stage functional decline) clinical estimate",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_disease_stage_communication_capacity",
@@ -1782,7 +1915,8 @@
       "weight": 0.3,
       "formula": null,
       "desc": "Advancing disease stage correlates with reduced verbal communication capacity, consistent with terminal-phase obtundation/delirium; mild-stage patients should very rarely present with no verbal communication.",
-      "ref": "Clinical estimate, consistent with terminal-phase communication decline in palliative literature"
+      "ref": "Clinical estimate, consistent with terminal-phase communication decline in palliative literature",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_ecog_performance_status_mobility",
@@ -1793,7 +1927,8 @@
       "weight": 0.6,
       "formula": null,
       "desc": "ECOG performance status is definitionally tied to ambulatory capacity (ECOG 4 = completely disabled, confined to bed/chair).",
-      "ref": "ECOG scale definition (Oken et al. 1982)"
+      "ref": "ECOG scale definition (Oken et al. 1982)",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_ecog_performance_status_communication_capacity",
@@ -1804,7 +1939,8 @@
       "weight": 0.25,
       "formula": null,
       "desc": "Worse ECOG performance status correlates with reduced verbal communication capacity in advanced/terminal decline.",
-      "ref": "Clinical estimate, consistent with functional decline literature"
+      "ref": "Clinical estimate, consistent with functional decline literature",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_disease_stage_opioid_use",
@@ -1815,7 +1951,8 @@
       "weight": 1,
       "formula": "target = 'No' if source <= 0 else target",
       "desc": "Stage 1 (Mild) disease has low baseline opioid-analgesic need per the WHO analgesic ladder (opioids reserved for moderate-severe pain, which correlates with more advanced disease). Genuinely severe pain can still trigger opioid use via the existing high-pain escalation rule in refactor_synthetic_dataset.py Layer 4.",
-      "ref": "WHO analgesic ladder; flagged via manual QA (\"Severe Opioid & Sedation Toxicity in Early Stages\")"
+      "ref": "WHO analgesic ladder; flagged via manual QA (\"Severe Opioid & Sedation Toxicity in Early Stages\")",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_depressive_diagnosis_dsm5_depression_severity_index_gate",
@@ -1826,7 +1963,8 @@
       "weight": 1,
       "formula": "target = 0.0 if source == 3 else (target if target >= 13.5 else 13.5) if source == 0 else (target if target >= 2.7 else 2.7) if source == 1 else target",
       "desc": "DSM-5-consistency floor: No formal diagnosis forces severity to 0; Major depressive disorder / Dysthymia floor severity at their DSM-5-consistent minimums (0.5x/0.1x of the 0-27 range). Runs as a proper topo-ordered edge (not a post-hoc repair) so downstream nodes like suicidal_ideation_risk see the diagnosis-consistent value, not a stale pre-gate one.",
-      "ref": "DSM-5 Major Depressive Episode severity specifiers; fixes an ordering bug found via manual QA — suicidal_ideation_risk was reading depression_severity_index before its DSM-5 floor was applied"
+      "ref": "DSM-5 Major Depressive Episode severity specifiers; fixes an ordering bug found via manual QA — suicidal_ideation_risk was reading depression_severity_index before its DSM-5 floor was applied",
+      "evidence_tier": "literature"
     },
     {
       "id": "e_insomnia_severity_drowsiness",
@@ -1837,7 +1975,8 @@
       "weight": 0.14,
       "formula": "target += source * weight",
       "desc": "Severe sleep-onset/maintenance difficulty directly elevates daytime drowsiness (sleep deprivation) — previously missing; flagged via manual QA.",
-      "ref": "Standard sleep-medicine relationship (insomnia -> daytime somnolence); flagged via manual QA"
+      "ref": "Standard sleep-medicine relationship (insomnia -> daytime somnolence); flagged via manual QA",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_ecog_performance_status_functional_autonomy_adl",
@@ -1848,7 +1987,8 @@
       "weight": 22,
       "formula": "target -= source * weight",
       "desc": "ECOG performance status is the primary driver of Barthel ADL independence — migrated from a hardcoded Python formula in refactor_synthetic_dataset.py so the relationship is visible/editable in the schema graph.",
-      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 (adl_base = 100 - 22*ecog); verified this session — clean monotonic ADL-by-ECOG gradient (95.9/74.9/50.5/28/11.3)"
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 (adl_base = 100 - 22*ecog); verified this session — clean monotonic ADL-by-ECOG gradient (95.9/74.9/50.5/28/11.3)",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_age_bracket_cognitive_function_mmse",
@@ -1859,7 +1999,8 @@
       "weight": 1,
       "formula": "target -= (0 if source == 0 else 1 if source == 1 else 2.5 if source == 2 else 4) * weight",
       "desc": "Age-related cognitive decline penalty (18-35: none, 36-55: mild, 56-70: moderate, 71+: pronounced) — migrated from refactor_synthetic_dataset.py's AGE_PENALTY lookup table via an explicit per-category mapping (plain linear weighting on category index would not reproduce the non-linear 0/1/2.5/4 curve).",
-      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 AGE_PENALTY"
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2 AGE_PENALTY",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_disease_stage_cognitive_function_mmse",
@@ -1870,7 +2011,8 @@
       "weight": 1.5,
       "formula": "target -= source * weight",
       "desc": "More advanced disease stage is associated with modest cognitive decline (disease burden, medication effects) — migrated from refactor_synthetic_dataset.py.",
-      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2"
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_ecog_performance_status_cognitive_function_mmse",
@@ -1881,7 +2023,8 @@
       "weight": 1.8,
       "formula": "target -= source * weight",
       "desc": "Worse ECOG performance status is associated with cognitive decline — migrated from refactor_synthetic_dataset.py.",
-      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2"
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 2",
+      "evidence_tier": "clinical_estimate"
     },
     {
       "id": "e_disease_stage_nutritional_status_mna",
@@ -1892,7 +2035,8 @@
       "weight": 0.6,
       "formula": "target -= source * weight",
       "desc": "More advanced disease stage independently degrades nutritional status beyond what appetite loss/nausea alone capture — migrated from refactor_synthetic_dataset.py.",
-      "ref": "Migrated from refactor_synthetic_dataset.py Layer 3"
+      "ref": "Migrated from refactor_synthetic_dataset.py Layer 3",
+      "evidence_tier": "clinical_estimate"
     }
   ]
 }

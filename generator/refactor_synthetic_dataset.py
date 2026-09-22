@@ -250,7 +250,7 @@ def _layer4_pharmacology(df, rng):
         resampled = np.round(np.clip(rng.normal(3, 2.5, n) + 6, 0, 10)).astype(int)
         df.loc[flip_to_opioid, "opioid_induced_constipation"] = resampled
 
-    need_antiemetic = (df["nausea_vomiting"].ge(6) | (df["chemotherapy_current"].eq("Yes") & df["nausea_vomiting"].ge(4)))
+    need_antiemetic = (df["nausea_vomiting"].ge(6) | (df["has_chemo"].eq("Yes") & df["nausea_vomiting"].ge(4)))
     flip_to_antiemetic = need_antiemetic & df["antiemetic_use"].eq("No") & (rng.random(len(df)) < 0.8)
     df.loc[flip_to_antiemetic, "antiemetic_use"] = "Yes"
     df.loc[df["antiemetic_use"].eq("Yes"), "nausea_vomiting"] = (df.loc[df["antiemetic_use"].eq("Yes"), "nausea_vomiting"] * 0.6).clip(lower=0)
